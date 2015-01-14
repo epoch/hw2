@@ -47,7 +47,7 @@ puts "Welcome to Crappy Calc"
 
 menu_selection = read_choice
 
-if menu_selection.to_i > 6 && menu_selection!= 'q'
+if menu_selection.to_i > 6 && menu_selection!= 'q' # does not tell if you don't pick a valid option
 	puts "Error! This is not an option"
 	read_choice
 else
