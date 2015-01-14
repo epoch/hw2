@@ -48,12 +48,13 @@ end
 puts "The total number of stations you will pass before you arrive at #{destination_station} station on #{destination_line} is #{ (number_of_stops - 1) }."
 
 
-print lines[current_line]
-
-
 binding.pry 
 
-puts "The stations you will pass are: "
+# puts "The stations you will pass are: " 
+
+# lines[lines[current_line].index(current_station)]
+
+# ..lines[current_line].find_index("Union Square")]
 
 
  
