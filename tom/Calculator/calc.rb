@@ -120,6 +120,9 @@ while menu_selection != 'q'
 	# needs a functioning way of checking if the input is one a series of options without looking so disgusting 
 	until menu_selection == 'a' || menu_selection == 's' || menu_selection == 'd' || menu_selection == 'm' || menu_selection == 'e' || menu_selection == 'r' || menu_selection == 'sq' || menu_selection == 'c' || menu_selection == 'p'
 	# ------------------------------------
+
+	# CAN BE FIXED USING SOME SORT OF ARRAY.INCLUDE? THING
+	# until menu_selection.include? 'a', 's', 'd', 'm', 'e', 'r', 'sq', 'c', 'p'
 		puts "Unknown function. Please choose again:"
 		menu_selection = read_choice
 	end
