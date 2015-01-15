@@ -1,15 +1,14 @@
 require 'pry'
 
 lines = {	
-	"Line N" => ["8th", "Union Square", "23rd", "28th", "34th", "Times Square"],
-	"Line L" => ["1st", "3rd", "Union Square", "6th", "8th"],
-	"Line 6" => ["Astor Place", "Union Square", "23rd", "28th", "33rd", "Grand Central"]
+	"LINE N" => ["8th", "Union Square", "23rd", "28th", "34th", "Times Square"],
+	"LINE L" => ["1st", "3rd", "Union Square", "6th", "8th"],
+	"LINE 6" => ["Astor Place", "Union Square", "23rd", "28th", "33rd", "Grand Central"]
 }
 
 puts lines.keys
 print "Type which line are you on?: "
 current_line = gets.chomp
-
 
 puts lines[current_line]
 print "Which station are you at?: "
@@ -37,31 +36,13 @@ puts "You are travelling from #{current_station} station on #{current_line} to #
 
 # this stipulates if the user needs to change lines
 
-if 
-	current_line == destination_line
+if current_line == destination_line
 	puts "This route does not require changing trains. Please remain on #{current_line}."
-	
-	else
-		puts "This route requires you to change trains at Union Square to #{destination_line}."
+else
+	puts "This route requires you to change trains at Union Square to #{destination_line}."
 end
 
 puts "The total number of stations you will pass before you arrive at #{destination_station} station on #{destination_line} is #{ (number_of_stops - 1) }."
-
-
-binding.pry 
-
-# puts "The stations you will pass are: " 
-
-# lines[lines[current_line].index(current_station)]
-
-# ..lines[current_line].find_index("Union Square")]
-
-
- 
-
-
-
-
 
 
 
