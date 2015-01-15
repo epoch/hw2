@@ -1,17 +1,12 @@
 
 # Library
-
-# Line_N = ["time_square_N", "34th_N", "28th_N", "23rd_N", "union_square", "8th_N"]
-# Line_L = ["8th_L", "6th_L","union_square", "3rd_L","1st_L"]
-# Line_6 = ["grand_central_6", "33rd_6", "28th_6", "23rd_6", "union_square", "astor_place_6"]
-
 MTA = { :Line_N => ["time_square_N", "34th_N", "28th_N", "23rd_N", "union_square", "8th_N"], 
 		:Line_L => ["8th_L", "6th_L","union_square", "3rd_L","1st_L"], 
 		:Line_6 => ["grand_central_6", "33rd_6", "28th_6", "23rd_6", "union_square", "astor_place_6"]
 		}
 
 # Choose start line
-puts "Choose your starting line:"
+puts "Choose your starting line:" 
 puts "Line_N"
 puts "Line_L"
 puts "Line_6"
@@ -67,7 +62,6 @@ puts "You are ending your journey at #{end_station}"
 puts ""
 
 # Calculate number of stations
-
 Journey_1 = MTA[start_line.to_sym].index(start_station) - MTA[start_line.to_sym].index("union_square")
 
 Journey_2 = MTA[end_line.to_sym].index(end_station)-MTA[end_line.to_sym].index("union_square")
@@ -78,6 +72,26 @@ puts ""
 puts " When travelling from #{start_station} on #{start_line} to #{end_station} on #{end_line} you will reach your destination in #{Total_stops} stops"
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## What if people are starting and ending on the same line or same station? This does not solve
+## Can improve by just printing keys for MTA
+
 # Total_stops = Line_L.index("union_square") - Line_L.index("8th_L")+ -(Line_6.index("23rd_6")-Line_6.index("union_square"))
 # puts Total_stops
 
@@ -87,4 +101,10 @@ puts " When travelling from #{start_station} on #{start_line} to #{end_station} 
 	# return Line_X[stop .. start].count
 # Else find start line, find end line
 	# return Line_start[union_square..start].count + Line_end[stop..union_square]
+
+
+
+# Line_N = ["time_square_N", "34th_N", "28th_N", "23rd_N", "union_square", "8th_N"]
+# Line_L = ["8th_L", "6th_L","union_square", "3rd_L","1st_L"]
+# Line_6 = ["grand_central_6", "33rd_6", "28th_6", "23rd_6", "union_square", "astor_place_6"]
 
