@@ -19,7 +19,7 @@ class Animal
 		return "#{ @name } has no toys." if toys.empty? 
 		# else
 		s = "#{ @name } has the following toy(s):\n"
-		toys.each { |toy| s += "toy" + "\n" }
+		@toys.each { |toy| s += toy + "\n" }
 		s
 	end
 
