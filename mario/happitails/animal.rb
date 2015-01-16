@@ -10,7 +10,7 @@ class Animal
 	end
 
 	def to_s
-		s = "#{ @name } is a #{ @gender } #{ @species } that is #{ @age } years old.\n"
+		s = "#{ @name } is a #{ @gender } #{ @species } that is #{ @age } years old. "
 		s += display_toys
 		s
 	end

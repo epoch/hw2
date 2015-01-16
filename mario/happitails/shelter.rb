@@ -10,19 +10,21 @@ class Shelter
 	end
 
 	def display_clients
-		puts "Here are the clients on record:"
+		puts "Here are the clients on record: "
 		puts clients
 	end
 
 	def display_animals
 		puts "Animals adopted by clients:"
-		@clients.each { |client| puts client.display_pets }
+		clients.each do |client|
+			client.pets.each {|pet| puts pet.name}
+		end
 
 		if animals.empty?
 			puts "No animals available for adoption."
 		else		
 			puts "\nAnimals up for adoption:"
-			puts animals
+			animals.each {|animal| puts animal.name}
 		end
 	end
 end
