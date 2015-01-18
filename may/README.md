@@ -1,5 +1,0 @@
-# TESTING
-
-Test test test
-
-$$$
