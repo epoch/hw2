@@ -1,0 +1,8 @@
+puts "\t1. Show buildings"
+puts "\t2. Show avaliable aparments"
+puts "\t3. Show tenants"
+puts "\t4. Create building"
+puts "\t5. Create aparment"
+puts "\t6. Create new tenant"
+puts "\t7. Destroy building (this kills all tenants)"
+puts "\t8. Destroy apartment"
