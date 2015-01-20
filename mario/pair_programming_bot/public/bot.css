@@ -1,0 +1,48 @@
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+}
+a {
+    color: white;
+    font-family: sans-serif;
+    font-size: 36px;
+    text-decoration: none;
+}
+p {
+    font-size: 72px;
+}
+.button {
+    padding: 0px;
+    text-align: center;
+    background: blue;
+    border: 7px solid blue;
+    border-radius: 20px;
+}
+
+.yes {
+    padding: 0px;
+    text-align: center;
+    background: green;
+    border: 7px solid green;
+    border-radius: 20px;
+    width: 200px;
+    display: inline;
+    float: left;
+    margin: 10px;
+}
+
+.no {
+    padding: 0px;
+    text-align: center;
+    background: red;
+    border: 7px solid red;
+    border-radius: 20px;
+    width: 200px;
+    display: inline;
+    float: left;
+    margin: 10px;
+}

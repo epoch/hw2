@@ -1,0 +1,9 @@
+<form action="/">
+    <input name='symbol' placeholder="Symbol" value"<%= params[:symbol] %>">
+
+    <button>Get Quote</button>
+</form>
+
+<h1><%= @symbol %> last traded at <%= @price %></h1>
+
+<p>Thank you for using stock price info</p>
