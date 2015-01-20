@@ -1,0 +1,20 @@
+<form action="/stock">
+
+<div class="rows">
+  <p class="text">Welcome to Stocklab</p>
+</div>
+
+<div class="rows">
+  <input class="input-medium","text-center" name="symbol" placeholder="Stock Symbol" value"<%= params[:symbol] %>">
+</div>
+
+<div
+  <ul class="buttons">
+    <button class="done btn-large btn-primary">Get Quote</button>
+  </ul>
+</div>
+</form>
+
+<p class="text">Search: <%= @symbol %></p>
+<p class="text">Last traded at: <%= @quote %></p>
+<p class="text">Thank you for using Stocklab</p>
