@@ -1,0 +1,68 @@
+/*div {
+  border: 1px solid #f0f;
+}*/
+
+
+body {
+  background-color: black;
+}
+
+#container {
+  text-align:center;
+    font-family: "Tahoma", "Verdana", "Helvetica", "Arial", sans-serif;
+
+}
+
+.linkleft {
+  text-align: left;
+  margin-top: 200px;
+  color: green;
+}
+
+.linkleft a:link {
+  color: green;
+}
+
+.linkright {
+  text-align: right;
+
+}
+
+.linkright a:link {
+  color: gray;
+}
+
+
+.text {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 200px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.beck_text {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 180px;
+  text-align: center;
+  line-height: 120%;
+  color: white;
+}
+
+a {
+  color: #080;
+  text-decoration: none;
+}
+
+.beck_citation {
+  color: gray;
+  font-size: 20px;
+}
+.buttons {
+  margin-top: 30px;
+}
+
+.btn-large {
+  margin: 0 15px;
+}

@@ -39,56 +39,77 @@ def read_choice
 	choice
 end
 
-def add(x, y)
-	x + y
+def number1
+	print "Enter a number: "
+	x = gets.to_f
+end
+
+def number2
+	print "Enter a number: "
+	y = gets.to_f
+end
+
+def add
+	x = number1
+	y = number2
+	puts "#{x} + #{y} = #{x + y}"
+	line_space
 end
 	
-def subtract(x, y)
-	x - y
+def subtract
+	x = number1
+	y = number2
+	puts "#{x} - #{y} = #{x - y}"
+	line_space
 end
 
-def multiply(x, y)
-	x * y
+def multiply
+	x = number1
+	y = number2
+	puts "#{x} * #{y} = #{x * y}"
+	line_space
 end
 
-def divide(x, y)
-	x / y
+def divide
+	x = number1
+	y = number2
+	puts "#{x} / #{y} = #{x / y}"
+	line_space
 end
 
-def exponent(x, y)
-	x % y
+def exponent
+	x = number1
+	y = number2
+	puts "#{x} ** #{y} = #{x ** y}"
+	line_space
 end
 
-def square_root(x, y)
-	x ** y
+def square_root
+	x = number1
+	puts "Square root of #{x} = #{Math.square_root(x)}"
+	line_space
+end
+
+def line_space
+	puts ""
 end
 
 menu_selection = read_choice
 
 while menu_selection != 'q'
-	print "Enter the first number: "
-	x = gets.to_i
-	print "Enter the second number: "
-	y = gets.to_i
 	case menu_selection
 	when '1'
-		print "#{x} + #{y} = "
-		puts add(x, y)
+		add
 	when '2'
-		print "#{x} - #{y} = "
-		puts subtract(x, y)
+		subtract
 	when '3'
-		print "#{x} * #{y} = "
-		puts multiply(x, y)
+		multiply
 	when '4'
-		print "#{x} / #{y} = "
-		puts divide(x, y)
+		divide
 	when '5'
-		print "#{x} % #{y} = "
-		puts exponent(x, y)
+		exponent
 	when '6'
-		print "#{x} ** #{y} = "
-		puts square_root(x, y)
+		square_root
 	else
 		puts "Unknown function"
 	end
