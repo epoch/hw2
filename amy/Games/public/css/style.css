@@ -1,0 +1,26 @@
+body {
+    font-family: 'Helvetica Neue', Arial;
+}
+
+header {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 10px;
+}
+
+header a:hover {
+    color: green;
+}
