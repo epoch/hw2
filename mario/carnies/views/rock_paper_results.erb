@@ -1,9 +1,7 @@
 <h1>Results</h1>
 
-<h2>You played <%= @player_hand %>
+<h3>You played <%= @player_hand %>, I played <%= @comp_hand %></h3>
 
-<h2>I played <%= @comp_hand %>
-
-<h2>The winner is <%= @winning_player %>
+<h2>The winner is: <%= @winning_player %>
 
 <%= erb :rock_paper_scissors, :layout => false %>

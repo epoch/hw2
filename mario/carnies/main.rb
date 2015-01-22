@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
-require_relative 'eight_ball'
-require_relative 'rock_paper_scissors'
+require_relative 'lib/eight_ball'
+require_relative 'lib/rock_paper_scissors'
 
 get '/' do
     erb :menu
@@ -12,6 +12,8 @@ get '/magic_eight_ball' do
 end
 
 get '/eight_ball_result' do
+    # require 'pry'
+    # binding.pry
     e_ball = EightBall.new
     @reply = e_ball.shake
     erb :eight_ball_result
