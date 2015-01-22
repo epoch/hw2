@@ -1,0 +1,78 @@
+body {
+  margin-top: 50px;
+  background: #e6e6e6;
+  background: linear-gradient(45deg, #ffffff, #bdbdbd);
+  min-height: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  position: relative;
+
+}
+
+#container {
+  display: inline-block;
+  text-align: center;
+  width: 500px;
+  border-radius: 10px;
+  margin: auto;
+  margin-left: 100px;
+  margin-right: -4px;
+  padding: 100px;
+  background-color: #ffffff;
+}
+
+#triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 60px solid #ffffff;
+  position: relative;
+  top: -60px;
+}
+
+#name {
+  text-align: right;
+  margin-right: 120px;
+}
+
+.yes {
+  border: 1px solid #a5d6a7;
+  border-radius: 5px;
+  background-color: #a5d6a7;
+}
+
+.no {
+  border: 1px solid #ef9a9a;
+  border-radius: 5px;
+  background-color: #ef9a9a;
+}
+
+.done {
+  border: 1px solid #42a5f5;
+  border-radius: 5px;
+  background-color: #42a5f5;
+}
+
+a {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+h1 {
+  padding-bottom: 50px;
+}
+
+img {
+  position: relative;
+  top: 100px;
+  left: 20px;
+  height: 333px;
+  width: 300px;
+  margin-left: 10px;
+}
+
+/*make classes for yes no and done, the buttons which need to be formatted*/

@@ -1,0 +1,15 @@
+<% if @secret_number.to_s == @user_choice %>
+
+  <h2>You win!</h2>
+
+<% else %>
+
+  <h2>Try again, stupidhead.</h2>
+
+<% end %>
+
+<a href="/secret_number" class="try-again">Try again</a>
+
+<a href="/" class="main-menu">Main Menu</a>
+<br>
+<br>
