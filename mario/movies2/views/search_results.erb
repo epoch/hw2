@@ -1,0 +1,4 @@
+<h2>Click on the movie you wish to view</h2>
+<% @search_results.each do |i| %>
+    <p><a href="get_poster?imdbid=<%= i["imdbID"] %>"><%= i["Title"] %>, <%= i["Year"] %></a></p>
+<% end %>
