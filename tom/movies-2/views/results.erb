@@ -1,0 +1,35 @@
+<div id="search-results">
+
+
+
+<p>Search results:</p>
+
+
+
+<% if @search_results["Search"] %>
+
+
+   <% @search_results["Search"].each do |v| %>
+
+    <!-- by making our own url (with ?id= on the end of the route /movie)
+    we can make the value of the newly created param "id" equal to
+    the value of the imdb id stored in the search hash -->
+    <a href="/movie?id=<%= v["imdbID"] %>"><%= v["Title"] + ", " + v["Year"]%></a>
+
+    <br>
+  <% end %>
+
+
+
+<% else %>
+
+
+<p>That film doesn't exist. Do you even cinema?</p>
+
+
+<% end %>
+
+<br>
+
+
+</div>

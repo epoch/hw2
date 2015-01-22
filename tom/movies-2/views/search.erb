@@ -1,0 +1,20 @@
+<div id="search_box">
+  <div id="content">
+    <h2>Please enter a movie:</h2>
+
+    <br>
+
+    <form action="/results">
+
+      <!-- below basically says, whatever goes in here I want to be called name (this can then be accessed via params[:name]) -->
+      <p>
+        <label for="search">Name: </label>
+        <input name="search" id="search" placeholder="Movie name" required autofocus>
+      </p>
+
+      <br>
+      <!-- by default, a button within a form will automatically be set up to submit -->
+      <button>Submit</button>
+    </form>
+  </div>
+</div>
