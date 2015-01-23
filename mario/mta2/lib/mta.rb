@@ -7,8 +7,7 @@ class MTA
 	def initialize(start_line, start_station, finish_line, finish_station)
 		@start_line, @start_station = start_line, start_station
 		@finish_line, @finish_station = finish_line, finish_station
-	    @counter = 0 # Counter for the number of stations travelled
-	    @stations = []
+	    @counter, @stations = 0, [] # Counter for the number of stations travelled
 		journey
 	end
 
@@ -26,7 +25,7 @@ class MTA
 
 	def trip_with_no_transfers
 		s = SingleLine.new(start_line, @start_station, @finish_station)
-		@counter, @vstations = s.counter, s.stations
+		@counter, @stations = s.counter, s.stations
 	end
 
 	def trip_with_transfers
