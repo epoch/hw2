@@ -1,6 +1,5 @@
-
-<p>Computer choice was: <%=@computer_choice %></p>
-<p>User choice was: <%=@user_choice %></p>
+<p>Computer chose: <%=@computer_choice %></p>
+<p>You chose: <%=@user_choice %></p>
 
 <% if @user_result == true %>
     <p>You win!</p>
@@ -8,6 +7,4 @@
     <p>You Lose!</p>
 <% elsif @user_result == "Tie" %>
     <p>You tied!</p>
-<% elsif @user_result == "Unknown" %>
-    <p>Unknown!</p>
 <% end %>

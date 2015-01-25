@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'pry'
 
 get '/' do
     erb :games
@@ -82,14 +83,13 @@ get '/rock_paper_scissors_result' do
         elsif user_choice == :Scissors && computer_choice == :Paper
             @user_result = true
         elsif user_choice == :Paper && computer_choice == :Rock
-            @user_result == true
+            @user_result = true
         elsif user_choice == :Paper && computer_choice == :Scissors
             @user_result = false
         elsif user_choice == computer_choice
             @user_result = @tie
         end
     end
-
     get_result(@user_choice, @computer_choice)
 
     erb :rock_paper_scissors_result
