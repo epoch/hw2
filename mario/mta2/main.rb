@@ -18,7 +18,8 @@ def display_menu(line, display, id_suffix)
     Subway::LINES[line].each do |i|
         s << "        <p>"
         s << "            <label for=\"#{i}_#{id_suffix}\">"
-        s << "            <input id=\"#{i}_#{id_suffix}\" name=\"#{i}\" type=\"radio\" value=\"#{i}\">"
+        s << "            <input id=\"#{i}_#{id_suffix}\" name=\"#{id_suffix}\"
+                          type=\"radio\" value=\"#{i}|#{line}\">"
         s << "            #{i}</label>"
         s << "        </p>"
     end
@@ -30,4 +31,14 @@ end
 get '/' do
     require 'pry'
     erb :menu
+end
+
+get '/process' do
+    start_station, start_line = *(params["start"].split('|'))
+    finish_station, finish_line = *(params["finish"].split('|'))
+    if start_station == finish_station && start_line == finish_line
+        return "<h1>You're aleady there, stupid!</h1>"
+    end
+    @mta = MTA.new(start_line.to_sym, start_station, finish_line.to_sym, finish_station)
+    erb :result
 end

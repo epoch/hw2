@@ -19,7 +19,7 @@ class SingleLine
     # journey on a single line
     def journey
         if @start_index == @finish_index
-            @stations = @line[@start_index]
+            @stations = [@line[@start_index]]
         elsif @start_index < @finish_index
             @stations = @line[@start_index..@finish_index]
         else
