@@ -1,0 +1,69 @@
+<div class="options-container">
+
+    <form action="/results">
+
+        <!-- LINE ON --> 
+
+        <p class="prompt">Which line are you getting on at?</p>
+            <p>
+                <label for="line_on">Select a line:</label>
+                <select name="line_on" id="line_on">
+                    <!-- loop through the array to put the lines as options -->
+                    <% $subway_lines.keys.each do |line| %>
+                        <option value="<%=line%>" > <%=line%> </option>
+                    <% end %>
+                </select>
+            </p>
+
+        <!-- STOP ON -->
+
+        <p class="prompt">Which stop are you getting on at?</p>
+            <p>
+                <label for="stop_on">Select a stop:</label>
+                <select name="stop_on" id="stop_on">
+                    <!-- loop through the values of line_on to put the stations as options --> 
+                    <% $subway_lines.values.flatten.each do |station| %>
+                        <option value="<%=station%>" > <%=station%> </option>
+                    <% end %>
+                </select>
+            </p>
+
+        <!-- LINE OFF -->
+
+        <p class="prompt">Which line are you getting off at?</p>
+            <p>
+                <label for="line_off">Select a line:</label>
+                <select name="line_off" id="line_off">
+                    <!-- loop through the array to put the lines as options -->
+                    <% $subway_lines.keys.each do |line| %>
+                        <option value="<%=line%>" > <%=line%> </option>
+                    <% end %>
+                </select>
+            </p>
+
+        <!-- STOP OFF -->
+
+        <p class="prompt">Which stop are you getting off at?</p>
+            <p>
+                <label for="stop_off">Select a stop:</label>
+                <select name="stop_off" id="stop_off">
+                    <!-- loop through the values of line_on to put the stations as options --> 
+                    <% $subway_lines.values.flatten.each do |station| %>
+                        <option value= "<%=station%>" > <%=station%> </option>
+                    <% end %>
+                </select>
+            </p>
+
+        <button>Submit</button>
+
+    </form>
+
+</div> <!-- end options container -->
+
+<div class="results-container">
+
+   
+
+</div> <!-- end results container -->
+
+

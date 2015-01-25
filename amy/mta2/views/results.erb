@@ -1,0 +1,45 @@
+<div class="results-container">
+    <p>There are <%=@total_stops %> stops until you reach your destination:</p>
+
+    <ol>
+        <%if @line_on == @line_off %>
+            <%@stations.each do |station|%>
+                <li><%=station%></li>
+            <%end%>
+        <%else%>
+             <%@stations_before_changeover_arr.each do |station|%>
+                <li><%=station%></li>
+            <%end%>
+            <%@stations_after_changeover_arr.each do |station|%>
+                <li><%=station%></li>
+            <%end%>
+        <%end%>
+    </ol>
+
+    <% if @changeover %>
+        <p>You need to change stations at Union Square.</p>
+    <% end %>
+
+    <% if @already_at_destination %>
+        <p>You're already at your destination!</p>
+    <% end %>
+</div>
+<div class="lines-stations-container">
+
+    <h2>Line N</h2>
+    <div class="line N">
+        <div class="station"><p>Times Square</p></div><div class="station"><p>34th</p></div><div class="station"><p>28th</p></div><div class="station"><p>23rd</p></div><div class="station"><p class="union">Union Square</p></div><div class="station"><p>8th</p></div><div class="station empty"><p class="empty">None</p></div>
+    </div>
+
+    <h2>Line L</h2>
+    <div class="line L">
+        <div class="station empty"><p class="empty">None</p></div><div class="station empty"><p class="empty">None</p></div><div class="station"><p>6th</p></div><div class="station"><p>8th</p></div><div class="station"><p class="union">Union Square</p></div><div class="station"><p>3rd</p></div><div class="station"><p>1st</p></div>
+    </div>
+    
+    <h2>Line 6</h2>
+    <div class="line 6">
+        <div class="station"><p>Grand Central</p></div><div class="station"><p>33rd</p></div><div class="station"><p>28th</p></div><div class="station"><p>23rd</p></div><div class="station"><p class="union">Union Square</p></div><div class="station"><p>Astor Place</p></div><div class="station empty"><p class="empty">None</p></div>
+    </div>
+    
+</div>
+

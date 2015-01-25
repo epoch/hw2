@@ -1,0 +1,140 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,900,800,700);
+
+html {
+    magin: 0;
+}
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    /*position: relative;*/
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+}
+
+
+body::after {
+  content: "";
+  /*background: url("../images/nyctrain.jpg");*/
+  background: #fff url("../images/nyctrain.jpg") no-repeat center center;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+/*  bottom: 0;
+  right: 0;*/
+  position: absolute;
+  z-index: -1;  
+  width: 100%;
+height: 100%; 
+}
+
+.options-container {
+    max-width: 49%;
+}
+
+.results-container {
+    width: 22%;
+    height: 100%;
+    display: inline-block;
+    margin: auto;
+    vertical-align: top;
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.results-container p:first-child {
+    margin-top: 0;
+}
+
+.lines-stations-container {
+    width: 60%;
+    height: 100%;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    margin-left: 100px;
+}
+
+.line {
+    display: block;
+    margin: 20px 0px;
+}
+
+.station {
+    display: inline-block;
+    width: 110px;
+    height: 80px;
+    /*background-color: lime;*/
+    border-right: 2px solid black;
+    text-align: right;
+    border-bottom: 3px solid black;
+}
+
+.station p {
+    margin-top: 0;
+    padding-right: 4px;
+    font-size: 14px;
+    border-right: 3px solid black;
+}
+
+.station.empty {
+    background-color: #fff;
+    border: none;
+    visibility: hidden;
+}
+
+p.empty {
+    color: #fff;
+}
+
+h1.title {
+  width: 200px;
+  height: 200px;
+  background: url("../images/mta-svg.png") no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+
+.union {
+    font-weight: 600;
+
+}
+
+button {
+    width: 200px;
+    height: 80px;
+    background-color: #fff;
+    opacity: 1;
+    border: 3px solid darkgrey;
+    font-size: 26px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+.prompt {
+    font-weight: 600;
+}
+
+.container {
+    /*max-width: 1000px;*/
+    margin: 50px 50px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.highlighted {
+    background-color: yellow;
+}
+
+.unhighlighted {
+    background-color: green;
+}
+
+
