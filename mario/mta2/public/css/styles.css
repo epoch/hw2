@@ -1,0 +1,101 @@
+@import url(http://fonts.googleapis.com/css?family=Orbitron:400,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:700);
+html { 
+  background: url("/images/background.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-transform: bold;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-size: 50px;
+}
+
+h2 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}
+
+ol {
+    text-align: left;
+    margin: auto;
+    font: ;
+}
+
+ol p{
+    font-family: 'Orbitron', sans-serif;
+    line-height: 140%;
+}
+
+button {
+    font-size: 30px;
+    margin-bottom: 20px
+}
+
+a {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    padding-top: 1em;
+    display: inline-block;
+    width:80%;
+    margin-bottom: 20px
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    background: rgba(109,142,135, 0);
+    max-width: 960px;
+    margin: auto;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.menu {
+    margin: 1em;
+}
+
+.sub_menu {
+    background: rgba(83,224,165, 0.9);
+    display: inline-block;
+    width: 20%;
+    margin: 10px;
+    vertical-align: top;
+    height: 17em;
+    text-align: left;
+    padding-left: 2em;
+    border: rgb(71,196,154) solid 5px;
+}
+
+.result {
+    background: rgba(109,142,135, 0.9);
+    display: inline-block;
+    width: 40%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    border: rgb(71,196,154) solid 5px;
+    text-align: left;
+    padding-left: 1em;
+    color: white;
+    margin-top: 15px;
+}
+
+.finish {
+    background: rgba(117,251,155, 0.9);
+}

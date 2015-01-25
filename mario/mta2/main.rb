@@ -12,14 +12,14 @@ require_relative 'lib/subway'
 
 def display_menu(line, display, id_suffix)
     s = []
-    s << "<div class=\"sub_menu\">"
+    s << "<div class=\"sub_menu #{id_suffix}\">"
     s << "    <h3>#{display}</h3>"
 
     Subway::LINES[line].each do |i|
         s << "        <p>"
         s << "            <label for=\"#{i}_#{id_suffix}\">"
         s << "            <input id=\"#{i}_#{id_suffix}\" name=\"#{id_suffix}\"
-                          type=\"radio\" value=\"#{i}|#{line}\">"
+                          type=\"radio\" value=\"#{i}|#{line}\" required>"
         s << "            #{i}</label>"
         s << "        </p>"
     end
