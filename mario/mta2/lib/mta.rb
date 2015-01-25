@@ -35,6 +35,3 @@ class MTA
 		@stations << s1.stations << s2.stations
 	end
 end
-
-require 'pry'
-binding.pry

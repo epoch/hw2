@@ -1,0 +1,10 @@
+<div class="sub_menu">
+    <h3>N-Line</h3>
+    <% @subways[:n_line].each do |i|%>
+        <p>
+            <label for="<%= i %>_start">
+            <input id="<%= i %>_start" name="<%= i %>" type="radio" value="<%= i %>">
+            <%= i %></label>
+        </p>
+    <% end %>
+</div>
