@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,900,800,700);
+
+html {
+    magin: 0;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    /*position: relative;*/
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+}
+
+body::after {
+    content: "";
+    background: #919192 url("../images/nyctrain.jpg") no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;  
+    width: 100%;
+    height: 100%; 
+}
+
+h1.title {
+  width: 200px;
+  height: 200px;
+  background: url("../images/mta-svg.png") no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: auto;
+  /*text-align: right;*/
+  opacity: 0.5;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+}
+
+.options-container {
+    margin: auto;
+    text-align: center;
+}
+
+.prompt {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+select {
+    font-size: 30px;
+}
+
+button {
+    width: 200px;
+    height: 80px;
+    background-color: #fff;
+    opacity: 1;
+    border: 3px solid #919192;
+    font-size: 26px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+.results-container {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.results-container p:first-child {
+    margin-top: 0;
+}
+
+.line_and_station {
+    display: block;
+    margin: 60px 0;
+}
+
+.line {
+    display: inline;
+    margin: 20px 0px;
+}
+
+.station {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    border-right: 2px solid black;
+    text-align: right;
+    border-bottom: 3px solid black;
+}
+
+.station p {
+    margin-top: 0;
+    padding-right: 4px;
+    font-size: 14px;
+    border-right: 3px solid black;
+}
+
+.station.empty {
+    visibility: hidden;
+}
+
+
+h2 {
+    font-size: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    display: inline;
+    margin-right: 50px;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+.map {
+    margin-left: 30px;
+}
+
+.N, .L, .6 {
+    display: inline;
+}
+
+.N, .6 {
+    /*margin-right: 130px;*/
+}
+
+.L {
+    /*margin-left: 130px;*/
+}
+
+.highlighted {
+    background-color: yellow;
+}
+

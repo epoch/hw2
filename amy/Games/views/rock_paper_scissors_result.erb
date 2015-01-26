@@ -1,0 +1,10 @@
+<p>Computer chose: <%=@computer_choice %></p>
+<p>You chose: <%=@user_choice %></p>
+
+<% if @user_result == true %>
+    <p>You win!</p>
+<% elsif @user_result == false %>
+    <p>You Lose!</p>
+<% elsif @user_result == "Tie" %>
+    <p>You tied!</p>
+<% end %>
