@@ -1,45 +1,38 @@
 <div class="results-container">
-    <p>There are <%=@total_stops %> stops until you reach your destination:</p>
-
-    <ol>
-        <%if @line_on == @line_off %>
-            <%@stations.each do |station|%>
-                <li><%=station%></li>
+    <% if (@total_stops + 1) > 1 %>
+        <p>Your destination is <%=@total_stops + 1 %> stops away:</p>
+        <ol>
+            <%if @line_on == @line_off %>
+                <%@stations.each do |station|%>
+                    <li class="<%=station.downcase.tr(" ", "-")%>"><%=station%></li>
+                <%end%>
+            <%else%>
+                 <%@stations_before_changeover_arr.each do |station|%>
+                    <li class="<%=station.downcase.tr(" ", "-")%>"><%=station%></li>
+                <%end%>
+                <%@stations_after_changeover_arr.each do |station|%>
+                    <li class="<%=station.downcase.tr(" ", "-")%>"><%=station%></li>
+                <%end%>
             <%end%>
-        <%else%>
-             <%@stations_before_changeover_arr.each do |station|%>
-                <li><%=station%></li>
-            <%end%>
-            <%@stations_after_changeover_arr.each do |station|%>
-                <li><%=station%></li>
-            <%end%>
-        <%end%>
-    </ol>
-
-    <% if @changeover %>
-        <p>You need to change stations at Union Square.</p>
-    <% end %>
-
-    <% if @already_at_destination %>
+        </ol>
+     <%else%>
         <p>You're already at your destination!</p>
     <% end %>
+    <% if @changeover %>
+        <p>You need to change lines at Union Square.</p>
+    <% end %>
 </div>
-<div class="lines-stations-container">
 
-    <h2>Line N</h2>
-    <div class="line N">
-        <div class="station"><p>Times Square</p></div><div class="station"><p>34th</p></div><div class="station"><p>28th</p></div><div class="station"><p>23rd</p></div><div class="station"><p class="union">Union Square</p></div><div class="station"><p>8th</p></div><div class="station empty"><p class="empty">None</p></div>
-    </div>
-
-    <h2>Line L</h2>
-    <div class="line L">
-        <div class="station empty"><p class="empty">None</p></div><div class="station empty"><p class="empty">None</p></div><div class="station"><p>6th</p></div><div class="station"><p>8th</p></div><div class="station"><p class="union">Union Square</p></div><div class="station"><p>3rd</p></div><div class="station"><p>1st</p></div>
-    </div>
-    
-    <h2>Line 6</h2>
-    <div class="line 6">
-        <div class="station"><p>Grand Central</p></div><div class="station"><p>33rd</p></div><div class="station"><p>28th</p></div><div class="station"><p>23rd</p></div><div class="station"><p class="union">Union Square</p></div><div class="station"><p>Astor Place</p></div><div class="station empty"><p class="empty">None</p></div>
-    </div>
-    
+<div class="map">
+    <% $subway_lines.keys.each do |line| %>
+        <div class="line_and_station <%=line%>">
+        <h2>Line <%=line%></h2>
+        <% $subway_lines[line].flatten.each do |station| %>
+            <div class="line <%=line%>">
+                <div class="station <%=station.downcase.tr(" ", "-")%>"><p><%=station%></p></div>
+            </div>
+        <%end%>
+        </div>
+    <%end%>
 </div>
 
