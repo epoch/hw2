@@ -7,11 +7,11 @@ require_relative 'animal'
 
 $my_shelter = Shelter.new
 jazz = Animal.new("Jazz", 3, "male", "dog")
-inky = Animal.new("Inky", 14, "female", "dog")
+biggles = Animal.new("Biggles", 14, "female", "cat")
 mario = Client.new("Mario", 0, 32)
 donald = Client.new("Donald", 2, 54)
 donald.pets << jazz
-$my_shelter.animals << inky
+$my_shelter.animals << biggles
 $my_shelter.clients << mario
 $my_shelter.clients << donald
 

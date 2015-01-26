@@ -1,0 +1,20 @@
+<div class="result">
+    <p>Start on <%= @mta.start_line %></p>
+    <ol>
+    <% @mta.stations[0].each do |i| %>
+        <li><p><%= i %></p></li>
+    <% end %>
+    </ol>
+
+    <% if @mta.stations[1] && @mta.stations[1].length > 1 %>
+        <p>Transfer at Union Square to <%= @mta.finish_line %></p>
+        <ol start="<%= @mta.stations[0].size + 1 %>">
+            <% @mta.stations[1][1..-1].each do |i| %>
+                <li><p><%= i %></p></li>
+            <% end %>
+        </ol> 
+    <% end %> 
+
+    <p>Total number of stops: <%= @mta.counter + 1 %></p>
+</div>
+<a href="/">New Search</a>
