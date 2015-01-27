@@ -1,0 +1,12 @@
+I threw <%=@computer_throw%> and you threw <%=@throw%>
+
+<%if @computer_throw == @throw%>
+<p>"It's a draw!"</p>
+<%elsif (@computer_throw== "Rock" && @throw=="Scissors")||(@computer_throw== "Paper" && @throw=="Rock")||(@computer_throw== "Scissors" && @throw=="Paper") %>
+<p>"I win!"</p>
+<%else%> 
+<p>"You win!"</p>
+<%end%>
+
+<!-- what is the best way to set up a universal variable such that I can access the data from the previous tab?
+ -->        

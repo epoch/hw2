@@ -1,0 +1,9 @@
+body {
+    background-color: green;
+    color: white;
+}
+
+.container {
+        max-width: 960 px;
+        margin: auto;
+}
