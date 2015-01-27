@@ -1,0 +1,26 @@
+<p>
+    <h2>Please see the poster here: </h2>
+
+<p>
+    <div class='poster'>
+        <img src='<%=@poster %>' alt="Movie not found!">
+        <img src="" alt="">
+    </div>
+</p>
+
+<form class='anther' action="/result">
+
+    <p>
+        <h3>Continue your search?</h3>
+    </p>
+
+    <p>
+    <label for="title">Move's name</label>
+    <input type="search" name='title' id='title' placeholder='Jaws' value="<%= params[:title] %>">
+    </p>
+
+    <p>
+        <button>Go</button>
+    </p>
+
+</form>
