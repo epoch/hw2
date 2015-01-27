@@ -1,0 +1,157 @@
+#container {
+  position: relative;
+}
+
+#wrapper1 {
+ /* position: relative;*/
+ overflow: auto;
+ background-image: url('../images/bg_body.jpg');
+}
+
+#wrapper2 {
+  text-align: center;
+  background-image: url('../images/bg_body.jpg');
+}
+
+#shadow {
+  margin-top: -5px;
+}
+
+#logo {
+  margin-left: 40px;
+  padding-top: 35px;
+}
+
+#wrapper3 {
+  border-top: 1px solid gray;
+  outline: 1px solid white;
+  width: 75%;
+  margin: auto;
+  background-image: url('../images/bg_blurb.jpg');
+}
+
+#wrapper3 p{
+  display: inline-block;
+  width: 74%;
+  position: relative;
+  top: -10px;
+  padding-left: 10px;
+}
+
+#wrapper3 img{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: inline-block;
+  width: 24%;
+  position: relative;
+  top: 10px;
+}
+
+#social_media {
+  float: right;
+
+}
+
+#home_boxes {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+#blogroll {
+  display: inline-block;
+  width: 240px;
+}
+
+#text_widget {
+  display: inline-block;
+  width: 480px;
+  position: absolute;
+  top: 0;
+  padding-left: 10px;
+}
+
+#meta_widget {
+  display: inline-block;
+  width: 240px;
+  position: absolute;
+  right: 0;
+}
+
+#copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}
+
+#companybottom {
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  margin: 0;
+
+}
+
+#bottom_wrap {
+  width: 100%;
+  background-color: black;
+}
+
+.home-box {
+  text-align: left;
+  width: 320px;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.home-box p {
+  font-size: 13px;
+  width: 276px;
+  margin-left: 1px;
+}
+
+.home-box img {
+  border: 1px solid white;
+  outline: 5px solid #cccccc;
+  margin-left: 6px;
+}
+
+header {
+  background-color: black;
+  color: #cccccc;
+}
+
+header li {
+  display: inline-block;
+  margin: 20px;
+}
+
+header ul {
+  margin: 0;
+}
+
+footer {
+  height: 190px;
+  margin: auto;
+  width: 960px;
+  position: relative;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+}
+
+footer li {
+  color: #cccccc;
+  margin-bottom: 5px;
+
+}
+
+footer ul {
+  list-style-type: none;
+  margin-left: -39px;
+}
+
+footer p {
+  color: #cccccc;
+  padding-right: 40px;
+}
