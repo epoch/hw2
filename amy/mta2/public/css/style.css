@@ -12,11 +12,12 @@ body {
     /*position: relative;*/
     font-family: 'Raleway', sans-serif;
     font-size: 26px;
+    background: #919192 url("../images/nyctrain.jpg") no-repeat center center;
 }
 
 body::after {
     content: "";
-    background: #919192 url("../images/nyctrain.jpg") no-repeat center center;
+    /*background: #919192 url("../images/nyctrain.jpg") no-repeat center center;*/
     background-size: cover;
     opacity: 0.3;
     top: 0;
@@ -36,7 +37,9 @@ h1.title {
   overflow: hidden;
   margin: auto;
   /*text-align: right;*/
-  opacity: 0.5;
+  opacity: 0.7;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .container {
@@ -47,6 +50,11 @@ h1.title {
 .options-container {
     margin: auto;
     text-align: center;
+    background-color: #fff;
+    opacity: 0.8;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .prompt {
@@ -122,6 +130,14 @@ ol {
     list-style-position: inside;
 }
 
+.results {
+    background-color: #fff;
+    opacity: 0.8;
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
 .map {
     margin-left: 30px;
 }
@@ -140,5 +156,9 @@ ol {
 
 .highlighted {
     background-color: yellow;
+}
+
+.stops {
+    font-weight: 600;
 }
 
