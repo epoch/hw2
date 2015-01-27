@@ -7,15 +7,22 @@
 </head>
 <body>
     <nav>
+        <h1 class="title">the office</h1>
+        <div class="menu_items">
         <a class="menu_item" href="/">Home</a>
         <a class="menu_item" href="/videos">Videos</a>
         <a class="menu_item" href="/videos/new">New video</a>
+        </div>
+        <div class="genres">
         <% @genres.each do |group| %>
             <a class="genre" href="/videos/genre/<%=group["genre"]%>"><%=group["genre"]%></a>
         <%end%>
+        </div>
     </nav>
     <div class="container">
         <%=yield%>
     </div>
+    <script src="/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>

@@ -1,19 +1,18 @@
-<h2>Edit video</h2>
 
 <form action="/videos/<%=@video["id"]%>" method="post">
 
     <label for="title">Title</label>
-    <input id="title" name="title" value="<%@video["title"]%>">
+    <input id="title" name="title" type="text" value="<%@video["title"]%>" placeholder="Enter title">
 
     <label for="genre">Genre</label>
-    <input id="genre" name="genre" value="<%@video["genre"]%>">
+    <input id="genre" name="genre" type="text" value="<%@video["genre"]%>" placeholder="Enter genre">
 
     <label for="description">Description</label>
-    <input id="description" name="description" value="<%@video["description"]%>">
+    <input id="description" type="text" name="description" value="<%@video["description"]%>" placeholder="Enter description">
 
     <label for="link">Link</label>
-    <input id="link" type="url" name="link" value="<%@video["link"]%>">
+    <input id="link" type="url" name="link" value="<%@video["link"]%>" placeholder="Enter YouTube URL">
 
-    <input type="submit" value="Edit video">
+    <input class="button" type="submit" value="Edit video">
 
 </form>

@@ -1,12 +1,15 @@
-<a href="<%=@video["link"]%>"><h2><%=@video["title"]%></h2></a>
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/<%=@yt_embed%>?rel=0" frameborder="0" allowfullscreen></iframe>
+<div class="show">
+    <a class="vid-title" href="<%=@video["link"]%>"><h2><%=@video["title"]%></h2></a>
 
-<p>Genre: <%=@video["genre"]%></p>
-<p>Description: <%=@video["description"]%></p>
-<a href="<%=@video["link"]%>"> </a>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/<%=@yt_embed%>?rel=0" frameborder="0" allowfullscreen></iframe>
 
-<div class="controls">
-    <a href="/videos/<%=@video["id"]%>/delete">Delete</a>
-    <a href="/videos/<%=@video["id"]%>/edit">Edit</a>
+    <p class="vid-genre" ><span class="bold">Genre:</span> <%=@video["genre"]%></p>
+    <p class = "vid-desc"><span class="bold">Description:</span> <%=@video["description"]%></p>
+    <a href="<%=@video["link"]%>"> </a>
+
+    <div class="controls">
+        <a class="delete" href="/videos/<%=@video["id"]%>/delete">Delete</a>
+        <a class="edit" href="/videos/<%=@video["id"]%>/edit">Edit</a>
+    </div>
 </div>
