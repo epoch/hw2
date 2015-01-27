@@ -1,0 +1,57 @@
+<!-- LANDING PAGE -->
+
+<% if params[:movie].nil? %>
+<h1 class="basic-grey">Open Movie Database</h1>
+
+<form action="/">
+  <input name="movie" id="movie" class="basic-grey" placeholder="Godfather" value="<%= @input %>" autofocus required>
+  <button class="button">Search</button>
+</form>
+
+
+<!-- ERROR PAGE -->
+
+<% elsif @movie_data.response == "False" %>
+<h1 class="basic-grey">Open Movie Database</h1>
+
+<form action="/">
+  <input name="movie" id="movie" class="basic-grey" placeholder="Godfather" value="<%= @input %>" autofocus required>
+  <button class="button">Search</button>
+</form>
+
+<h1>Sorry, couldn't find what you were looking for...</h1>
+
+
+<!-- TITLE PAGE -->
+
+<% else @movie_data.response == "True" %>
+<h1 class="basic-grey">Open Movie Database</h1>
+
+<form action="/">
+  <input name="movie" id="movie" class="basic-grey" placeholder="Godfather" value="<%= @input %>" autofocus required>
+  <button class="button">Search</button>
+</form>
+
+  <% if @poster && @plot == "N/A" %>
+  <h1 class="basic-grey"><%= @title %></h1>
+  <h1 class="basic-grey">Year: <%= @year %></h1>
+  <% else %>
+  <h1 class="basic-grey"><%= @title %></h1>
+  <h1 class="basic-grey">Year: <%= @year %></h1>
+  <img src="<%= @poster %>" class="basic-grey"/>
+  <p class="basic-grey">Plot: <%= @plot %></p>
+  <% end %>
+
+  <% if @results.is_a? Array %>
+    <h1 class="basic-grey">Suggestions:</h1>
+    <ul>
+      <% @results.each do |i| %>
+        <li><a href="?movie=<%= i.title %>"> <%= i.title %>, <%= i.year %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+<% end %> 
+
+
+<p class="basic-grey footer">omdb®</p>
