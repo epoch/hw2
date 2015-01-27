@@ -1,0 +1,157 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body {
+  background-image: url('/img/mtabackground-repeatable.png');
+  font-family: 'Raleway', sans-serif;
+}
+
+#container {
+  max-width: 850px;
+  height: 230px;
+  margin: auto;
+  margin-top: 175px;
+  text-align: center;
+  background-color: #bdbdbd;
+  padding-bottom: 30px;
+  border: 13px solid #757575;
+  border-radius: 15px;
+}
+
+#container2 {
+  max-width: 850px;
+  height: 300px;
+  margin: auto;
+  margin-top: 150px;
+  text-align: center;
+  background-color: #bdbdbd;
+  padding-bottom: 30px;
+  border: 13px solid #757575;
+  border-radius: 15px;
+}
+
+#selection {
+  max-width: 350px;
+  background-color: #bdbdbd;
+  border: 13px solid #757575;
+  border-radius: 15px;
+  padding: 20px 0 20px 0;
+  margin: auto;
+  text-align: center;
+  margin-top: 200px;
+}
+
+#error {
+  max-width: 850px;
+  height: 75px;
+  margin: auto;
+  margin-top: 250px;
+  text-align: center;
+  background-color: #bdbdbd;
+  padding-bottom: 30px;
+  border: 13px solid #757575;
+  border-radius: 15px;
+}
+
+#error h2 {
+  margin-top: 35px;
+}
+
+.line {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px 3px 1px 3px;
+  background-color: #bbdefb;
+}
+
+.station {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px 3px 1px 3px;
+  background-color: #b2dfdb;
+  margin-bottom: 10px;
+}
+
+#labels {
+  margin-top: 0px;
+  float: left;
+  text-align: right;
+  padding-right: 30px;
+  width: 300px;
+  border-right: 1px solid black;
+  line-height: 21.5px;
+}
+
+#info {
+  margin-top: 0px;
+  margin-right: 140px;
+  float: right;
+  width: 350px;
+  text-align: left;
+  border-right: 1px solid black;
+}
+
+#info .total-stops {
+  top: 2px;
+}
+
+#labels2 {
+  margin-top: 0px;
+  float: left;
+  text-align: right;
+  padding-right: 30px;
+  width: 300px;
+  border-right: 1px solid black;
+
+}
+
+#info2 {
+  margin-top: 0px;
+  margin-right: 140px;
+  float: right;
+  width: 350px;
+  text-align: left;
+  border-right: 1px solid black;
+}
+
+.stop {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px 3px 1px 3px;
+  background-color: #ffe0b2;
+  margin-right: 6px;
+  position: relative;
+  top: -1px;
+}
+
+
+.total-stops {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1px 10px 1px 10px;
+  background-color: #e0e0e0;
+  position: relative;
+  top: 4px;
+}
+
+.list-align {
+  padding-bottom: 3px;
+}
+
+.second {
+  position: relative;
+}
+
+button {
+  padding:5px;
+  background-color: #2196f3;
+  color: #ffffff;
+  text-decoration:none;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-menu {
+  margin: auto;
+}

@@ -6,10 +6,11 @@
 
 body {
   font-family: 'Asap', sans-serif;
-  background-image: url("http://ec.pond5.com/s3/012604051_prevstill.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("/img/fancypants.jpg");
+
+
 }
+
 
 #container {
   width: 960px;
@@ -23,9 +24,12 @@ body {
   margin: auto;
   text-align: center;
   letter-spacing: 3px;
-  margin-top: 150px;
+  margin-top: -25px;
 }
 
+#info_box img {
+  border: 15px solid #6b5702;
+}
 
 /*make this look like a plaque*/
 #info_box p em{
@@ -33,8 +37,8 @@ body {
 }
 
 #info_box p{
-  background-color: rgb(174, 159, 149);
-  border: 5px solid gray;
+  background-color: #e2b900;
+  border: 5px solid #6b5702;
   padding: 15px 0 15px 0;
 }
 
@@ -43,11 +47,11 @@ body {
   text-align: center;
   margin: auto;
   margin-top: 150px;
-  border: 6px solid gray;
+  border: 6px solid #00376b;
   border-radius: 50%;
   width: 350px;
   height: 350px;
-  background-color: rgba(174, 159, 149, 0.98);
+  background-color: #2a5782;
 }
 
 #search_box #content {
@@ -56,11 +60,32 @@ body {
 }
 
 #search-results {
-  background-color: rgba(174, 159, 149, 0.98);
+  background-color: #2a5782;
   text-align: center;
-  width: 960px;
+  width: 600px;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 180px;
   border-radius: 5px;
-  border: 6px solid gray;
+  border: 6px solid #00376b;
+}
+
+#search-results a {
+  color: black;
+}
+
+#again {
+  position: relative;
+  top: 30px;
+
+  background-color: #2a5782;
+  border: 3px solid #00376b;
+  border-radius: 5px;
+  width: 150px;
+  margin: auto;
+  padding: 10px 0 10px 0;
+}
+
+#again a {
+  text-decoration: none;
+  color: black;
 }

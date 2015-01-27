@@ -1,8 +1,6 @@
 # to add:
 # - make it look pretty
-# - display other info
-# - query string parameters, pass in other stuff
-# - get it working for one word first, then look into multiple
+# - re-route to inital solution for one search result
 
 require 'sinatra'
 require 'sinatra/reloader'
@@ -20,13 +18,16 @@ get '/results' do
   @raw_data = HTTParty.get @url
   @search_results = JSON.parse @raw_data
 
-
-
-
-
+  if @search_results["Response"] == "False"
+    erb :results
+  elsif @search_results["Search"].count == 1
+    redirect "/movie?id=" + @search_results["Search"][0]["imdbID"]
+  else
+    erb :results
+  end
  # each movie has a unique imdb identifier to tell which films are different
 
-  erb :results
+
 end
 
 get '/movie' do
@@ -41,14 +42,3 @@ get '/movie' do
   erb :info
 end
 
-# there needs to be a variable that stores the movie data for
-# a particular search result, like in the program before
-
-
-
-
-
-# it then needs to
-# - go through the array of search results
-# - list them
-# - make them all links which lead to the relevant info page (with posters etc.)
