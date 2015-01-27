@@ -1,0 +1,29 @@
+body {
+  background-color: purple;
+  color: white;
+}
+
+aside {
+  background-color: blue;
+}
+
+p {
+  border: 1px solid pink;
+}
+
+/* Specificity!!!!! */
+article p {
+  color: red;
+  text-decoration: underline;
+}
+
+/* Matches <p class="warning"> */
+p.warning {
+  color: lime;
+}
+
+#bla {
+  font-size: 1000%;
+}
+
+

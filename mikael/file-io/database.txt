@@ -1,0 +1,5 @@
+Mikael,25,Male
+Maija,40,Female
+Craigsy,27,Male
+Bobby,400,Male
+Pekka,40,Male
