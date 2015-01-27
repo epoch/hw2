@@ -1,0 +1,17 @@
+<div class="search_again"?>
+  <%= erb :search, :layout => false %>
+</div>
+
+<h2><%= @movie_data["Title"] %></h2>
+
+<p>Released: <%= @movie_data["Released"] %></p>
+
+<p>Runtime: <%= @movie_data["Runtime"] %></p>
+
+<p>Genre: <%= @movie_data["Genre"] %></p>
+
+<p>Director: <%= @movie_data["Director"] %></p>
+
+<p>imdbRating: <%= @movie_data["imdbRating"] %></p>
+
+<img src= <%= @movie_data["Poster"] %> >
