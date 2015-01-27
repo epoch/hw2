@@ -1,0 +1,30 @@
+<h1>Please elect your start station and destination station: </h1>
+
+<form action="result" method="post">
+    <label for="start_point">Satart point </label>
+    <select name="start_point" id="start_point">
+        <% LINES.each_key do |line| %>
+            <optgroup label="<%= line.upcase %>">
+                <% LINES[line].each do |s| %>
+                    <option value="<%= "#{line.downcase}: #{s}" %>"><%= s %></option>
+                <% end %>
+            </optgroup>
+        <% end %>
+    </select>
+
+    <label for="destination_point">Destination point </label>
+    <select name="destination_point" id="destination_point">
+        <% LINES.each_key do |line| %>
+            <optgroup label="<%= line.upcase %>">
+                <% LINES[line].each do |s| %>
+                    <option value="<%= "#{line.downcase}: #{s}" %>"><%= s %></option>
+                <% end %>
+            </optgroup>
+        <% end %>
+    </select>
+    <p>
+    <button>Submit</button> 
+    </p>
+</form>
+
+
