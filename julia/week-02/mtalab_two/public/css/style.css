@@ -1,0 +1,156 @@
+* {
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    background-color: #000;
+    background-image: url(http://www.mrwallpaper.com/wallpapers/new-york-metro.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Helvetica;
+    font-size: 20px;
+    color: #EDF7F2;
+}
+h1 {
+    display: inline-block;
+    line-height: 150%;
+    padding: 3px 6px;
+    border-top: 3px solid #EDF7F2;
+    margin: 50px 50px 0px 50px;
+    font-size: 50px;
+}
+h2 {
+    font-size: 36px;
+    padding-bottom: 7px;
+}
+form {
+    max-width: 60%;
+    display: inline-block; 
+}
+
+select {
+    width: 270px;
+    font-size: 18px;
+    border: 1px solid #fff;
+    margin-left: 10px;
+    margin-bottom: 12px;
+}
+input[type="submit"] {
+    width: 100px;
+    display: inline-block;
+    font-size: 26px;  
+    margin-top: 9px;
+}
+label {
+    display: inline-block;
+    margin-top: 9px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*CLASSES*/
+
+.container {
+    max-width: 960px;
+    height: 500px;
+    margin: 90px auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.subway-lines {
+    margin: 0px 57px;
+}
+
+.line-sym {
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.5em;
+    font-weight: bold;
+    font-size: 24px;
+    vertical-align: top;
+}
+.line-description {
+    display: inline-block;
+    max-width: 200px;
+    font-size: 26px;
+}
+.line-n {
+    background-color: #FCCC0A;
+    color: #000;
+    margin-right: 4px; 
+}
+.line-l {
+    background-color: #A7A9AC;
+    color: #fff;
+    margin-right: 4px;
+}
+.line-6 {
+    background-color: #00933C;
+    color: #fff;
+    margin-right: 4px;
+}
+
+.main-container {
+    margin-left: 57px;
+    margin-right: 57px;
+/*    padding-top: 25px;*/
+    border-top: 3px solid #EDF7F2;
+    margin-top: 40px;
+}
+
+/*SERVICE CLASSES*/
+.service-container {
+    display: inline-block;
+    max-width: 35%;
+    padding-left: 30px;
+    margin-left: 80px;
+    border-left: 1px solid #EDF7F2;
+    padding-top: 10px;
+    margin-top: 27px; 
+}
+.line-container {
+    display: block;
+    padding-left: 15px;
+}
+.line-container p {
+    display: inline-block;
+    margin: 10px;
+    line-height: 1.2em;
+}
+.line-sym-service {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2em;
+    font-weight: bold;
+    font-size: 14px;
+}
+/*RESULT CLASSES*/
+.origin, .destination {
+    margin-top: 10px;
+    display: block;
+    line-height: 1.2em;
+}
+.key {
+    font-weight: bold;
+}
+.journey {
+    width: 45%;
+    display: inline-block;
+/*    padding-top: 10px;*/
+}
+.stops {
+    width: 45%;
+    display: inline-block;
+    line-height: 250%;
+}
+.results-header {
+    padding-top: 20px;
+}
