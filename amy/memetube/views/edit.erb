@@ -1,0 +1,19 @@
+<h2>Edit video</h2>
+
+<form action="/videos/<%=@video["id"]%>" method="post">
+
+    <label for="title">Title</label>
+    <input id="title" name="title" value="<%@video["title"]%>">
+
+    <label for="genre">Genre</label>
+    <input id="genre" name="genre" value="<%@video["genre"]%>">
+
+    <label for="description">Description</label>
+    <input id="description" name="description" value="<%@video["description"]%>">
+
+    <label for="link">Link</label>
+    <input id="link" type="url" name="link" value="<%@video["link"]%>">
+
+    <input type="submit" value="Edit video">
+
+</form>
