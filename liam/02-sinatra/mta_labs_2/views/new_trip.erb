@@ -1,0 +1,45 @@
+<h2>Enter your trip details:</h2>
+
+<form action="/trip">
+  
+  <label for="from_station">From: </label>
+  <select name="from_station" id="from_station">
+    <optgroup label="Line N">
+      <% $subway[:line_n].each do |station| %>
+        <option value="line_n-<%= station %>"><%= station %></option>
+      <% end %>
+    </optgroup> 
+    <optgroup label="Line L">
+      <% $subway[:line_l].each do |station| %>
+        <option value="line_l-<%= station %>"><%= station %></option>
+      <% end %>
+    </optgroup>
+    <optgroup label="Line 6">
+      <% $subway[:line_6].each do |station| %>
+        <option value="line_6-<%= station %>"><%= station %></option>
+      <% end %>
+    </optgroup>
+  </select>
+
+  <label for="to_station">To: </label>
+  <select name="to_station" id="to_station">
+    <optgroup label="Line N">
+      <% $subway[:line_n].each do |station| %>
+        <option value="line_n-<%= station %>"><%= station %></option>
+      <% end %>
+    </optgroup> 
+    <optgroup label="Line L">
+      <% $subway[:line_l].each do |station| %>
+        <option value="line_l-<%= station %>"><%= station %></option>
+      <% end %>
+    </optgroup>
+    <optgroup label="Line 6">
+      <% $subway[:line_6].each do |station| %>
+        <option value="line_6-<%= station %>"><%= station %></option>
+      <% end %>
+    </optgroup>
+  </select>
+
+  <button class="btn btn-large btn-primary">Submit</button>
+
+</form>

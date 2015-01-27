@@ -1,0 +1,7 @@
+<div class="search_again"?>
+  <%= erb :search, :layout => false %>
+</div>
+
+<h2>Here is the movie poster for <%= params[:title].split(/ |\_/).map(&:capitalize).join(" ") %>:</h2>
+
+<img src= <%=@poster_url%> >

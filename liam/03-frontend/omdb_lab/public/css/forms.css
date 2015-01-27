@@ -1,0 +1,25 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+
+body {
+  background: #000 url(../img/blur-background.jpg) no-repeat fixed center;
+  background-size: 100% 100%;
+  color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.container {
+  position: relative;
+  display: block;
+  top: 50%;
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+
+}
+
+/*label {
+  border: 1px dashed white;
+}*/
