@@ -1,0 +1,42 @@
+body {
+    background-image: url(http://ewallpaperhub.com/wp-content/uploads/2015/01/scary-clowns-photos.jpg);
+    background-size: 100%;
+    font-family: 'Butcherman', cursive;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 10em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(1, 1, 1, 0.7);
+    border: 1px solid black;
+    padding: 1em;
+}
+
+.container {
+    margin: auto;
+}
+
+.games {
+    margin-top: 4em;
+}
+
+.input {
+    pading: 3em;
+}
+
+#throw {
+    margin: 1em;
+}
+
+#number_guess
+{
+    width: 7em;
+}
+
+.output {
+    margin: 2em;
+}
