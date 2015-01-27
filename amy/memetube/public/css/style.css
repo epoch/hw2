@@ -39,10 +39,6 @@ nav a {
     text-decoration: none;
 }
 
-nav a.currentlyActive {
-    text-decoration: underline;
-}
-
 
 .title {
     font-size: 60px;
