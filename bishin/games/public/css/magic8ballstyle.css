@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+
+body {
+    background-image: url("/../images/drstrangepup.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.container{
+    margin: auto;
+}
+
+.greeting {
+    display: block;
+    font-size: 30px;
+    text-align: left;
+    width: 12em;
+    height: 10em;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.question {
+    text-align: right;
+    font-family: "arial";
+    margin-right: 5%;
+}
