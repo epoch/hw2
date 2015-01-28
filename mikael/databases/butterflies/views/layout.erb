@@ -20,8 +20,8 @@
       <ul>
         Family: <% @families.each do |group| %>
         <li>
-          <a href="/butterflies/family/<%= group["family"] %>">
-            <%= group["family"] %>
+          <a href="/butterflies/family/<%= group.family %>">
+            <%= group.family %>
           </a>
         </li>
         <% end %>
