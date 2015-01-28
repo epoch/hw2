@@ -1,0 +1,21 @@
+<div class="main-container">
+    <h2 class="results-header">Journey</h2>
+    <div class="journey">
+        <div class="origin">
+            <h3>Origin</h3>
+            <p><span class="key">Line:</span> <%= @journey[:origin_line] %></p>
+            <p><span class="key">Station:</span> <%= @journey[:origin] %></p>
+        </div>
+        <div class="destination">
+            <h3>Destination</h3>
+            <p><span class="key">Line:</span> <%= @journey[:destination_line] %></p>
+            <p><span class="key">Station:</span> <%= @journey[:destination] %></p>
+        </div>
+    </div>
+    <div class="stops">
+        <h3>Stopping</h3>
+        <p><%= @stops %></p>
+        <p>There are <%= @num_stops %> stops to <%= @journey[:destination] %>.</p>
+    </div>
+</div>
+

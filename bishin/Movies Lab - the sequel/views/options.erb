@@ -1,0 +1,19 @@
+<h2> Did you mean...</h2>
+
+<% if @movie_data["Response"] == "False"%>
+
+    <h2 class="no_movie"> "Toto, I've got a feeling we're not in Kansas anymore..."</h2>
+
+<% else%>
+
+    <% @multi_movie_data["Search"].each do |x| %>
+    <ul>
+        <li><a href="/result?movie_name=<%=x["Title"]%>"> <%=x["Title"]%> </a></li>
+    </ul>
+    <%end%>
+
+<%end%>
+
+<!-- if there is more than one option this is the page we end up on -->
+
+    <!-- redirect to options  -->

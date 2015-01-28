@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic);
+
+ /*save this for the error message screen! http://www.stockfreeimages.com/15618007/Watching-3D-Movie.html*/
+
+
+
+body {
+  font-family: 'Asap', sans-serif;
+  background-image: url("/img/fancypants.jpg");
+
+
+}
+
+
+#container {
+  width: 960px;
+  margin: auto;
+  text-align: center;
+   margin-top: 45px;
+}
+
+#info_box {
+  width: 600px;
+  margin: auto;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-top: -25px;
+}
+
+#info_box img {
+  border: 15px solid #6b5702;
+}
+
+/*make this look like a plaque*/
+#info_box p em{
+  font-size: 20px;
+}
+
+#info_box p{
+  background-color: #e2b900;
+  border: 5px solid #6b5702;
+  padding: 15px 0 15px 0;
+}
+
+#search_box {
+
+  text-align: center;
+  margin: auto;
+  margin-top: 150px;
+  border: 6px solid #00376b;
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  background-color: #2a5782;
+}
+
+#search_box #content {
+  position: relative;
+  top: 90px;
+}
+
+#search-results {
+  background-color: #2a5782;
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  margin-top: 180px;
+  border-radius: 5px;
+  border: 6px solid #00376b;
+}
+
+#search-results a {
+  color: black;
+}
+
+#again {
+  position: relative;
+  top: 30px;
+
+  background-color: #2a5782;
+  border: 3px solid #00376b;
+  border-radius: 5px;
+  width: 150px;
+  margin: auto;
+  padding: 10px 0 10px 0;
+}
+
+#again a {
+  text-decoration: none;
+  color: black;
+}

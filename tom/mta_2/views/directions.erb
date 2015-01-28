@@ -1,0 +1,72 @@
+<% if @total_stops == 0 %>
+
+  <div id="error">
+    <h2>You're already there. Stop wasting my time.</h2>
+  </div>
+
+<% elsif @current_line == @destination_line %>
+  <div id="container">
+    <h2>Your Journey</h2>
+    <div id="labels">
+      <p>Start</p>
+      <% if @stops.length > 0 %>
+        <p>Stations Passed</p>
+      <% end %>
+      <p>Finish</p>
+      <p>Total Stops</p>
+    </div>
+
+    <div id="info">
+      <p><span class="line"><%= "Line " + @current_line %></span> - <span class="station"><%= @current_station %></span></p>
+      <% @stops.each do |stop| %>
+          <div class="stop"><%= stop %></div>
+      <% end %>
+      <p><span class="line"><%= "Line " + @destination_line %></span> - <span class="station second"><%= @destination_station %></span></p>
+      <p><span class="total-stops"><%= @total_stops %></span></p>
+
+    </div>
+
+  </div>
+
+<% else %>
+  <div id="container2">
+    <h2>Your Journey</h2>
+    <div id="labels2">
+      <p class="list-align">Start</p>
+      <% if @stops.length > 0 %>
+        <p class="list-align">Stations Passed</p>
+      <% end %>
+      <p class="list-align">Change at</p>
+      <% if @stops2.length > 0 %>
+        <p class="list-align">Stations Passed</p>
+      <% end %>
+      <p class="list-align">Finish</p>
+      <p class="list-align">Total Stops</p>
+    </div>
+
+    <div id="info2">
+      <p>
+        <span class="line"><%= "Line " + @current_line %></span> - <span class="station"><%= @current_station %></span>
+      </p>
+
+      <% @stops.each do |stop| %>
+          <div class="stop"><%= stop %></div>
+      <% end %>
+
+      <p>
+        <span class="station">Union Square</span> &rarr; <span class="line"><%= "Line " + @destination_line %></span>
+      </p>
+
+      <% @stops2.each do |stop| %>
+          <div class="stop"><%= stop %></div>
+      <% end %>
+
+      <p>
+        <span class="line second"><%= "Line " + @destination_line %></span> - <span class="station second"><%= @destination_station %></span>
+      </p>
+      <p>
+        <span class="total-stops"><%= @total_stops %></span>
+      </p>
+    </div>
+  </div>
+<% end %>

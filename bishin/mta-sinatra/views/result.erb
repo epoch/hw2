@@ -1,0 +1,28 @@
+<div>
+    <p class="box">
+        You are departing from <%=@start_station%> station
+    </p>
+</div>
+
+<div class="button">A</div>
+<div class="line"><strong>- - - - - - -</strong></div>
+<div class="button">B</div>
+
+<div>
+    <p class= "box">
+        You are arriving at <%=@end_station%> station
+    </p>
+</div>
+
+<p class="narration">
+    On the way, your train will stop at <%=@stations_travelled.join(", ")%>, 
+    <%if @stations_travelled !="you have already arrived at your destination" %>
+        travelling a total of <%=@stations_travelled.length%> stops.
+    <%end%>
+</p>
+
+<p class="try_again">Not quite what you were looking for?</p>
+<form action="/">
+    <input type="submit" value="Try again">
+</form>
+

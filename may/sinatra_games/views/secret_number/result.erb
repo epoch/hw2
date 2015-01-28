@@ -1,0 +1,22 @@
+
+
+
+<% if @guess_number == @secret_number %>
+    <h1>Congradulations! Yon won.</h1>
+<% else %>
+    <h1>Sorry, you lost.</h1>
+<% end %>
+
+<br>
+<br>
+<br>
+<br>
+<h2>Try again?</h2>
+
+
+<br>
+<br>
+<br>
+
+
+<%= erb :'secret_number/secret_number', :layout =>false %>

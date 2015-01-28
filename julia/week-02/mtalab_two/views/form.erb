@@ -1,0 +1,79 @@
+<div class="main-container">
+    <form action="/result" method="get">
+        <h2>Schedule</h2>
+        <div class="select-container">
+            <label for="origin">Origin </label>
+            <select id="origin" name="origin" required>
+                <option value='' disabled selected>Select your Line and Station</option>
+                <optgroup label="N Line">
+                    <option value="N - Times Square">Times Square</option>
+                    <option value="N - 34th">34th</option>
+                    <option value="N - 28th">28th</option>
+                    <option value="N - 23rd">23rd</option>
+                    <option value="N - Union Square">Union Square</option>
+                    <option value="N - 8th">8th</option>
+                </optgroup> 
+                <optgroup label="L Line">
+                    <option value="L - 8th">8th</option>
+                    <option value="L - 6th">6th</option>
+                    <option value="L - Union Square">Union Square</option>
+                    <option value="L - 3rd">3rd</option>
+                    <option value="L - 1st">1st</option>
+                </optgroup>
+                <optgroup label="6 Line">
+                    <option value="Six - Grand Central">Grand Central</option>
+                    <option value="Six - 33rd">33rd</option>
+                    <option value="Six - 28th">28th</option>
+                    <option value="Six - 23rd">23rd</option>
+                    <option value="Six - Union Square">Union Square</option>
+                    <option value="Six - Astor Place">Astor Place</option>
+                </optgroup>
+            </select>  
+        </div>
+        <div class="select-container">
+            <label for="destination">Destination </label>
+            <select id="destination" name="destination" required>
+                <option value='' disabled selected>Select your Line and Station</option>
+                <optgroup label="N Line">
+                    <option value="N - Times Square">Times Square</option>
+                    <option value="N - 34th">34th</option>
+                    <option value="N - 28th">28th</option>
+                    <option value="N - 23rd">23rd</option>
+                    <option value="N - Union Square">Union Square</option>
+                    <option value="N - 8th">8th</option>
+                </optgroup> 
+                <optgroup label="L Line">
+                    <option value="L - 8th">8th</option>
+                    <option value="L - 6th">6th</option>
+                    <option value="L - Union Square">Union Square</option>
+                    <option value="L - 3rd">3rd</option>
+                    <option value="L - 1st">1st</option>
+                </optgroup>
+                <optgroup label="6 Line">
+                    <option value="Six - Grand Central">Grand Central</option>
+                    <option value="Six - 33rd">33rd</option>
+                    <option value="Six - 28th">28th</option>
+                    <option value="Six - 23rd">23rd</option>
+                    <option value="Six - Union Square">Union Square</option>
+                    <option value="Six - Astor Place">Astor Place</option>
+                </optgroup>
+            </select>
+        </div>
+        <input type="submit" value="Go!">
+    </form>
+    <div class="service-container">
+        <h2>Service Status</h2>
+        <div class="line-container">
+            <div class="line-sym-service line-n">N</div>
+            <p>Good Service</p>
+        </div>
+        <div class="line-container">
+            <div class="line-sym-service line-l">L</div>
+            <p>Good Service</p>
+        </div>
+        <div class="line-container">
+            <div class="line-sym-service line-6">6</div>
+            <p>Good Service</p>
+        </div>
+    </div>
+</div>

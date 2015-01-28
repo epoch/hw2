@@ -1,0 +1,56 @@
+@import url(http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+body {
+    background: url("/images/background.png") repeat;
+    text-align: center;
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 30px;
+
+}
+
+a {
+    color: #F38630;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    background-color: #E0E4CC;
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    border: #FA6900 solid 10px;
+}
+
+.eight_ball_reply {
+    font-family: serif;
+    font-size: 50px;
+    background: #A7DBD8;
+    padding: 0px;
+    display: inline-block;
+    width: 80%;
+    border-radius: 40px;
+}
+
+.back {
+    font-family: sans-serif;
+}
+
+.menu_choices {
+    font-size: 40px;
+}
+
+.menu_title {
+    font-family: 'Oswald', sans-serif;
+}
+
+#question {
+    display: inline-block;
+    width: 80%;
+}
+

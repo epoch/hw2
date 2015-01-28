@@ -1,0 +1,20 @@
+# form erb + results erb
+
+#####
+
+
+require "httparty"
+require "json"
+
+title = "prometheus"
+
+url = "http://www.omdbapi.com/?t=#{title}""
+
+raw_data = HTTParty.get(url)
+
+# converts the string into a hash
+movie_data = JSON.parse raw_Data
+
+movie_poster = movie_data["Poster"]
+
+<img src=movie_poster>

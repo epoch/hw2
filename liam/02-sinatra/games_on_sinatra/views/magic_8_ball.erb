@@ -1,0 +1,15 @@
+<h2>Magic 8 Ball: Ready for Questions</h2>
+
+<form action="/magic-8-ball">
+
+    <label for="question">Question: </label>
+    <input name="question" id="question" placeholder="Do you know me?" autofocus>
+    <button class="btn btn-success">Ask Away</button>
+
+</form>
+
+<h3>Would you like another game?</h3>
+
+<div>
+  <%= erb :games, :layout => false %>
+</div>

@@ -1,0 +1,36 @@
+<!-- form is stuff that can be entered-->
+<h2> Please enter a stock ticker </h2>
+
+<form action="/lookup">
+    <input name = "ticker" placeholder="Enter Stock Ticker e.g. GOOG" >
+    <button>Lookup Latest Stock Price</button>
+</form>
+
+<% if @last_trade && @last_trade > 0 %>
+
+    <p> <%= params[:ticker].upcase%> last traded at $<%= @last_trade %></p>
+
+<% end %>
+
+
+<!-- use form action=‘/lookup’ to be the next page form redirects you to - must match what you have in main
+
+value which can be included after input name and placeholder =“what do you want the user to see as a hardcoded placeholder" <$= @ticker %> what you last looked for 
+
+%= means to spit something out (echoing)
+% just means to calculate (non-echoing) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

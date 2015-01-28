@@ -1,0 +1,62 @@
+
+
+body {
+    font-size: 12px;
+    line-height: 17px;
+    font-family: "Times New Roman", serif;
+    color: #656565;
+}
+
+#container {
+   max-width: 960px;
+    margin: 0 auto;
+}
+
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #20222a;
+}
+
+h1.logo {
+  width: 200px;
+  height: 29px;
+  background: url(../images/brook-and-lyn-logo.gif);
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.client {
+    border: 4px solid lightgray;
+}
+
+.copyright {
+    color: lightgray;
+}
+
+/*
+Body 
+
+Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+
+About
+In late 2008, Mimi Jung started a blog, documenting her unique personal style. After being named one of New York’s top ten fashion bloggers by Huffington Post, Mimi launched a self-designed jewelry collection titled "Surrounded."
+Her debut collection  was featured by Lucky Magazine, Refinery 29 and New York Magazine and carried by boutiques across the country, including ShopBop and Anthropologie. Her most recent collection, titled "Medaled", is set to launch this fall.
+LINKS
+http://www.nbc.com
+http://www.huffingtonpost.com
+http://www.luckymag.com
+http://www.marieclaire.com
+
+*/
