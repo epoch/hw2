@@ -1,0 +1,21 @@
+<p>Which movie are you searching for?</p>
+
+<div><%= @title_results %>
+
+<ul>
+<% @movie_options_array.each do |movie| %>
+    <%if movie['Type']['movie'] %>
+        <li><a href="/poster?id=<%= movie['imdbID']%>"><%= movie['Title']%>, <%= movie["Year"]%></a></li>
+    <% end %>
+<% end %>
+</ul>
+
+</div>
+
+<form action="/results">
+    <p>Not what you're looking for? Search again:</p>
+    <p>
+        <input type="search" name="title" id="title" placeholder="Movie title">
+        <button>SUBMIT</button>
+    </p>
+</form>
