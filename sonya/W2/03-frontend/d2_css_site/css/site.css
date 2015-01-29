@@ -1,0 +1,39 @@
+.container {
+    max-width: 960px;
+    margin: auto;
+    border-radius: 40px;
+    background-color: gray;
+    padding: 10px 10px 10px 10px;
+}
+
+header h1 {
+    color: white;
+}
+
+article {
+    background-color: black;
+    color: white;
+    width: 79%;
+    display: inline-block;
+    padding: 10px;
+}
+
+aside {
+    background-color: pink;
+    color: white;
+    width: 19%;
+    display: inline-block;
+}
+
+.outer {
+    width: 50%;
+    margin: auto;
+    background-color: red;
+    padding: 15px;
+}
+
+.inner {
+    background-color: blue;
+    padding: 10px;
+    border-radius: 100%;
+}
