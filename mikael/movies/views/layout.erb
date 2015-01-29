@@ -6,6 +6,17 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body class="basic-grey">
+
+  <h1 class="basic-grey">Open Movie Database</h1>
+
+  <form action="/">
+    <input name="movie" id="movie" class="basic-grey" placeholder="Godfather" value="<%= @input %>" autofocus required>
+    <button class="button">Search</button>
+  </form>
+
   <%= yield %>
+
+  <p class="basic-grey footer">omdb®</p>
+
 </body>
 </html>

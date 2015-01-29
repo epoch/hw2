@@ -1,0 +1,21 @@
+<h1>Genre:</h1>
+<ul>
+  <% @genres.each do |group| %>
+  <li>
+    <a href="/youtube/genre/<%= group["genre"] %>">
+      <%= group["genre"] %>
+    </a>
+  </li>
+  <% end %>
+</ul>
+
+<h1>Videos:</h1>
+<ul>
+  <% @youtube.each do |video| %>
+    <li>
+      <a href="/youtube/<%= video["id"] %>">
+        <%= video["name"] %>
+      </a>
+    </li>
+  <% end %>
+</ul>
