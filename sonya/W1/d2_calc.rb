@@ -5,7 +5,7 @@
 # 5. This process should continue until the user selects a quit option from the menu
 
 # $ gem install rainbow
-require 'rainbow'
+require 'Rainbow'
 
 # Create menu arithmetic (+,-, *, /)
 

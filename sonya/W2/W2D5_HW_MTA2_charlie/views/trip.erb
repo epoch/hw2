@@ -1,0 +1,7 @@
+<p>You want to go from <%= params[:start_line]%>: <%= params[:start_station]%> to <%= params[:end_line]%>: <%= params[:end_station]%></p>
+
+<% if params[:start_line].include?params[:end_line]%>
+    <p>You have <%= @stops %> stops</p>
+<% else %>
+    <p> You have <%=@stops2%> stops </p>
+<%end%>

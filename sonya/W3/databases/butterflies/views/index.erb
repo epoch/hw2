@@ -1,0 +1,10 @@
+<ul>
+    <% @butterflies.each do |butterfly| %>
+        <li>
+            <a href="/butterflies/<%= butterfly.id %>">
+                <%= butterfly.name %>
+            </a>
+        </li>
+    <% end %>
+</ul>
+

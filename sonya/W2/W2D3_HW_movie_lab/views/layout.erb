@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Poster Engine</title>
+  <link rel="stylesheet" href="css/movie.css">
+</head>
+<body>
+
+<div class="header">
+<header>Movie Poster Engine</header>
+
+  <div class="container">
+    <div id="center">
+
+        <div class="movie_title">
+             <p> The movie you have searched for is <%= params['movie_title'].capitalize if params['movie_title']%></p>
+        </div>
+
+        <div class="rating">
+            <p>IMDB Rating for <%= params['movie_title'] %> is <%= @movie_data['imdbRating'] %></p>
+        </div>
+
+        <!-- TO DO: Display error -->
+
+<!--         <div class="error">
+            <p>Sorry dude <%#= params['movie_title'] %>  <%#= @error %></p>
+        </div> -->
+
+    </div>
+            <%= yield %>
+  </div>
+
+<footer>Powered by <a href="http://omdbapi.com/">Open Movie Database Api</footer>
+
+</body>
+</html>
+

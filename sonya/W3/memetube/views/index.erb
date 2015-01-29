@@ -1,0 +1,9 @@
+<ul>
+    <% @memetube.each do |memetube| %>
+    <li>
+        <a href="/memetube/<%= memetube["id"] %>">
+            <%= memetube["title"] %>
+        </a>
+    </li>
+    <% end %>
+</ul>

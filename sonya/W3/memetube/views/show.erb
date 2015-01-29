@@ -1,0 +1,18 @@
+<%# require 'uri' %>
+<%# uri = URI.parse(@meme["url"]) %>
+<%#= @meme["url"] %>
+<%# uri = uri.query %>
+<%#= uri %>
+
+<h2><%= @meme["title"] %></h2>
+
+<div class="video_embed">
+    <iframe width="420" height="315" src="http://www.youtube.com/embed/<%= @embed_code %>"> frameborder="20" allowfullscreen></iframe>
+
+    <p>Description: <%= @meme["description"] %></p>
+    <p>Genre: <%= @meme["genre"] %></p>
+
+<div class="controls">
+    <a href="/memetube/<%= @meme["id"] %>/delete">Delete</a>
+    <a href="/memetube/<%= @meme["id"] %>/edit">Edit</a>
+</div>

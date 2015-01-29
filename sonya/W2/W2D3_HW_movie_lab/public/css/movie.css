@@ -1,0 +1,38 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+header {
+    font-size: 36px;
+    padding: 10px;
+    background: black;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    /*background: #6e828e;*/
+    
+    color: white;
+}
+
+.container {
+    color: #6e828e;
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 40px;
+    text-align: center;
+    background-image: url(http://upload.wikimedia.org/wikipedia/commons/b/be/Film_strip.jpg);
+}       
+
+label {
+    border: 0px dashed white;
+    padding: 10px;
+}
+
+#poster img {
+    /*border-radius: 20px;*/
+    border: 10px solid #D1D6DC;
+}
+
+footer {
+    color: black;
+    padding: 10px;
+}

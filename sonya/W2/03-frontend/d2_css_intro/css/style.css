@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(47, 27, 47);
+    color: white; 
+}
+
+aside {
+    background-color: blue;
+}
+
+/* Specificity: specify the parent elements in your selector */
+article p {
+    color: red;
+    text-decoration: underline;
+}
+
+p {
+    border: 1px solid green;
+}
+
+/* This equals <p class="warning"> */
+p.warning {
+    color: lime;
+}
+
+.warning {
+    color: lime;
+}
+
+#desire {
+    font-size: 500%;
+}

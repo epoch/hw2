@@ -1,0 +1,10 @@
+body {
+    margin: 0 auto;
+    margin-padding: 40px;
+    background-color: green;
+    color: white;
+}
+
+h3 {
+    font-family: sans-serif;
+}

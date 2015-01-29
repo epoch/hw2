@@ -1,0 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+body {
+    background-color: slategray;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+a {
+    color: FloralWhite;
+}
+
+nav {
+    background-color: black;
+    padding: 1em;
+    border-radius: 20px;
+}
+
+nav ul {
+    padding-left: 0;
+}
+
+nav li {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+nav a {
+    color: FloralWhite;
+}
