@@ -45,6 +45,10 @@ get '/results' do
         erb :movie_error
     else
 
+        @movie_options_array = @movie_options_array.select do |movie|
+            movie['Type'] == 'movie'
+        end
+
         if @movie_options_array.length == 1
             redirect to("/poster?id=#{@movie_options_array[0]['imdbID']}")
         else
@@ -52,6 +56,7 @@ get '/results' do
         end
     end
 end
+
 
 get '/poster' do
 
