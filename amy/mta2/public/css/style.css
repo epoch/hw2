@@ -31,13 +31,13 @@ body::after {
 h1.title {
   width: 200px;
   height: 200px;
-  background: url("../images/mta-svg.png") no-repeat;
+  background: url("../images/mta_logo_words.svg.png") no-repeat;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
   margin: auto;
   /*text-align: right;*/
-  opacity: 0.7;
+  /*opacity: 0.7;*/
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -48,6 +48,16 @@ h1.title {
 }
 
 .options-container {
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0.8;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.error-container {
     margin: auto;
     text-align: center;
     background-color: #fff;
@@ -72,6 +82,7 @@ button {
     background-color: #fff;
     opacity: 1;
     border: 3px solid #919192;
+    border: 4px solid rgb(214, 0, 153);
     font-size: 26px;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
