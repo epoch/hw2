@@ -4,9 +4,7 @@
 
 <ul>
 <% @movie_options_array.each do |movie| %>
-    <%if movie['Type']['movie'] %>
-        <li><a href="/poster?id=<%= movie['imdbID']%>"><%= movie['Title']%>, <%= movie["Year"]%></a></li>
-    <% end %>
+    <li><a href="/poster?id=<%= movie['imdbID']%>"><%= movie['Title']%>, <%= movie["Year"]%></a></li>
 <% end %>
 </ul>
 
