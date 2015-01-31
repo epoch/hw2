@@ -1,0 +1,11 @@
+<ul>
+    
+    <% @pastries.each do |pastry| %>
+        <li>Pastry Types</li>
+        <li>
+            <a href="/pastries/<%= pastry.id %>">
+                <%= pastry.snack %>
+            </a>
+        </li>
+    <% end %>    
+</ul>
