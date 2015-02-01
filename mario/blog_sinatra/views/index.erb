@@ -1,0 +1,8 @@
+<h2>Blog Entries</h2>
+<ul>
+  <% @entries.each do |entry| %>
+    <li>
+      <a href="/entries/<%= entry.id %>"><%= entry.title %></a>    
+    </li>
+  <% end %>
+</ul>
