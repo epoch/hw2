@@ -1,0 +1,55 @@
+body {
+    font-family: helvetica, sans-serif;
+    /*text-align: center;*/
+    margin: auto;
+    font-size: 24px;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    margin-bottom: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    color: black;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+}
+
+.blog-title {
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+.menu-item {
+    text-decoration: none;
+    font-size: 50px;
+    text-transform: lowercase;
+    color: gray;
+    padding: 25px 25px;
+}
+
+.post {
+    border-bottom: 1px solid gray;
+    padding: 50px 0px;
+}
+
+.single-post {
+    padding: 50px 0;
+}
+
+.controls {
+    padding-top: 20px;
+}
+

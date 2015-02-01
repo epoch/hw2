@@ -1,0 +1,19 @@
+
+<div class="single-post"
+    <p class="date-time">Post created: <%=@post.created_at%></p>
+
+    <h2><%=@post["title"]%></h2>
+
+    <img class="post-image" src="<%=@post.image%>">
+
+    <p class="post-text"><%=@post.full_text%></p>
+
+    <a href="/<%= @post.category %>">Category: 
+    <%= @post.category %>
+    </a>
+
+    <div class="controls">
+        <a href="/post/<%=@post.id%>/delete">Delete</a>
+        <a href="/post/<%=@post.id%>/edit">Edit</a>
+    </div>
+</div>
