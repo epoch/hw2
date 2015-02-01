@@ -7,8 +7,12 @@ header a {
   color: #fff;
 }
 
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
 h1 {
-  display: inline;
   position: absolute;
   top: 60px;
   font-size: 42px;
@@ -17,10 +21,9 @@ h1 {
 }
 
 h2 {
-  display: inline;
-  color: #fff;
   position: absolute;
   top: 120px;
+  color: #fff;
   font-family: sans-serif;
 }
 
@@ -77,11 +80,6 @@ img.gif {
   width: 120px;
   margin: 60px -160px;
   border-radius: 100%;
-}
-
-.container {
-  max-width: 640px;
-  margin: 0 auto;
 }
 
 footer {
