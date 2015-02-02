@@ -1,13 +1,25 @@
-<h2>Stock LookUp</h2>
+<h1></h1>
 
-<form action="/stock">
-    <input name="stock" placeholder="Stock Name">
+<div class="row">
+  <div class="large-6 columns">
+    <div class="panel">
+      <h2>Get Stocks</h2>
+      <form action="/stock">
+      <input name="stock" placeholder="Stock Name">
 
-    <button>Get Quote</button>
-</form>
+      <button>Get Stocks</button>
+      </form>
+      <hr>
+      <h3><%= params[:stock] %> Stock last traded: </h3>
+      <hr>
+      <h3><%== @price %> $USD</h3>
 
-<h3><%= params[:stock] %> stock last traded: </h3>
-
-<p><%== @price %></p>
-
-<p>Powered by <a href="http://www.transparentech.com/projects/yahoofinance">Yahoo Finance</a></p>
+    </div>
+  </div>
+  <div class="large-6 columns">
+    <div class="panel">
+      <img src="http://www.gstatic.com/hostedimg/c91784665df772dd_landing">
+      <p>Powered by <a href="http://www.transparentech.com/projects/yahoofinance">Yahoo Finance</a></p>
+    </div>
+  </div>
+</div>

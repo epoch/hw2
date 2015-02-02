@@ -3,26 +3,68 @@
   margin: auto;
 }
 
+.panel {
+  background-color: black;
+}
+
+.panel h2, .panel h3 {
+  color: white;
+}
+
+.panel_poster h3 {
+  color: white;
+  padding-left: 10px;
+}
+
+.panel img {
+  border-radius: 100%;
+  border: 20px black solid;
+}
+
+.panel_poster {
+  background-color: black;
+}
+
+.panel_poster img {
+  border: 20px black solid;
+  position: relative;
+  left: 50px;
+}
+
+.panel a:hover{
+ opacity: 0.2;
+}
+
+.menu {
+ opacity: 1;
+ font-size: 8em;
+ position: relative;
+ top: 250px;
+ left: 35px;
+ color: transparent;
+}
+
 body {
   background-color: Gainsboro;
   margin: 0;
   padding: 0;
 }
 
+/* NAV */
 nav {
-  background-color: green;
+  background-color: black;
   padding: 20px;
 }
-
 nav a {
   text-decoration: underline: ;
   color: white;
 }
-
 nav li {
   display: inline-block;
+  width: 7em;
 }
 
+/* FOOTER */
 footer {
   width: 100%;
   background-color: rgb(46, 46, 47);

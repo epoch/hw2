@@ -1,22 +1,32 @@
+<h1></h1>
 <div id="movie_page">
 
-  <% if params[:id] %>
-    <% url = "http://www.omdbapi.com?i=#{params[:id]}" %>
-    <% response = HTTParty.get url %>
-    <% @movie_details = JSON(response) %>
-
-    <h1><%= @movie_details["Title"] %></h1>
-    <img src="<%= @movie_details["Poster"] %>">
+    <% if params[:id] %>
+      <% url = "http://www.omdbapi.com?i=#{params[:id]}" %>
+      <% response = HTTParty.get url %>
+      <% @movie_details = JSON(response) %>
 
       <%elsif @movie_details["Error"]%>
-        <p>Movie cannot be found</p>
+      <p>Movie cannot be found</p>
     <%end%>
-
-  <p>Enter a new movie title to start another search</p>
-  <form action="/movie" method="/post">
-    <label name="movie">
-    <input name="movie" id="movie">
-    <button>Search</button>
-  </form>
   
+</div>
+
+<div class="row">
+  <div class="large-6 columns">
+    <div class="panel">
+      <h2>Get Movies</h2>
+        <form action="/movie" method="/post">
+        <label name="movie">
+        <input name="movie" id="movie">
+        <button>Search</button>
+  </form>
+    </div>
+  </div>
+  <div class="large-6 columns">
+    <div class="panel_poster">
+      <h3><%= @movie_details["Title"] %></h3>
+      <img src="<%= @movie_details["Poster"] %>">
+    </div>
+  </div>
 </div>
