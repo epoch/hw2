@@ -1,0 +1,22 @@
+<div id="movie_page">
+
+  <% if params[:id] %>
+    <% url = "http://www.omdbapi.com?i=#{params[:id]}" %>
+    <% response = HTTParty.get url %>
+    <% @movie_details = JSON(response) %>
+
+    <h1><%= @movie_details["Title"] %></h1>
+    <img src="<%= @movie_details["Poster"] %>">
+
+      <%elsif @movie_details["Error"]%>
+        <p>Movie cannot be found</p>
+    <%end%>
+
+  <p>Enter a new movie title to start another search</p>
+  <form action="/movie" method="/post">
+    <label name="movie">
+    <input name="movie" id="movie">
+    <button>Search</button>
+  </form>
+  
+</div>

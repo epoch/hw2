@@ -1,1 +1,28 @@
-<h2>This is where the movie form will go</h2>
+<div id="movie">
+  <h1>Movie</h1>
+  <hr>
+  <h3>Enter a movie title below to get some info.</h3>
+
+    <form action="/movie" method="/post">
+      <label name="movie">
+      <input name="movie" id="movie">
+      <button>Search</button>
+    </form>
+
+  <% @movie_title = params[:movie] %>
+    <% if params[:movie].present? %>
+      <% url = "http://www.omdbapi.com/?s=#{params[:movie].gsub(' ','+')}" %>
+      <% response = HTTParty.get url %>
+      <% json = JSON(response) %>
+      <% @movies = json["Search"] %>
+      <% @movie_details = json %>
+
+      <% if @movies && @movies.length %>
+        <% @movies.each do |movie| %>
+          <p><a href="/movie/<%= movie["imdbID"]%>"> <%= movie["Title"]%></a></p>
+        <%end%>
+      <%else%>
+        <p>The movie you are looking for cannot be found.</p>
+      <%end%>
+    <%end%>
+</div>

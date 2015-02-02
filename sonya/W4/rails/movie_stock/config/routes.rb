@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/faq' => 'pages#faq'
 
   get '/stock' => 'stock#lookup'
+
   get '/movie' => 'movie#lookup'
+  get '/movie/:id' => 'movie#movie_id'
 
 end
