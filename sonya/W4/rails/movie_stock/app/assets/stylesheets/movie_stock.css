@@ -1,0 +1,46 @@
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+body {
+  background-color: Gainsboro;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: green;
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: underline: ;
+  color: white;
+}
+
+nav li {
+  display: inline-block;
+}
+
+footer {
+  width: 100%;
+  background-color: rgb(46, 46, 47);
+  color: white;
+  margin: 0 auto;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: .5;
+}
+
+footer a {
+  text-decoration: underline: ;
+  color: white;
+}
+
+footer li {
+  display: inline-block;
+}
