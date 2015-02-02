@@ -1,0 +1,22 @@
+<h2>New Butterfly</h2>
+
+<form action="/butterflies" method="post">
+    <label for="name">Name: </label>
+    <input id="name" name="name">
+
+    <label for="family">Family: </label>
+    <input id="family" name="family">
+
+    <label for="image">Image: </label>
+    <input id="image" name="image" type="url">
+
+    <label for="plant_id">Larval Plant: </label>
+    <select name="plant_id" id="plant_id">
+      <option></option>
+      <% Plant.all.each do |plant| %>
+      <option value="<%= plant_id %>"><%= plant.name %></option>
+      <% end %>
+    </select>
+
+    <input type="submit" value="Create Butterfly">
+</form>

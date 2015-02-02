@@ -13,3 +13,6 @@ class Tenant
 	end
 
 end
+
+require 'pry'
+binding.pry

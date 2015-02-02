@@ -1,0 +1,7 @@
+<h2>Videos on record</h2>
+<% @videos.each do |video| %>
+    <p><%= video["title"] %></p>
+    <li>
+        <a href="/videos/<%= video["id"] %>"><%= video["title"] %></a>
+    </li>
+<% end %>

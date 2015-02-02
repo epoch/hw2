@@ -1,0 +1,14 @@
+<h2>Edit Video</h2>
+
+<form action="/videos/<%= @video["id"] %>" method="post">
+    <label for="title">Title:</label>
+    <input id="title" name="title" value="<%= @video["title"] %>">
+
+    <label for="genre">Genre:</label>
+    <input id="genre" name="genre" value="<%= @video["genre"] %>">
+
+    <label for="url">URL:</label>
+    <input id="url" name="url" typle="url" value="<%= @video["url"] %>">
+
+    <input type="submit" value="Update Meme">
+</form>

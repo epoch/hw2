@@ -1,0 +1,56 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #fff;
+    background: #47a3da;
+}
+
+.main {
+    width: 90%;
+    max-width: 69em;
+    margin: 0 auto;
+    padding: 2.875em 1.875em 1.875em;
+}
+
+.container > header {
+    width: 90%;
+    max-width: 69em;
+    margin: 0 auto;
+    padding: 2.875em 1.875em 1.875em;
+}
+
+.container > header > span {
+    display: block;
+    position: relative;
+    z-index: 9999;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    padding: 0 0 0.6em 0.1em;
+}
+
+label {
+    display: block;
+    padding: 40px 5px 5px 2px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: transparent;
+}
+
+button {
+    text-align: center;
+    border: 5px solid #10689a;
+    border-radius: 20px
+}
+
+footer {
+    width: 90%;
+    max-width: 69em;
+    margin: 0 auto;
+    padding: 2.875em 1.875em 1.875em;
+}
+
+

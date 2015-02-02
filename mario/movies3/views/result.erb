@@ -1,0 +1,8 @@
+<div class="result">
+   <h2><%= @movie.title %>, <%= @movie.year %></h2>
+   <img src="<%= @movie.poster %>"> 
+</div>
+
+<div class="search_again">
+    <%= erb :search, :layout => false %>
+</div>

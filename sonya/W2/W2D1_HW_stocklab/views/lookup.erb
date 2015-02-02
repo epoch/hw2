@@ -1,0 +1,11 @@
+<form action="/">
+    <input name="stock" placeholder="Stock Name">
+
+    <button>Get Quote</button>
+</form>
+
+<h3>This stock last traded at: </h3>
+
+<em>The last trade for <%= params[:stock] %> <%= @price %> </em>
+
+<p><i><small>Powered by <a href="http://www.transparentech.com/projects/yahoofinance>"Yahoo Finance</small></i></p>

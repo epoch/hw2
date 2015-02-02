@@ -1,0 +1,9 @@
+body{
+    font-family: Futura;
+    display: block;
+    margin: 50px auto;
+    border: 1px solid #bbb;
+    max-width: 960px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}

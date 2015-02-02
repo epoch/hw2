@@ -1,0 +1,10 @@
+Benji,Rails Config,500
+Benji,Rails Config,500
+with redirect,redirect ('/client'),300
+with redirect,redirect ('/'),300
+with POST,with method="post",100
+with POST,with method="post",300
+with POST,with method="post",300
+post,removed /create from form action and post,12.42
+Thank you,redirect to thank you with partial,12.47
+asaas,sdsd,sasasa

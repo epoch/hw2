@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+body {
+    background-color: slategray;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+a {
+    color: FloralWhite;
+}
+
+img.butterfly, img.plant {
+    max-width: 100%;
+    border: 1em white solid;
+}
+
+.controls a {
+    color: orange;
+}
+
+nav {
+    background-color: black;
+    padding: 1em;
+    border-radius: .2em;
+}
+
+nav ul {
+    padding-left: 0;
+}
+
+nav li {
+    display: inline-block;
+    width: 20%;
+    text-align: left;
+}
+
+nav a {
+    color: FloralWhite;
+}
