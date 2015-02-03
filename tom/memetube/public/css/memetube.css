@@ -1,0 +1,172 @@
+@import url(http://fonts.googleapis.com/css?family=Nunito:400,700);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F2F2E8;
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+/*  border: 1px solid blue;*/
+}
+
+#wrapper {
+  border-top: 1px solid #77705b;
+  border-bottom: 1px solid #77705b;
+  margin-top: 15px;
+/*  border: 1px solid red;*/
+  padding-bottom: 50px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+#blurb {
+  margin-top: 40px;
+}
+
+header {
+  width: 100%;
+  background-color: #e57373;
+}
+
+#logo {
+  height: 200px;
+  color: white;
+  font-size: 42pt;
+  text-align: center;
+  line-height: 200px;
+}
+
+#menu-nav {
+  background-color: white;
+  text-align: right;
+  height: 50px;
+  line-height: 50px;
+
+
+}
+
+#menu-nav ul li {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+#menu-nav a {
+  text-decoration: none;
+  color: #454135;
+}
+
+#menu-nav a:hover {
+  color: #e57373;
+}
+
+.genres {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.genres li {
+  display: inline-block;
+  background-color: white;
+  border-radius: 5px;
+  padding: 3px 3px 1px 3px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.genres a {
+  text-decoration: none;
+  color: #454135;
+}
+
+.genres li:hover {
+  background-color: #e57373;
+}
+
+.search-results {
+  margin-bottom: 15px;
+}
+
+.video-title {
+  font-size: 14pt;
+}
+
+#listing a {
+  color: #454135;
+  text-decoration: none;
+}
+
+#listing a:hover {
+  text-decoration: underline;
+  color: #e57373;
+}
+
+#listing ul {
+  margin-top: 70px;
+  list-style: none;
+  margin-left: 100px;
+}
+
+.info-box {
+  width: 40%;
+  margin-right: 10%;
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left: 50px;
+ /* border: 1px solid black;*/
+}
+
+.info-box p {
+  margin-bottom: 15px;
+}
+
+.embed {
+  position: relative;
+  top: 30px;
+}
+
+.controls a {
+  background-color: #e57373;
+  border-radius: 5px;
+  padding: 3px 3px 1px 3px;
+  text-decoration: none;
+  color: white;
+}
+
+.controls a:hover {
+  color: #e57373;
+  background-color: white;
+}
+
+#video-entry {
+margin-top: 30px;
+text-align: center;
+}
+
+.labels {
+  width: 48%;
+  display: inline-block;
+  text-align: right;
+}
+
+.labels ul {
+  list-style: none;
+}
+
+.inputs {
+  width: 50%;
+  display: inline-block;
+  text-align: left;
+}
+
+.inputs ul {
+  list-style: none;
+}
+

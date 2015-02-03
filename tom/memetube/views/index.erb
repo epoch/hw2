@@ -1,0 +1,11 @@
+<div id="listing">
+  <ul>
+    <% @videos.each do |video| %>
+      <li class="search-results">
+        <a href="/videos/<%= video["id"] %>">
+          <span class="video-title"><b><%= video["name"] %></b></span> - <em><%= video["description"] %></em> - <%= video["genre"] %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>
