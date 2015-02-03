@@ -1,0 +1,15 @@
+<form action="<%= ocean_path(@ocean.id) %>" method="post">
+  <label for="name">Name: </label>
+  <input id="name" name="ocean[name]" value="<%= @ocean.name %>" autofocus>
+
+  <label for="image">Image: </label>
+  <input type="url" id="image" name="ocean[image]" value="<%= @ocean.image %>">
+
+  <label for="depth">Depth: </label>
+  <input type="number" id="depth" name="ocean[depth]" value="<%= @ocean.depth %>">
+
+  <label for="mean_depth">Mean-depth: </label>
+  <input type="nubmer" id="mean_depth" name="ocean[mean_depth]" value="<%= @ocean.mean_depth %>">
+
+  <button>Update ocean</button>
+</form>
