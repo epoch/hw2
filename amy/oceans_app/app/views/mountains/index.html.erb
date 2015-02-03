@@ -1,0 +1,13 @@
+<nav>
+    <ul>
+        <li><%=link_to('New mountain', mountains_new_path)%> </li>
+    </ul>
+</nav>
+
+<h1>Mountains</h1>
+
+<% @mountains.each do |mountain| %>
+
+    <li><%=link_to(mountain.name, mountain_path(mountain.id))%></li>
+    
+<% end %>
