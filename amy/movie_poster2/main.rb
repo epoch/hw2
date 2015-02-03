@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'HTTParty'
 require 'JSON'
+require 'pry'
 
 get '/' do
     erb :movie_poster
@@ -20,16 +21,20 @@ get '/options' do
 
     @movie_options_array = movie_options['Search']
 
-
     if movie_options["Error"]
         erb :movie_error
     else
+
+        @movie_options_array = @movie_options_array.select do |movie|
+            movie['Type'] == 'movie'
+        end
 
         if @movie_options_array.length == 1     
             redirect to("/poster?id=#{@movie_options_array[0]['imdbID']}")
         else
             erb :options
         end
+
     end
 end
 

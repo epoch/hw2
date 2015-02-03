@@ -1,0 +1,15 @@
+<%@posts.each do |post| %>
+
+<div class="post">
+    <p class="date-time">Post created: <%=post.created_at%></p>
+
+    <a class="post-title" href="post/<%=post.id%>"><h2><%=post.title%></h2></a>
+
+    <img class="post-image" src="<%=post.image%>">
+
+    <p class="post-description"><%=post.description%></p>
+
+    <a class="category" href="category/<%= post.category %>">Category: <%= post.category %></a>
+</div>
+
+<%end%>

@@ -1,0 +1,24 @@
+<h2>Edit post</h2>
+
+<form action="/<%=@post.id%>" method="post">
+        
+    <label for="title">Title</label>
+    <input id="title" name="title" value="<%=@post.title%>">
+
+    <label for="description">Description</label>
+    <input id="description" name="description" value="<%=@post.description%>">
+
+   <label for="full_text">Full text</label>
+    <input id="full_text" name="full_text" value="<%=@post.full_text%>">
+
+
+    <label for="image">Image:</label>
+    <input id="image" name="image" type="url" value="<%=@post.image%>">
+
+
+   <label for="category">Category</label>
+    <input id="category" name="category" value="<%=@post.category%>">
+
+    <input type="submit" value="Edit post">
+
+</form>
