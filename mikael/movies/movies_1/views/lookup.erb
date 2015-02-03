@@ -1,0 +1,29 @@
+<!-- LANDING RENDERING -->
+<% if params[:movie].nil? %>
+
+<!-- ERROR RENDERING -->
+<% elsif @movie_data.response == "False" %>
+  <h1>Sorry, couldn't find what you were looking for...</h1>
+
+<!-- N/A RENDERING -->
+<% elsif (@poster && @plot == "N/A") && (@results.is_a? Array) %>
+  <h1 class="basic-grey"><%= @title %></h1>
+  <h1 class="basic-grey">Year: <%= @year %></h1>
+  <h1 class="basic-grey">Suggestions:</h1>
+  <ul>
+    <% @results.each do |i| %>
+      <li><a href="?movie=<%= i.title %>"> <%= i.title %>, <%= i.year %></a></li>
+    <% end %>
+  </ul>
+
+<!-- TITLE RENDERING -->
+<% else @movie_data.response == "True" %>
+  <h1 class="basic-grey"><%= @title %></h1>
+  <h1 class="basic-grey">Year: <%= @year %></h1>
+  <% unless @poster == "N/A" %>
+    <img src="<%= @poster %>" class="basic-grey"/>
+  <% end %>
+  <% unless @plot == "N/A" %>
+    <p class="basic-grey">Plot: <%= @plot %></p>
+  <% end %>
+<% end %>
