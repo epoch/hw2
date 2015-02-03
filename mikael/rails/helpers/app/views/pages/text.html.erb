@@ -1,0 +1,13 @@
+<p>There's <%= pluralize(@person_count_a, "person") %>.</p>
+<p>There's <%= pluralize(@person_count_b, "person") %>.</p>
+
+<p> <%= pluralize(0, "error") %> prevented this page from working.</p>
+<p> <%= pluralize(1001, "pussy") %> prevented this page from working.</p>
+
+<p><%= truncate(@story, :length => 10) %></p>
+
+<ul>
+  <% @numbers.each do |num| %>
+    <li style="background-color: <%= cycle("red", "green", "yellow", "purple") %>">number <%= num %> </li>
+    <% end %>
+</ul>
