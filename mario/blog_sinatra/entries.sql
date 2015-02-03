@@ -1,0 +1,6 @@
+CREATE TABLE entries (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT,
+  created_at TIMESTAMP,
+  body TEXT
+);

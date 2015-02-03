@@ -1,0 +1,12 @@
+<h2><%= @entry.title %></h2>
+
+<p><%= @entry.created_at.strftime("Created on %d/%m/%Y at %H:%M") %></p>
+
+<% @entry.body.split("\r\n\r\n").each do |paragraph| %>
+  <p><%= paragraph %></p>
+<% end %>
+
+<div class="controls">
+  <a href="/entries/<%= @entry.id %>/edit">Edit</a>
+  <a href="/entries/<%= @entry.id %>/delete">Delete</a>
+</div>

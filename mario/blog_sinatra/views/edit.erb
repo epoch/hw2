@@ -1,0 +1,15 @@
+<h2>Edit Blog Post</h2>
+
+<form action="/entries/<%= @entry.id %>" method="post">
+  <p>
+    <label for="title">Title:</label>
+    <input id="title" name="title" value="<%= @entry.title %>">
+  </p>
+
+  <p><label for="body">Blog text:</label></p>
+  <p><textarea name="body" id="body"><%= @entry.body %></textarea></p>
+
+  <button>Submit</button>
+</form>
+
+
