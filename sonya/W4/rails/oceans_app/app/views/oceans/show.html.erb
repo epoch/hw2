@@ -1,0 +1,7 @@
+<h2><%= @ocean.name %></h2>
+
+<%= image_tag @ocean.image %>
+
+<%= link_to('Edit Ocean', ocean_edit_path(@ocean.id)) %>
+
+<%= button_to('Delete Ocean', ocean_delete_path(@ocean.id)) %>
