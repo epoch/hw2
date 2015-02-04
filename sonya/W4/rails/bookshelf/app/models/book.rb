@@ -9,6 +9,7 @@
 #  image      :text
 #  created_at :datetime
 #  updated_at :datetime
+#  author_id  :integer
 #
 
 class Book < ActiveRecord::Base

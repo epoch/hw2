@@ -1,34 +1,73 @@
-html, body {
-  margin: 0;
+body {
+  padding-top: 50px;
 }
 
-.container {
-  max-width: 960px;
+.footer {
+  width: 100%;
   margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: Gainsboro;
+  opacity: 0.5;
 }
 
 .thumb {
   max-width: 10em;
+  -webkit-box-shadow: 3px 0px 5px 0px Gainsboro;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 0px 5px 0px Gainsboro;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 0px 5px 0px Gainsboro;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
-.work {
-  max-width: 100%;
+.book {
+  max-height: 50vh;
+  -webkit-box-shadow: 3px 0px 5px 0px Gainsboro;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 0px 5px 0px Gainsboro;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 0px 5px 0px Gainsboro;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 .portrait {
-  max-height: 75vh;
+  max-height: 50vh;
+  -webkit-box-shadow: 3px 0px 5px 0px Gainsboro;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 0px 5px 0px Gainsboro;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 0px 5px 0px Gainsboro;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
-nav li {
-  display: inline-block;
+.book_index {
+  max-height: 50vh;
 }
 
-nav {
-  text-align: right;
-  background-color: #ccc;
-  padding: 1em;
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
 }
-
-nav a {
-  color: black;
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }

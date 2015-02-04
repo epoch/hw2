@@ -12,9 +12,9 @@
     <li>Date of Birth: <%= @author.dob.strftime('%B %e, %Y') %></li>
   </ul>
 </p>
-
+<hr>
 <% if @author.books.any? %>
-<h2>books</h2>
+<h4>See books</h4>
 <% end %>
 
 <% @author.books.each do |book| %>

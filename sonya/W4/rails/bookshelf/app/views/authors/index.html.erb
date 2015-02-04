@@ -1,10 +1,14 @@
-<h1>Authors</h1>
+<h1>Listing Authors</h1>
 
-<% @authors.each do |author| %>
-  <%= image_tag(author.image, :class => 'thumb') %>
-  <ul>
-    <li>Name: <%= link_to(author.name, author) %></li>
-    <li>Nationality: <%= author.nationality %></li>
-    <li>Date of Birth: <%= author.dob.strftime('%A %B %e, %Y') %></li>
-  </ul>
+<% @authors.in_groups_of(3) do |author| %>
+  <div class="row">
+    <% author.compact.each do |author| %>
+      <div class="col-md-4">
+        <%= image_tag author.image, width: '100%' if author.image.present?%>
+        <h4><%= link_to author.name, author %></h4>
+        <p>Nationality: <%= author.nationality %></p>
+        <p>Date of Birth: <%= author.dob.strftime('%A %B %e, %Y') %></p>
+      </div>
+    <% end %>
+  </div>
 <% end %>

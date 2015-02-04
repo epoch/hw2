@@ -29,7 +29,7 @@ class AuthorsController < ApplicationController
   def destroy
     author = Author.find params[:id]
     author.destroy
-    redirect_to author_path
+    redirect_to authors_path
   end
 
   private
