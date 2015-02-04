@@ -3,6 +3,7 @@
 <% @authors.each do |author| %>
 
     <%= image_tag(author.image, :class => 'thumb') %>
+    
     <ul>
         <li>Name: <%= link_to(author.name, author)%></li>
         <li>Nationality: <%= author.nationality%></li>

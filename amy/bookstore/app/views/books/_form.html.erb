@@ -31,5 +31,9 @@
     <%=f.label :author_id %>
     <%=f.select :author_id, Author.all.map{|author|[author.name, author.id]}, :include_blank => true %>
     </div>
+     <div>
+    <%=f.label :user_id %>
+    <%=f.select :user_id, User.all.map{|user|[user.name, user.id]}, :include_blank => true %>
+    </div>
     <%= f.submit %>
 <% end %>
