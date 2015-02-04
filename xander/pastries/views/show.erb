@@ -1,0 +1,9 @@
+<h2><%= @pastry.snack %></h2>
+<p>Flavour: <strong><%= @pastry.flavour %></strong></p>
+<p>Comment: <strong><%= @pastry.comment %></strong></p>
+<p>Rating: <strong><%= @pastry.rating %></strong></p>
+
+<div class="actions">
+    <a href="/pastries/<%= @pastry.id %>/delete">Delete</a>
+    <a href="/pastries/<%= @pastry.id %>/edit">Edit</a>
+</div>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><%= link_to('Home', root_path) %></li>
+            <li><%= link_to('Authors', authors_path) %></li>
+            <li><%= link_to('Books', books_path) %></li>
+            <li> || </li>
+            <li><%= link_to('Add Author', new_author_path) %></li>
+            <li><%= link_to('Add Book', new_book_path) %></li>
+        </ul>
+    </nav>
+    <div class="container">
+        
+        <%= yield %>
+    </div>
+</body>
+</html>

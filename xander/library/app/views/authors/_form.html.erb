@@ -1,0 +1,28 @@
+<%= form_for @author do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+
+    <%= f.label :university %>
+    <%= f.text_field :university %>
+
+    <%= f.label :dob, 'Date of Birth' %>
+    <%= f.text_field :dob %>
+
+    <%= f.label :dod, 'Date of Death' %>
+    <%= f.text_field :dod %>
+
+    <%= f.label :highlight, 'Career Highlight' %>
+    <%= f.text_field :highlight %>
+
+    <%= f.label :num_books, 'Number of Books Published' %>
+    <%= f.text_field :num_books %>
+
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+
+    <%= f.submit %>
+<% end %>

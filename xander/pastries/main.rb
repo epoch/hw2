@@ -15,6 +15,9 @@ require_relative 'pastry'
 
 before do
   @flavours = Pastry.select(:flavour).uniq
+
+  @rating_options = { 0 => "Call an ambulance.", 1 => "Anyone have a bucket?", 2 => "Meh. It's fuel.", 3 => "Pretty damn tasty", 4 => "I would maim someone for another one", 5 => "This is my O-face"}
+
 end
 
 after do
@@ -34,8 +37,8 @@ get '/pastries' do
     erb :index
 end
 
-get '/pastries/flavour/:snack' do
-    @pastries = Pastry.where(:flavour => params[:snack])
+get '/pastries/flavour/:flavour' do
+    @pastries = Pastry.where(:flavour => params[:flavour])
     erb :index
 end
 
@@ -55,3 +58,30 @@ post '/pastries' do
 
     redirect to('/pastries')
 end
+
+get '/pastries/:id' do 
+    @pastry = Pastry.find params[:id]
+    erb :show
+end
+
+get '/pastries/:id/delete' do
+    pastry = Pastry.find params[:id]
+    pastry.destroy
+    redirect to('/pastries')
+end
+
+get '/pastries/:id/edit' do 
+    @pastry = Pastry.find params[:id]
+    erb :edit
+end
+
+post '/pastries/:id' do
+    pastry = Pastry.find params[:id]
+    pastry.snack = params[:snack]
+    pastry.flavour = params[:flavour]
+    pastry.comment = params[:comment]
+    pastry.rating = params[:rating]
+    redirect to("/pastries/#{ pastry.id }")
+end
+
+

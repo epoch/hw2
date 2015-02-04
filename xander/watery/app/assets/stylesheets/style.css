@@ -1,0 +1,67 @@
+body {
+    background: linear-gradient(rgb(223,100,0), rgb(130,70,0));
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    background-color: black;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+nav li {
+    font-family: Arial;
+    display: inline;
+    margin-left: 1.5em;
+    text-decoration: none;
+}
+
+li {
+    text-decoration: none;
+}
+
+form {
+    margin-top: 2em;
+}
+
+form label {
+    display: block;
+    padding-top: 0.5em;
+}
+
+form input {
+    width: 15em;
+}
+
+.button_to {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.stats ul {
+    list-style: none;
+}
+
+.stats ul li {
+    padding: 0.2em;
+}
+
+img {
+    max-width: 960px;
+}

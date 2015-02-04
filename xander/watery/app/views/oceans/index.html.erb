@@ -1,0 +1,14 @@
+<h2>Oceans of the World</h2>
+
+<h3>Select an Ocean to view:</h3>
+<div class="ocean_list">
+    <p>
+        <ul>
+            <% @oceans.each do |ocean| %>
+            <li>
+                <%= link_to(ocean.name, ocean_path(ocean.id)) %>
+            </li>
+            <% end %>
+        </ul>
+    </p>
+</div>

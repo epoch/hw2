@@ -1,0 +1,91 @@
+html, body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url(http://www.pdgm.com/getmedia/49986e29-2fba-4629-8a09-591205b91ed4/Library_1400_800.jpg.aspx);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    background-color: rgba(230,234,214,0.6);
+}
+
+.portrait {
+    max-height: 70vh;    
+}
+
+.thumb {
+    max-width: 15em;
+
+}
+
+.book {
+    max-width: 100%
+}
+
+nav li {
+    display: inline-block;
+    color: rgb(230,234,214);
+}
+
+nav {
+    text-align: right;    
+}
+
+nav ul {
+    background-image: url(http://www.jakabooks.com.au/wp-content/uploads/2012/07/books.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    margin: 0;
+    padding: 1.5em;
+}
+
+nav a {
+    color: black;
+    border-radius: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 0.5em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    background-color: rgba(230,234,214,0.9);
+}
+
+#new_book {
+    margin-left: 200px;
+}
+
+#new_book input {
+    display: block;
+    width: 250px;
+}
+
+#new_book label {
+    font-size: 14px;
+}
+
+#new_book label {
+    display: block;
+    padding-top: 0.8em; 
+}
+
+#new_author {
+    margin-left: 200px;
+}
+
+#new_author input {
+    display: block;
+    width: 250px;
+}
+
+#new_author label {
+    font-size: 14px;
+}
+
+#new_author label {
+    display: block;
+    padding-top: 0.8em; 
+}

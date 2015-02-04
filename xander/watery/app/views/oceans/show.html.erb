@@ -1,0 +1,15 @@
+<h2><%= @ocean.name %> Ocean</h2>
+<div class="stats">
+    <ul>
+        <li><strong>Maximum Depth:</strong> <%= @ocean.max_depth %> metres</li>
+        <li><strong>Area:</strong> <%= number_to_human(@ocean.area) %> square km</li>
+        <li><strong>Volume:</strong> <%= number_to_human(@ocean.volume) %> cubic km</li>
+    </ul>
+</div>
+
+<%= image_tag @ocean.image %>
+
+<div class="ocean_action">
+    <%= link_to('Edit Ocean', ocean_edit_path(@ocean.id)) %>
+    <%= button_to('Delete Ocean', ocean_delete_path(@ocean.id)) %>
+</div>
