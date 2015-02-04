@@ -13,4 +13,8 @@
 
   <%= f.submit %>
 
+  <hr>
+  <%= f.label :author_id %>
+  <%= f.select :author_id, Author.all.map { |author| [author.name, author.id] }, :include_blank => true %>  
+
 <% end %>

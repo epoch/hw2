@@ -8,7 +8,10 @@
 <p>
   <%= image_tag @book.image, :class => 'portrait' %>
   <ul>
-    <li>Publisher: <% @book.publisher %></li>
-    <li>Year: <% @book.year %></li>
+    <% if @book.author %>
+      <li>Author: <%= link_to(@book.author.name, @book.author) %></li>
+    <% end %>
+      <li>Publisher: <%= @book.publisher %></li>
+      <li>Year: <%= @book.year %></li>
   </ul>
 </p>

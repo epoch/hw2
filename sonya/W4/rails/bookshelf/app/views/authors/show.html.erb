@@ -12,3 +12,11 @@
     <li>Date of Birth: <%= @author.dob.strftime('%B %e, %Y') %></li>
   </ul>
 </p>
+
+<% if @author.books.any? %>
+<h2>books</h2>
+<% end %>
+
+<% @author.books.each do |book| %>
+  <%= link_to(image_tag(book.image, :class => 'thumb'), book) %>
+<% end %>
