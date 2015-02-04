@@ -7,6 +7,11 @@
     <% if @book.author %>
     <li>Author: <%= link_to(@book.author.name, @book.author)  %></li>
     <% end %>
+
+    <% if @book.user %>
+    <li>On loan to: <%= link_to(@book.user.name, @book.user) %></li>
+    <% end %>
+
     <li>Published: <%= @book.published %></li>
     <li>Publisher: <%= @book.publisher %></li>
     <li>Notable Award: <%= @book.award %></li>

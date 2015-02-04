@@ -9,8 +9,10 @@
 #  image     :text
 #  award     :text
 #  author_id :integer
+#  user_id   :integer
 #
 
 class Book < ActiveRecord::Base
     belongs_to :author
+    belongs_to :user
 end
