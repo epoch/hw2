@@ -7,10 +7,22 @@ html, body {
     background-attachment: fixed;
 }
 
+a {
+    text-decoration: none;
+    color: navy;
+}
+
+h1 {
+    color: navy;
+    margin-left: 3em;
+    padding-top: 1em;
+}
+
 .container {
-    max-width: 960px;
+    max-width: 900px;
+    height: 80vh;
     margin: auto;
-    background-color: rgba(230,234,214,0.6);
+    background-color: rgba(230,234,214,0.8);
 }
 
 .portrait {
@@ -19,7 +31,8 @@ html, body {
 
 .thumb {
     max-width: 15em;
-
+    padding: 1em;
+    
 }
 
 .book {
@@ -54,38 +67,69 @@ nav a {
     background-color: rgba(230,234,214,0.9);
 }
 
-#new_book {
-    margin-left: 200px;
+.new_book {
+    margin-left: 5em;
+    padding-bottom: 1.5em;
 }
 
-#new_book input {
+.new_book input {
     display: block;
     width: 250px;
+    margin-bottom: 1em;
 }
 
-#new_book label {
+.new_book label {
     font-size: 14px;
-}
-
-#new_book label {
     display: block;
-    padding-top: 0.8em; 
 }
 
-#new_author {
-    margin-left: 200px;
+.new_author {
+    margin-left: 5em;
+    padding-bottom: 1.5em;
 }
 
-#new_author input {
+.new_author input {
     display: block;
     width: 250px;
+    margin-bottom: 1em;
 }
 
 #new_author label {
     font-size: 14px;
+    display: block; 
 }
 
-#new_author label {
+.edit_book {
+    margin-left: 5em;
+}
+
+.edit_book input {
     display: block;
-    padding-top: 0.8em; 
+    width: 250px;
+    margin-bottom: 1em;
+}
+
+.edit_book label {
+    font-size: 14px;
+    display: block;
+}
+
+.edit_author {
+    margin-left: 5em;
+}
+
+.edit_author input {
+    display: block;
+    width: 250px;
+    margin-bottom: 1em;
+}
+
+.edit_author label {
+    font-size: 14px;
+    display: block; 
+}
+
+.author_list {
+    display: inline-block;
+    height: 160px;
 }

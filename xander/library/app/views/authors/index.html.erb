@@ -1,9 +1,12 @@
 <h1>Authors</h1>
 
+
 <% @authors.each do |author| %>
+<div class="author_list">
     <%= image_tag(author.image, :class => 'thumb') %>
     <ul>
         <li>Name: <%= link_to(author.name, author) %></li>
         <li>Books Published: <%= author.num_books %></li>
     </ul>
+</div>
 <% end %>
