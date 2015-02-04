@@ -1,6 +1,11 @@
 <h1><%= @author.name %></h1>
 
 <p>
+  <%= link_to 'Edit Author', edit_author_path(@author) %>
+  <%= link_to 'Delete Author', @author, :method => 'delete', :data => { :confirm => "Are you sure? "} %>
+</p>
+
+<p>
     <%= image_tag @author.image, :class => 'portrait' %>
   <ul>
     <li>Nationality: <%= @author.nationality %></li>

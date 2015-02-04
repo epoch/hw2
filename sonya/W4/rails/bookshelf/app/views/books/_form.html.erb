@@ -1,0 +1,16 @@
+<%= form_for @book do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :autofocus => true %>
+
+  <%= f.label :publisher %>
+  <%= f.text_field :publisher %>
+
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+
+  <%= f.label :image %>
+  <%= f.url_field :image %>
+
+  <%= f.submit %>
+
+<% end %>
