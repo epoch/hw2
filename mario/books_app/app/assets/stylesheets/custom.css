@@ -1,0 +1,54 @@
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.portrait {
+  width: 100%;
+}
+
+.thumb {
+  width: 150px;
+}
+
+.book {
+  max-width: 100%;
+}
+
+.author {
+  display: inline-block;
+  margin: 20px;
+}
+
+.centerino {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 0em;
+}
+
+nav {
+  text-align: right;
+  background-color: #FD482F;
+  padding-top: 10px;
+  padding-bottom: 0.1px;
+  padding-right: 10px;
+}
+
+nav a {
+  color: white;
+  margin-right: 0.5em;
+}
