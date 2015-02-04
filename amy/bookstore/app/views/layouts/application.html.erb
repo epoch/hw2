@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookstore</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bookstore</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><%=link_to('Authors', authors_path)%></li>
+                <li><%=link_to('Books', books_path)%></li>
+                <li><%=link_to('New author', new_author_path)%></li>
+                <li><%=link_to('New book', new_book_path)%></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content-container">
+        <%= yield %>
+    </div>
+</body>
+</html>
