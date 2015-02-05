@@ -1,4 +1,4 @@
-<h1>Stock look up</h1>
+<h1 class="stock_home_title">Stock look up</h1>
 
 
 <% if @price && @price > 0 %>
@@ -7,7 +7,7 @@
     <p>No stock trading with that symbol. Search again.</p>
 <% end %>
 
-<h2>Please enter a stock symbol</h2>
+<p>Please enter a stock symbol</p>
 <form action="/stock">
     <input name="stock_symbol" placeholder="GOOG" required>
     <button>Get quote</button>

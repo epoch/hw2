@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OceansApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><%=link_to('Home', home_path)%></li>
+        <li><%=link_to('Oceans', oceans_path)%></li>
+        <li><%=link_to('Mountains', mountains_path)%></li>
+        
+    </ul>
+</nav>
+<%= yield %>
+
+</body>
+</html>

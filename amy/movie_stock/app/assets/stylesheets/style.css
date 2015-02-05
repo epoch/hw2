@@ -10,15 +10,22 @@
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Raleway', sans-serif;
     height: 100%;
     text-align: center;
+
 }
 
 header {
     /*background-color: #000;*/
     /*color: #fff;*/
     text-align: center;
+    background-color: rgb(244, 8, 8);
+    color: #fff;
+    position: fixed;
+    top: 0px;
+    width: 100%;
 }
 
 header h1 {
@@ -29,18 +36,19 @@ nav {
     /*padding-top: 50px;*/
     padding-bottom: 20px;
     border-bottom: 1px solid lightgrey;
-    /*position: fixed;*/
-    width: 100%;
+/*    position: fixed;
+    width: 100%;*/
 }
 
 nav a {
     text-decoration: none;
     padding: 10px;
-    /*color: #fff;*/
+    color: #fff;
 }
 
 .container {
     /*height: 100%;*/
+    margin-top: 100px;
 }
 
 .movies-menu-div, .stocks-menu-div, .games-menu-div {
@@ -135,13 +143,31 @@ button {
     text-transform: uppercase;
 }
 
+.stock_home_title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+}
 
+.movie_home_title {
+    font-family: 'Plaster', cursive;
+    font-size: 60px;
+}
 
+.games_home_title {
+    font-family: 'Monoton', cursive;
+    font-size: 60px;
+}
 
+.games-menu {
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+}
 
-*/
-
-
+p {
+    font-size: 25px;
+    font-weight: 200;
+}
 
 /*
 body {

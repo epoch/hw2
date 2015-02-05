@@ -1,0 +1,39 @@
+<%= form_for @book do |f| %>
+    <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
+    <div>
+        <%= f.label :genre %>
+        <%= f.text_field :genre %>
+    </div>
+    <div>
+        <%= f.label :year %>
+        <%= f.text_field :year %>
+    </div>
+    <div>
+        <%= f.label :publisher %>
+        <%= f.text_field :publisher %>
+    </div>
+     <div>
+        <%= f.label :isbn %>
+        <%= f.text_field :isbn %>
+    </div>
+     <div>
+        <%= f.label :summary %>
+        <%= f.text_area :summary %>
+    </div>
+    <div>
+        <%= f.label :image %>
+        <%= f.url_field :image %>
+    </div>
+    <div>
+    <%=f.label :author_id %>
+    <%=f.select :author_id, Author.all.map{|author|[author.name, author.id]}, :include_blank => true %>
+    </div>
+     <div>
+    <%=f.label :user_id %>
+    <%=f.select :user_id, User.all.map{|user|[user.name, user.id]}, :include_blank => true %>
+    </div>
+    <%= f.submit %>
+<% end %>
