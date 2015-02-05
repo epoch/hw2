@@ -1,0 +1,9 @@
+<h1>Oceans</h1>
+
+<ul>
+  <% @oceans.each do |ocean| %>
+    <li>
+      <%= link_to(ocean.name, ocean_path(ocean.id)) %> has <%= (ocean.mean_depth) %> Average Depth.
+    </li>
+  <% end %>
+</ul>
