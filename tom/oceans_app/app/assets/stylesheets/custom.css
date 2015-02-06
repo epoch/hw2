@@ -1,0 +1,81 @@
+@import url(http://fonts.googleapis.com/css?family=Asap);
+
+body {
+  background-image: url('http://static.hdw.eweb4.com/media/wallpapers_1920x1200/abstract/1/2/gaussian-blur-abstract-hd-wallpaper-1920x1200-10432.jpg');
+  background-size: cover;
+  font-family: 'Asap', sans-serif;
+}
+
+.container-fluid {
+  background-color: #e8eaf6;
+}
+
+li {
+  margin-top: 5px;
+}
+
+img {
+  width: 580px;
+}
+
+.navbar {
+  width: 100%;
+  z-index: 10000;
+}
+
+.list-group-item {
+  background-color: #e8eaf6;
+}
+
+.ocean-heading {
+  margin-top: 3em;
+}
+
+.list-group {
+  margin-top: 5em;
+}
+
+.hell-yes {
+  margin-top: 3em;
+}
+
+.hell-yes a {
+  text-decoration: none;
+  color: white;
+}
+
+.home-heading {
+  margin-top: 4em;
+}
+
+.logo {
+  font-size: 60px;
+  margin-top: 2.5em;
+}
+
+.crud-nav {
+  list-style: none;
+  margin-right: -40px;
+}
+
+.crud-nav li {
+  display: inline-block;
+}
+
+.form-horizontal {
+  margin-top: 8em;
+}
+
+.panel {
+  margin-top: 15px;
+  margin-right: -40px;
+}
+
+.panel p, li{
+  font-size: 12px;
+}
+
+.panel-heading h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}

@@ -1,0 +1,13 @@
+<div class="row">
+  <h1 class="col-md-12 text-center ocean-heading">Oceans</h1>
+</div>
+
+<div class="row">
+  <ul class="list-group col-md-4 col-md-offset-4">
+    <% @oceans.each do |ocean| %>
+    <li class="list-group-item text-center">
+      <%= link_to ocean.name, ocean_path(ocean.id) %>
+    </li>
+    <% end %>
+  </ul>
+</div>

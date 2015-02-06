@@ -1,0 +1,37 @@
+<div class="row col-md-6 col-md-offset-3">
+  <h2><%= @ocean.name %></h2>
+
+  <ul class="crud-nav text-right">
+    <li><%= button_to 'Delete Ocean', ocean_delete_path(@ocean.id), :class => "btn btn-warning"%></li>
+    <li><%= link_to 'Edit Ocean', ocean_edit_path(@ocean.id), :class => "btn btn-warning" %></li>
+    <li><%= link_to 'Back', oceans_path, :class => "btn btn-warning" %></li>
+  </ul>
+</div>
+
+<div class="row col-md-6 col-md-offset-3">
+  <%= image_tag @ocean.image %>
+</div>
+
+<div class="row col-md-6 col-md-offset-3">
+  <div class="panel panel-default ">
+    <div class="panel-heading">
+      <h3>Info:</h3>
+    </div>
+    <div class="panel-body">
+      <p>Max. Depth: <%= @ocean.max_depth %>ft</p>
+      <p>Percentage of Earth's Water: <%= @ocean.earth_percentage %>%</p>
+
+      <% unless @ocean.countries == "" %>
+
+      <p>Bordering Countries:</p>
+        <ul>
+          <!-- splits countries into array so it can print each one in the list -->
+          <% @ocean.countries.split(', ').each do |country| %>
+            <li><%= country %></li>
+          <% end %>
+        </ul>
+
+      <% end %>
+    </div>
+  </div>
+</div>
