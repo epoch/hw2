@@ -9,7 +9,7 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  password_digest :string
-#  is_admin        :boolean
+#  is_admin        :boolean          default("false")
 #
 
 class User < ActiveRecord::Base

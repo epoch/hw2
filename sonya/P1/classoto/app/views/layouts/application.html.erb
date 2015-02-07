@@ -10,7 +10,61 @@
 </head>
 <body>
 
-<h1>Welcome to Classoto <%= @current_user.try(:name) %></h1>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Classoto</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Log in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <%= image_tag('classoto.png', class: "logo_header", size:"1016x280") %>
+        <p>Tired off yet another "introduce yourself discussion board"? Well then, do something about it! Jump onto Classoto, upload a selfie and join your classmates on your very own interactive Class Photo (sans the "ph").</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Sign Up</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Quick</h2>
+          <p><%= image_tag('classoto_logo.png', class: "logo", size:"300x300") %></p>
+          <p><a class="btn btn-default" href="#" role="button">Sign Up</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Easy</h2>
+          <p><%= image_tag('classoto_logo.png', class: "logo", size:"300x300") %></p>
+          <p><a class="btn btn-default" href="#" role="button">Sign Up</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Fun</h2>
+          <p><%= image_tag('classoto_logo.png', class: "logo", size:"300x300") %></p>
+          <p><a class="btn btn-default" href="#" role="button">Sign Up</a></p>
+        </div>
+      </div>
+
+    <h1>Welcome to Classoto <%= @current_user.try(:name) %></h1>
 
 <nav>
   <ul>
@@ -22,5 +76,20 @@
   <%= yield %>
 </div>
 
-</body>
+      <hr>
+
+      <footer>
+        <p>Powered by GA WDIWeekV</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
