@@ -1,0 +1,21 @@
+<!-- Content Section -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="section-heading">View Articles</h1>
+        <ul>
+          <% @articles.each do |article| %>
+            <li>
+              <a href="/articles/<%= article.id %>">
+                <%= article.title %>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

@@ -1,0 +1,13 @@
+.search-form {
+  height:300px;
+  width:400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(255,255,255,0.95);
+  /* Set margins to offset 50% of the w/h */
+  margin: -200px 0 0 -200px;
+  text-align: center;
+  padding-top: 50px;
+  line-height: 2;
+}

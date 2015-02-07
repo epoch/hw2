@@ -1,0 +1,21 @@
+<!-- Content Section -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="section-heading">View Authors</h1>
+        <ul>
+          <% @users.each do |user| %>
+            <li>
+              <a href="/users/<%= user.id %>">
+                <%= user.name %>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

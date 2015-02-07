@@ -1,0 +1,22 @@
+<!-- Fixed Height Image Aside -->
+<aside class="image-bg-fixed-height-min"></aside>
+
+<!-- Content Section -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="section-heading">Movies</h1>
+        <% @movies.each do |movie| %>
+        <p class="section-paragraph">
+          <a href="/movie?id=<%= movie.imdbID %>">
+            <%= movie.title %> <%= movie.year %>
+          </a>
+        </p>
+        <% end %>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
