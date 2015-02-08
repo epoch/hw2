@@ -1,4 +1,4 @@
-%h1 Sign Up
+%h2 Sign Up to Classoto
 
 - if @user.errors.any?
   %ol
@@ -16,4 +16,7 @@
     = f.label :password_confirmation
     = f.password_field :password_confirmation, :class => 'form-control'
 
+    = f.label :image
+    = f.url_field :image, :class => 'form-control'
+    %hr
     = f.submit "Sign up"
