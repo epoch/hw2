@@ -1,0 +1,6 @@
+%h1 Your Class Photo
+
+%ul
+  - @users.each do |user|
+    %li= user.name 
+    = image_tag user.image
