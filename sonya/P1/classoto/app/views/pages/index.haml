@@ -5,5 +5,14 @@
     - user.compact.each do |user|
       .col-md-4
         .user_index
-          %h2= user.name
           = link_to(image_tag(user.image), user)
+          %h2= user.name
+          %h4
+            %li
+              ID: #{user.id}
+            %li
+              Image: #{user.image}
+            %li
+              Cohort ID: #{user.cohort_id}
+            %li
+              Admin: #{user.is_admin}
