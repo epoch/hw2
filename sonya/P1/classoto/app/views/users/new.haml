@@ -1,5 +1,4 @@
 %h1 Sign Up
-
 - if @user.errors.any?
   %ol
     - @user.errors.full_messages.each do |msg|
@@ -15,5 +14,8 @@
 
     = f.label :password_confirmation
     = f.password_field :password_confirmation, :class => 'form-control'
+
+    = f.label :image
+    = f.url_field :image, :class => 'form-control'
 
     = f.submit "Sign up"
