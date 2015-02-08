@@ -1,6 +1,16 @@
-%h1 Secret list of users
+%h1 Secret List Of Users
 
+<<<<<<< HEAD
 %ul
   - @users.each do |user|
     %h4 
       %li= link_to user.name, user
+=======
+- @users.in_groups_of(3) do |user|
+  .row
+    - user.compact.each do |user|
+      .col-md-4
+        .user_index
+          %h2= user.name 
+          = link_to(image_tag(user.image))
+>>>>>>> photolist

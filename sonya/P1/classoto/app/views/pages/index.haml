@@ -1,0 +1,9 @@
+%h1 Your Class Photo
+
+- @users.in_groups_of(3) do |user|
+  .row
+    - user.compact.each do |user|
+      .col-md-4
+        .user_index
+          %h2= user.name 
+          = link_to(image_tag(user.image))
