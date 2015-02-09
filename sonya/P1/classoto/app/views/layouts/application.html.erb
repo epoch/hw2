@@ -21,7 +21,9 @@
           </button>
           <a class="navbar-brand" href="<%= root_path %>">Classoto</a>
           <a class="navbar-brand" href="<%= users_path %>">Index</a>
-          <a class="navbar-brand" href="<%= login_path(:method => :delete) %>">Sign Out</a>
+          <% if @current_user.present? %>
+         <%= link_to('Sign out ' + @current_user.name, login_path, :method => :delete, :class => "navbar-brand") %>
+         <% end %>
         </div>
         
         <div id="navbar" class="navbar-collapse collapse">
