@@ -6,7 +6,7 @@
       .col-md-4
         .user_index
           = link_to(image_tag(user.image), user)
-          %h2= user.name
+          %h2= link_to(user.name, user)
           %h4
             %li
               ID: #{user.id}
@@ -17,7 +17,7 @@
             %li
               Class: #{user.cohort.cohort}
             %li
-              Class: #{user.cohort.year}
+              Cohort: #{user.cohort.year}
 
           / - if user.cohorts.any?
           /   %li
