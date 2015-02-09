@@ -1,4 +1,4 @@
-%h1 Admin List of Users
+%h1 List of Classmates
 
 - @users.in_groups_of(3) do |user|
   .row
@@ -6,15 +6,19 @@
       .col-md-4
         .user_index
           = link_to(image_tag(user.image), user)
-          %h2= link_to(user.name, user)
+          %h2= user.name
           %h4
             %li
               ID: #{user.id}
             %li
               Cohort ID: #{user.cohort_id}
             %li
-              Year: #{user.name}
-            %li
               Admin: #{user.is_admin}
             %li
-              Updated: #{user.updated_at}
+              Class: #{user.cohort.cohort}
+            %li
+              Class: #{user.cohort.year}
+
+          / - if user.cohorts.any?
+          /   %li
+          /     Cohort: #{cohort.year}

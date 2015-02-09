@@ -8,4 +8,4 @@ admin = User.create(:name => 'admin', :password => 'admin', :password_confirmati
 
 c1 = Cohort.create(:cohort => 'UG 1', :year => '2015')
 
-c1.users << u1 << u2 << u3
+c1.users << u1 << u2 << u3 << admin

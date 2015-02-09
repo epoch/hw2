@@ -1,4 +1,4 @@
-%h1 Your Class Photo
+%h1 Admin Class Photo
 
 - @users.in_groups_of(3) do |user|
   .row
@@ -9,16 +9,10 @@
           %h2= user.name
           %h4
             %li
-              ID: #{user.id}
+              Class: #{user.cohort.cohort}
             %li
-              Cohort ID: #{user.cohort_id}
-            %li
-              Admin: #{user.is_admin}
-            %li
-              Updated: #{user.updated_at}
-            / %li
-            /   Year: #{@user.cohorts.cohort}
-
-/ - if user.cohort.any?
-/   %li
-/     Cohort: #{cohort.year}
+              Class: #{user.cohort.year}
+          %h4
+            - if user.is_admin?
+              %li
+                Admin: #{user.is_admin}
