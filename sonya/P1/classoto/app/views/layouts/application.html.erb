@@ -41,9 +41,10 @@
       </div>
     </nav>
 
-    <h1>Blah</h1>
     <h1>Welcome to Classoto <%= @current_user.try(:name) %></h1>
     <h2><%= flash[:error] if flash[:error].present? %></h2>
+    </div>
+
 </div>
 
 <nav>
