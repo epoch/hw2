@@ -6,7 +6,8 @@
   %div.form-group
     = label_tag :username
     = text_field_tag :username, nil, :autofocus => true, :class => 'form-control'
+  %div.form-group
     = label_tag :password
     = password_field_tag :password, nil, :class => 'form-control'
-    %hr
-    = submit_tag 'Login'
+  %div.form-group
+    = submit_tag 'Login', :class => 'btn btn-success'
