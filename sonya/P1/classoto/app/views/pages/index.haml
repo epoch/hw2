@@ -11,8 +11,14 @@
             %li
               ID: #{user.id}
             %li
-              Image: #{user.image}
-            %li
               Cohort ID: #{user.cohort_id}
             %li
               Admin: #{user.is_admin}
+            %li
+              Updated: #{user.updated_at}
+            / %li
+            /   Year: #{@user.cohorts.cohort}
+
+/ - if user.cohort.any?
+/   %li
+/     Cohort: #{cohort.year}
