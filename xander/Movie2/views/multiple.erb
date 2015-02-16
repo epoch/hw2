@@ -1,18 +1,17 @@
-<form action="multiple">
-
-        <p>
-            <label for="title">Movie  </label>
-            <input type="search" name="title" id="title" placeholder="Enter the movie title">
-        </p>
-    
-    <button>Go get em...</button>    
-</form>
-
-    <p>Please select the movie you're looking for:</p>
-    <% @movies.each do |movie| %>
-
-<p> 
-    <a href="/result?id=<%= movie['imdbID'] %>"><%= movie['Title'] %></a> 
-</p>
-
-<% end %>
+<div class="movies">
+    <form action="multiple">
+        <label class="searchfield" for="title">Movie  </label>
+        <input type="search" name="title" id="title" placeholder="Enter the movie title">
+        <button>Search</button>    
+    </form>
+            <div class="list_title">
+                <p>
+                Please select the movie you're looking for:
+                </p>
+            </div>
+            <% @movies.each do |movie| %>
+            <div class="movie_list">
+                <a href="/result?id=<%= movie['imdbID'] %>"><%= movie['Title'] %></a> 
+            </div>
+    <% end %>
+</div>

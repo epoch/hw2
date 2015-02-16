@@ -1,41 +1,95 @@
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display+SC);
 
 body {
-    font-family: 'Playfair Display SC', serif;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url('http://fc00.deviantart.net/fs70/f/2011/035/6/4/imdb_top_250_movie_poster_by_saxon1964-d38rnod.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
     color: white;
-    margin: 0;
+    margin: auto;
     padding: 0; 
-    background: url('http://wallpoper.com/images/00/38/37/12/the-godfather_00383712.png'); 
-    background-size: 100%;
-    background-repeat: no-repeat;
+}
+
+form {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px; 
+    margin-left: 30px;
+    margin-bottom: 25px;
+    margin-top: 0; 
+    color: white;
+    background-color: rgba(70,70,70,0.9);
 }
 
 .container {
-    text-align: left;
-    max-width: 1000px;
-    margin-left: 100px;
-    margin-top: 50px;
-    padding: 0;
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    background-color: rgba(161,163,160,0.6);
+}
 
+.searchfield {
+    font-size: 28px;
+    font-weight: bold;
 }
 
 h1 {
-    margin: 0px;
+    padding-top: 50px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0;
 }
 
 img {
     margin-top: 20px;
+    margin-left: 250px;
     display: inline-block;
     vertical-align: top;
 }
 
 
+
+#title {
+    width: 20em;
+    min-height: 3em;
+}
+
+.error {
+    margin-left: 250px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .output {
-    font-size: 12px;
+    font-size: 18px;
+    font-weight: bold;
     width: 200px;
     margin-left: 50px;
     margin-top: 20px;
     display: inline-block;
+}
+
+.list_title {
+    font-weight: bold;
+    font-size: 28px;
+    margin-left: 250px;
+}
+
+.movie_list {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 250px;
 }
 
 a {

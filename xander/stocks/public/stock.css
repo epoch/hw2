@@ -1,0 +1,21 @@
+body {
+    font-family: Verdana;
+    background-image: url(\nyse.jpg);
+    background-position: center;
+    background-size: 75%;
+    color: white;
+    text-align: center;
+    margin-top: 250px;
+
+}
+
+.button {
+    background-color: rgba(190,190,190,0.9);
+    color: white;
+
+}
+
+.output{
+    font-size: 16px;
+   
+}

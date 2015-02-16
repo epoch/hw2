@@ -64,7 +64,7 @@ end
 
 get '/error' do
 
-    @error = "That movie sleeps with the fishes. Try again..."
+    @error = "Are you sure that's the correct title? We can't find that in our records."
 
     erb :error
 

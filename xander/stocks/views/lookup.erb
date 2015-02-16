@@ -1,0 +1,10 @@
+<h2>Crappy Stock Price Ticker</h2>
+<form action="/lookup">
+    <input name="symbol" placeholder="Enter stock code" value="<%= params[:symbol] %>">
+
+    <button class="button">Get Price</button>
+
+    <h3 class="output">The last traded price for <%= params[:symbol] %> was <%= @result %></h3>
+
+
+
