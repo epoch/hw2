@@ -2,27 +2,43 @@
 
 console.log("hello mta js");
 
-subwayLines = {
+var subwayLines = {
     "N": ["Times Square(N)", "34th(N)", "28th(N)", "23rd(N)", "Union Square", "8th(N)"],
     "L": ["8th(L)", "6th(L)", "Union Square", "3rd(L)", "1st(L)"],
     "6": ["Grand Central(6)", "33rd(6)", "28th(6)", "23rd(6)", "Union Square", "Astor Place(6)"]
 }
 
-var lineOn = "6"
+var lineOn = "N"
 
-var stopOn = "Astor Place(6)"
+var stopOn = "8th(N)"
 
-var lineOff = "N"
+var lineOff = "6"
 
-var stopOff = "34th(N)"
+var stopOff = "33rd(6)"
 
-var indexStopOn = subwayLines[lineOn].indexOf(stopOn) 
+// var noStation = function(lineOn, stopOn, lineOff, stopOff){
+    if( (subwayLines.hasOwnProperty(lineOn)) && (subwayLines.hasOwnProperty(lineOff)) && (subwayLines[lineOn].indexOf(stopOn) >= 0) && (subwayLines[lineOff].indexOf(stopOff) >= 0) ){
 
-var indexStopOff = subwayLines[lineOff].indexOf(stopOff) 
+        var indexStopOn = subwayLines[lineOn].indexOf(stopOn);
 
-var indexUnionSquareOn = subwayLines[lineOn].indexOf("Union Square")
+        var indexStopOff = subwayLines[lineOff].indexOf(stopOff);
 
-var indexUnionSquareOff = subwayLines[lineOff].indexOf("Union Square")
+        var indexUnionSquareOn = subwayLines[lineOn].indexOf("Union Square");
+
+        var indexUnionSquareOff = subwayLines[lineOff].indexOf("Union Square");
+
+    }else {
+        console.log("There is no stop or station by that name.");
+
+    };
+
+// var indexStopOn = subwayLines[lineOn].indexOf(stopOn) 
+
+// var indexStopOff = subwayLines[lineOff].indexOf(stopOff) 
+
+// var indexUnionSquareOn = subwayLines[lineOn].indexOf("Union Square")
+
+// var indexUnionSquareOff = subwayLines[lineOff].indexOf("Union Square")
 
 var stations = function(indexStopOn, indexStopOff, indexUnionSquareOn, indexUnionSquareOff){
 
@@ -55,7 +71,7 @@ var stations = function(indexStopOn, indexStopOff, indexUnionSquareOn, indexUnio
         // list stations and stops for changeover journey
 
         if(indexStopOn < indexUnionSquareOn){
-            var stationsBeforeChangeoverArr = subwayLines[lineOn].slice(indexStopOn, indexUnionSquareOn);
+            var stationsBeforeChangeoverArr = subwayLines[lineOn].slice(indexStopOn, indexUnionSquareOn + 1);
         }else if (indexStopOn > indexUnionSquareOn) {
             var stationsBeforeChangeoverArr = subwayLines[lineOn].slice(indexUnionSquareOn, indexStopOn + 1);
             var stationsBeforeChangeoverArr = stationsBeforeChangeoverArr.reverse();
@@ -65,7 +81,7 @@ var stations = function(indexStopOn, indexStopOff, indexUnionSquareOn, indexUnio
             var stationsAfterChangeoverArr = subwayLines[lineOff].slice(indexStopOff, indexUnionSquareOff);
             var stationsAfterChangeoverArr = stationsAfterChangeoverArr.reverse();
         }else if (indexStopOff > indexUnionSquareOff){
-            var stationsAfterChangeoverArr = subwayLines[lineOff].slice(indexUnionSquareOff, indexStopOff + 1);
+            var stationsAfterChangeoverArr = subwayLines[lineOff].slice(indexUnionSquareOff + 1, indexStopOff + 1);
         }
         // var stationsAfterChangeoverArr = stationsAfterChangeoverArr.shift;
 
@@ -103,6 +119,11 @@ var alreadyAtDestination = function(stopOn, stopOff){
 };
 alreadyAtDestination(stopOn, stopOff);
 
+
+
+
+// !("key" in obj) // true if "key" doesn't exist in object
+// !"key" in obj   // ERROR!  Equivalent to "false in obj"
 
 // var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 // var citrus = fruits.slice(1, 3);
