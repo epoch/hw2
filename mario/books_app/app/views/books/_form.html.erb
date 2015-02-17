@@ -14,7 +14,7 @@
   <br>
 
   <p><%= f.label :author_id %>
-  <%= f.select :author_id, Author.all.map { |author| [author.name, author.id]}, :include_blank => true, :class => "block full-width field-light" %></p>
+  <%= f.select :author_id, Author.all.map { |author| [author.name, author.id]}, {:include_blank => true}, :class => "block full-width field-light" %></p>
 
   <%= f.submit :class => "button-blue" %>
 <% end %>
