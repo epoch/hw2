@@ -1,0 +1,23 @@
+<%= form_for @artist do |f| %>
+  <div class="form">
+    <%= f.label :name %>
+    <%= f.text_field :name, :autofocus => true %>
+  </div>
+  <div class="form">
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </div>
+  <div class="form">
+    <%= f.label :dob, "Date of birth" %>
+    <%= f.text_field :dob %>
+  </div>
+  <div class="form">
+    <%= f.label :period %>
+    <%= f.text_field :period %>
+  </div>
+  <div class="form">
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </div>
+    <%= f.submit %>
+<% end %>
