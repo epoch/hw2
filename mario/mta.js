@@ -41,6 +41,8 @@ mta = {
   finishStation : "Grand Central",
 
   journey : function () {
+    // error checking
+
     if (this.startLine === this.finishLine) {
       return this.tripWithNoTransfers()
     } else {
@@ -57,6 +59,12 @@ mta = {
   },
 
   tripWithTransfers : function() {
+    noStopError = this.errorChecker()
+
+    if (noStopError) {
+      return noStopError
+    }
+
     singleLine.line = this.startLine;
     singleLine.startStation = this.startStation;
     singleLine.finishStation = "Union Square";
@@ -73,7 +81,17 @@ mta = {
     console.log("The stop on " + this.startLine + " are " + stations1);
     console.log("Transfer at Union Square.");
     console.log("Then, the stop on " + this.finishLine + " are " + stations2);
+  },
+
+  errorChecker : function() {
+    if (LINES[this.startLine].indexOf(this.startStation) === -1) {
+      return "Please check you start station."
+    } else if (LINES[this.finishLine].indexOf(this.startStation) === -1) {
+      return "Please check you finish station."
+    } else {
+      return false
+    }
   }
 }
 
-mta.journey()
+console.log(mta.errorChecker());
