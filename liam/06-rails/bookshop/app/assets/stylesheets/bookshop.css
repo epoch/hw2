@@ -1,0 +1,21 @@
+ul li {
+  list-style: none;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.thumb {
+  max-width: 10em;
+}
+
+.book {
+  max-width: 100%;
+}
+
+.portrait {
+  max-height: 75vh;
+  border-radius: 100%
+}

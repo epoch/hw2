@@ -1,0 +1,32 @@
+<!-- Content Section -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="section-heading"><%= @user.name %>'s Profile</h1>
+        <img class="user" src="<%= @user.image %>" alt="<%= @user.name %> Photo">
+        <pre><%= @user.description %></pre>
+
+        <% if @user.articles.any? %>
+          <h3>Articles:</h3>
+          <ul>
+          <% @user.articles.each do |article| %>
+            <li>
+              <a href="/articles/<%= article.id %>">
+                <%= article.title %>
+              </a>
+            </li>
+          <% end %>
+          </ul>
+        <% end %>
+
+        <div class="controls">
+          <a href="/users/<%= @user.id %>/delete">Delete</a>
+          <a href="/users/<%= @user.id %>/edit">Edit</a>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

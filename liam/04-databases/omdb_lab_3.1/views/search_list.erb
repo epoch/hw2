@@ -1,0 +1,18 @@
+<!-- Fixed Height Image Aside -->
+<aside class="image-bg-fixed-height-min"></aside>
+
+<!-- Content Section -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="section-heading">Which movie are you searching for?</h1>
+          <% @search_data["Search"].each do |movie| %>
+            <p><a href="/movie?id=<%= movie["imdbID"] %>"><%= movie["Title"] %> <%= movie["Year"] %></a></p>
+          <% end %>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

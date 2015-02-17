@@ -1,0 +1,25 @@
+<%= form_for @book, :html => {:class => 'sm-col-6'} do |f| %>
+  
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, :autofocus => true, :class => 'block full-width field-light' %>
+  
+    <%= f.label :date_published %>
+    <%= f.text_field :date_published, :class => 'block full-width field-light' %>
+  
+    <%= f.label :publisher %>
+    <%= f.text_field :publisher, :class => 'block full-width field-light' %>
+  
+    <%= f.label :description %>
+    <%= f.text_area :description, :class => 'block full-width field-light' %>
+  
+    <%= f.label :image %>
+    <%= f.url_field :image, :class => 'block full-width field-light' %>
+  
+    <%= f.label :author_id %>
+    <%= f.select :author_id, Author.all.map {|author| [author.name, author.id]}, {:include_blank => true}, {:class => 'block full-width field-light'} %>
+  </div>
+
+  <%= f.submit :class => 'h3 button button-big mb4 button-blue' %>
+
+<% end %>

@@ -1,0 +1,7 @@
+CREATE TABLE videos (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+title TEXT,
+description TEXT,
+genre TEXT,
+url TEXT
+);

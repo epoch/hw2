@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookshop</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="clearfix white bg-dark-gray">
+  <div class="sm-col">
+    <a href="<%= root_path %>" class="button py2 button-nav-dark">Home</a>
+    <a href="<%= authors_path %>" class="button py2 button-nav-dark">Authors</a>
+    <a href="<%= books_path %>" class="button py2 button-nav-dark">Books</a>
+  </div>
+  <div class="sm-col-right">
+    <a href="<%= new_author_path %>" class="button py2 button-nav-dark">New Author</a>
+    <a href="<%= new_book_path %>" class="button py2 button-nav-dark">New Book</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <%= yield %>
+
+</div>
+
+<br>
+
+<footer class="white bg-dark-gray">
+  <div class="px2 py3 container">
+    <p class="h6 mb0">&copy; 2014 WDI Bookshop. Crafted by <a href="yttp://www.liamdarmody.com">Liam Darmody</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
