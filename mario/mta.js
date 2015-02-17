@@ -41,7 +41,12 @@ mta = {
   finishStation : "Grand Central",
 
   journey : function () {
-    // error checking
+    noLineOrStopError = this.errorChecker()
+
+    if (noLineOrStopError ) {
+      return noLineOrStopError 
+    }
+
 
     if (this.startLine === this.finishLine) {
       return this.tripWithNoTransfers()
@@ -54,17 +59,13 @@ mta = {
     singleLine.line = this.startLine;
     singleLine.startStation = this.startStation;
     singleLine.finishStation = this.finishStation;
-    console.log("The number of stops is " + singleLine.counter());
-    console.log("The stations are " + singleLine.stations());
+    output = []
+    output.push("The number of stops is " + singleLine.counter());
+    output.push("The stations are " + singleLine.stations());
+    return output.join('\n')
   },
 
   tripWithTransfers : function() {
-    noStopError = this.errorChecker()
-
-    if (noStopError) {
-      return noStopError
-    }
-
     singleLine.line = this.startLine;
     singleLine.startStation = this.startStation;
     singleLine.finishStation = "Union Square";
@@ -77,21 +78,27 @@ mta = {
     counter += singleLine.counter();
     stations2 = singleLine.stations();
 
-    console.log("The number of stops is " + counter);
-    console.log("The stop on " + this.startLine + " are " + stations1);
-    console.log("Transfer at Union Square.");
-    console.log("Then, the stop on " + this.finishLine + " are " + stations2);
+    output = []
+    output.push("The number of stops is " + counter);
+    output.push("The stop on " + this.startLine + " are " + stations1);
+    output.push("Transfer at Union Square.");
+    output.push("Then, the stop on " + this.finishLine + " are " + stations2);
+    return output.join('\n')
   },
 
   errorChecker : function() {
-    if (LINES[this.startLine].indexOf(this.startStation) === -1) {
-      return "Please check you start station."
+    if (!(this.startLine in LINES)) {
+      return "Please check your start line."
+    } else if (!(this.finishLine in LINES)) {
+      return "Please check your finish line."
+    } else if (LINES[this.startLine].indexOf(this.startStation) === -1) {
+      return "Please check your start station."
     } else if (LINES[this.finishLine].indexOf(this.startStation) === -1) {
-      return "Please check you finish station."
+      return "Please check your finish station."
     } else {
       return false
     }
   }
 }
 
-console.log(mta.errorChecker());
+console.log(mta.journey());
