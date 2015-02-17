@@ -7,9 +7,9 @@ const LINES = {
 }
 
 singleLine = {
-  line : undefined,
-  startStation : undefined,
-  finishStation : undefined,
+  line : "n_line",
+  startStation : "28th",
+  finishStation : "28th",
 
   startIndex : function() {
     return LINES[this.line].indexOf(this.startStation)
@@ -26,14 +26,14 @@ singleLine = {
   stations : function() {
     if (this.finishIndex() === this.startIndex()) {
       return [LINES[this.line][this.startIndex]]
+    } else if (this.startIndex() < this.finishIndex()) {
+      return LINES[this.line].slice(this.startIndex(), this.finishIndex() + 1)
+    } else {
+      return (LINES[this.line].slice(this.finishIndex(), this.startIndex() + 1)).reverse()
     }
   }
 
 }
-
-singleLine.line = "n_line";
-singleLine.startStation = "Time Square";
-singleLine.finishStation = "8th";
 
 console.log("Start index is " + singleLine.startIndex());
 console.log("Finish index is " + singleLine.finishIndex());
