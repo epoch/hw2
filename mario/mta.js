@@ -36,9 +36,9 @@ singleLine = {
 
 mta = {
   startLine : "nLine",
+  startStation : "34th",
   finishLine : "sixLine",
-  startStation : "Union Square",
-  finishStation : "Grand Central",
+  finishStation : "Astor Place",
   prettyPrint : {
                   nLine : "N-Line",
                   lLine : "L-Line",
@@ -50,10 +50,12 @@ mta = {
 
     if (noLineOrStopError ) {
       return noLineOrStopError 
-    }
-
-
-    if (this.startLine === this.finishLine) {
+    } else if (this.startLine === this.finishLine) {
+      return this.tripWithNoTransfers()
+    } else if (this.startStation === "Union Square") {
+      this.startLine = this.finishLine;
+      return this.tripWithNoTransfers()
+    } else if (this.finishStation === "Union Square"){
       return this.tripWithNoTransfers()
     } else {
       return this.tripWithTransfers()
@@ -64,10 +66,15 @@ mta = {
     singleLine.line = this.startLine;
     singleLine.startStation = this.startStation;
     singleLine.finishStation = this.finishStation;
-    output = []
-    output.push("The number of stops is " + singleLine.counter());
-    output.push("The stations are " + singleLine.stations().join(", "));
-    return output.join('\n')
+    if (singleLine.counter() === 0) {
+      return "You're aleady there, stupid!"
+    } else {
+      line = this.prettyPrint[this.startLine];
+      output = []
+      output.push("The number of stops is " + singleLine.counter());
+      output.push("On the " + line + ", the stations are " + singleLine.stations().join(", "));
+      return output.join('\n')
+    }
   },
 
   tripWithTransfers : function() {
@@ -100,7 +107,7 @@ mta = {
       return "Please check your finish line."
     } else if (LINES[this.startLine].indexOf(this.startStation) === -1) {
       return "Please check your start station."
-    } else if (LINES[this.finishLine].indexOf(this.startStation) === -1) {
+    } else if (LINES[this.finishLine].indexOf(this.finishStation) === -1) {
       return "Please check your finish station."
     } else {
       return false
@@ -108,4 +115,8 @@ mta = {
   }
 }
 
+mta.startLine = "nLine"
+mta.startStation = "34th"
+mta.finishLine = "sixLine"
+mta.finishStation = "Astor Place"
 console.log(mta.journey());
