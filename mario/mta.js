@@ -17,13 +17,25 @@ singleLine = {
 
   finishIndex : function() {
     return LINES[this.line].indexOf(this.finishStation)
+  },
+
+  counter : function() {
+    return Math.abs(this.finishIndex() - this.startIndex());
+  },
+
+  stations : function() {
+    if (this.finishIndex() === this.startIndex()) {
+      return [LINES[this.line][this.startIndex]]
+    }
   }
 
 }
 
-singleLine.line = "n_line"
-singleLine.startStation = "Time Square"
-singleLine.finishStation = "8th"
+singleLine.line = "n_line";
+singleLine.startStation = "Time Square";
+singleLine.finishStation = "8th";
 
-console.log("Start index is " + singleLine.startIndex())
-console.log("Finish index is " + singleLine.finishIndex())
+console.log("Start index is " + singleLine.startIndex());
+console.log("Finish index is " + singleLine.finishIndex());
+console.log("The number of stops is " + singleLine.counter());
+console.log("The stations are " + singleLine.stations())
