@@ -18,8 +18,8 @@ var stationEnd = prompt('Selection: ');
 
 var start = subway[lineStart].indexOf(stationStart);
 var end = subway[lineEnd].indexOf(stationEnd);
-var startUnionSq = subway[lineStart].indexOf("UNION STATION");
-var endUnionSq = subway[lineEnd].indexOf("UNION STATION");
+var startUnionStation = subway[lineStart].indexOf("UNION STATION");
+var stopUnionStation = subway[lineEnd].indexOf("UNION STATION");
 
 var trip = [];
 
@@ -37,32 +37,32 @@ if (lineStart === lineEnd) {
   }
   var tripLength = trip.length;
 } else {
-  if (start < startUnionSq) {
-    for(i = start; i <= startUnionSq; i++){
+  if (start < startUnionStation) {
+    for(i = start; i <= startUnionStation; i++){
       var tripStops = subway[lineStart][i];
       trip.push(tripStops);
     }
   }
-  if (end < endUnionSq) {
-    for (i = end; i <= (endUnionSq + 1); i++) {
+  if (end < stopUnionStation) {
+    for (i = end; i <= (stopUnionStation + 1); i++) {
       var tripStops = subway[lineEnd][i];
       trip.push(tripStops);
     }
   }
-  if (start > startUnionSq) {
-    for (i = startUnionSq; i <= start; i++) {
+  if (start > startUnionStation) {
+    for (i = startUnionStation; i <= start; i++) {
       var tripStops = subway[lineStart][i];
       trip.push(tripStops);
     }
   }
-  if (end > endUnionSq) {
-    for (i = (endUnionSq + 1); i <= end; i++) {
+  if (end > stopUnionStation) {
+    for (i = (stopUnionStation + 1); i <= end; i++) {
       var tripStops = subway[lineEnd][i];
       trip.push(tripStops);
     }
   }
   var tripLength = trip.length;
 }
-  var trip = trip.join(", ");
+var trip = trip.join(", ");
 
 alert("Your trip: " + trip + " with " + tripLength + " stops.");
