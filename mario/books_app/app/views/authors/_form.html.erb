@@ -1,0 +1,15 @@
+<%= form_for @author do |f| %>
+  <p><%= f.label :name, :class => "sm-col-4" %>
+  <%= f.text_field :name, :autofocus => true, :class => "block full-width field-light" %></p>
+
+  <%= f.label :nationality %>
+  <%= f.text_field :nationality, :class => "block full-width field-light" %>
+
+  <%= f.label :dob, "Date of Birth" %>
+  <%= f.text_field :dob, :class => "block full-width field-light" %>
+
+  <%= f.label :image %>
+  <%= f.url_field :image, :class => "block full-width field-light" %>
+
+  <%= f.submit :class => "button-blue" %>
+<% end %>

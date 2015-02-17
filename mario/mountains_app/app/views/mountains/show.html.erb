@@ -1,0 +1,19 @@
+<div class="row"><h2><%= @mountain.name %></h2></div>
+<div class="row">
+<div class="three columns">    
+  <h5>Height: <%= @mountain.height %>m</h5>
+  <h5>Country: <%= @mountain.country %></h5>
+</div>
+<div class="eight columns"> 
+  <p><%= image_tag @mountain.image %></p>
+</div>
+</div>
+
+<div class="row">
+  <div class="three columns"> 
+    <p><%= link_to 'Edit Mountain', mountain_edit_path(@mountain.id) %></p>
+  </div>
+  <div class="eight columns"> 
+    <%= button_to('Delete Mountain', mountain_delete_path(@mountain.id)) %>
+  </div>
+</div>
