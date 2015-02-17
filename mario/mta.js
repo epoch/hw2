@@ -1,13 +1,13 @@
 // Third version of MTA, first version in Javascript
 
 const LINES = {
-    n_line : ["Time Square", "34th", "28th", "23rd", "Union Square", "8th"],
-    l_line : ["8th", "6th", "Union Square", "3rd", "1st"],
-    six_line : ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
+    nLine : ["Time Square", "34th", "28th", "23rd", "Union Square", "8th"],
+    lLine : ["8th", "6th", "Union Square", "3rd", "1st"],
+    sixLine : ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
 }
 
 singleLine = {
-  line : "n_line",
+  line : "nLine",
   startStation : "28th",
   finishStation : "8th",
 
@@ -35,10 +35,15 @@ singleLine = {
 }
 
 mta = {
-  startLine : "n_line",
-  finishLine : "six_line",
-  startStation : "28th",
+  startLine : "nLine",
+  finishLine : "sixLine",
+  startStation : "Union Square",
   finishStation : "Grand Central",
+  prettyPrint : {
+                  nLine : "N-Line",
+                  lLine : "L-Line",
+                  sixLine : "6-Line"
+                },
 
   journey : function () {
     noLineOrStopError = this.errorChecker()
@@ -61,7 +66,7 @@ mta = {
     singleLine.finishStation = this.finishStation;
     output = []
     output.push("The number of stops is " + singleLine.counter());
-    output.push("The stations are " + singleLine.stations());
+    output.push("The stations are " + singleLine.stations().join(", "));
     return output.join('\n')
   },
 
@@ -77,12 +82,14 @@ mta = {
     singleLine.finishStation = this.finishStation;
     counter += singleLine.counter();
     stations2 = singleLine.stations();
+    startLine = this.prettyPrint[this.startLine];
+    finishLine = this.prettyPrint[this.finishLine];
 
     output = []
     output.push("The number of stops is " + counter);
-    output.push("The stop on " + this.startLine + " are " + stations1);
+    output.push("The stops on " + startLine + " are " + stations1.join(", "));
     output.push("Transfer at Union Square.");
-    output.push("Then, the stop on " + this.finishLine + " are " + stations2);
+    output.push("Then, the stops on " + finishLine + " are " + stations2.join(", "));
     return output.join('\n')
   },
 
