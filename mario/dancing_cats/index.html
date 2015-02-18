@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Cat Walk</title>
+ </head>
+ <body>
+  
+  <button id="start-button">Start</button>
+  <button id="speed-button">Go Faster!</button>
+  <button id="stop-button">Stop</button>
+  <div id="info"></div>
+  
+  <img style="position:absolute; left: 0px; top: 80px;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+
+  <script>
+var movePixels = 10;
+var delayMs = 50;
+var catTimer = null;
+function catWalk() {
+  var img = document.getElementsByTagName('img')[0];
+  var currentLeft = parseInt(img.style.left);
+  img.style.left = (currentLeft + movePixels) + 'px';
+  if (currentLeft > (window.innerWidth-img.width)) {
+    img.style.left = '0px';
+  }
+}
+function startCatWalk() {
+  catTimer = window.setInterval(catWalk, delayMs);
+}
+  </script>
+
+  <article>
+<p>Move the above code into a separate JS file!
+<p>Add an event listener to the start button, so that the cat starts moving across the screen when its clicked.
+<p>Add an event listener to the stop button, so that the cat stops moving when clicked.
+<p>Add an event listener to the speed button, so that the cat moves faster when it's clicked. 
+<p>When the cat reaches the edge of the screen, have her walk back to the start. Repeat forever.
+<p>Make sure your code works even when the screen is resized (you will need to find the window width with Javascript.
+<p>BONUS: When the cat reaches half way, have her stop and replace the image with a dancing cat gif for a moment, then resume.
+  </article>
+
+ </body>
+ <script src="dancing_cat.js"></script>
+</html>
