@@ -4,19 +4,25 @@ var speedButton = document.getElementById('speed-button');
 var stopButton = document.getElementById('stop-button');
 var timer = null;
 var speedFactor = 1;
+var direction = 1;
+
 
 img.style.position = 'absolute';
 img.style.top = '100px';
 
 var step = function() {
   var oldLeft = parseInt(img.style.left);
-  var newLeft = oldLeft + 4;
+  var newLeft = oldLeft + 4 * direction;
   img.style.left = newLeft + 'px';
   var oldTop = parseInt(img.style.top);
-  var newTop = oldTop + 1;
+  var newTop = oldTop + 1 * direction;
   img.style.top = newTop + 'px';
   if (newLeft > (window.innerWidth-img.width)) {
-  img.style.left = '0px';
+    direction = -1;
+    img.id = "mirror-cat";
+  } else if (newLeft == 0) {
+    direction = 1;
+    img.id = undefined;
   };
 };
 
