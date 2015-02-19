@@ -1,0 +1,17 @@
+<div class="post">
+
+  <h2><%= @post.title %></h2>
+
+    <div class="show-content">
+    <p>Created: <%= @post.post_time %></p>
+    <p><%= @post.body %></p>
+
+    <img class='content-img' src="<%= @post.image %>" alt="">
+  </div>
+  <div class="controls">
+    <a href="/posts">< Back to Posts</a>
+    <a href="/posts/<%= @post.id %>/delete">Delete</a>
+    <a href="/posts/<%= @post.id %>/edit">Edit</a>
+  </div>
+
+</div>

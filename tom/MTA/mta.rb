@@ -1,7 +1,8 @@
-# currently only works with the N line hardcoded
+# currently only works with the N line hardcoded (or any other line hardcoded)
 # accepts current station and destination inputs
-# doesn't seem to like strings with spaces in them
 # goes backwards successfully
+
+# make sure it prints out menus saying where you are going with station and line options
 
 # subway stations are stored in a hash
 subway = {
@@ -14,7 +15,12 @@ subway = {
 
 # save this for when I figure out how to use other lines as hash keys
 # print "Please enter the line you are on: "
-# user_line = gets.chomp.capitalize
+# user_line = gets.chomp
+
+# union sq might need to be a constant for each line (so I don't have to keep trying to access that index)
+
+print 'Please enter the line you are on'
+user_line = gets.chomp
 
 # finds the index of user_station
 print 'Please enter your current station: '
@@ -24,7 +30,7 @@ start = subway['N'].index {|x| x == user_station}
 
 # finds the index of user_destination
 print 'Please enter your destination: '
-user_destination = gets.chomp.capitalize
+user_destination = gets.chomp
 
 finish = subway['N'].index {|x| x == user_destination}
 
@@ -61,10 +67,7 @@ subway['N'].each_with_index do |v, i|
 	end
 end
 
-# to avoid messing with an already working loop above:
-# - if statement checks to see if we're going backwards
-# - reverses the stops
-# - prints out the reversed stops
+# - if statement checks to see if we're going backwards, reverses stops and prints out the reversed stops
 if finish < start
 	reverse_array.reverse!
 	
@@ -78,5 +81,3 @@ if finish < start
 
 	end
 end
-
-# next step is to figure out how to input a line to travel on

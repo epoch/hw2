@@ -1,0 +1,99 @@
+body {
+  background-image: url('http://currentwiki.mindseyesociety.org/images/2/2b/Grand-ballroom_000.jpg');
+  background-size: cover;
+}
+
+.music {
+  position: absolute;
+  top: 0;
+  left: -30000px;
+  z-index: -1;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  background-color: blue;
+  font-size: 46pt;
+  margin-top: -20px;
+}
+
+.keyboard-left {
+  position:absolute;
+  left: 0px;
+  top: 100px;
+}
+
+.keyboard-right {
+  position:absolute;
+  right: 0px;
+  top: 100px;
+}
+
+#mirror-cat {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.left-corner-cat {
+  height: 200px;
+  width: 140px;
+  z-index: 3;
+}
+
+.right-corner-cat {
+  height: 200px;
+  width: 140px;
+  z-index: 3;
+}
+
+.trumpet-cat {
+  position: absolute;
+  right: 150px;
+  top: 380px;
+  height: 250px;
+  width: 220px;
+}
+
+.cat-dancers {
+  position: absolute;
+  top: 500px;
+  left: 490px;
+}
+
+#money-raised {
+  position: absolute;
+  bottom: 0;
+  left: 771px;
+  color: white;
+  background-color: blue;
+  z-index: 1001;
+}
+
+#current-amount {
+  position: absolute;
+  bottom: 0;
+  left: 420px;
+  color: white;
+  background-color: blue;
+  z-index: 1001;
+}
+
+.roll-cat {
+  position: absolute;
+  bottom: 25px;
+  left: 500px;
+  height: 100px;
+  width: 100px;
+  z-index: 3;
+}
+
+.banner {
+  position: absolute;
+  top: 150px;
+  left: 430px;
+}

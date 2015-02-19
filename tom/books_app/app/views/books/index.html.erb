@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <h2>Books</h2>
+  </div>
+
+  <div class="row">
+    <% @books.each do |book| %>
+      <div class="col-md-4">
+        <div class="thumbnail author-pic">
+          <%= image_tag book.image %>
+          <div class="caption">
+            <h3 class="text-center"><%= link_to book.title, book %></h3>
+            <ul>
+              <li>Year: <%= book.year %></li>
+              <li>Pages: <%= book.pages %></li>
+              <li>Language: <%= book.language %></li>
+              <li>Genre: <%= book.genre %></li>
+               <%= link_to 'View', book, :class => "btn btn-primary thumb-btn" %>
+             </div>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

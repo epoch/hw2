@@ -1,0 +1,24 @@
+<h2 class='post-list'>Edit post</h2>
+
+<form action="/posts/<%= @post.id %>" method="post">
+  <p>
+  <label for="title">Title:</label>
+  </p>
+  <p>
+  <input type="text" id="title" name="title" value="<%= @post.title %>">
+  </p>
+  <p>
+  <label for="body">Body:</label>
+  </p>
+  <p>
+  <textarea id="body" name="body"><%= @post.body %></textarea>
+  </p>
+  <p>
+  <label for="image">Image:</label>
+  </p>
+  <p>
+  <input type="url" id="image" name="image" value="<%= @post.image %>">
+  </p>
+
+  <input type="submit" value="Update post">
+</form>

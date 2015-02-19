@@ -1,0 +1,41 @@
+<%= form_for @book, :html => {:class => "form-horizontal"} do |f| %>
+
+  <div class="form-group">
+    <%= f.label :title, :class => "col-md-2 col-md-offset-1 text-right" %>
+    <%= f.text_field :title, :autofocus => true, :class => "col-md-6" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :year, :class => "col-md-2 col-md-offset-1 text-right" %>
+    <%= f.text_field :year, :class => "col-md-6" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :pages, :class => "col-md-2 col-md-offset-1 text-right" %>
+    <%= f.text_field :pages, :class => "col-md-6" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :language, :class => "col-md-2 col-md-offset-1 text-right" %>
+    <%= f.text_field :language, :class => "col-md-6" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :genre, :class => "col-md-2 col-md-offset-1 text-right" %>
+    <%= f.text_field :genre, :class => "col-md-6" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image, :class => "col-md-2 col-md-offset-1 text-right" %>
+    <%= f.url_field :image, :class => "col-md-6" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :author_id, :class => "col-md-2 col-md-offset-1 text-right" %>
+    <%= f.select :author_id, Author.all.map { |author| [author.name, author.id] }, :include_blank => true %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit :class => "col-md-2 col-md-offset-5" %>
+  </div>
+<% end %>

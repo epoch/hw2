@@ -1,0 +1,32 @@
+<div class="row author-buttons">
+  <div class="col-md-4 col-md-offset-1">
+    <h2><%= @book.title %></h2>
+
+    <!-- we use @author because we're 'posting' it to that path -->
+    <%= link_to 'Delete Book', @book, :method => 'delete', :data => {:confirm => 'Are you sure?'}, :class => 'btn btn-default' %>
+    <%= link_to 'Edit Book', edit_book_path, :class => 'btn btn-default' %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 col-md-offset-1">
+  <%= image_tag @book.image, :class => 'show-pic' %>
+  </div>
+
+  <div class="col-md-6 col-md-offset-1">
+    <div class="panel panel-default book-info">
+      <div class="panel-heading">
+        <p>Info:</p>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <li>Year: <%= @book.year %></li>
+          <li>Pages: <%= @book.pages %></li>
+          <li>Language: <%= @book.language %></li>
+          <li>Genre: <%= @book.genre %></li>
+          <% if @book.author_id %>
+            <li>Author: <%= link_to @book.author.name, @book.author %></li>
+          <% end %>
+        </ul>
+      </div>
+</div>

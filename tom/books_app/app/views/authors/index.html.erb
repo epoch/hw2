@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <h2>Authors</h2>
+  </div>
+
+  <div class="row">
+    <% @authors.each do |author| %>
+      <div class="col-md-4">
+        <div class="thumbnail author-pic">
+          <%= image_tag author.image %>
+          <div class="caption">
+            <h3 class="text-center"><%= link_to author.name, author %></h3>
+            <ul>
+              <li>Nationality: <%= author.nationality %></li>
+              <li>DOB: <%= author.dob.strftime('%B %e, %Y') if author.dob %></li>
+              <%= link_to 'View', author, :class => "btn btn-primary thumb-btn" %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -12,6 +12,7 @@ class Anagram
     print "List of possible answers: "
     puts @array.join(', ')
     puts "\n"
+
     @array.each do |word|
       if @user_word.chars.sort.join == word.chars.sort.join
         puts "Anagram of #{@user_word} is #{word}!"
@@ -19,7 +20,8 @@ class Anagram
 
       end
     end
+
     puts "====================="
-        puts "\n"
+    puts "\n"
   end
 end

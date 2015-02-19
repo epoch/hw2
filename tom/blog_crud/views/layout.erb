@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BlogFace</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1><a href="/">BlogFace</a></h1>
+
+      <nav class='menu'>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts">View Posts</a></li>
+          <li><a href="/new">New Post</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <%= yield %>
+  </div>
+</body>
+</html>

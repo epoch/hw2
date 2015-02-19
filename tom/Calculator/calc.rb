@@ -11,7 +11,7 @@ def read_choice
 	puts "|  m. Multiplication   |"
 	puts "|  e. Exponentiation   |"
 	puts "|  r. Square Root      |"
-	puts "| sq. Square           |"
+	puts "|  k. Square           |"
 	puts "|  c. Cube             |"
 	puts "|  p. Percentage       |"
 	puts "|  q. Quit             |"
@@ -118,14 +118,14 @@ while menu_selection != 'q'
 	# ------------------------------------
 	# loop keeps prompting user for a valid option, will not progress until it gets one
 	# needs a functioning way of checking if the input is one a series of options without looking so disgusting 
-	until menu_selection == 'a' || menu_selection == 's' || menu_selection == 'd' || menu_selection == 'm' || menu_selection == 'e' || menu_selection == 'r' || menu_selection == 'sq' || menu_selection == 'c' || menu_selection == 'p'
+	#until menu_selection == 'a' || menu_selection == 's' || menu_selection == 'd' || menu_selection == 'm' || menu_selection == 'e' || menu_selection == 'r' || menu_selection == 'sq' || menu_selection == 'c' || menu_selection == 'p'
 	# ------------------------------------
 
 	# CAN BE FIXED USING SOME SORT OF ARRAY.INCLUDE? THING
-	# until menu_selection.include? 'a', 's', 'd', 'm', 'e', 'r', 'sq', 'c', 'p'
-		puts "Unknown function. Please choose again:"
-		menu_selection = read_choice
-	end
+	# until menu_selection.include? /[asdmerkcp]/
+	# 	puts "Unknown function. Please choose again:"
+	# 	menu_selection = read_choice
+	# end
 
 	case menu_selection
 		when 'a' then add(get_number, get_number2)
@@ -134,7 +134,7 @@ while menu_selection != 'q'
 		when 'm' then multiply(get_number, get_number2)
 		when 'e' then expontentiate(exp, power)
 		when 'r' then root(get_number)
-		when 'sq' then square(get_number)
+		when 'k' then square(get_number)
 		when 'c' then cube(get_number)
 		when 'p' then percent 
 		else

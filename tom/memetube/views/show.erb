@@ -1,23 +1,20 @@
 <div class="info-box">
-  <h2><%= @video["name"] %></h2>
+  <h2><%= @video.name %></h2>
   <br>
   <p>Description:</p>
-  <p><em><%= @video["description"] %></em></p>
+  <p><em><%= @video.description %></em></p>
   <p>URL:</p>
   <p>
-    <a href="<%= @video["url"] %>" target="_blank"><%= @video["url"] %></a>
+    <a href="<%= @video.url %>" target="_blank"><%= @video.url %></a>
   </p>
-  <p>Genre: <em><%= @video["genre"] %></em></p>
+  <p>Genre: <em><%= @video.genre %></em></p>
 
   <div class="controls">
-    <a href="/videos/<%= @video["id"] %>/delete">Delete</a>
-    <a href="/videos/<%= @video["id"] %>/edit">Edit</a>
+    <a href="/videos/<%= @video.id %>/delete">Delete</a>
+    <a href="/videos/<%= @video.id %>/edit">Edit</a>
   </div>
 </div>
 
-<!-- this currently means every show page will have the same video embedded. need to append a value after the /embed/ section of the url -->
-<!-- @embed_code currently doesn't work -->
 <iframe class="embed" width="420" height="315"
 src="//www.youtube.com/embed/<%= @embed_code %>">
 </iframe>
-
