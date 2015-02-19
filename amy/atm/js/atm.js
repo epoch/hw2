@@ -4,30 +4,13 @@ var accounts = {
   checking: {
     balance: 0,
     deposit: $('#checkingDeposit').on('click', function (amount) {
-                // var $currentBalance = parseInt($('#balance1').html());
                 var $amt = parseInt($( "#checkingAmount" ).val());
                 accounts.checking.balance += $amt;
-                // once i get the value update the internal balance
-                // accessing the variable form the object
-                // replace the $currentbalance in the below line with the balance variable
                 $('#balance1').html(accounts.checking.balance); 
-
-                // console.log (accounts.checking.balance);
-                // console.log($('#balance1'));
-
     }),
 
     withdraw: $('#checkingWithdraw').on('click', function (amount) {
-               // var $currentBalance = parseInt($('#balance1').html()); 
                var $amt = parseInt($( "#checkingAmount" ).val());
-
-               // if ($amt > accounts.checking.balance){
-               //      $('#balance1').html("not enough money")
-               //      console.log("not enough money");
-               // }else{
-               //      accounts.checking.balance -= $amt;
-               //      $('#balance1').html(accounts.checking.balance); 
-               //  }
 
                 var totalBalance = accounts.savings.balance + accounts.checking.balance;
 
@@ -41,12 +24,12 @@ var accounts = {
 
                 }else if ($amt > accounts.checking.balance && $amt > totalBalance){
                     console.log("insufficient funds even for overdraft");
+                     $('#balance2').html("Insufficient funds");
+
                 }else if ($amt < accounts.checking.balance){
                     accounts.checking.balance -= $amt;
                     $('#balance1').html(accounts.checking.balance); 
                 }
-
-                
     })
 
   },
@@ -61,24 +44,31 @@ var accounts = {
 
     withdraw: $('#savingsWithdraw').on('click', function (amount) {
                var $amt = parseInt($( "#savingsAmount" ).val());
-               if ($amt > accounts.savings.balance){
-                    $('#balance2').html("not enough money")
-                    console.log("not enough money");
+ 
+                var totalBalance = accounts.savings.balance + accounts.checking.balance;
 
-               }else{
-                    accounts.savings.balance -= $amt;
+                if ($amt > accounts.savings.balance && $amt < totalBalance ) {
+                    console.log("hello im overdrawn savings");
+                    var overdraft = Math.abs($amt - accounts.savings.balance);
+                    accounts.savings.balance = 0;
+                    accounts.checking.balance -= overdraft;
+                    $('#balance1').html(accounts.checking.balance); 
                     $('#balance2').html(accounts.savings.balance); 
 
-               }
+                }else if ($amt > accounts.savings.balance && $amt > totalBalance){
+                    console.log("insufficient funds even for overdraft");
+                    $('#balance2').html("Insufficient funds");
 
+                }else if ($amt < accounts.savings.balance){
+                    accounts.savings.balance -= $amt;
+                    $('#balance2').html(accounts.savings.balance); 
+                }
 
     })
 
   },
     
 };
-
-           
 
 function changeCheckingBackground(balance){
     if (accounts.checking.balance === 0){
@@ -90,7 +80,7 @@ function changeCheckingBackground(balance){
     }
 }
 
-changeCheckingBackground();
+// changeCheckingBackground();
 
 function changeSavingsBackground(){
     if (accounts.savings.balance === 0){
@@ -99,6 +89,8 @@ function changeSavingsBackground(){
         $('#balance2').removeClass('zero-background');
     }
 }
+
+// changeSavingsBackground();
 
 
 
@@ -116,20 +108,20 @@ function changeSavingsBackground(){
 // changeBackgroundColor();
 
 
-var totalBalance = accounts.savings.balance + accounts.checking.balance
+// var totalBalance = accounts.savings.balance + accounts.checking.balance
 
-var overdraftChecking = function(){
-    if ($amt > accounts.checking.balance && $amt < totalBalance ) {
-        console.log("hello im overdrawn checkings");
+// var overdraftChecking = function(){
+//     if ($amt > accounts.checking.balance && $amt < totalBalance ) {
+//         console.log("hello im overdrawn checkings");
 
-    }
-}
+//     }
+// }
 
 
-var overdraftSavings = function(){
+// var overdraftSavings = function(){
 
-}
-overdraftSavings();
+// }
+// overdraftSavings();
 
 
 
