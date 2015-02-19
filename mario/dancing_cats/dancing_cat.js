@@ -10,6 +10,12 @@ var direction = 1;
 img.style.position = 'absolute';
 img.style.top = '100px';
 
+var swapImage = function () {
+  img.src = "conga_cat.gif";
+  stopKittyWalk();
+  window.setTimeout(watchKittyWalk, 3000);
+}
+
 var step = function() {
   var oldLeft = parseInt(img.style.left);
   var newLeft = oldLeft + 4 * direction;
@@ -17,7 +23,10 @@ var step = function() {
   var oldTop = parseInt(img.style.top);
   var newTop = oldTop + 1 * direction;
   img.style.top = newTop + 'px';
-  if (newLeft > (window.innerWidth-img.width)) {
+  if (newLeft == (window.innerWidth - img.width) / 2 - 80) {
+    swapImage();
+  };
+  if (newLeft > (window.innerWidth - img.width)) {
     direction = -1;
     img.id = "mirror-cat";
   } else if (newLeft == 0) {
@@ -28,6 +37,7 @@ var step = function() {
 
 var watchKittyWalk = function() {
   if (!timer) {
+  img.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif"
   timer = window.setInterval(step, 50/speedFactor);
   }
 };

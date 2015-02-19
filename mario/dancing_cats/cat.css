@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
 #mirror-cat {
         -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
@@ -5,4 +7,15 @@
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";
+}
+
+body {
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0px;
+  padding: 0px;
 }
