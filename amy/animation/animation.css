@@ -1,5 +1,18 @@
+html, body {
+    height: 100%;
+    font-family: 'Abril Fatface', cursive;
+}
+
 body {
     margin: 0;
+}
+
+h1 {
+    color: #fff;
+  color: #e0eff2;
+  font: italic bold 80px Georgia, Serif;
+  text-shadow: -4px 3px 0 yellow, -14px 7px 0 #000;
+
 }
 
 .flipped {
@@ -24,7 +37,69 @@ footer {
     background: #ffffff url("catwalk_viewers.jpg") repeat left bottom;
     height: 101px;
     width: 100%;
+    /*bottom: 0;*/
+    border: none;
 }
+
+.container{
+    /*height: 100vh;*/
+    min-height: 100%;
+    width: 100%;
+    margin-bottom: -174px;
+    /*background: linear-gradient(direction, #000, #fff);*/
+    text-align: center;
+  background: -webkit-linear-gradient(#000, #fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#000, #fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#000, #fff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#000, #fff); /* Standard syntax */
+    
+
+    
+}
+
+.container:after {
+  content: "";
+  display: block;
+}
+
+/*.container img {
+    bottom: 0;
+}*/
+
+footer, .container:after {
+  height: 101px; 
+}
+
+
+button{
+    background-color: #000;
+    border: 5px solid yellow;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 50px 10px 10px 10px;
+    color: #fff;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.dancing-cat-spin{
+
+/*    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);*/
+
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .catwalk-lights {
     

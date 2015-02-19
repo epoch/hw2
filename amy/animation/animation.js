@@ -12,15 +12,22 @@ var audioElement = document.createElement('audio');
 audioElement.setAttribute('src', 'Im_Too_Sexy.mp3');
 // audioElement.setAttribute('autoplay', 'autoplay');
 
-var halfWindow = window.innerWidth/2
-
 function catWalk(){
-  var img = document.getElementsByTagName('img')[0];
+  var img = document.getElementsByTagName('img')[2];
+  // var img2 = document.getElementsByTagName('img')[1];
+
   var currentLeft = parseInt(img.style.left);
   var currentRight = parseInt(img.style.right);
-  var currentCenter = parseInt(img.style.center);
+
+  // var currentLeft = parseInt(img2.style.left);
+  // var currentRight = parseInt(img2.style.right);
+
+  // var currentCenter = parseInt(img.style.center);
   img.style.left = (currentLeft + movePixels) + 'px';
   img.style.right = (currentRight - movePixels) + 'px';
+
+  // img2.style.left = (currentLeft + movePixels) + 'px';
+  // img2.style.right = (currentRight - movePixels) + 'px';
   
   if (currentLeft > (window.innerWidth-img.width)) {
     
@@ -36,7 +43,7 @@ function catWalk(){
     movePixels = 30;
 
   }else if (currentLeft > (window.innerWidth/2 -img.width) && 
-            currentLeft < (window.innerWidth/2) -img.width+movePixels+2)  {
+            currentLeft < (window.innerWidth/2) -img.width+movePixels+1)  {
 
     console.log(currentLeft, (window.innerWidth/2 -img.width), (window.innerWidth/2));
 
@@ -59,6 +66,7 @@ function catWalk(){
 
 function startCatWalk(){
     catTimer = window.setInterval(catWalk, delayMs);
+    $('.dancing-cat-small').addClass('dancing-cat-spin');
     audioElement.play();
 }
 
@@ -68,7 +76,8 @@ function speedCatWalk(){
 
 function stopCatWalk(){
     window.clearInterval(catTimer);
-    audioElement.pause();
+    // audioElement.pause();
+    $('.dancing-cat-small').removeClass('dancing-cat-spin');
 
 }
 
