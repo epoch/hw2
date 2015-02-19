@@ -1,32 +1,39 @@
-var movePixels = 10;
-var delayMs = 50;
+var movePixels = 2;
+var delayMs = 36;
 var catTimer = null;
 
-var startButt = document.getElementById('start-button');
-var stopButt = document.getElementById('stop-button');
+var startButton = document.getElementById('start-button');
+var stopButton = document.getElementById('stop-button');
+var speedButton = document.getElementById('speed-button');
+
+// var startButton = function(event) {
+//   var start = document.getElementById('start-button').value;
+// }
 
 function catWalk() {
   var img = document.getElementsByTagName('img')[0];
   var currentLeft = parseInt(img.style.left);
-  img.style.left = (currentLeft + movePixels) + 'px';
+  img.style.left = (currentLeft + movePixels) + 'px'; 
   if (currentLeft > (window.innerWidth-img.width)) {
-    img.style.left = '0px';
+  img.style.left = '0px';
   }
 }
-function startCatWalk() {
-  catTimer = window.setInterval(catWalk, delayMs);
+
+function speedCatWalk() {
+  movePixels = 5;
 }
 
-
-var startButton 
-
-
-
+function startCatWalk() {
+  if (catTimer === null) {
+  catTimer = window.setInterval(catWalk, delayMs);
+  }
+}
 
 function stopCatWalk() {
-  window.clearInterval(catWalk, delayMs);
+  clearInterval(catTimer);
 }
 
+startButton.addEventListener('click', startCatWalk);
+stopButton.addEventListener('click', stopCatWalk);
+speedButton.addEventListener('click', speedCatWalk);
 
-startButt.addEventListener('click', startCatWalk);
-stopButt.addEventListener('click', stopCatWalk);
