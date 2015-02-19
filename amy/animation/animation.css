@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+.flipped {
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -khtml-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+}
+
+
+header {
+    height: 73px;
+
+    width: 100%;
+    /*background-color: pink;*/
+    background: #ffffff url("catwalk_lights.jpg") repeat left top;
+}
+
+footer {
+    background: #ffffff url("catwalk_viewers.jpg") repeat left bottom;
+    height: 101px;
+    width: 100%;
+}
+
+.catwalk-lights {
+    
+}
+
+.catwalk-viewers {
+
+}
