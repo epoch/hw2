@@ -1,7 +1,0 @@
-<h2><%= @planet.name %></h2>
-<h3>Mass: <%= @planet.mass %></h3>
-
-<%= image_tag @planet.image %>
-
-<%= button_to("Deathstar!", planet_delete_path(@planet.id)) %>
-<%= link_to("Edit planet", planet_edit_path(@planet.id)) %>

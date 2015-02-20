@@ -25,39 +25,39 @@ var trip = [];
 
 if (lineStart === lineEnd) {
   if (start < end) {
-    for(i = start; i <= end; i++){
-      var tripStops = subway[lineStart][i];
+    for(n = start; n <= end; n++){
+      var tripStops = subway[lineStart][n];
       trip.push(tripStops);
     }
   } else if (start > end){
-      for(i = end; i <= start; i++){
-        var tripStops = subway[lineStart][i];
+      for(n = end; n <= start; n++){
+        var tripStops = subway[lineStart][n];
         trip.push(tripStops);
       }
   }
   var tripLength = trip.length;
 } else {
   if (start < startUnionStation) {
-    for(i = start; i <= startUnionStation; i++){
-      var tripStops = subway[lineStart][i];
+    for(n = start; n <= startUnionStation; n++){
+      var tripStops = subway[lineStart][n];
       trip.push(tripStops);
     }
   }
   if (end < stopUnionStation) {
-    for (i = end; i <= (stopUnionStation + 1); i++) {
-      var tripStops = subway[lineEnd][i];
+    for (n = end; n <= (stopUnionStation + 1); n++) {
+      var tripStops = subway[lineEnd][n];
       trip.push(tripStops);
     }
   }
   if (start > startUnionStation) {
-    for (i = startUnionStation; i <= start; i++) {
-      var tripStops = subway[lineStart][i];
+    for (n = startUnionStation; n <= start; n++) {
+      var tripStops = subway[lineStart][n];
       trip.push(tripStops);
     }
   }
   if (end > stopUnionStation) {
-    for (i = (stopUnionStation + 1); i <= end; i++) {
-      var tripStops = subway[lineEnd][i];
+    for (n = (stopUnionStation + 1); n <= end; n++) {
+      var tripStops = subway[lineEnd][n];
       trip.push(tripStops);
     }
   }
