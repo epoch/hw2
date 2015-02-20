@@ -1,3 +1,5 @@
+// jQuery newbie so comment overkill
+
 $(document).ready(function () {
   // Find the container div in the html
   $container = $(".container");
@@ -14,11 +16,13 @@ $(document).ready(function () {
       // Create a new <li> element
       var $li = $('<li/>');
 
+      var stationID = value + '|' + key
+
       // Create a label
-      var $label = $("<label>").attr({for: value}).text(value);
+      var $label = $("<label>").attr({for: stationID}).text(value);
 
       // Create a radio button
-      var $radioBtn = $('<input type="radio">').attr({id: value, name: 'startStation'});
+      var $radioBtn = $('<input type="radio">').attr({id: stationID, value: stationID, name: 'startStation'});
 
       // The contents of <li> is a station (value)
       $li.append($radioBtn, $label);
@@ -27,5 +31,15 @@ $(document).ready(function () {
       $line.append($li);
     }); 
     $container.append($line);
-  });  
+  });
+
+  var $buttonNext = $("<button>").attr('id', 'nextButton').text("Next");
+  $container.append($buttonNext);
+
+
+  $("#nextButton").click(function(){
+    var value = $("input[name=startStation]:checked").val()      
+    console.log(value)
+  });
+
 });

@@ -1,9 +1,9 @@
 // Third version of MTA, first version in Javascript
 
 const LINES = {
-    nLine : ["Time Square", "34th", "28th", "23rd", "Union Square", "8th"],
-    lLine : ["8th", "6th", "Union Square", "3rd", "1st"],
-    sixLine : ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
+    nLine : ["Time_Square", "34th", "28th", "23rd", "Union_Square", "8th"],
+    lLine : ["8th", "6th", "Union_Square", "3rd", "1st"],
+    sixLine : ["Grand_Central", "33rd", "28th", "23rd", "Union_Square", "Astor_Place"]
 }
 
 singleLine = {
