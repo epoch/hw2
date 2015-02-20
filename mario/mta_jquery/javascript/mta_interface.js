@@ -11,11 +11,17 @@ $(document).ready(function () {
     // Iterate of the line (eg: N-line)
     $.each(value, function( index, value ) {
 
-      // Creata a new <li> element
+      // Create a new <li> element
       var $li = $('<li/>');
 
+      // Create a label
+      var $label = $("<label>").attr({for: value}).text(value);
+
+      // Create a radio button
+      var $radioBtn = $('<input type="radio">').attr({id: value, name: 'startStation'});
+
       // The contents of <li> is a station (value)
-      $li.html(value);
+      $li.append($radioBtn, $label);
 
       // Add the <li> to the <ul>
       $line.append($li);
