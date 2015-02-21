@@ -1,7 +1,7 @@
-Deployed the following three websites to Heroku:
+# Deployed the following three websites to Heroku:
 
 MTA Navigator
-Ruby, Sinatra, Bootstrap
+Stack: Ruby, Sinatra, Bootstrap
 URL: https://mta-navigator.herokuapp.com/
 
 OMDB Lookup
