@@ -5,7 +5,6 @@ $(document).ready(function () {
   // Object to store client choices
   var mtaClient = {};
 
-
   // Find the container div in the html
   $container = $(".container");
 
@@ -30,7 +29,7 @@ $(document).ready(function () {
       var $label = $("<label>").attr({for: stationID}).text(value);
 
       // Create a radio button
-      var $radioBtn = $('<input type="radio">').attr({id: stationID, value: stationID, name: 'startStation'});
+      var $radioBtn = $('<input type="radio">').attr({id: stationID, value: stationID, name: 'stationLine'});
 
       // The contents of <li> is a station (value)
       $li.append($radioBtn, $label);
@@ -47,14 +46,16 @@ $(document).ready(function () {
   $container.append($menu);
 
   $("#nextButton").click(function(){
-    var value = $("input[name=startStation]:checked").val().split('|')
-    mtaClient.startStation = value[0];
-    mtaClient.startLine = value[1];
+    var value = $("input[name=stationLine]:checked").val().split('|')
+    mtaClient['startStation'] = value[0];
+    mtaClient['startLine'] = value[1];
     $menu.addClass('animated fadeOutLeft');
-    console.log(mtaClient.startStation);
-    console.log(mtaClient.startLine);
-    // Remove $menu
-    $container.empty();
+    console.log(mtaClient['startStation']);
+    console.log(mtaClient['startLine']);
+    // Remove $menu with a delay so we get fadeOut animation effect
+    setTimeout(function(){
+      $container.empty();
+    }, 2000);
   });
 
 });
