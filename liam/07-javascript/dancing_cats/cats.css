@@ -1,0 +1,13 @@
+body {
+  background-image: url(http://th09.deviantart.net/fs71/PRE/i/2012/250/5/4/colourful_space_wallpaper_by_nazgrul-d5ah3d6.jpg);
+  background-size: 100%;
+}
+
+#mirror-cat {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
