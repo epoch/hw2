@@ -64,9 +64,9 @@ $(document).ready(function() {
             ATM.ui.$checkingAmount.val('');
 
             if (accounts.checking.balance === 0) {
-                ATM.ui.$checkingAccount.addClass('zero');
+                ATM.ui.$checkingBalance.addClass('zero');
             } else {
-                ATM.ui.$checkingAccount.removeClass('zero');
+                ATM.ui.$checkingBalance.removeClass('zero');
             }
         },
 
@@ -75,9 +75,9 @@ $(document).ready(function() {
             ATM.ui.$savingsAmount.val('');
 
             if (accounts.savings.balance === 0) {
-                ATM.ui.$savingsAccount.addClass('zero');
+                ATM.ui.$savingsBalance.addClass('zero');
             } else {
-                ATM.ui.$savingsAccount.removeClass('zero');
+                ATM.ui.$savingsBalance.removeClass('zero');
             }
         }
     };
