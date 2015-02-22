@@ -1,78 +1,59 @@
-var img = document.getElementById('walking-cat');
-var imgWidth = parseInt(img.width, 10);
-var docWidth = parseInt(document.width, 10);
-var TWEEN_VALUE = 3;
-var FRAMES_PER_SECOND = 60;
+var movePixels = 2;
+var delayMs = 36;
+var catTimer = null;
 
-var currentTweenValue = TWEEN_VALUE;
-var timerRight = null;
+var startButton = document.getElementById('start-button');
+var stopButton = document.getElementById('stop-button');
+var speedButton = document.getElementById('speed-button');
 
-function getLeft() {
-  return parseInt(img.style.left, 10);
-}
+// var startButton = function(event) {
+//   var start = document.getElementById('start-button').value;
+// }
 
-function moveRight() {
-  if (getLeft() < (docWidth - (imgWidth/2))) {
-    img.style.left = getLeft() + currentTweenValue;
-  }
-  // wraparound
-  else {
-    img.style.left = -1 * (2 * imgWidth/3);
-  }
-}
+function catWalkRight() {
 
-function updateSpeed() {
-  var speedEl = document.getElementById("currentSpeed");
-  var speedAsCatLengthsPerSecond = parseInt(currentTweenValue, 10) / parseInt(TWEEN_VALUE, 10);
-  // if moving...
-  if (timerRight) {
-    speedEl.innerText = speedAsCatLengthsPerSecond + " cat lengths per second";
-  }
-  else {
-    speedEl.innerText = "0 cat lengths per second (will be " + speedAsCatLengthsPerSecond + " cats/sec upon start)";
+  var img = document.getElementsByTagName('img')[0];
+  var currentLeft = parseInt(img.style.left);
+  var direction 
+  if (currentLeft > (window.innerWidth - img.width)) {
+    img.style.left = (currentLeft + movePixels) + 'px';
+    
+    img.className = "flipToLeft";
+    img.style.left = (currentLeft - movePixels) + 'px';
+
+put a condition in for both left and right to check and maybe a variable for which direction the cat goes
+
   }
 }
 
-var stopRightCallback = function () {
-  if (timerRight !== null) {
-    clearInterval(timerRight);
-    timerRight = null;
-  }
-  updateSpeed();
-};
+// function catWalkLeft() {
 
-var moveRightCallback = function () {
-  // only set new interval if doesn't already exist
-  if (timerRight === null) {
-    timerRight = setInterval(moveRight, 1000 / FRAMES_PER_SECOND);
-  }
-  updateSpeed();
-};
+//   var img = document.getElementsByTagName('img')[0];
+//   img.className = "flipToLeft";
+//   var currentRight = parseInt(img.style.right);
+//   img.style.right = (currentRight + movePixels) + 'px'; 
+//   if (currentRight > (window.innerWidth - img.width)) {
+//     img.className = "flipToRight";
+//     catWalkRight();
+//   }
+// }
 
-var start = document.getElementById("start");
-start.onclick = moveRightCallback;
 
-var stop = document.getElementById("stop");
-stop.onclick = stopRightCallback;
-
-function increaseTween() {
-  currentTweenValue = parseInt(currentTweenValue, 10) + parseInt(TWEEN_VALUE, 10);
-  updateSpeed();
+function speedCatWalk() {
+  movePixels = 5;
 }
 
-var faster = document.getElementById("faster");
-faster.onclick = increaseTween;
-
-function decreaseTween() {
-  newTweenValue = parseInt(currentTweenValue, 10) - parseInt(TWEEN_VALUE, 10);
-  if (newTweenValue < 0) {
-    currentTweenValue = 0;
+function startCatWalk() {
+  if (catTimer === null) {
+  catTimer = window.setInterval(catWalkRight, delayMs);
   }
-  else {
-    currentTweenValue = newTweenValue;
-  }
-  updateSpeed();
 }
 
-var slower = document.getElementById("slower");
-slower.onclick = decreaseTween;
+function stopCatWalk() {
+  clearInterval(catTimer);
+}
+
+startButton.addEventListener('click', startCatWalk);
+stopButton.addEventListener('click', stopCatWalk);
+speedButton.addEventListener('click', speedCatWalk);
+
