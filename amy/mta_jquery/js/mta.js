@@ -6,6 +6,18 @@ $(document).ready(function(){
         "6": ["Grand Central(6)", "33rd(6)", "28th(6)", "23rd(6)", "Union Square", "Astor Place(6)"]
     }
 
+    var numStops = $('<p></p>').addClass('num-stops');
+        numStops.appendTo('.journey');
+    var stationsList = $('<ul></ul>').addClass('stations-list');
+        stationsList.appendTo('.journey');
+
+// why can't i get clear stations to work?
+    var clearStations = function(){
+        console.log("im clearing");
+        $('.journey').empty();
+        $('ul').empty();
+    }
+
     var generateDepartureForm = function(subwayLines){
         $.each(subwayLines, function(key, value){
             
@@ -38,6 +50,8 @@ $(document).ready(function(){
     }
     generateDestinationForm(subwayLines);
 
+
+
     var listStations = function(){
         
         var selectedLineOn = $('select.departure option:selected').parent().attr('label');
@@ -52,14 +66,11 @@ $(document).ready(function(){
         var indexUnionSquareOff = subwayLines[selectedLineOff].indexOf("Union Square");
         // console.log (selectedLineOff, selectedStopOff, indexStopOff, indexUnionSquareOff);
 
-        var numStops = $('<p></p>').addClass('num-stops');
-        numStops.appendTo('.container');
-        var stationsList = $('<ul></ul>').addClass('stations-list');
-        stationsList.appendTo('.container');
+   
+
         if(selectedLineOn === selectedLineOff){
 
             // list stations and stops for single line journey
-
             if(indexStopOn < indexStopOff){
                 
                 var totalStations = subwayLines[selectedLineOn].slice(indexStopOn, indexStopOff + 1);
@@ -114,9 +125,32 @@ $(document).ready(function(){
 
         }
 
+        var changeover = function(selectedLineOn, selectedLineOff){
+        // say whether the person needs to change lines at Union Square
+            if(selectedLineOn != selectedLineOff){
+                var changeover = true
+                console.log ("Don't forget to change lines at Union Square.");
+            }
+        };
+        changeover(selectedLineOn, selectedLineOff);
+
+        var alreadyAtDestination = function(selectedStopOn, selectedStopOff){
+            // tell the user if they're already at their destination
+            if(selectedStopOn === selectedStopOff){
+                var atDestination = true
+                console.log ("Looks like you're alreay there!");
+            }
+        };
+        alreadyAtDestination(selectedStopOn, selectedStopOff);
+
     };
 
-$('.submit').on('click', listStations);
+
+
+    $('.submit').on('click', clearStations, listStations);
+    // $('.submit').on('click', clearStations);
+
+
 
 }); // end document.ready
 
