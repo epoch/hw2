@@ -1,0 +1,11 @@
+body {
+  font-family: helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input[type="radio"] {
+  margin-right: 1em;
+}

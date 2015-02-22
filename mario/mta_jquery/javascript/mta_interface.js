@@ -11,7 +11,7 @@ $(document).ready(function () {
     });
 
     // Refactor button code as there is duplication
-    var $buttonNext = $("<button>").attr('id', 'nextButton').text("New Search");
+    var $buttonNext = $("<button>").addClass('btn btn-success').attr('id', 'nextButton').text("New Search");
     $journey.append($buttonNext);
     $container.append($journey);
 
@@ -25,12 +25,12 @@ $(document).ready(function () {
   }
 
   var getStationInfo = function(startOrFinish) {
-    var $menu = $('<div/>').addClass("menu");
+    var $menu = $('<div/>').addClass("menu row");
 
     $menu.append($('<h2/>').text("Select your " + startOrFinish + " station."));
 
     $.each( LINES, function( key, value ) {
-      var $subwayLine = $('<ul/>').addClass(key);
+      var $subwayLineUL = $('<ul/>').addClass(key);
       $.each(value, function( index, value ) {
 
         var $li = $('<li/>');
@@ -39,13 +39,16 @@ $(document).ready(function () {
         var $radioBtn = $('<input type="radio">').attr({id: stationID, value: stationID, name: 'stationLine'});
 
         $li.append($radioBtn, $label);
-        $subwayLine.append($li);
-      }); 
-      $menu.append($subwayLine);
+        $subwayLineUL.append($li);
+      });
+      var $subwayLine = $('<div/>').addClass('col-md-3');
+      $subwayLine.append($('<h3/>').text(mta.prettyPrint[key])); 
+      $menu.append($subwayLine.append($subwayLineUL));
     });
 
-    var $buttonNext = $("<button>").attr('id', 'nextButton').text("Next");
-    $menu.append($buttonNext);
+    var $buttonNext = $("<button>").addClass('btn btn-primary').attr('id', 'nextButton').text("Next");
+    var $buttonRow = $("<div/>").addClass('col-md-9 buttonRow');
+    $menu.append($buttonRow.append($buttonNext));
     $menu.addClass('animated fadeInRight');
     $container.append($menu);
 
