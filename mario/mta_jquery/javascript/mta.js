@@ -70,9 +70,9 @@ mta = {
       return ["You're aleady there, stupid!"]
     } else {
       line = this.prettyPrint[this.startLine];
-      output = []
-      output.push("The number of stops is " + singleLine.counter());
-      output.push("On the " + line + ", the stations are " + singleLine.stations().join(", ")) + ".";
+      output = [];
+      output.push("On the " + line + ", the stations are " + singleLine.stations().join(", ") + ".");
+      output.push("The number of stops is " + singleLine.counter() + ".");
       return output
     }
   },
@@ -92,11 +92,20 @@ mta = {
     startLine = this.prettyPrint[this.startLine];
     finishLine = this.prettyPrint[this.finishLine];
 
-    output = []
-    output.push("The number of stops is " + counter);
+    output = [];
     output.push("The stops on " + startLine + " are " + stations1.join(", ") + ".");
     output.push("Transfer at Union Square.");
-    output.push("Then, the stops on " + finishLine + " are " + stations2.join(", ") + ".");
+    output.push("Then the stops on " + finishLine + " are " + stations2.join(", ") + ".");
+    output.push("The number of stops is " + counter + ".");
+    return output
+  },
+
+  startFinishInfo : function() {
+    output = [];
+    output.push("Start Station: " + this.startStation);
+    output.push("Start Line: " + this.prettyPrint[this.startLine]);
+    output.push("Finish Station: " + this.finishStation);
+    output.push("Finish Line: " + this.prettyPrint[this.finishLine]);
     return output
   },
 
