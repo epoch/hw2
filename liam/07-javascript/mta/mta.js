@@ -24,7 +24,6 @@
 // Make sure the stops that are the same for different lines have different names (i.e. 23rd on the N and on the 6 need to be differentiated)
 // BIG HINT: Look through the Javascript array methods to see what's available to help you: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-
 console.log('MTA Navigator');
 
 var subway = {
@@ -34,90 +33,104 @@ var subway = {
 }
 
 // Storing values for calculation of route
-var from_line = "Line L";
-var from_station = "8th";
-var to_line = "Line N";
-var to_station = "Times Square";
+
+var from_line = "Line N";
+var from_station = "Times Square";
+var to_line = "Line L";
+var to_station = "1st";
 
 // Turning stations into indexes
+
 var from_station_index = subway[from_line].indexOf(from_station);
 var to_station_index = subway[to_line].indexOf(to_station);
 
 // Turning transfer intersections into indexes
+
 var from_transfer_index = subway[from_line].indexOf("Union Square")
 var to_transfer_index = subway[to_line].indexOf("Union Square")
 
-
-// Creating arrays for each leg of the trip
-
-
-
-
 // Calculate number of stops for all possible scenarios
+
 if (from_station === to_station) {
   console.log("No need to travel! You are already at " + to_station + " station.");
 
 } else if (from_line === to_line) {
+    
+  // Listing stations
+
+  if (from_station_index < to_station_index) {
+    var stations = subway[from_line].slice(from_station_index, to_station_index + 1);
+  } else {
+    var stations = subway[from_line].slice(to_station_index, from_station_index + 1);
+    var stations = stations.reverse();    
+  }
   
-  var total_stops = from_station_index > to_station_index ? from_station_index - to_station_index : to_station_index - from_station_index
-  console.log("You will travel on the same line from " + from_station + " to " + to_station + ". You have a total of " + total_stops + " stop(s) to travel.")
+  var total_stops = stations.length - 1;
 
-  var stations = subway[from_line].slice(from_station_index, (to_station_index + 1))
-
-  // if (from_station_index > to_station_index) {
-  //   var total_stops = from_station_index - to_station_index
-  //   var ordered_stations = stations
-  // } else {
-  //   var total_stops = to_station_index - from_station_index
-  //   var ordered_stations = stations.reverse();
-  // }
-
-  
-
-  // var stations = subway[from_line].slice(from_station_index, (to_station_index + 1))
-
-  // var ordered_stations = from_station_index > to_station_index ? stations : stations.reverse();
-
-  // console.log("Stations:")
-  // for (var i = 0; i < total_stops + 1; i++){
-  //   console.log(ordered_stations[i])
-  // }
+  console.log("You will travel on the same line from " + from_station + " to " + to_station + ". You have a total of " + total_stops + " stop(s) to travel.");
+  console.log(stations);
 
 } else if (from_line != to_line && from_station_index === from_transfer_index) {
+    
+  // Listing stations
+
+  if (from_station_index < to_station_index) {
+    var stations = subway[from_line].slice(from_station_index, to_station_index + 1);
+  } else {
+    var stations = subway[from_line].slice(to_station_index, from_station_index + 1);
+    var stations = stations.reverse();
+  }
   
-  var total_stops = to_station_index > to_transfer_index ? to_station_index - to_transfer_index : to_transfer_index - to_station_index
-  console.log("You will have a total of " + total_stops + " stop(s) before disembarking at " + to_station + ".")
-  
-  var stations = subway[to_line].slice(to_transfer_index, (to_station_index + 1))
+  var total_stops = stations.length - 1;
 
-  // var ordered_stations = to_station_index > to_transfer_index ? stations : stations
+  console.log("You will have a total of " + total_stops + " stop(s) before disembarking at " + to_station + ".");
+  console.log(stations);
 
-  // console.log("Stations:")
-  // for (var i = 0; i < total_stops + 1; i++){
-  //   console.log(ordered_stations[i])
-  // }
-} else if (from_line != to_line && to_station_index == to_transfer_index) {
-  var total_stops = from_station_index > to_transfer_index ? from_station_index - to_transfer_index : to_transfer_index - from_station_index
-  console.log("You will have a total of " + total_stops + " stop(s) before disembarking at " + to_station + ".")
+} else if (from_line != to_line && to_station_index === to_transfer_index) {
 
-  // var stations = subway[to_line].slice(from_station_index, (to_transger_index + 1))
-  // console.log("Stations:")
-  // for (var i = 0; i < total_stops + 1; i++){
-  //   console.log(stations[i])
-  // }
+  // Listing stations
+
+  if (from_station_index < from_transfer_index) {
+    var stations = subway[from_line].slice(from_station_index, from_transfer_index + 1);
+  } else {
+    var stations = subway[from_line].slice(from_transfer_index, from_station_index + 1);
+    var stations = stations.reverse();
+  }
+
+  var total_stops = stations.length - 1;
+
+  console.log("You will have a total of " + total_stops + " stop(s) before disembarking at " + to_station + ".");
+  console.log(stations);
+
 } else {
-  var first_leg = from_station_index > from_transfer_index ? from_station_index - from_transfer_index : from_transfer_index - from_station_index
-  // var first_leg_stations = subway[from_line].slice(from_transfer_index, (from_station_index + 1))
   
-  var second_leg = to_station_index > to_transfer_index ? to_station_index - to_transfer_index : to_transfer_index - to_station_index
-  // var second_leg_stations = subway[to_line].slice(to_transfer_index, (to_station_index + 1))
+  // Listing stations (first_leg_stations)
 
-  var total_stops = first_leg + second_leg
-  console.log("You will have " + first_leg + " stop(s) before transferring at Union Square. After boarding your second train, you will have " + second_leg + " more stop(s) before disembarking at " + to_station + "station.")
+  if (from_station_index < from_transfer_index) {
+    var first_leg_stations = subway[from_line].slice(from_station_index, from_transfer_index);
+    var first_leg_stops = first_leg_stations.length;
+  } else {
+    var first_leg_stations = subway[from_line].slice(from_transfer_index, from_station_index + 1);
+    var first_leg_stations = first_leg_stations.reverse();
+    var first_leg_stops = first_leg_stations.length - 1;
+  }
 
-  // var stations = first_leg_stations.concat(second_leg_stations)
-  // console.log("Stations:")
-  // for (var i = 0; i < total_stops + 1; i++){
-  //   console.log(stations[i])
-  // }
+  // Listing stations (second_leg_stations)
+
+  if (to_transfer_index < to_station_index) {
+    var second_leg_stations = subway[to_line].slice(to_transfer_index, to_station_index + 1);
+    var second_leg_stops = second_leg_stations.length - 1;
+  } else {
+    var second_leg_stations = subway[to_line].slice(to_station_index, from_transfer_index);
+    var second_leg_stations = second_leg_stations.reverse();
+    var second_leg_stops = second_leg_stations.length;
+  }
+
+  // Listing stations (first_leg_stations + second_leg_stations)
+
+  var stations = first_leg_stations.concat(second_leg_stations);
+  var total_stops = stations.length - 1;
+
+  console.log("You will have a total of " + total_stops + " stops to travel. You will have " + first_leg_stops + " stop(s) before transferring at Union Square. After boarding your second train, you will have " + second_leg_stops + " more stop(s) before disembarking at " + to_station + " station.");
+  console.log(stations);
 }
