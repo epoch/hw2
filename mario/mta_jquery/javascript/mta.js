@@ -1,9 +1,9 @@
 // Third version of MTA, first version in Javascript
 
 const LINES = {
-    nLine : ["Time_Square", "34th", "28th", "23rd", "Union_Square", "8th"],
-    lLine : ["8th", "6th", "Union_Square", "3rd", "1st"],
-    sixLine : ["Grand_Central", "33rd", "28th", "23rd", "Union_Square", "Astor_Place"]
+    nLine : ["Time Square", "34th", "28th", "23rd", "Union Square", "8th"],
+    lLine : ["8th", "6th", "Union Square", "3rd", "1st"],
+    sixLine : ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
 }
 
 singleLine = {
@@ -72,8 +72,8 @@ mta = {
       line = this.prettyPrint[this.startLine];
       output = []
       output.push("The number of stops is " + singleLine.counter());
-      output.push("On the " + line + ", the stations are " + singleLine.stations().join(", "));
-      return output.join('\n')
+      output.push("On the " + line + ", the stations are " + singleLine.stations().join(", ")) + ".";
+      return output
     }
   },
 
@@ -94,10 +94,10 @@ mta = {
 
     output = []
     output.push("The number of stops is " + counter);
-    output.push("The stops on " + startLine + " are " + stations1.join(", "));
+    output.push("The stops on " + startLine + " are " + stations1.join(", ")) + ".";
     output.push("Transfer at Union Square.");
-    output.push("Then, the stops on " + finishLine + " are " + stations2.join(", "));
-    return output.join('\n')
+    output.push("Then, the stops on " + finishLine + " are " + stations2.join(", ")) + ".";
+    return output
   },
 
   errorChecker : function() {

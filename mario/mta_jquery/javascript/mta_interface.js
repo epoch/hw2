@@ -3,18 +3,18 @@ $(document).ready(function () {
   $container = $(".container");
 
   var displayJourney = function() {
-    var $journeyDiv = $('<div/>').addClass("journey animated bounceInUp");
-    var $journey = $('<p/>');
-    $journey.text(mta.journey());
-    $journeyDiv.append($journey);
+    var $journey = $('<div/>').addClass("journey animated bounceInUp");
+    $.each(mta.journey(), function( index, value ) {
+      $journey.append($('<p/>').text(value));
+    });
 
     // Refactor button code as there is duplication
     var $buttonNext = $("<button>").attr('id', 'nextButton').text("New Search");
-    $journeyDiv.append($buttonNext);
-    $container.append($journeyDiv);
+    $journey.append($buttonNext);
+    $container.append($journey);
 
     $("#nextButton").click(function(){
-      $journeyDiv.addClass('animated flipOutY');
+      $journey.addClass('animated bounceOutDown');
       setTimeout(function(){
         $container.empty();
         getStationInfo('start');
