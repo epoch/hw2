@@ -67,7 +67,7 @@ mta = {
     singleLine.startStation = this.startStation;
     singleLine.finishStation = this.finishStation;
     if (singleLine.counter() === 0) {
-      return "You're aleady there, stupid!"
+      return ["You're aleady there, stupid!"]
     } else {
       line = this.prettyPrint[this.startLine];
       output = []
@@ -94,9 +94,9 @@ mta = {
 
     output = []
     output.push("The number of stops is " + counter);
-    output.push("The stops on " + startLine + " are " + stations1.join(", ")) + ".";
+    output.push("The stops on " + startLine + " are " + stations1.join(", ") + ".");
     output.push("Transfer at Union Square.");
-    output.push("Then, the stops on " + finishLine + " are " + stations2.join(", ")) + ".";
+    output.push("Then, the stops on " + finishLine + " are " + stations2.join(", ") + ".");
     return output
   },
 

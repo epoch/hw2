@@ -4,6 +4,8 @@ $(document).ready(function () {
 
   var displayJourney = function() {
     var $journey = $('<div/>').addClass("journey animated bounceInUp");
+    $journey.append($('<h2/>').text("Below is your journey"));
+
     $.each(mta.journey(), function( index, value ) {
       $journey.append($('<p/>').text(value));
     });
@@ -24,6 +26,8 @@ $(document).ready(function () {
 
   var getStationInfo = function(startOrFinish) {
     var $menu = $('<div/>').addClass("menu");
+
+    $menu.append($('<h2/>').text("Select your " + startOrFinish + " station."));
 
     $.each( LINES, function( key, value ) {
       var $subwayLine = $('<ul/>').addClass(key);
