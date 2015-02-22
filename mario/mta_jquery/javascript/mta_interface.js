@@ -1,11 +1,26 @@
-// jQuery newbie so comment overkill
-
 $(document).ready(function () {
 
-  // Object to store client choices
-  var mtaClient = {};
-
   $container = $(".container");
+
+  var displayJourney = function() {
+    var $journeyDiv = $('<div/>').addClass("journey animated bounceInUp");
+    var $journey = $('<p/>');
+    $journey.text(mta.journey());
+    $journeyDiv.append($journey);
+
+    // Refactor button code as there is duplication
+    var $buttonNext = $("<button>").attr('id', 'nextButton').text("New Search");
+    $journeyDiv.append($buttonNext);
+    $container.append($journeyDiv);
+
+    $("#nextButton").click(function(){
+      $journeyDiv.addClass('animated flipOutY');
+      setTimeout(function(){
+        $container.empty();
+        getStationInfo('start');
+      }, 500);
+    });
+  }
 
   var getStationInfo = function(startOrFinish) {
     var $menu = $('<div/>').addClass("menu");
@@ -32,20 +47,22 @@ $(document).ready(function () {
 
     $("#nextButton").click(function(){
       var value = $("input[name=stationLine]:checked").val().split('|')
-      mtaClient[startOrFinish + 'Station'] = value[0];
-      mtaClient[startOrFinish + 'Line'] = value[1];
+      mta[startOrFinish + 'Station'] = value[0];
+      mta[startOrFinish + 'Line'] = value[1];
       $menu.addClass('animated fadeOutLeft');
-      console.log(mtaClient[startOrFinish + 'Station']);
-      console.log(mtaClient[startOrFinish + 'Line']);
+      console.log(mta[startOrFinish + 'Station']);
+      console.log(mta[startOrFinish + 'Line']);
       // Remove $menu with a delay so we get fadeOut animation effect
       setTimeout(function(){
         $container.empty();
         if (startOrFinish === 'start') {
           getStationInfo('finish');
+        } else {
+          displayJourney();
         }
       }, 300);
     });
   }
-  
+
   getStationInfo('start');
 });
