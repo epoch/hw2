@@ -10,13 +10,10 @@ $(document).ready(function(){
         numStops.appendTo('.journey');
     var stationsList = $('<ul></ul>').addClass('stations-list');
         stationsList.appendTo('.journey');
-
-// why can't i get clear stations to work?
-    var clearStations = function(){
-        console.log("im clearing");
-        $('.journey').empty();
-        $('ul').empty();
-    }
+    var changeStationsMsg = $('<p></p>').addClass('change-stations');
+        changeStationsMsg.appendTo('.journey');
+    var alreadyThereMsg = $('<p></p>').addClass('already-there');
+        alreadyThereMsg.appendTo('.journey');
 
     var generateDepartureForm = function(subwayLines){
         $.each(subwayLines, function(key, value){
@@ -130,6 +127,7 @@ $(document).ready(function(){
             if(selectedLineOn != selectedLineOff){
                 var changeover = true
                 console.log ("Don't forget to change lines at Union Square.");
+                changeStationsMsg.html("Don't forget to change lines at Union Square.");
             }
         };
         changeover(selectedLineOn, selectedLineOff);
@@ -139,49 +137,28 @@ $(document).ready(function(){
             if(selectedStopOn === selectedStopOff){
                 var atDestination = true
                 console.log ("Looks like you're alreay there!");
+                alreadyThereMsg.html("Looks like you're alreay there!");
             }
         };
         alreadyAtDestination(selectedStopOn, selectedStopOff);
 
+
+        var unionSquareError = function(selectedLineOn, selectedLineOff, selectedStopOn, selectedStopOff){
+            if(selectedLineOn != selectedLineOff && (selectedStopOn === "Union Square" || selectedStopOff === "Union Square"))
+                console.log("If you are departing or going to Union Square, your joureny should be single line.")
+        };
+        unionSqureError(selectedStopOn, selectedStopOff);
+
     };
 
 
+    var clearStations = function(){
+        console.log("im clearing");
+        $('ul').empty();
+    }
 
-    $('.submit').on('click', clearStations, listStations);
-    // $('.submit').on('click', clearStations);
-
-
+    $('.submit').on('click', clearStations);
+    $('.submit').on('click', listStations);
 
 }); // end document.ready
 
-
-    // var getDepartureInfo = function(){
-    //     selectedLineOn = $('select.departure option:selected').parent().attr('label');
-    //     selectedStopOn = $('select.departure option:selected').val();
-    //     indexStopOn = subwayLines[selectedLineOn].indexOf(selectedStopOn);
-    //     indexUnionSquareOn = subwayLines[selectedLineOn].indexOf("Union Square");
-    //     console.log (selectedLineOn, selectedStopOn, indexStopOn, indexUnionSquareOn);
-    // }
-
-    // var getDestinationInfo = function(){
-    //     selectedLineOff = $('select.destination option:selected').parent().attr('label');
-    //     selectedStopOff = $('select.destination option:selected').val();
-    //     indexStopOff = subwayLines[selectedLineOff].indexOf(selectedStopOff);
-    //     indexUnionSquareOff = subwayLines[selectedLineOff].indexOf("Union Square");
-    //     console.log (selectedLineOff, selectedStopOff, indexStopOff, indexUnionSquareOff);
-    // }
-
-    // var selectedLineOn 
-    // var selectedStopOn 
-    // var indexStopOn 
-    // var indexUnionSquareOn 
-    // var selectedLineOff 
-    // var selectedStopOff
-    // var indexStopOff 
-    // var indexUnionSquareOff 
-
-   // listStations(selectedLineOn, selectedStopOn, indexStopOn, indexUnionSquareOn, selectedLineOff, selectedStopOff, indexStopOff, indexUnionSquareOff);
-    // listStations(selectedLineOn, selectedStopOn, indexStopOn, indexUnionSquareOn, selectedLineOff, selectedStopOff, indexStopOff, indexUnionSquareOff);
-
-
-// $('.submit').on('click', getDepartureInfo, listStations);
