@@ -63,7 +63,6 @@ $(document).ready(function(){
         var indexUnionSquareOff = subwayLines[selectedLineOff].indexOf("Union Square");
         // console.log (selectedLineOff, selectedStopOff, indexStopOff, indexUnionSquareOff);
 
-   
 
         if(selectedLineOn === selectedLineOff){
 
@@ -94,8 +93,52 @@ $(document).ready(function(){
 
         }else {
 
-            // list stations and stops for changeover journey
+            // if the user selects union square on one line and any station on another
+            if(selectedStopOn === "Union Square"){
+                selectedLineOn = selectedLineOff;
+                console.log(selectedLineOn);
 
+                if(indexStopOff < indexUnionSquareOff){
+                    console.log("true that");
+                    var totalStations = subwayLines[selectedLineOn].slice(indexStopOff, indexUnionSquareOff + 1);
+                    var totalStations = totalStations.reverse();
+                    console.log(indexStopOff, indexUnionSquareOff);
+                    console.log(totalStations);
+                    console.log("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
+                    numStops.html("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
+                }
+                else if(indexStopOff > indexUnionSquareOff){
+                    console.log("true");
+                    var totalStations = subwayLines[selectedLineOn].slice(indexUnionSquareOff, indexStopOff + 1);
+                    console.log(indexStopOff, indexUnionSquareOff);
+                    console.log(totalStations);
+                    console.log("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
+                    numStops.html("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
+                }
+            }else if(selectedStopOff === "Union Square"){
+                selectedLineOff = selectedLineOn;
+                console.log(selectedLineOff);
+
+                if(indexStopOn < indexUnionSquareOn){
+                    console.log("true that");
+                    var totalStations = subwayLines[selectedLineOff].slice(indexStopOn, indexUnionSquareOn + 1);
+                    console.log(indexStopOn, indexUnionSquareOn);
+                    console.log(totalStations);
+                    console.log("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
+                    numStops.html("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
+                }
+                else if(indexStopOn > indexUnionSquareOn){
+                    console.log("true");
+                    var totalStations = subwayLines[selectedLineOff].slice(indexUnionSquareOn, indexStopOn + 1);
+                    var totalStations = totalStations.reverse();
+                    console.log(indexStopOn, indexUnionSquareOn);
+                    console.log(totalStations);
+                    console.log("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
+                    numStops.html("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
+                }
+            }
+
+            // list stations and stops for changeover journey
             if(indexStopOn < indexUnionSquareOn){
                 var stationsBeforeChangeoverArr = subwayLines[selectedLineOn].slice(indexStopOn, indexUnionSquareOn + 1);
             }else if (indexStopOn > indexUnionSquareOn) {
@@ -110,10 +153,14 @@ $(document).ready(function(){
                 var stationsAfterChangeoverArr = subwayLines[selectedLineOff].slice(indexUnionSquareOff + 1, indexStopOff + 1);
             }
 
-            var totalStations = stationsBeforeChangeoverArr.concat(stationsAfterChangeoverArr);
 
-            console.log("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
-            numStops.html("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
+            if(stationsBeforeChangeoverArr && stationsAfterChangeoverArr){
+                var totalStations = stationsBeforeChangeoverArr.concat(stationsAfterChangeoverArr);
+                console.log(totalStations);
+                console.log("two arrays present");
+                console.log("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
+                numStops.html("There are " + (totalStations.length - 1) + " stops until you reach your destination:");
+            }
 
             for ( var i = 0; i < totalStations.length; i++ ){
                 console.log(totalStations[i]);
@@ -141,13 +188,6 @@ $(document).ready(function(){
             }
         };
         alreadyAtDestination(selectedStopOn, selectedStopOff);
-
-
-        var unionSquareError = function(selectedLineOn, selectedLineOff, selectedStopOn, selectedStopOff){
-            if(selectedLineOn != selectedLineOff && (selectedStopOn === "Union Square" || selectedStopOff === "Union Square"))
-                console.log("If you are departing or going to Union Square, your joureny should be single line.")
-        };
-        unionSqureError(selectedStopOn, selectedStopOff);
 
     };
 
