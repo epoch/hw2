@@ -1,0 +1,66 @@
+body {
+  background-color: #FFFAE4;
+  width: 100%;
+  margin-top: 20px;
+  color: #17272B;
+  font-family: 'Roboto Condensed', Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 54px;
+  text-transform: uppercase;
+}
+
+input {
+  margin: 20px 0px;
+  padding: 15px 20px;
+  border: 3px solid #17272B;
+  font: 20px/150% 'Roboto Condensed', Helvetica, sans-serif;
+  background-color: #FFFAE4;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: transparent;
+  border: 3px solid #17272B;
+  display: block;
+  margin: 20px auto;
+  text-transform: uppercase;
+  font: 20px/150% 'Roboto Condensed', Helvetica, sans-serif;
+}
+button:hover {
+  background-color: #3F2E49;
+  color: #fff;
+  border: 3px solid #3F2E49;
+}
+.container {
+  width: 500px;
+  margin: 175px auto;
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+   font-size: 16px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-size: 16px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-size: 16px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+:-ms-input-placeholder {  
+   font-size: 16px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+

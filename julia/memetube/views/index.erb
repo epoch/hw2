@@ -1,0 +1,10 @@
+<h2>All videos</h2>
+<ul>
+  <% @videos.each do |video| %>
+    <li class="video-item">
+      <a href="/memetube/<%= video["id"] %>">
+        <%= video["title"] %>
+      </a>
+    </li>
+  <% end %>
+</ul>

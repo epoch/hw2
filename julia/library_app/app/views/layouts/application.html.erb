@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Little Library</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+  <div class="container">
+    <header>
+      <h1>Little Library</h1>
+    </header>
+    <nav>
+      <ul>
+        <li> <%= link_to('Authors', authors_path, :class => 'nav-link') %></li>
+        <li> <%= link_to('Books', books_path, :class => 'nav-link') %></li>
+        <li> <%= link_to('Add Author', new_author_path, :class => 'nav-link') %></li>
+        <li> <%= link_to('Add Book', new_book_path, :class => 'nav-link') %></li>
+      </ul>
+    </nav>
+    <div class="content-container">
+      <%= yield %> 
+    </div>
+  </div>
+  </body>
+</html>

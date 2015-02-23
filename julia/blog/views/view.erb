@@ -1,0 +1,9 @@
+<h2><%= @post.subject %></h2>
+<p><em><%= @post.created_at %></em></p>
+<p>Author: <%= @post.author %></p>
+<p><%= @post.body %></p>
+<p><em><%= @post.tags %></em></p>
+<div class="controls">
+    <a href="/posts/<%= @post.id %>/delete">Delete</a>
+    <a href="/posts/<%= @post.id %>/edit">Edit</a>
+</div>

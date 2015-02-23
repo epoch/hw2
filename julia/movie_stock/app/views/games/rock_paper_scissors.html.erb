@@ -1,0 +1,10 @@
+<% if @user_throw.to_s.length > 0 %>
+  <p>You threw <%= @user_throw %>.</p>
+  <p>Computer threw <%= @program_throw %>.</p>
+  <p><%= @user_throw == @program_throw %></p>
+<% end %>
+<div class="draw-hands">
+  <% @gestures.each do |gesture| %>
+    <div class="hands"><a href="/games/rock_paper_scissors/<%= gesture %>"><%= gesture %></a></div>
+  <% end %>
+</div>

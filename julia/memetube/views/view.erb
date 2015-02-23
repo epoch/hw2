@@ -1,0 +1,14 @@
+<h2>Title: <%= @video["title"] %></h2>
+<div class="video-details">
+    <h3>Genre</h3>
+    <p><%= @video["genre"] %></p>
+    <h3>Description</h3>
+    <p><%= @video["description"] %></p>
+</div>
+<div class="embed-video">
+    <iframe width="853" height="480" src="//www.youtube.com/embed/YuOBzWF0Aws" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="controls">
+    <a class="btn" href="/memetube/<%= @video["id"] %>/edit"><i class="fa fa-pencil fa-lg"></i> Edit</a>
+    <a class="btn" href="/memetube/<%= @video["id"] %>/delete"><i class="fa fa-trash-o fa-lg"></i> Delete</a> 
+</div>

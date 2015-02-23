@@ -1,0 +1,37 @@
+<%= form_for @book do |f| %>
+  <div class="form-group">
+    <%= f.label :title, :class => 'label-form' %>
+    <%= f.text_field :title, :required => true, :class => 'input-form' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :author_id, "Author", :class => 'label-form' %>
+    <%= f.select :author_id, Author.all.map { |author| [author.name, author.id] }, {:include_blank => true}, :class => 'select-form' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :year, :class => 'label-form' %>
+    <%= f.text_field :year, :class => 'input-form' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :publisher, :class => 'label-form' %>
+    <%= f.text_field :publisher, :class => 'input-form' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :genre, :class => 'label-form' %>
+    <%= f.text_field :genre, :class => 'input-form' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :isbn, "ISBN", :class => 'label-form' %>
+    <%= f.text_field :isbn, :class => 'input-form' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :summary, :class => 'label-form' %>
+    <%= f.text_area :summary %>
+  </div>
+  <div class="form-group">
+    <%= f.label :image, :class => 'label-form' %>
+    <%= f.url_field :image, :class => 'input-form' %>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Submit', :class => 'btn-form' %>
+  </div>
+<% end %>

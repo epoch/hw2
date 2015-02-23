@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movies, stocks and games</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="main-container movies stock"> 
+      <header>
+        <h1>Movies, stocks and games</h1>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/movies">Movies</a></li>
+            <li><a href="/stocks">Stocks</a></li>
+            <li><a href="/games">Games</a></li>
+          </ul>
+        </nav> 
+      </header>
+      <div class="content-container">
+        <%= yield %>  
+      </div>
+      <footer>
+        <ul class="sub-nav">
+          <li><a href="/about">About</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/help">Help</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+* {
+  -webkit-padding-start: 0px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+header {
+  border-bottom: 2px solid #000;
+}
+h1 {
+  font-size: 44px;
+  color: #911146;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 28px;
+  border-bottom: 1px solid #000;
+}
+a {
+  text-decoration: none;
+}
+
+nav ul {
+  margin: auto;
+  text-align: center;
+}
+nav li {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.nav-link {
+  font-size: 20px;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center; 
+  padding: 0 20px;
+}
+.nav-link:hover {
+  color: #fff;
+  background-color: #911146;
+  padding: 10px 20px;
+}
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.author,
+.book {
+  display: inline-block;
+  width: 100%
+}
+
+.author-img,
+.book-img {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin: 10px 10px 10px 0;
+}
+
+.author-info,
+.book-info,
+.full-author-img,
+.full-book-img,
+.full-author-info,
+.full-book-info {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 150%;
+}
+.author-info,
+.book-info {
+  width: 28%;
+}
+.full-author-img {
+  width: 45%;
+}
+.full-book-img {
+  width: 40%;
+}
+.full-author-info {
+  width: 50%;
+}
+.full-book-info {
+  width: 50%;
+}
+.author-info li,
+.book-info li,
+.full-author-info li, 
+.full-book-info li {
+  list-style-type: none;
+}
+.thumb-author {
+  max-width: 10em;
+/*  display: inline-block;*/
+}
+.thumb-book {
+  max-height: 18em;
+  display: inline-block;
+  padding-right: 5px;
+}
+.portrait {
+  max-height: 75vh;
+}
+
+.cover {
+  max-height: 75vh;
+}
+.controls {
+  margin: 50px auto;
+}
+.btn-control {
+  border: 2px solid #000;
+  padding: 17px;
+  text-transform: uppercase;
+  color: #000;
+  margin-right: 20px;
+}
+.btn-control:hover {
+  background-color: #911146;
+  color: #fff;
+  border: 2px solid #911146;
+}
+.form-group {
+  margin: 10px auto;
+}
+
+.label-form {
+  display: inline-block;
+  vertical-align: top;
+  width: 10%;
+}
+.input-form {
+  width: 200px;
+  padding: 5px;
+}
+.btn-form {
+  width: 200px;
+  background-color: #fff;
+  display: block;
+  margin-top: 30px;
+  padding: 10px;
+  border: 2px solid #000;
+  color: #000;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-left: 60px;
+}
+.select-form {
+  width: 270px;
+  border: 1px solid #fff;
+  margin-left: 10px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  outline: none;
+}

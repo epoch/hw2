@@ -1,0 +1,14 @@
+<div class="form-results">
+  <% if @price && @price > 0 %>
+    <p><%= @symbol%> last traded at <%= number_to_currency(@price) %></p>
+  <% elsif @price == 0.0 %>
+    <p>Sorry, no results found. Try again.</p>
+  <% end %>
+</div>
+<form action="/stocks/lookup">
+  <div class="label">
+    <label for="keyword">Enter a stock symbol</label>
+    <input name="stock_symbol" placeholder="Stock Symbol" required>
+  </div>
+  <button>Get quote</button>
+</form>

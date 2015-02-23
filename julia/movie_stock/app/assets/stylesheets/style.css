@@ -1,0 +1,256 @@
+/***** GENERAL *****/
+
+@import url(http://fonts.googleapis.com/css?family=Voltaire|News+Cycle:400,700);
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: 'News Cycle', sans-serif;
+  font-size: 24px;
+  color: #EBEFCC;
+}
+
+h1,
+h2,
+label {
+  font-family: 'Voltaire', sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+a {
+  text-decoration: none;
+  color: #EBEFCC;
+}
+
+nav a:hover,
+button:hover,
+.sub-nav a:hover,
+.btn:hover {
+  background-color: #EBEFCC;
+  font-weight: bold;
+  color: #000;
+}
+
+button.btn-magic:hover {
+  -webkit-animation: shake 1s;
+  animation: shake 1s;
+}
+.content-container {
+  max-width: 850px;
+  height: 100%;
+  margin: 60px auto;
+  padding-bottom: 50px;
+}
+
+.btn-container {
+  padding-top: 30px;
+}
+/***** HEADER & MAIN NAV *****/
+
+header{
+  width: 100%;
+  height: 70px;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 150%;
+  text-align: left;
+  margin: 10px 20px;
+}
+
+nav {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  margin: 5px 10px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  padding: 25px 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+/***** FOOTER & SECONDARY NAV */
+
+footer {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  border-top: 1px solid #EBEFCC;
+}
+.sub-nav {
+  text-align: right;
+  margin-right: 50px;
+}
+
+.sub-nav li {
+  display: inline-block;
+}
+.sub-nav a {
+  padding: 9px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/***** FORMS *****/
+
+form {
+  width: 600px;
+  height: 340px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin: 30px auto;
+  padding-top: 40px;
+  font-size: 54px;
+}
+input {
+  background-color: #FFFAF6;
+  display: block;
+  width: 400px;
+  margin: auto;
+  padding: 25px 10px;
+  border: 2px solid #EBEFCC;
+  font-family: 'News Cycle', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+input:focus {
+  outline: none;
+}
+
+button, .btn {
+  background-color: transparent;
+  width: 400px;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px 10px;
+  border: 2px solid #EBEFCC;
+  font-family: 'News Cycle', sans-serif;
+  color: #EBEFCC;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.label {
+  text-align: center;
+}
+ /***** STOCKS *****/
+
+.form-results p {
+  text-align: center;
+  font-size: 36px;
+ }
+
+/*OPTION CLASSES*/
+.search-results-container {
+  max-width: 600px;
+  max-height: 100%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+.search-results-header {
+  margin-left: 35px;
+}
+.search-result {
+  list-style-type: none;
+  line-height: 2em;
+}
+i.fa {
+  color: #EBEFCC;
+}
+/*POSTER DISPLAY CLASSES*/
+.poster {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/*ERROR MSG CLASSES*/
+.error {
+  max-width: 600px;
+  margin: auto;
+}
+
+
+.draw-cards, .draw-hands {
+  width: 700px;
+  margin: 30px auto;
+  text-align: center;
+}
+.cards {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  background-color: #EBEFCC;
+  text-align: center;
+  line-height: 3em;
+  margin: 20px;
+  opacity: 0.9;
+}
+
+.hands {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-color: #EBEFCC;
+  text-align: center;
+  line-height: 5.5em;
+  margin: 20px;
+  opacity: 0.9;
+}
+.cards a,
+.hands a {
+  color: #000;
+  text-transform: uppercase;
+}
+
+.cards:hover,
+.hands:hover {
+  background-color: #EA2E49;
+  font-weight: bold;
+}

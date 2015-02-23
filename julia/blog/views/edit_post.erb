@@ -1,0 +1,21 @@
+<form action="/posts/<%= @post.id %>" method="post">
+  <div>
+    <label for="subject">Subject</label>
+    <input id="subject" name="subject" value="<%= @post.subject %>">
+  </div>
+  <div>
+    <label for="body">Body</label>
+    <textarea id="body" name="body"></textarea>
+  </div>
+  <div>
+    <label for="author">Author</label>
+    <input id="author" name="author" value="<%= @post.author %>">
+  </div>
+  <div>
+    <label for="tags">Tags</label>
+    <input id="tags" name="tags" value="<%= @post.tags %>">
+  </div>
+  <div>
+    <input type="submit" id="submit" name="submit" value="Submit">
+  </div>
+</form>
