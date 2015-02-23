@@ -1,9 +1,12 @@
-<h1>Flickr Search</h1>
+<header>
+  <h1>Flickr Search</h1>
+  <div class="search">
+    <%= text_field_tag 'query', nil, :autofocus => true, :placeholder => 'Enter your search' %>
+    <%= button_tag 'Search', :id => 'search' %>
+    <%= button_tag 'Clear results', :id => 'clear' %>
+  </div>
+</header>
 
-<div>
-  <%= text_field_tag 'query', nil, :autofocus => true, :placeholder => 'Butterfiles..' %>
-  <%= button_tag 'Search', :id => 'search' %>
-  <%= button_tag 'Clear results', :id => 'clear' %>
+<div class="container">
+  <div id="images"></div>
 </div>
-
-<div id="images"></div>

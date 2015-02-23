@@ -46,7 +46,14 @@ var processImages = function(result) {
       '_q.jpg'
     ].join('');
 
-    var $img = $('<img>').attr('src', url);
+    var imageUrl = [
+    'https://www.flickr.com/photos/',
+    photo.owner,
+    '/',
+    photo.id
+    ].join('');
+
+    var $img = $('<a/>').attr('href', imageUrl).html($('<img>').attr('src', url));
     $img.appendTo('#images');
   });
 };
@@ -65,13 +72,14 @@ $(document).ready(function() {
     $('#images').empty();
   })
 
-  $(window).on('scroll', function() {
-    var $documentHeight = $(document).height();
-    var $windowHeight = $(window).height();
-    var $scrollTop = $(document).scrollTop();
+   $(window).on('scroll', _.debounce(loadMoreImages, 1000));
+  // $(window).on('scroll', function() {
+  //   var $documentHeight = $(document).height();
+  //   var $windowHeight = $(window).height();
+  //   var $scrollTop = $(document).scrollTop();
 
-    if ($windowHeight + $scrollTop === $documentHeight) {
-      loadMoreImages();
-    };
-  });
+  //   if ($windowHeight + $scrollTop === $documentHeight) {
+  //     loadMoreImages();
+  //   };
+  // });
 });
