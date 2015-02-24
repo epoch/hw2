@@ -15,28 +15,28 @@ var selectMovie = function(searchResults) {
 };
 
 var generateRadioButtons = function(searchResults) {
-  var $movieUL = $('<ul/>');
+  var $movieDiv = $('<div/>');
   for (var i = 0; i < searchResults.length; i++) {
     var movie = searchResults[i];
     var imdbID = movie.imdbID;
     var movieDiplay = movie.Title + ' (' + movie.Year + ')';
 
-    var $li = $('<li/>');
+    var $label = $('<label/>').addClass(imdbID);
     var $radioBtn = $('<input type="radio">').attr({id: imdbID, value: imdbID, name: 'movieChoice'});
-    var $label = $("<label>").attr({for: imdbID}).text(movieDiplay);
+    var $span = $("<span/>").addClass('label-body').text(movieDiplay);
 
-    $li.append($radioBtn, $label);
-    $movieUL.append($li);
+    $label.append($radioBtn, $span);
+    $movieDiv.append($label);
   };
-  return $movieUL
+  return $movieDiv
 };
 
 var displayOptions = function(searchResults) {
   $posterDiv = $('.poster');
-  $posterDiv.html('Which movie did you mean?')
+  $posterDiv.html('<h4>Which movie did you mean?</h4>')
 
-  $movieUL = generateRadioButtons(searchResults);
-  $posterDiv.append($movieUL);
+  $movieDiv = generateRadioButtons(searchResults);
+  $posterDiv.append($movieDiv);
 
   var $buttonNext = $("<button>").attr('id', 'submit').text("Submit");
   $posterDiv.append($buttonNext);
@@ -82,4 +82,12 @@ var searchOMDBbyID = function (imdbID) {
 
 $(document).ready(function () {
   $('#search').on('click', searchOMDB);
+
+  $('#movie-title').on('keypress', function (event) {
+    // Ignore any keypresses that are not Enter.
+    if (event.which !== 13) {
+      return;
+    }
+    searchOMDB();
+  });
 });
