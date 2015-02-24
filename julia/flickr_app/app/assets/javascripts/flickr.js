@@ -14,7 +14,6 @@ var searchFlickr = function () {
   }).done(processImages)
 };
 
-
 var loadMoreImages = function () {
   var query = $('#query').val();
   currentPage++;
