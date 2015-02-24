@@ -1,8 +1,46 @@
+var selectMovie = function(searchResults) {
+  searchResults = searchResults.Search;
+  if (searchResults.length == 1) {
+    var imdbID = searchResults[0].imdbID;
+    searchOMDBbyID(imdbID);
+  } else {
+    displayOptions(searchResults);
+  }
+};
+
+var displayOptions = function(searchResults) {
+  $posterDiv = $('.poster');
+  $posterDiv.html('Which movie did you mean?')
+  var $movieUL = $('<ul/>');
+  // Generate radio buttons
+  for (var i = 0; i < searchResults.length; i++) {
+    var movie = searchResults[i];
+    var imdbID = movie.imdbID;
+    var movieDiplay = movie.Title + ' (' + movie.Year + ')';
+
+    var $li = $('<li/>');
+    var $radioBtn = $('<input type="radio">').attr({id: imdbID, value: imdbID, name: 'movieChoice'});
+    var $label = $("<label>").attr({for: imdbID}).text(movieDiplay);
+
+    $li.append($radioBtn, $label);
+    $movieUL.append($li);
+  };
+  $posterDiv.append($movieUL);
+
+  var $buttonNext = $("<button>").attr('id', 'submit').text("Submit");
+  $posterDiv.append($buttonNext);
+
+  $("#submit").click(function(){
+    var selectedID = $("input[name=movieChoice]:checked").val()
+    searchOMDBbyID(selectedID);
+  });
+};
+
 var insertPoster = function(movieJSON) {
   $posterDiv = $('.poster');
   var title = movieJSON.Title;
   var year = movieJSON.Year;
-  $posterDiv.html('<h2>' + title + ', ' + year + '</h2>')
+  $posterDiv.html('<h2>' + title + ' (' + year + ')</h2>')
 
   var $poster = $('<img>').attr('src', movieJSON.Poster);
   $poster.appendTo($posterDiv);
@@ -13,7 +51,17 @@ var searchOMDB = function () {
   var omdbUrl = 'http://www.omdbapi.com/?';
 
   $.getJSON(omdbUrl, {
-    t: movieTitle
+    s: movieTitle,
+    type: 'movie'
+  }).done(selectMovie);
+};
+
+var searchOMDBbyID = function (imdbID) {
+  var omdbUrl = 'http://www.omdbapi.com/?';
+
+  $.getJSON(omdbUrl, {
+    i: imdbID,
+    type: 'movie'
   }).done(insertPoster);
 };
 
