@@ -1,7 +1,7 @@
 var insertPoster = function(movieJSON) {
   $posterDiv = $('.poster');
-  title = movieJSON.Title;
-  year = movieJSON.Year;
+  var title = movieJSON.Title;
+  var year = movieJSON.Year;
   $posterDiv.html('<h2>' + title + ', ' + year + '</h2>')
 
   var $poster = $('<img>').attr('src', movieJSON.Poster);
@@ -10,12 +10,11 @@ var insertPoster = function(movieJSON) {
 
 var searchOMDB = function () {
   var movieTitle = $('#movie-title').val();
-  var searchSlug = movieTitle.split(' ').join('+');
-  var searchString = 'http://www.omdbapi.com/?t=' + searchSlug + '&plot=short&r=json';
+  var omdbUrl = 'http://www.omdbapi.com/?';
 
-  $.getJSON(searchString).done(function (result) {
-   insertPoster(result);
-  });
+  $.getJSON(omdbUrl, {
+    t: movieTitle
+  }).done(insertPoster);
 };
 
 $(document).ready(function () {
