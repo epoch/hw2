@@ -1,4 +1,10 @@
 var selectMovie = function(searchResults) {
+  if (searchResults.Error) {
+    $posterDiv = $('.poster');
+    $posterDiv.html("<h2>We can't find that movie.</h2>");
+    return
+  }
+
   searchResults = searchResults.Search;
   if (searchResults.length === 1) {
     var imdbID = searchResults[0].imdbID;
