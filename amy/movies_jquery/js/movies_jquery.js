@@ -16,6 +16,8 @@ $(document).ready(function(){
 
     var searchOMDB = function(){
         console.log('search button clicked');
+        clearResults();
+        clearPosters();
 
         var query = $('#query').val();
 
@@ -56,6 +58,7 @@ $(document).ready(function(){
         $('.movie a').on('click', function(event){
             event.preventDefault();
             // dont treat this as a link
+            clearPosters();
             getPoster($(this).attr('href'));
             // when they clikc on movie a, into getPoster, pass in the href
         });
@@ -66,17 +69,6 @@ $(document).ready(function(){
 
         console.log(url);
         console.log('getting poster');
-
-        // i = url
-
-        // var href = $('.movie a').attr('href');
-
-        // var index = href.indexOf("=");
-
-        // var movieID = url.slice(index + 1);
-
-
-        // var query = $('#query').val();
 
         var OMDBUrl = 'http://www.omdbapi.com/?'
 
@@ -96,27 +88,32 @@ $(document).ready(function(){
         var posterURL = result.Poster;
         var $postersContainer = $('<div/>').addClass('posters-container').appendTo('.container');
         var $singlePoster = $('<img/>').addClass('single-poster').attr("src", posterURL).appendTo('.posters-container');
-        
 
-    }
+    };
+
+    var clearPosters = function(){
+        $('.posters-container').remove();
+        console.log("clearing poster");
+    };
+
+    var clearResults = function(){
+        $('.movies-container').remove();
+        console.log("clearing search results");
+    };
+
 
     $('.search').on('click', searchOMDB);
+
+    $('#query').on('keypress', function(){
+        if(event.which != 13){
+            return;
+            // ignore any key presses that are not flickr
+        }
+        searchOMDB();
+        // console.log(event);
+    });
 
 
 });
 
-
-    //     var $a = $('<a class="image-link"></a>').attr('href', flickrURL);
-    //     var $img = $('<img>').attr('src', url);
-    //     $img.appendTo($a);
-    //     $a.appendTo('#images');
-    //     // console.log($a)
-    //     // console.log
-
-    //     // cant clear my val here because it breaks the load more photos
-    //     // $('#query').val('').focus();
-    //     // sets the value to nothing and focuses on the input
-
-
-    // });
 
