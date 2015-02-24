@@ -1,6 +1,6 @@
 var selectMovie = function(searchResults) {
   searchResults = searchResults.Search;
-  if (searchResults.length == 1) {
+  if (searchResults.length === 1) {
     var imdbID = searchResults[0].imdbID;
     searchOMDBbyID(imdbID);
   } else {
@@ -43,6 +43,10 @@ var displayOptions = function(searchResults) {
 
 var insertPoster = function(movieJSON) {
   $posterDiv = $('.poster');
+  if (movieJSON.Poster === "N/A") {
+    $posterDiv.html('<h2>Sorry, no poster is avaliable.</h2>');
+    return
+  }
   var title = movieJSON.Title;
   var year = movieJSON.Year;
   $posterDiv.html('<h2>' + title + ' (' + year + ')</h2>')
