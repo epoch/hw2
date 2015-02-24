@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MTA jQ</title>
+  <link rel="stylesheet" href="mta.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="mta2.js"></script>
+</head>
+<body>
+
+  <h1>MTA jQuery</h1>
+
+
+  <div id="inputs">
+    <p>
+      <label for="start-line">Current Line:</label>
+      <input type="text" id="start-line">
+    </p>
+
+    <p>
+      <label for="start-station">Current Station:</label>
+      <input type="text" id="start-station">
+    </p>
+
+    <p>
+      <label for="end-line">Destination Line:</label>
+      <input type="text" id="end-line">
+    </p>
+
+    <p>
+      <label for="end-station">Destination Station:</label>
+      <input type="text" id="end-station">
+    </p>
+
+    <button id="plan-route">Plan route</button>
+  </div>
+
+  <div id="map">
+    <p>N - Times Square, 34th, 28th, 23rd, Union Square, 3rd, 1st </p>
+    <p>L - 8th, 6th, Union Square, 3rd, 1st</p>
+    <p>6 - Grand Central, 33rd, 28th, 23rd, Union Square, Astor Place</p>
+
+  </div>
+
+  <div id="info"></div>
+
+</body>
+</html>
