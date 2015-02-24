@@ -8,11 +8,8 @@ var selectMovie = function(searchResults) {
   }
 };
 
-var displayOptions = function(searchResults) {
-  $posterDiv = $('.poster');
-  $posterDiv.html('Which movie did you mean?')
+var generateRadioButtons = function(searchResults) {
   var $movieUL = $('<ul/>');
-  // Generate radio buttons
   for (var i = 0; i < searchResults.length; i++) {
     var movie = searchResults[i];
     var imdbID = movie.imdbID;
@@ -25,6 +22,14 @@ var displayOptions = function(searchResults) {
     $li.append($radioBtn, $label);
     $movieUL.append($li);
   };
+  return $movieUL
+};
+
+var displayOptions = function(searchResults) {
+  $posterDiv = $('.poster');
+  $posterDiv.html('Which movie did you mean?')
+
+  $movieUL = generateRadioButtons(searchResults);
   $posterDiv.append($movieUL);
 
   var $buttonNext = $("<button>").attr('id', 'submit').text("Submit");
