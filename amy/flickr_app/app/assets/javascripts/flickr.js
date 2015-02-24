@@ -1,6 +1,12 @@
 // console.log('hello world', $.fn.jquery);
 var current_page = 1;
+var endOfImages = false;
+
 var searchFlickr = function() {
+
+    if (endOfImages === true) {
+        return; // Abort!
+    }
 
     var query = $('#query').val();
     // get the query
@@ -12,7 +18,7 @@ var searchFlickr = function() {
         method: 'flickr.photos.search',
         api_key: 'b47d91403359ea157efabefedc9e5508',
         text: query,
-        page: current_page,
+        page: current_page++,
         format: 'json'
 
     }).done(processImages);
@@ -57,6 +63,10 @@ var processImages = function(result){
     // page ++
     // console.log(page);
 
+    if (current_page > result.photos.pages) {
+        endOfImages = true;
+    }
+
     _(photos).each(function(photo){
         
         var url = [
@@ -96,23 +106,28 @@ var processImages = function(result){
 };
 
 
-var searchFlickrAgain = function(result){
-    var query = $('#query').val();
-    // get the query
-    console.log(current_page);
-    current_page++;
-    var flickrUrl = 'https://api.flickr.com/services/rest/?jsoncallback=?';
-    // explains to js that this is where you need to go and request this information from
+// var searchFlickrAgain = function(result){
+    
+//     if (endOfImages === true) {
+//         return; // Abort!
+//     }
 
-    $.getJSON(flickrUrl, {
-        method: 'flickr.photos.search',
-        api_key: 'b47d91403359ea157efabefedc9e5508',
-        text: query,
-        page: current_page,
-        format: 'json'
+//     var query = $('#query').val();
+//     // get the query
+//     console.log(current_page);
+//     current_page++;
+//     var flickrUrl = 'https://api.flickr.com/services/rest/?jsoncallback=?';
+//     // explains to js that this is where you need to go and request this information from
 
-    }).done(processImages);
-}
+//     $.getJSON(flickrUrl, {
+//         method: 'flickr.photos.search',
+//         api_key: 'b47d91403359ea157efabefedc9e5508',
+//         text: query,
+//         page: current_page,
+//         format: 'json'
+
+//     }).done(processImages);
+// }
 
 var loadMoreImages = function(result) {
     
@@ -131,7 +146,7 @@ var loadMoreImages = function(result) {
     if(windowHeight + scrollTop === documentHeight){
         console.log("bottom of page reached");
 
-        searchFlickrAgain();
+        searchFlickr();
 
     };
 
@@ -156,6 +171,10 @@ $(document).ready(function(){
 
     $('#clear').on('click', function(){
         $('#images').empty();
+    });
+
+    $('#query').on('change', function () {
+        endOfImages = false;
     });
 
     $(window).on('scroll', loadMoreImages);
