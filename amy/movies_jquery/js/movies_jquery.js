@@ -19,6 +19,7 @@ $(document).ready(function(){
         clearResults();
         clearPosters();
         clearErrors();
+        clearMovieInfo();
 
         var query = $('#query').val();
 
@@ -43,11 +44,13 @@ $(document).ready(function(){
 
             var title = result.Title;
 
+            var year = result.Year;
+
             // var posterURL = result.Poster
 
             var url = result.imdbID;
 
-            var $movie = $('<li><a href='+ url +'>'+ title +'</a></li>' );
+            var $movie = $('<li><a href='+ url +'>'+ title + ', ' + year + '</a></li>' );
 
             $movie.addClass('movie').appendTo($moviesList);
 
@@ -94,6 +97,9 @@ $(document).ready(function(){
 
     var showPoster = function(result){
 
+        // debugger;
+
+        clearErrors();
         console.log("showing poster");
 
         if(result.Poster === "N/A"){
@@ -102,7 +108,34 @@ $(document).ready(function(){
             var posterURL = result.Poster;
             var $postersContainer = $('<div/>').addClass('posters-container').appendTo('.container');
             var $singlePoster = $('<img/>').addClass('single-poster').attr("src", posterURL).appendTo('.posters-container');
+            
+            showMovieInfo(result);
         }
+
+    };
+
+    var showMovieInfo = function(result){
+    
+        clearMovieInfo();
+
+        var actors = result.Actors;
+        var awards = result.Awards;
+        var director = result.Director;
+        var genre = result.Genre;
+        var plot = result.Plot;
+        var rating = result.Rated;
+        var imdbScore = result.imdbRating;
+
+        var $movieInfoContainer = $('<div/>').addClass('movie-info-container').appendTo('.container');
+        var $movieInfoList = $('<ul/>').addClass('movie-info-list').appendTo('.movie-info-container');
+        
+        $('<li/>').addClass('movie-info-list-item').html('<span class="info-label">Plot: </span>' + plot).appendTo('.movie-info-list');
+        $('<li/>').addClass('movie-info-list-item').html('<span class="info-label">Genre: </span>' + genre).appendTo('.movie-info-list');
+        $('<li/>').addClass('movie-info-list-item').html('<span class="info-label">Rated: </span>' + rating).appendTo('.movie-info-list');
+        $('<li/>').addClass('movie-info-list-item').html('<span class="info-label">Director: </span>' + director).appendTo('.movie-info-list');
+        $('<li/>').addClass('movie-info-list-item').html('<span class="info-label">Actors: </span>' + actors).appendTo('.movie-info-list');
+        $('<li/>').addClass('movie-info-list-item').html('<span class="info-label">Awards: </span>' + awards).appendTo('.movie-info-list');
+        $('<li/>').addClass('movie-info-list-item').html('<span class="info-label">imdb Rating: </span>' + imdbScore).appendTo('.movie-info-list');
 
     };
 
@@ -120,6 +153,11 @@ $(document).ready(function(){
         $('.posters-container').remove();
         console.log("clearing poster");
     };
+
+    var clearMovieInfo = function(){
+        $('.movie-info-container').remove();
+        console.log("clearing movie info");
+    }
 
     var clearResults = function(){
         $('.movies-container').remove();
