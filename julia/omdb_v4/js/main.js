@@ -14,24 +14,31 @@ var showResults = function (result) {
   var results = result.Search;
 
   var $moviesContainer = $('<div/>').addClass('movies-container');
-  var $moviesList = $('<ul/>').addClass('movies-list');
-
   $('.container').append($moviesContainer);
-  $moviesContainer.append($moviesList);
 
-  _(results).each(function(result) {
-    var title = result.Title;
+  if (result.Response) {
+    var $moviesHeader = $('<p>').addClass('error').html('Sorry, the film could not be found');
+    $moviesContainer.append($moviesHeader);
 
-    var imdbId = result.imdbID;
-    
-    var $movie = $('<li/>').addClass('movie').html($('<a/>').attr('href', imdbId).html(title));
-    $moviesList.append($movie);
-  });
+  } else{
+    var $moviesHeader = $('<h2>').html('Select a film');
+    var $moviesList = $('<ul/>').addClass('movies-list');
 
-  $('.movie a').on('click', function (event) {
-    event.preventDefault();
-    getPoster( $(this).attr('href') );
-  });
+    $moviesContainer.append($moviesHeader, $moviesList);
+
+    _(results).each(function(result) {
+      var title = result.Title;
+      var imdbId = result.imdbID;
+
+      var $movie = $('<li/>').addClass('movie').html($('<a/>').attr('href', imdbId).html(title));
+      $moviesList.append($movie);
+    });
+
+    $('.movie a').on('click', function (event) {
+      event.preventDefault();
+      getPoster( $(this).attr('href') );
+    });
+  };
 }
 
 var getPoster = function (imdbId) {
@@ -51,7 +58,7 @@ var getPoster = function (imdbId) {
     $('.container').append($posterContainer);
 
     if (result.Poster === 'N/A') {
-      var $posterError = $('<h2/>').addClass('poster-error').html('Sorry, we can\'t seem to find that poster');
+      var $posterError = $('<p/>').addClass('error').html('Sorry, we can\'t seem to find that poster');
       $posterContainer.append($posterError);
 
     } else {
@@ -63,7 +70,7 @@ var getPoster = function (imdbId) {
 
 $(document).ready(function() {
   var buildForm = function () {
-    $div = $('<div/>').addClass('form');
+    $div = $('<div/>').addClass('form-container');
     $label = $('<label>').attr('for', 'query');
     $input = $('<input>').attr({
       id: 'query',
@@ -72,7 +79,7 @@ $(document).ready(function() {
     });
     $button = $('<button/>').attr('id', 'search').html('Search');
 
-    $('.container').append($div);
+    $('header').append($div);
     $div.append($label, $input, $button);
   };
 
