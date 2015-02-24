@@ -18,6 +18,7 @@ $(document).ready(function(){
         console.log('search button clicked');
         clearResults();
         clearPosters();
+        clearErrors();
 
         var query = $('#query').val();
 
@@ -50,10 +51,22 @@ $(document).ready(function(){
 
             $movie.addClass('movie').appendTo($moviesList);
 
-
-            // debugger;
         });
 
+        // if no results show no movie error
+        // if result.Error === "Movie not found!"
+        if(result.Error){
+            noMovieError();
+            console.log("no movie error called");
+        };
+
+        // if one result show poster straight away
+        if(results.length === 1){
+            // console.log("one result");
+            var result = result.Search[0];
+            var url = result.imdbID;
+            getPoster(url);
+        };
 
         $('.movie a').on('click', function(event){
             event.preventDefault();
@@ -77,19 +90,31 @@ $(document).ready(function(){
             r: 'json',
             type: 'movie'
         }).done(showPoster);
-
-
     }
 
     var showPoster = function(result){
 
         console.log("showing poster");
-        
-        var posterURL = result.Poster;
-        var $postersContainer = $('<div/>').addClass('posters-container').appendTo('.container');
-        var $singlePoster = $('<img/>').addClass('single-poster').attr("src", posterURL).appendTo('.posters-container');
+
+        if(result.Poster === "N/A"){
+            noPosterError();
+        }else{
+            var posterURL = result.Poster;
+            var $postersContainer = $('<div/>').addClass('posters-container').appendTo('.container');
+            var $singlePoster = $('<img/>').addClass('single-poster').attr("src", posterURL).appendTo('.posters-container');
+        }
 
     };
+
+    var noMovieError = function(){
+        var $errorContainer = $('<div/>').addClass('error-container').appendTo('.container');
+        var $errorMsg = $('<p/>').addClass('error-msg').html("No movie by that name").appendTo('.error-container');
+    };
+
+    var noPosterError = function(){
+        var $errorContainer = $('<div/>').addClass('error-container').appendTo('.container');
+        var $errorMsg = $('<p/>').addClass('error-msg').html("No poster for that movie").appendTo('.error-container');
+    }
 
     var clearPosters = function(){
         $('.posters-container').remove();
@@ -101,6 +126,10 @@ $(document).ready(function(){
         console.log("clearing search results");
     };
 
+    clearErrors = function(){
+        $('.error-container').remove();
+        console.log('clearing errors');
+    };
 
     $('.search').on('click', searchOMDB);
 
@@ -112,7 +141,6 @@ $(document).ready(function(){
         searchOMDB();
         // console.log(event);
     });
-
 
 });
 
