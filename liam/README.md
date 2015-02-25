@@ -1,5 +1,3 @@
-# TESTING
+# Welcome to Liam's Homework Directory
 
-Test test test
-
-$$$
+Got questions? Flick me a message.
