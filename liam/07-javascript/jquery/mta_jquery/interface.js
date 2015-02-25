@@ -1,50 +1,34 @@
 var $container = $('.container');
 
-var elem = "<form>";
-      
-      elem += "<label for=from_station>From: </label>";
-      elem += "<select name=from_station, id=from_station>";
-        elem += "<optgroup label='Line N'>";
-          subway["Line N"].forEach( function (current) {
-            elem += ( "<option>" + current + "</option>" );
-          });
-        elem += "</optgroup>"
-        elem += "<optgroup label='Line L'>";
-          subway["Line L"].forEach( function (current) {
-            elem += ( "<option>" + current + "</option>" );
-          });
-        elem += "</optgroup>"
-        elem += "<optgroup label='Line 6'>";
-          subway["Line 6"].forEach( function (current) {
-            elem += ( "<option>" + current + "</option>" );
-          });
-        elem += "</optgroup>"
-      elem += "</select>";
+// Create Optgroup of Stations and Lines
+var statLines = "";
+$.each(subwayLines, function(key, value){
+  statLines += '<optgroup label="Line ' + key + '" >';
+    subwayLines[key].forEach( function (current) {
+      statLines += "<option>" + current + "</option>";
+    });
+  statLines += "</optgroup>";
+});
 
-      elem += "<label for=to_station>To: </label>";
-      elem += "<select name=to_station, id=to_station>";
-        elem += "<optgroup label='Line N'>";
-          subway["Line N"].forEach( function (current) {
-            elem += ( "<option>" + current + "</option>" );
-          });
-        elem += "</optgroup>"
-        elem += "<optgroup label='Line L'>";
-          subway["Line L"].forEach( function (current) {
-            elem += ( "<option>" + current + "</option>" );
-          });
-        elem += "</optgroup>"
-        elem += "<optgroup label='Line 6'>";
-          subway["Line 6"].forEach( function (current) {
-            elem += ( "<option>" + current + "</option>" );
-          });
-        elem += "</optgroup>"
-      elem += "</select>";
+// Create Menu (form)
+var menu = "<form>";
 
-      elem += '<button class="btn">Submit</button>';
+// From Station
+menu += "<label for=from_station>From: </label>";
+menu += "<select name=from_station, id=from_station>";
+menu +=  statLines
+menu += "</select>";
 
-    elem += "</form>"
+// To Station
+menu += "<label for=to_station>To: </label>";
+menu += "<select name=to_station, id=to_station>";
+menu +=  statLines
+menu += "</select>";
 
-$container.append(elem);
+// Submit Button
+menu += '<button class="btn">Submit</button>';
+menu += "</form>";
 
-$from_station = $('#from_station').val();
-$to_station = $('#to_station').val();
+// Append menu to container
+$container.append(menu);
+
