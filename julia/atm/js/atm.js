@@ -1,45 +1,92 @@
-var accounts = {
-  checking: {
-    balance: 0,
-    deposit: $('#checkingDeposit').on('click', function () {
-      var $currentAmount = parseInt($('#balance1').html());
-      var $amt = parseInt($('#checkingAmount').val());
-      $('#balance1').text($amt + $currentAmount);
-    }),
+var checkingBalance = 0;
+var savingsBalance = 0;
 
-    withdraw: $('#checkingWithdraw').on('click', function () {
-      var $currentAmount = parseInt($('#balance1').html());
-      var $amt = parseInt($('#checkingAmount').val());
+var checkingDeposit = function (amount) {
+  if (amount > 0) {
+    checkingBalance += amount;
+  };
+};
 
-      if ($currentAmount > $amt) {
-        $('#balance1').text($currentAmount - $amt);
-      } else if ($currentAmount < $amt){
-          var $currentSavAmount = parseInt($('#balance2').html());
-          var totalBalance = $currentSavAmount + $currentAmount;
+var checkingWithdraw = function (amount) {
+  if (amount <= checkingBalance) {
+    checkingBalance -= amount;
+  } 
+  else if (amount <= getTotalBalance()) {
+    var newCheckingBalance = Math.abs(amount - checkingBalance);
+    savingsBalance = savingsBalance - newCheckingBalance;
+    $('#balance2').text('$' + savingsBalance);
+    checkingBalance = 0;
+  };
+};
 
-          if ($totalBalance > $amt ) {
-            $('#balance1').text("Yes");
-          } else{
-            $('#balance1').text('No');
-          }
+var savingsDeposit = function (amount) {
+  if (amount > 0) {
+    savingsBalance +=amount;
+  };
+};
 
-      }
-    })
-  },
+var savingsWithdraw = function (amount) {
+  if (amount <= savingsBalance) {
+    savingsBalance -=amount;
+       } 
+  else if (amount <= getTotalBalance()) {
+    var newSavingsBalance = Math.abs(amount - savingsBalance);
+    checkingBalance = checkingBalance - newSavingsBalance;
+    $('#balance1').text('$' + checkingBalance);
+    savingsBalance = 0;
+  };
+};
 
-  savings: {
-    balance: 0,
-    deposit: function (amount) {},
-    withdraw: function (amount) {}
-  }
+var getTotalBalance = function () {
+  return checkingBalance + savingsBalance;
 }
 
+$(document).ready(function () {
 
-// $('#checkingDeposit').on('click', function () {
-//   console.log('clicked!');
-// });
+  var updateChecking = function () {
+    $('#balance1').text('$' + checkingBalance);
+    $('#checkingAmount').val('');
 
-// $('#checkingDeposit').click();
-// $('#savingsDeposit').click();
-// $('#checkingWithdraw').click();
-// $('#savingsWithdraw').click();
+    if (checkingBalance === 0) {
+      $('#checkingAccount').addClass('zero');
+    } else {
+      $('#checkingAccount').removeClass('zero');
+    }
+  };
+
+  var updateSavings = function () {
+    $('#balance2').text('$' + savingsBalance);
+    $('#savingsAmount').val('');
+
+    if (savingsBalance === 0) {
+      $('#savingsAccount').addClass('zero');
+    } else {
+      $('#savingsAccount').removeClass('zero');
+    }
+  };
+
+  $('#checkingDeposit').on('click', function () {
+    var amount = parseInt($('#checkingAmount').val());
+    checkingDeposit(amount);
+    updateChecking();
+  });
+
+  $('#checkingWithdraw').on('click', function () {
+    var amount = parseInt($('#checkingAmount').val());
+    checkingWithdraw(amount);
+    updateChecking();
+  });
+
+  $('#savingsDeposit').on('click', function () {
+    var amount = parseInt($('#savingsAmount').val());
+    savingsDeposit(amount);
+    updateSavings();
+  });
+
+  $('#savingsWithdraw').on('click', function () {
+    var amount = parseInt($('#savingsAmount').val());
+    savingsWithdraw(amount);
+    updateSavings();
+  });
+});
+

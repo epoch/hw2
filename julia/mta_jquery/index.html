@@ -17,34 +17,31 @@
           <div class="line-sym line-6">6</div>
       </div>
       <div class="main-container">
-        <div class="form-container">
-            <h2>Schedule</h2>
-            <div class="select-container">
-              <select id="origin" name="origin" required>
-                <option disabled selected>Select your Line and Station</option>
+        <div class="schedule">
+          <h2>Schedule</h2>
+          <div class="select-container">
+            <select id="origin" name="origin" required>
+              <option disabled selected>Select your Line and Station</option>
+            </select>
+          </div>
+          <div class="select-container"> 
+            <select id="destination" name="destination" required>
+              <option disabled selected>Select your Line and Station</option>
               </select>
             </div>
-            <div class="select-container"> 
-              <select id="destination" name="destination" required>
-                <option disabled selected>Select your Line and Station</option>
-              </select>
-            </div>
-            <input id="submit" type="submit" value="Go!">
+          <input id="submit" type="submit" value="Go!">
         </div>
-      </div>
-      <div class="service-container">
-        <h2>Service Status</h2>
-        <div class="line-container">
-          <div class="line-sym-service line-n">N</div>
-          <p>Good Service</p>
-        </div>
-        <div class="line-container">
-          <div class="line-sym-service line-l">L</div>
-          <p>Good Service</p>
-        </div>
-        <div class="line-container">
-          <div class="line-sym-service line-6">6</div>
-          <p>Good Service</p>
+        <div class="journey">
+          <h2>Journey</h2>
+          <div class="origin">
+            <h3>Origin</h3>
+            <p id="origin-selection"></p>
+          </div>
+          <div class="destination">
+            <h3>Destination</h3>
+            <p id="destination-selection"></p>
+          </div>
+          <div class="stops"></div>
         </div>
       </div>
     </div>

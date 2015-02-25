@@ -7,7 +7,6 @@ var subway = {
 $(document).ready(function() {
 
   var buildSelect = function(lines) {
-
     $.each(lines, function(line, stops) {
       var optgroup = $('<optgroup/>');
       optgroup.addClass(line).attr( 'label', line + ' Line' );
@@ -28,49 +27,45 @@ $(document).ready(function() {
 
     singleLineJourney: function (line, stop1, stop2, subway) {
       var numStops;
-      var stopNames;
+      var stop;
       var $line = subway[line];
       var $originStation = $line.indexOf(stop1);
       var $destinationStation = $line.indexOf(stop2);
 
-      if ($originStation < $destinationStation) {
-        var stops = $line.slice($originStation, $destinationStation + 1);
-        
-        numStops = (stops.length) - 1;
-        console.log(numStops)
-        $(stops).each(function(index, val) {
-           stopNames = val;
-           console.log(stopNames)
-        });
+      $('#origin-selection').html(line + ' Line - ' + stop1);
+      $('#destination-selection').html(line + ' Line - ' + stop2);
 
-      } else if ($originStation === $destinationStation) {
-        var stops = $line.slice($originStation, $destinationStation + 1);
-        console.log($originStation)
-        console.log($destinationStation)
+      if ($originStation <= $destinationStation) {
+        stops = $line.slice($originStation, $destinationStation + 1);
         numStops = (stops.length) - 1;
-        console.log(numStops)
 
-        $(stops).each(function(index, val) {
-           stopNames = val;
-           console.log(stopNames)
-        });
+        var listStops = stops.join(', ');
+
+        var $stopsHeading = $('<h3/>').html('Stops');
+        var $namesOfStops = $('<p/>').html(listStops);
+        var $numberOfStops = $('<p/>').html('Stops: ' + numStops);
+
+        $('.stops').append($stopsHeading, $namesOfStops, $numberOfStops);
 
       } else {
-        var stops = $line.slice($destinationStation, $originStation + 1);
-        
-        numStops = (stops.length) - 1;
-        console.log(numStops)
+        stops = $line.slice($destinationStation, $originStation + 1);
         stops.reverse();
-        $(stops).each(function(index, val) {
-          stopNames = val;
-          console.log(stopNames)
-        });
+        numStops = (stops.length) - 1;
+
+        var listStops = stops.join(', ');
+        
+        var $stopsHeading = $('<h3/>').html('Stops');
+        var $namesOfStops = $('<p/>').html(listStops);
+        var $numberOfStops = $('<p/>').html('Stops: ' + numStops);
+
+        $('.stops').append($stopsHeading, $namesOfStops, $numberOfStops);
+
       };
     },
     
     multiLineJourney: function (line1, line2, stop1, stop2, subway) {
       var numStops;
-      var stopNames;
+      var stops;
       var $originLine = subway[line1];
       var $destinationLine = subway[line2];
       var $originIntersect = $originLine.indexOf('Union Square');
@@ -78,18 +73,23 @@ $(document).ready(function() {
       var $originStation = $originLine.indexOf(stop1);
       var $destinationStation = $destinationLine.indexOf(stop2);
 
+      $('#origin-selection').html($originLine + ' Line - ' + $originStation);
+      $('#destination-selection').html($destinationLine + ' Line - ' + $destinationStation);
+
       if ($originStation < $destinationStation) {
-        var originStops = $originLine.slice($originStation, $originIntersect);
-        var destinationStops = $destinationLine.slice($destinationIntersect, $destinationStation + 1);
+        var $originStops = $originLine.slice($originStation, $originIntersect);
+        var $destinationStops = $destinationLine.slice($destinationIntersect, $destinationStation + 1);
 
-        var stops = $.merge(originStops, destinationStops);
+        stops = $.merge($originStops, $destinationStops);
         numStops = (stops.length) - 1;
-        console.log(numStops);
 
-        $(stops).each(function(index, val) {
-          stopNames = val;
-          console.log(stopNames);
-        });
+        var listStops = stops.join(', ');
+
+        var $stopsHeading = $('<h3/>').html('Stops');
+        var $namesOfStops = $('<p/>').html(listStops);
+        var $numberOfStops = $('<p/>').html('Stops: ' + numStops);
+
+        $('.stops').append($stopsHeading, $namesOfStops, $numberOfStops);
 
       } else if ($originStation > $destinationStation) {
         var originStops = $originLine.slice($originIntersect, $originStation + 1);
@@ -97,30 +97,35 @@ $(document).ready(function() {
         
         stops = $.merge(destinationStops, originStops);
         numStops = (stops.length) - 1; 
-        console.log(numStops);
-
         stops.reverse();
+        
+        var listStops = stops.join(', ');
+  
+        var $stopsHeading = $('<h3/>').html('Stops');
+        var $namesOfStops = $('<p/>').html(listStops);
+        var $numberOfStops = $('<p/>').html('Stops: ' + numStops);
+
+        $('.stops').append($stopsHeading, $namesOfStops, $numberOfStops);
+
         $(stops).each(function(index, val) {
           stopNames = val;
-          console.log(stopNames);
         });
 
       } else if ($originStation === $destinationStation) {
         var originStop = $originLine.slice($originStation, $originIntersect + 1);
         var destinationStop = $destinationLine.slice($destinationStation, $destinationIntersect);
-        console.log(originStop); 
         destinationStop.reverse(); 
-        console.log(destinationStop);
 
         stops = $.merge(originStop, destinationStop);
         numStops = (stops.length) - 1; 
-        console.log(numStops);
 
-        $(stops).each(function(index, val) {
-          stopNames = val;
-          console.log(stopNames);
-        });
+        var listStops = stops.join(', ');
+        
+        var $stopsHeading = $('<h3/>').html('Stops');
+        var $namesOfStops = $('<p/>').html(listStops);
+        var $numberOfStops = $('<p/>').html('Stops: ' + numStops);
 
+        $('.stops').append($stopsHeading, $namesOfStops, $numberOfStops);
       };
     }
   }
@@ -145,9 +150,7 @@ $(document).ready(function() {
       var $singleLine = $destinationLine;
       journey.singleLineJourney($singleLine, $originStop, $destinationStop, subway);
     }
-
-
-    else{
+    else {
       journey.multiLineJourney($originLine, $destinationLine, $originStop, $destinationStop, subway);
     };
 

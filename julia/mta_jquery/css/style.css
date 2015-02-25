@@ -6,7 +6,7 @@
 }
 body {
   background-color: #000;
-/*  background: url(http://www.mrwallpaper.com/wallpapers/new-york-metro.jpg) no-repeat center;*/
+  background: url(http://www.mrwallpaper.com/wallpapers/new-york-metro.jpg) no-repeat center;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 20px;
   color: #EDF7F2;
@@ -20,30 +20,29 @@ h1 {
   line-height: 150%;
 }
 h2 {
-  font-size: 36px;
+  font-size: 32px;
   padding-bottom: 7px;
 }
 
 h3 {
   padding-bottom: 5px;
-  text-decoration: underline;
+  border-bottom: 1px solid #fff;
 }
 
 select {
   width: 270px;
   border: 1px solid #fff;
-/*  margin-left: 10px;*/
-  margin-bottom: 12px;
-  font-size: 18px;
+  margin: 8px auto;
+  font-size: 16px;
   outline: none;
 }
 
 input[type=submit] {
-  width: 120px;
+  width: 160px;
   display: inline-block;
   box-sizing: content-box;
-  margin-top: 9px;
-  font-size: 20px;
+  margin: 6px auto;
+  font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
   background-color: #fff;
@@ -61,8 +60,8 @@ label {
 
 .container {
   max-width: 960px;
-  height: 500px;
-  margin: 90px auto;
+  height: 570px;
+  margin: 60px auto;
   background-color: rgba(0,0,0,0.9);
 }
 .subway-lines {
@@ -106,14 +105,14 @@ label {
 }
 
 /*SERVICE CLASSES*/
-.form-container, .service-container, .journey, .stops {
+.schedule, .service-container, .journey, .stops {
   display: inline-block;
   vertical-align: top;
   margin-top: 15px;
-  padding-top: 10px;
+/*  padding-top: 10px;*/
 }
 
-.form-container {
+.schedule {
   max-width: 60%;
   padding-right: 30px;
 }
@@ -154,15 +153,11 @@ label {
 .origin p, .destination p {
   display: inline-block;
   padding-right: 15px;
+  line-height: 150%;
 }
 .journey {
-  width: 50%;
-  padding-right: 30px;
-}
-.stops {
-  max-width: 40%;
-  padding-left: 30px;
-  border-left: 1px solid #EDF7F2;
+  width: 60%;
+  padding-right: 20px;
 }
 
 .stops p {
