@@ -1,0 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
+#mirror-cat {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+body {
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.laurel {
+  width: 33%;
+  position: absolute;
+  margin: auto;
+  margin-top: 0;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  z-index: -1;
+}
