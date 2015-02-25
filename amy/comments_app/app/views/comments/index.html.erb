@@ -1,0 +1,11 @@
+<h1>Comments in Ajax</h1>
+
+<%@comment = Comment.new%>
+
+<%= form_for @comment, :remote => true, :html => { :'data-type' => 'html', :id => 'create_comment_form' } do |f| %>
+  <%= f.text_area(:content) %>
+  <div class="validation-error"></div>
+  <%= f.submit %>
+<% end %>
+
+<div id="comments"></div>
