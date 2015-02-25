@@ -32,7 +32,6 @@ $(document).ready(function () {
     var showResults = function (movie) {
       console.log(movie)
       // debugger;
-      // var $movieList = $('<li/>').attr('li', movie.Search);
       var $displayList = $('<ul>')
       var $movieList = movie.Search
       // $('#result-list').append( "<p>Or did you mean...</p>");
@@ -43,11 +42,6 @@ $(document).ready(function () {
           $displayList.append($link)
       });
       $('#result-list').html($displayList);
-      
-      // LOOP TITLES & DISPLAY AS <li>
-
-
-      // showResults();
     }
 
     var query = $('#title').val();
