@@ -103,10 +103,12 @@ $(document).ready(function(){
         console.log("showing poster");
 
         if(result.Poster === "N/A"){
+            clearMovieInfo();
             noPosterError();
         }else{
             var posterURL = result.Poster;
-            var $postersContainer = $('<div/>').addClass('posters-container').appendTo('.container');
+            var $resultsContainer = $('<div/>').addClass('results-container').appendTo('.container');
+            var $postersContainer = $('<div/>').addClass('posters-container').appendTo('.results-container');
             var $singlePoster = $('<img/>').addClass('single-poster').attr("src", posterURL).appendTo('.posters-container');
             
             showMovieInfo(result);
@@ -126,7 +128,7 @@ $(document).ready(function(){
         var rating = result.Rated;
         var imdbScore = result.imdbRating;
 
-        var $movieInfoContainer = $('<div/>').addClass('movie-info-container').appendTo('.container');
+        var $movieInfoContainer = $('<div/>').addClass('movie-info-container').appendTo('.results-container');
         var $movieInfoList = $('<ul/>').addClass('movie-info-list').appendTo('.movie-info-container');
         
         $('<li/>').addClass('movie-info-list-item').html('<span class="info-label">Plot: </span>' + plot).appendTo('.movie-info-list');

@@ -1,3 +1,109 @@
+@import url(http://fonts.googleapis.com/css?family=Limelight);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,300,200,100,600);
+
 body {
-    background-color: pink;
+    /*background-color: pink;*/
+    font-family: 'Raleway', sans-serif;
 }
+
+header {
+    text-align: center;
+    font-size: 30px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+h1 {
+    font-family: 'Limelight', cursive;
+}
+
+#query, .search{
+
+    padding: 20px;
+    /*background-color: white;*/
+    border: 5px solid #000;
+    background-color: #fff;
+    width: 300px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    margin: 10px;
+    /*display: block;*/
+}
+
+.search {
+    text-transform: uppercase;
+}
+
+.poster {
+    margin-top: 50px;
+}
+
+img {
+    /*display: block;*/
+    /*margin: auto;*/
+    box-shadow: 5px 5px 20px #888888;
+    margin-bottom: 40px;
+
+}
+
+li a {
+    text-decoration: none;
+    color: #000;
+/*    font-size: 30px;*/
+    /*text-align: center;*/
+}
+
+ul {
+    /*text-align: center;*/
+    /*margin: auto;*/
+}
+
+li a:hover {
+    color: #EB0500;
+}
+
+li {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.results-container{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.posters-container{
+    display: inline-block;
+    width: 34%;
+    vertical-align: middle;
+}
+
+.movie-info-container{
+    background-color: ;
+    text-align: left;
+    width: 60%;
+    display: inline-block;
+    font-size: 20px;
+    /*padding-bottom:;*/
+    vertical-align: middle;
+
+}
+
+.movie, .movie-info-list-item{
+    padding-bottom: 10px;
+}
+
+.info-label{
+    font-weight: 600;
+}
+
+
+
+
+
