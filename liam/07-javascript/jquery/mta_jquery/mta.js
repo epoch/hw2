@@ -26,28 +26,36 @@
 
 console.log('MTA Navigator');
 
-var subway = {
-  "Line N": ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
-  "Line L": ["8th", "6th", "Union Square", "3rd", "1st"],
-  "Line 6": ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
+var subwayLines = {
+  "N": ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
+  "L": ["8th", "6th", "Union Square", "3rd", "1st"],
+  "6": ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
 };
+
+// // Storing values for calculation of route
+
+// var from_line = "N";
+// var from_station = "Times Square";
+// var to_line = "L";
+// var to_station = "1st";
 
 // Storing values for calculation of route
 
-var from_line = "Line N";
-var from_station = "Times Square";
-var to_line = "Line L";
-var to_station = "1st";
+var from_line = $('#from_station').val().parent().attr('label');
+var from_station = $('#from_station').val();
+var to_line = $('#to_station').val().parent().attr('label');
+var to_station = $('#to_station').val();
+// debugger;
 
 // Turning stations into indexes
 
-var from_station_index = subway[from_line].indexOf(from_station);
-var to_station_index = subway[to_line].indexOf(to_station);
+var from_station_index = subwayLines[from_line].indexOf(from_station);
+var to_station_index = subwayLines[to_line].indexOf(to_station);
 
 // Turning transfer intersections into indexes
 
-var from_transfer_index = subway[from_line].indexOf("Union Square");
-var to_transfer_index = subway[to_line].indexOf("Union Square");
+var from_transfer_index = subwayLines[from_line].indexOf("Union Square");
+var to_transfer_index = subwayLines[to_line].indexOf("Union Square");
 
 // Calculate number of stops for all possible scenarios
 
@@ -59,9 +67,9 @@ if (from_station === to_station) {
   // Listing stations
 
   if (from_station_index < to_station_index) {
-    var stations = subway[from_line].slice(from_station_index, to_station_index + 1);
+    var stations = subwayLines[from_line].slice(from_station_index, to_station_index + 1);
   } else {
-    var stations = subway[from_line].slice(to_station_index, from_station_index + 1);
+    var stations = subwayLines[from_line].slice(to_station_index, from_station_index + 1);
     var stations = stations.reverse();    
   }
   
@@ -75,9 +83,9 @@ if (from_station === to_station) {
   // Listing stations
 
   if (from_station_index < to_station_index) {
-    var stations = subway[from_line].slice(from_station_index, to_station_index + 1);
+    var stations = subwayLines[from_line].slice(from_station_index, to_station_index + 1);
   } else {
-    var stations = subway[from_line].slice(to_station_index, from_station_index + 1);
+    var stations = subwayLines[from_line].slice(to_station_index, from_station_index + 1);
     var stations = stations.reverse();
   }
   
@@ -91,9 +99,9 @@ if (from_station === to_station) {
   // Listing stations
 
   if (from_station_index < from_transfer_index) {
-    var stations = subway[from_line].slice(from_station_index, from_transfer_index + 1);
+    var stations = subwayLines[from_line].slice(from_station_index, from_transfer_index + 1);
   } else {
-    var stations = subway[from_line].slice(from_transfer_index, from_station_index + 1);
+    var stations = subwayLines[from_line].slice(from_transfer_index, from_station_index + 1);
     var stations = stations.reverse();
   }
 
@@ -107,10 +115,10 @@ if (from_station === to_station) {
   // Listing stations (first_leg_stations)
 
   if (from_station_index < from_transfer_index) {
-    var first_leg_stations = subway[from_line].slice(from_station_index, from_transfer_index);
+    var first_leg_stations = subwayLines[from_line].slice(from_station_index, from_transfer_index);
     var first_leg_stops = first_leg_stations.length;
   } else {
-    var first_leg_stations = subway[from_line].slice(from_transfer_index, from_station_index + 1);
+    var first_leg_stations = subwayLines[from_line].slice(from_transfer_index, from_station_index + 1);
     var first_leg_stations = first_leg_stations.reverse();
     var first_leg_stops = first_leg_stations.length - 1;
   }
@@ -118,10 +126,10 @@ if (from_station === to_station) {
   // Listing stations (second_leg_stations)
 
   if (to_transfer_index < to_station_index) {
-    var second_leg_stations = subway[to_line].slice(to_transfer_index, to_station_index + 1);
+    var second_leg_stations = subwayLines[to_line].slice(to_transfer_index, to_station_index + 1);
     var second_leg_stops = second_leg_stations.length - 1;
   } else {
-    var second_leg_stations = subway[to_line].slice(to_station_index, from_transfer_index);
+    var second_leg_stations = subwayLines[to_line].slice(to_station_index, from_transfer_index);
     var second_leg_stations = second_leg_stations.reverse();
     var second_leg_stops = second_leg_stations.length;
   }
