@@ -1,0 +1,17 @@
+<h1>Flickr Search</h1>
+
+<div>
+  <%= text_field_tag 'query', nil, :autofocus => true, :placeholder => 'Butterflies...' %>
+  <%= button_tag 'Search', :id => 'search' %>
+  <%= button_tag 'Load more', :id => 'more'  %>
+  <%= button_tag 'Clear images', :id => 'clear' %>
+</div>
+
+<div id="images"></div>
+
+<input type='hidden' id='current_page' />  
+<input type='hidden' id='show_per_page' />  
+
+  
+<!-- An empty div which will be populated using jQuery -->  
+<div id='page_navigation'></div>  

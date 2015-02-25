@@ -1,0 +1,13 @@
+<div class="movies">
+    <form action="multiple">
+            <label class="searchfield" for="title">Movie  </label>
+            <input type="search" name="title" id="title" placeholder="Enter the movie title">
+        <button>Search</button>    
+    </form>    
+    <img src="<%= @poster_image %>">
+    <div class="output">
+        <p><%= @director %></p>
+        <p><%= @year %></p>
+        <p><%= @imdbrating %></p>
+    </div>
+</div>

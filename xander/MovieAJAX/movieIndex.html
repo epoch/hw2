@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movies and AJAX</title>
+  <link rel="stylesheet" href="moviestyle.css">
+</head>
+<body>
+<div class="container">
+
+  <h1>AJAX Movies</h1>
+
+  <form>
+    <div class="input">
+            <label for="title">Movie Title</label>
+            <input type="search" name="title" id="title" placeholder="Enter the movie title">
+        <button id="search">Search</button>    
+    </div>  
+  </form>
+
+  <div id="search-results">
+    <ul id="results-list">
+    </ul> 
+  </div>
+  <div id="show-poster">
+    
+  </div>
+
+</div>
+  <script src="jquery.js"></script>
+  <script src="underscore.js"></script>
+  <script src="movieAJAX.js"></script>
+
+</body>
+</html>

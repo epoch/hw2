@@ -1,0 +1,11 @@
+<h1>Users</h1>
+
+<% @users.each do |user| %>
+<div class="user_list">
+    <ul>
+        <li>Name: <%= link_to(user.name, user) %></li>
+        <li>Address: <%= user.address %></li>
+        <li>Date of Birth: <%= user.dob.strftime('%A %B %e, %Y') if user.dob %></li>
+    </ul>
+</div>
+<% end %>

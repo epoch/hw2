@@ -1,0 +1,27 @@
+<h2>Enter Pastry Creation</h2>
+
+<div class=input>
+    <form action="/pastries" method="post">
+        <label for="snack">Snack</label>
+        <input id="type" placeholder="Croissant" name="snack">
+
+        <label for="flavour">Flavour</label>
+        <input id="flavour" placeholder="Blueberry & Choc" name="flavour">
+
+        <label for="comment">Comment</label>
+        <input id="comment" placeholder="A riot of intense flavours" name="comment">
+
+        <label for="rating">Rating</label>
+            <select name="rating">
+                <option value="">-</option>
+                
+                <option value="5"></option>
+                <option value="4">I would maim someone for one more.</option>
+                <option value="3">Pretty damn tasty.</option>
+                <option value="2">Meh. It's fuel.</option>
+                <option value="1">Anyone have a bucket?</option>
+                <option value="0">Call an ambulance.</option>
+            </select>
+        <input type="submit" value="Create new pastry">
+    </form>
+</div>

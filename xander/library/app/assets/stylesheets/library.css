@@ -1,0 +1,171 @@
+html, body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url(http://www.pdgm.com/getmedia/49986e29-2fba-4629-8a09-591205b91ed4/Library_1400_800.jpg.aspx);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: navy;
+}
+
+h1 {
+    color: navy;
+    margin-left: 3em;
+    padding-top: 1em;
+}
+
+.book {
+    max-height: 600px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(230,234,214,0.8);
+    padding: 1em;
+}
+
+.portrait {
+    max-height: 60vh;  
+}
+
+.thumb {
+    max-width: 15em;
+    padding: 1em;
+    display: inline-block;
+}
+
+.book {
+    max-width: 15em;
+    display: inline-block;
+}
+
+nav li {
+    display: inline-block;
+    color: rgb(230,234,214);
+}
+
+nav {
+    text-align: right;    
+}
+
+nav ul {
+    background-image: url(http://www.jakabooks.com.au/wp-content/uploads/2012/07/books.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    margin: 0;
+    padding: 1.5em;
+}
+
+nav a {
+    color: black;
+    border-radius: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 0.5em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    background-color: rgba(230,234,214,0.9);
+}
+
+.new_book {
+    margin-left: 5em;
+    padding-bottom: 1.5em;
+}
+
+.new_book input {
+    display: block;
+    width: 250px;
+    margin-bottom: 1em;
+}
+
+.new_book label {
+    font-size: 14px;
+    display: block;
+}
+
+.new_author {
+    margin-left: 5em;
+    padding-bottom: 1.5em;
+}
+
+.new_author input {
+    display: block;
+    width: 250px;
+    margin-bottom: 1em;
+}
+
+.new_author label {
+    font-size: 14px;
+    display: block; 
+}
+
+.new_user {
+    margin-left: 5em;
+    padding-bottom: 1.5em;
+}
+
+.new_user input {
+    display: block;
+    width: 250px;
+    margin-bottom: 1em;
+}
+
+.new_user label {
+    font-size: 14px;
+    display: block; 
+}
+
+.edit_book {
+    margin-left: 5em;
+}
+
+.edit_book input {
+    display: block;
+    width: 250px;
+    margin-bottom: 1em;
+}
+
+.edit_book label {
+    font-size: 14px;
+    display: block;
+}
+
+.edit_author {
+    margin-left: 5em;
+}
+
+.edit_author input {
+    display: block;
+    width: 250px;
+    margin-bottom: 1em;
+}
+
+.edit_author label {
+    font-size: 14px;
+    display: block; 
+}
+
+.edit_user {
+    margin-left: 5em;
+}
+
+.edit_user input {
+    display: block;
+    width: 250px;
+    margin-bottom: 1em;
+}
+
+.edit_user label {
+    font-size: 14px;
+    display: block; 
+}
+
+.author_list {
+    display: inline-block;
+    height: 160px;
+}

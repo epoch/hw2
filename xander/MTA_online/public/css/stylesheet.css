@@ -1,0 +1,66 @@
+body {
+    background-image: url(http://mostbeautifulplacesintheworld.org/wp-content/uploads/2014/05/terminal.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    text-align: center;
+    font-family: 'Alegreya SC', serif;
+    margin: 0;
+}
+
+img {
+    width: 9em;
+    position: absolute;
+    top: 2em;
+    
+}
+
+#left_logo {   
+    left: 5em;
+
+}
+
+#right_logo {
+    right: 5em;
+}
+
+.input {
+    color: black;
+    padding: 3em;
+    background-color: rgba(255,239,213,0.6);
+    text-align: center;
+}
+
+.container {
+    margin-top: 9em;
+}
+
+button {
+    font-family: 'Alegreya SC', serif;
+    margin-top: 1.5em;
+    width: 10em; 
+}
+
+footer {
+    background-color: rgba(255,239,213,0.8);
+    height: 4em;
+    line-height: 4em;
+    color: navy;
+    bottom: 0em;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
+
+#mta_logo_left {
+    width: 3em;
+    top: 0.5em;
+    left: 1em;
+}
+
+#mta_logo_right {
+    width: 3em;
+    top: 0.5em;
+    right: 1em;
+}

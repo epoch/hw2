@@ -1,0 +1,31 @@
+<h2>Edit Pastry Details</h2>
+
+<form action="/pastries/<%= @pastry.id %>" method="post">
+
+    <label for="snack">Snack</label>
+    <input id="type" placeholder="Croissant" name="snack" value="<%= @pastry.snack %>">
+
+    <label for="flavour">Flavour</label>
+    <input id="flavour" placeholder="Blueberry & Choc" name="flavour" value="<%= @pastry.flavour %>">
+
+
+    <label for="rating">Rating</label>
+        <select name="rating">
+            <option value="">-</option>
+            <option value="5">This is my O-face.</option>
+            <option value="4">I would maim someone for one more.</option>
+            <option value="3">Pretty damn tasty.</option>
+            <option value="2">Meh. It's fuel.</option>
+            <option value="1">Anyone have a bucket?</option>
+            <option value="0">Call an ambulance.</option>
+        </select>
+    <p>
+        <label for="comment">Comment</label>
+    </p>
+    <p>
+        <textarea id="comment" cols="50" rows="3" placeholder="A riot of intense flavours" name="comment" value="<%= @pastry.comment %>">
+        </textarea>
+    </p>
+    <input type="submit" value="Update">
+</form>
+

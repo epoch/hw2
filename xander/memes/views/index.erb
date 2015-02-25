@@ -1,0 +1,9 @@
+<ul>
+    <% @memes.each do |meme| %>
+        <li>
+            <a href="/memes/<%= meme["id"] %>">
+                <%= meme["title"] %>
+            </a>
+        </li>
+    <% end %>
+</ul>

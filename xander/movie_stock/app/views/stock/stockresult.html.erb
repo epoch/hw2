@@ -1,0 +1,10 @@
+<div class="stocks">
+    <div class="find">
+        <h2>Stock price lookup</h2>
+        <form action="/stock/result">
+            <input name="code" placeholder="Enter stock code" value="<%= params[:code] %>">
+            <button class="button">Get Price</button>
+        </form>
+        <h3 class="output">The last traded price for <%= params[:code] %> was <%= number_to_currency(@result) %></h3>
+    </div>
+</div>

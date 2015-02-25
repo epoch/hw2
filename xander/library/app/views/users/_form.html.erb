@@ -1,0 +1,13 @@
+<%= form_for @user do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+
+    <%= f.label :dob, 'Date of Birth' %>
+    <%= f.text_field :dob %>
+
+    <%= f.submit %>
+<% end %>
