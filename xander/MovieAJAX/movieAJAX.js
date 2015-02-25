@@ -4,7 +4,7 @@ $(document).ready(function() {
   $('#search').on('click', function(event) {
     event.preventDefault();
     var $movieTitle = $('#title').val();
-
+    $('#show-poster').empty();
     $.ajax({
       url: 'http://www.omdbapi.com/?s=' + $movieTitle,
       method: 'get',
@@ -25,7 +25,7 @@ $(document).ready(function() {
   });
 
   $('#results-list').on('click', 'button', function() {
-    $('#show-poster').empty();
+
     var $imdbID = $(this).parent().attr('id');
       $.ajax({
         url: 'http://www.omdbapi.com/?i=' + $imdbID,
@@ -34,7 +34,10 @@ $(document).ready(function() {
         success: function(movie){
              
           var $posterUrl = movie.Poster;
+          var $bigTitle = $('<h2>' + movie.Title + ', ' + movie.Year + '</h2>');
           var $poster = $('<img>').attr('src', $posterUrl);
+
+          $('#show-poster').append($bigTitle);
           $('#show-poster').append($poster);
           $('#results-list').empty();
       }      

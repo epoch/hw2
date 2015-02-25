@@ -1,5 +1,12 @@
 body {
-  background: url(http://www.juliennicaise.net/IMDB/IMDB.jpg);
+  background: url(film-reel.jpg);
   background-size: cover;
   color: white;
+  font-family: Arial;
+}
+
+.container {
+  width: 100vh;
+  margin-top: 12em;
+  padding-left: 15em;
 }
