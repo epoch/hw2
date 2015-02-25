@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classoto</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<%= root_path %>">Classoto</a>
+          <a class="navbar-brand" href="<%= users_path %>">Index</a>
+          <% if @current_user.present? %>
+         <%= link_to('Sign out ' + @current_user.name, login_path, :method => :delete, :class => "navbar-brand") %>
+         <% end %>
+        </div>
+        
+        <div id="navbar" class="navbar-collapse collapse">
+        <%= form_tag login_path, :class => "navbar-form navbar-right" do %>
+            
+            <div class="form-group">
+              <%= text_field_tag :username, nil, :autofocus => true, :placeholder => "Name", :class => 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= password_field_tag :password, nil, :placeholder => "Password", :class => 'form-control' %>
+            </div>
+            <%= submit_tag 'Login', :class => "btn btn-success" %>
+          <% end %>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <h1>Welcome to Classoto <%= @current_user.try(:name) %></h1>
+    <h2><%= flash[:error] if flash[:error].present? %></h2>
+    </div>
+
+</div>
+
+<nav>
+  <ul>
+    <%== nav_menu %>
+  </ul>
+</nav>
+
+<div class="container">
+  <%= yield %>
+</div>
+      <footer>
+        <hr>
+        <p>Powered by GA WDIWeekV</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

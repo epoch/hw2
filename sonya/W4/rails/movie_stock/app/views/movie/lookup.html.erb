@@ -1,0 +1,41 @@
+<h1></h1>
+<div id="movie">
+
+
+</div>
+
+<div class="row">
+  <div class="large-6 columns">
+    <div class="panel">
+      <h2>Get Movies</h2>
+        <form action="/movie" method="/post">
+        <label name="movie">
+        <input name="movie" id="movie">
+        <button>Search</button>
+    </form>
+
+      <% @movie_title = params[:movie] %>
+    <% if params[:movie].present? %>
+      <% url = "http://www.omdbapi.com/?s=#{params[:movie].gsub(' ','+')}" %>
+      <% response = HTTParty.get url %>
+      <% json = JSON(response) %>
+      <% @movies = json["Search"] %>
+      <% @movie_details = json %>
+
+      <% if @movies && @movies.length %>
+        <% @movies.each do |movie| %>
+          <p><a href="/movie/<%= movie["imdbID"]%>"> <%= movie["Title"]%></a></p>
+        <%end%>
+      <%else%>
+        <p>The movie you are looking for cannot be found.</p>
+      <%end%>
+    <%end%>
+    
+    </div>
+  </div>
+  <div class="large-6 columns">
+    <div class="panel">
+      <img src="http://www.toocool2betrue.com/wp-content/uploads/2012/08/Marilyn-Monroe-Movies.jpg">
+    </div>
+  </div>
+</div>

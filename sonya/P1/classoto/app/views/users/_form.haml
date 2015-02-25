@@ -1,0 +1,25 @@
+%h2 Sign Up to Classoto
+
+- if @user.errors.any?
+  %ol
+    - @user.errors.full_messages.each do |msg|
+      %li= msg
+
+= form_for @user do |f|
+  %div.form-group
+    = f.label :name
+    = f.text_field :name, :autofocus => true, :required => true, :class => 'form-control'
+  %div.form-group
+    = f.label :password
+    = f.password_field :password, :class => 'form-control'
+  %div.form-group
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation, :class => 'form-control'
+  %div.form-group
+    = f.label :image
+    = f.url_field :image, :class => 'form-control'
+  %div.form-group
+    = f.label :cohort_id
+    = f.select :cohort_id, Cohort.all.map { |cohort| [cohort.year, cohort.id] }, :include_blank => true, :class => 'form-control'
+  %div.form-group
+    = f.submit "Sign Me Up", :class => 'btn btn-success'

@@ -1,0 +1,13 @@
+<h3>Edit Butterfly</h3>
+
+<form action="/posts" method="post">
+  <p><label for="title">Title: </label>
+  <!-- <input id="title" name="title" autofocus> -->
+  <textarea name="title" id="title" value="<%= @post.title %>" cols="50" rows="1" resize: vertical></textarea></p>
+  
+  <p><label for="url">GIF: </label>
+  <input id="url" name="url" value="<%= @post.url %>"></p>
+
+  <input type="submit" value="BLIF AWAY">
+</form>
+

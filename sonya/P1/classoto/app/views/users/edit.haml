@@ -1,0 +1,22 @@
+%h1 Edit User
+
+- if @user.errors.any?
+  %ol
+    - @user.errors.full_messages.each do |msg|
+      %li= msg
+
+= form_for @user do |f|
+  %div.form-group
+    = f.label :name
+    = f.text_field :name, :autofocus => true, :required => true, :class => 'form-control'
+
+    = f.label :password
+    = f.password_field :password, :class => 'form-control'
+
+    = f.label :image
+    = f.url_field :image, :class => 'form-control'
+    %hr
+    = f.label :cohort_id
+    = f.select :cohort_id, Cohort.all.map { |cohort| [cohort.year, cohort.id] }, :include_blank => true, :class => 'form-control'
+    %hr
+    = f.submit "Update Profile"

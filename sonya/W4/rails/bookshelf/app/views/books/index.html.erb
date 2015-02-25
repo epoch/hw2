@@ -1,0 +1,17 @@
+<h1>Listing Books</h1>
+
+<% @books.in_groups_of(3) do |book| %>
+  <div class="row">
+    <% book.compact.each do |book| %>
+      <div class="col-md-4">
+        <div class="book_index">
+          <%= link_to(image_tag(book.image, width: '90%'), book) %>
+          <h4><%= link_to book.title, book %></h4>
+          <%= book.publisher %>
+          <%= book.year %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+

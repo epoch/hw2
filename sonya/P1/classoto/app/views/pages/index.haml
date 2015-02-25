@@ -1,0 +1,18 @@
+%h1 Admin Class Photo
+
+- @users.in_groups_of(3) do |user|
+  .row
+    - user.compact.each do |user|
+      .col-md-4
+        .user_index
+          = link_to(image_tag(user.image), user)
+          %h2= link_to(user.name, user)
+          %h4
+            %li
+              Class: #{user.cohort.cohort}
+            %li
+              Cohort: #{user.cohort.year}
+          %h4
+            - if user.is_admin?
+              %li
+                Admin: #{user.is_admin}
