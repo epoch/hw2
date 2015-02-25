@@ -1,0 +1,11 @@
+<h1>Stock Lookup Tool</h1>
+<form action="/lookup"> <!-- needs to match get '/lookup' or where the data is being sent to -->
+  <input name="stock_symbol" placeholder="stock symbol"> <!-- Whatever I put in name will be available as a params e.g. params[:symbol] or params[:stock_symbol]-->
+  <button>Get quote</button>
+</form>
+
+<% if @price && @price > 0 %> <!-- non-echo -->
+  <p>Last trade for <%= @symbol%> was <%= @price %></p> 
+<% end %>
+
+<!-- <%= @price %> echo -->

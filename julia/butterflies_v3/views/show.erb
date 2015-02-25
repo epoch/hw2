@@ -1,0 +1,13 @@
+<h2><%= @butterfly.name %></h2>
+<p>Family: <em><%= @butterfly.family %></em></p>
+<img class="butterfly" src="<%= @butterfly.image %>">
+
+<% if @butterfly.plant %>
+<h3>
+    <a href="/plants/<%= @butterfly.plant.id %>"><%= @butterfly.plant.name %></a>
+</h3>
+<% end %>
+<div class="controls">
+    <a href="/butterflies/<%= @butterfly.id %>/delete">Delete</a>
+    <a href="/butterflies/<%= @butterfly.id %>/edit">Edit</a>
+</div>

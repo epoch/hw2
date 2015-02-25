@@ -1,0 +1,22 @@
+<h2>Edit a butterfly</h2>
+<form action="/butterflies/<%= @butterfly.id %>" method="post">
+    <label for="name">Name:</label>
+    <input id="name" name="name" value="<%= @butterfly.name %>">
+
+    <label for="family">Family:</label>
+    <input id="family" name="family" value="<%= @butterfly.family %>">
+
+    <label for="image">Image:</label>
+    <input type="url" id="image" name="image" value="<%= @butterfly.image %>"> 
+
+    <label for="plant_id">Larval Plant:</label>
+    <select name="plant_id" id="plant_id">
+        <option disabled>Select a plant</option>
+        <% Plant.all.each do |plant| %>
+        <option <%= "selected" if plant.id == @butterfly.plant_id %> value="<%= plant.id %>"><%= plant.name %></option>
+        <% end %>
+        <option>Don't know</option>
+    </select>
+
+    <input type="submit" value="Update Butterfly">
+</form>

@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100%;
+/*  background: url('http://www.commentnation.com/backgrounds/images/rainbow_pawprints_seamless_background_on_black.gif'), repeat;*/
+}
+
+.flip {
+  transform: scaleX(-1);
+}

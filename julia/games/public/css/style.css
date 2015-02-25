@@ -1,0 +1,130 @@
+@import url(http://fonts.googleapis.com/css?family=Ewert);
+
+* {
+    margin: 0 auto;
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+/*    background-image: url(http://fc04.deviantart.net/fs70/i/2011/266/d/a/carnival_madness_by_davislim-d4aogi4.jpg);
+    background-size: cover;*/
+    color: #000;
+    font-size: 20px;
+    text-transform: uppercase;
+    max-width: 100%;
+}
+
+
+h1 {
+    font-family: 'Ewert', cursive;
+    font-size: 84px;
+    line-height: 2em;
+    font-size: 
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #EA2E49;
+}
+
+button {
+    background-color: transparent;
+    padding: 22px;
+    border: 2px solid #EBEFCC;
+    margin-left: 10px;
+    color: #EBEFCC;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 160px;
+    font-size: 14px;
+}
+
+
+
+/*GENERAL CLASSES*/
+.container {
+/*    width: 960px;*/
+/*    height: 600px;*/
+/*    margin: 80px auto;*/
+    text-align: center;
+}
+
+/*INDEX CLASSES*/
+
+.hero {
+    max-width: 100%;
+    height: 450px;
+    background-color: red;
+}
+.games {
+    background-color: #fff;
+    width: 100%;
+    height: 250px;
+}
+.game {
+    width: 33.33%;
+    height: 100%;
+    display: inline-block;
+    border: 1px solid black;
+    margin: -3px;
+    padding: 0;
+}
+.magic-eight-circle {
+    background-color: #000;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: auto;
+}
+.magic-eight-triangle {
+    width: 0px;
+    height: 0px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #fff;
+    font-size: 0;
+    line-height: 0;
+    background-color: #000;
+    margin: auto;
+}
+.btn-game {
+    padding: 20px;
+    background-color: #290424;
+    color: #ffc;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/*MAGIC 8-BALL CLASSES*/
+
+button:hover.animated {
+    background-color: red;
+}
+
+/*SECRET NUMBER CLASSES*/
+
+.draw-cards {
+    width: 700px;
+    margin: auto;
+}
+.cards {
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    background-color: #290424;
+    text-align: center;
+    line-height: 4em;
+    margin: 20px;
+    opacity: 0.8;
+}
+.cards a {
+    color: #ffc;
+}

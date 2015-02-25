@@ -1,0 +1,19 @@
+<h2><%= @ocean.name %></h2>
+<div class="ocean-details">
+  <div>
+    <dt>Area:</dt>
+    <dd><%= number_with_delimiter(@ocean.area) %> km<span class="super">2</span></dd>
+  </div>
+  <div>
+    <dt>Area:</dt>
+    <dd><%= number_with_delimiter(@ocean.area) %> km<span class="super">2</span></dd>    
+  </div>
+
+  <dt>Deepest Point:</dt>
+  <dd><%= number_with_delimiter(@ocean.deepest_point) %> m</dd>
+</div>
+
+<%= image_tag @ocean.image %>
+
+<%= link_to('Edit ocean', ocean_edit_path(@ocean.id)) %>
+<%= button_to('Delete ocean', ocean_delete_path(@ocean.id)) %>

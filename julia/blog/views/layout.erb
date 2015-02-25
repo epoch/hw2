@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Oh! You Pretty Things!</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts">View posts</a></li>
+          <li><a href="/posts/add">Add a post</a></li>
+        </ul>
+      </nav>
+      <header>
+        <h1>Oh! You Pretty Things!</h1>
+      </header>
+      <div class="content-container">
+        <%= yield %>
+      </div>
+      <footer>
+
+        <p>Made <i class="fa fa-meh-o"></i> Julia</p>
+      </footer>
+    </div>
+  </body>
+</html>

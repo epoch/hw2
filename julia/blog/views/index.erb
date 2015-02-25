@@ -1,0 +1,7 @@
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium dolore provident praesentium mollitia deserunt! Veniam quibusdam iure quidem, vitae explicabo sequi dignissimos natus, dicta ea facere autem expedita dolore atque?</p>
+
+<ul>
+    <% @posts.each do |post| %>
+    <li><a href="/posts/<%= post.id %>"><%= post.subject %></a></li>
+    <% end %> 
+</ul>
