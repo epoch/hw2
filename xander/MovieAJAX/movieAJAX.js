@@ -9,16 +9,20 @@ $(document).ready(function() {
       url: 'http://www.omdbapi.com/?s=' + $movieTitle,
       method: 'get',
       dataType: 'json',
+
       success: function(movie){
       
       var $list = movie.Search;
+      if $list.length === 1;
+        showDetails
+      else
       _.each($list, function(item) {
         var $movieTitle = item.Title;
         var $movieYear = item.Year;
         var $movieID = item.imdbID;
         var $entry = $('<li><button>' + $movieTitle + ', ' + $movieYear + '</button></li>').attr("id", $movieID);
         $('#results-list').append($entry);
-
+      
         });
       }
     });
@@ -26,6 +30,7 @@ $(document).ready(function() {
 
   $('#results-list').on('click', 'button', function() {
 
+    var showDetails = function () {
     var $imdbID = $(this).parent().attr('id');
       $.ajax({
         url: 'http://www.omdbapi.com/?i=' + $imdbID,
@@ -40,6 +45,7 @@ $(document).ready(function() {
           $('#show-poster').append($bigTitle);
           $('#show-poster').append($poster);
           $('#results-list').empty();
+        }
       }      
     });     
   });
