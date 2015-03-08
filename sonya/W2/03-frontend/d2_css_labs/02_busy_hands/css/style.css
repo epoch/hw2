@@ -1,0 +1,295 @@
+/*
+Theme Name: Busy Square
+Author: Big Square
+Version: 0.00001
+[Table Of Contents] 
+	01- BODY
+	02- GLOBAL STYLES 
+	03- NAV
+	04- BANNER
+	05- SOCIAL MEDIA
+	06- BLURB
+	07- HOME BOXES
+	08- FOOTER
+	09- MISC
+*/
+
+
+/*----------------------------------------------------------------------------- 
+=01 BODY 
+-----------------------------------------------------------------------------*/
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #7f7d78;
+	font-size: 16px;
+	line-height: 1.1;
+	background: url(../images/bg_body.jpg);
+}
+
+#wrapper {
+	background: url(../images/bg_wrapper.png) repeat-x;
+}
+
+.container {
+	width: 950px;
+	margin: 0 auto; /*centers our container on the page */  
+}
+
+/*----------------------------------------------------------------------------- 
+=02 GLOBAL STYLES 
+-----------------------------------------------------------------------------*/
+
+h2 {
+	margin: 0px 0px 10px 0px;
+	font-size: 24px;
+	font-family: Helvetica, Arial, Sans-serif;
+	color: #000000;
+	line-height: 1.1;
+}
+
+a {
+	color:#dedede;
+	font-size: 16px;
+	text-decoration:none;
+}
+
+p { 
+	padding: 0 0 20px 0;
+} /* there's no explicit rule, but putting about 15px margin only to the bottom of your p is generally a good rule of thumb */
+.blue {
+	color: #36a1e7;
+	font-weight: 200;
+}
+
+/*----------------------------------------------------------------------------- 
+=03 NAV 
+-----------------------------------------------------------------------------*/
+
+.nav {
+	width: 100%;
+	display: block;
+}
+.nav ul {
+	margin-left: -30px;
+	text-align: center;
+	list-style: none;
+	padding: 0;
+}
+
+.nav ul li {
+	display: inline-block;
+}
+
+.nav li a {
+	display: block;
+	width: 100px;
+	padding: 30px 0px;	
+}
+.nav li a:hover {
+	background: url(../images/bg_nav_rollover.png) repeat-x;
+}
+/*----------------------------------------------------------------------------- 
+=04 BANNER
+-----------------------------------------------------------------------------*/
+	
+#logo {
+	background: url(../images/logo.png) no-repeat;
+	display: inline-block;
+	vertical-align: top;
+	margin: 50px 0 20px;
+	width: 291px;
+	height: 54px;
+}
+
+	/* hides the H1 tag from the page, while semantically keeping it present in your HTML */
+	#logo h1 {
+		text-indent: -99999em;	 
+	}
+
+.photobanner {
+	/*background-image: url(../images/shadow_slider.png) no-repeat;*/
+}
+.photobanner img#shadow{
+	margin-top: -5px;
+}
+
+/*----------------------------------------------------------------------------- 
+=05 SOCIAL MEDIA  
+-----------------------------------------------------------------------------*/
+
+
+#socialMedia ul {
+	display: inline-block;
+	margin: 50px 0 20px;
+}
+
+#socialMedia li {
+	display: inline-block;
+}
+
+#socialMedia ul li a {
+	 display:block;
+	 width:60px;
+	 height:60px;
+	 text-indent: 100%;
+	 white-space: nowrap;
+	 overflow: hidden;
+}
+
+#socialMedia ul li.linkedIn {
+	background:url(../images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+	background:url(../images/socialNav.png) -60px 64px; 
+}
+
+#socialMedia ul li.facebook {
+	background:url(../images/socialNav.png) -120px 64px; 
+}
+
+#socialMedia ul li.rss {
+	background:url(../images/socialNav.png) -180px 64px; 
+}
+
+#socialMedia ul li.linkedIn:hover {
+	background:url(../images/socialNav.png) 0px 0px; 
+}
+
+#socialMedia ul li.twitter:hover {
+	background:url(../images/socialNav.png) -60px 0px; 
+}
+
+#socialMedia ul li.facebook:hover {
+	background:url(../images/socialNav.png) -120px 0px; 
+}
+
+#socialMedia ul li.rss:hover {
+	background:url(../images/socialNav.png) -180px 0px; 
+}
+
+/*----------------------------------------------------------------------------- 
+=06 BLURB
+-----------------------------------------------------------------------------*/
+#blurb {
+	background: url(../images/bg_blurb.jpg);
+	width: 910px;
+	padding: 20px;
+	margin-bottom: 40px;
+	position: relative;
+	border-top: 1px solid rgb(189,189,189);
+	border-left: 1px solid rgb(189,189,189);
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+#blurb p {
+	display: inline-block;
+	padding: 0;
+	margin-right: 20px;
+	width: 680px;
+}
+
+/*----------------------------------------------------------------------------- 
+=07 HOME-BOXES
+-----------------------------------------------------------------------------*/
+#home-boxes {
+	width: 100%;
+	display: block;
+}
+.home-box  {
+	width: 30%;
+	float: left;
+	display: inline;
+	margin-right: 5%;	
+}
+.home-box.right {
+	margin-right: 0;
+}
+
+.home-box img {
+	margin-bottom: 20px;
+	border: solid 1px #fff;
+	outline: 5px solid rgb(226,226,226);
+}
+
+/*----------------------------------------------------------------------------- 
+=08 FOOTER
+-----------------------------------------------------------------------------*/
+footer {
+	width: 100%;
+	background: #000;
+	color: #333;
+}
+footer h3 {
+	font-size: 1.5em;
+	padding: 10px 0;
+	font-weight: 200;
+	color: #eee;
+	border-bottom: 1px solid #333;
+}
+.box-footer {
+	display: inline-block;
+	padding: 40px 0;
+	margin-right: 5%;
+	vertical-align: top;
+}
+.box-footer.blogroll {
+	width: 20%;
+	margin-bottom: 40px;
+}
+.box-footer.textwidget {
+	width: 40%;
+}
+.box-footer.metawidget {
+	width: 20%;
+}
+.box-footer.textwidget p {
+	margin-top: 20px;
+} 
+.box-footer li.footerlist {
+	border-bottom: 1px solid #333;
+}
+.box-footer li.footerlist a {
+	color: #333;
+	line-height: 2.7;
+}
+#copyright {
+	display: inline-block;
+	vertical-align: bottom;
+}
+#companybottom {
+	text-align: right;
+}
+
+/*----------------------------------------------------------------------------- 
+=09 MISC 
+-----------------------------------------------------------------------------*/
+
+.clear {
+	clear: both;	
+}
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.imgright {
+	display: inline-block;
+	margin: 0 0 10px 10px;
+}
+
+.imgleft {
+	display: inline-block;
+	margin: 0 10px 10px 0;
+}
+
+.imgborder {
+	border: 5px solid #CCC;	
+}

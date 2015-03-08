@@ -1,0 +1,165 @@
+* {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+  background: url(http://www.mrwallpaper.com/wallpapers/new-york-metro.jpg) no-repeat center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #EDF7F2;
+}
+h1 {
+  display: inline-block;
+  border-top: 3px solid #EDF7F2;
+  padding: 3px 6px;
+  margin: 50px 50px 0 50px;
+  font-size: 50px;
+  line-height: 150%;
+}
+h2 {
+  font-size: 32px;
+  padding-bottom: 7px;
+}
+
+h3 {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+select {
+  width: 270px;
+  border: 1px solid #fff;
+  margin: 8px auto;
+  font-size: 16px;
+  outline: none;
+}
+
+input[type=submit] {
+  width: 160px;
+  display: inline-block;
+  box-sizing: content-box;
+  margin: 6px auto;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+label {
+  display: inline-block;
+  margin-top: 9px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*CLASSES*/
+
+.container {
+  max-width: 960px;
+  height: 570px;
+  margin: 60px auto;
+  background-color: rgba(0,0,0,0.9);
+}
+.subway-lines {
+  margin: 0px 57px;
+}
+.line-sym {
+  width: 55px;
+  height: 55px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2.5em;
+  font-weight: bold;
+  font-size: 24px;
+  vertical-align: top;
+}
+.line-description {
+  display: inline-block;
+  max-width: 200px;
+  font-size: 26px;
+}
+.line-n {
+  background-color: #FCCC0A;
+  margin-right: 4px; 
+  color: #000;
+}
+.line-l {
+  background-color: #A7A9AC;
+  margin-right: 4px;
+  color: #fff;
+}
+.line-6 {
+  background-color: #00933C;
+  margin-right: 4px;
+  color: #fff;
+}
+
+.main-container {
+  margin: 40px 57px 0 57px;
+  border-top: 3px solid #EDF7F2;
+}
+
+/*SERVICE CLASSES*/
+.schedule, .service-container, .journey, .stops {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+/*  padding-top: 10px;*/
+}
+
+.schedule {
+  max-width: 60%;
+  padding-right: 30px;
+}
+
+.service-container {
+  max-width: 40%;
+  padding-left: 30px;
+  border-left: 1px solid #EDF7F2;
+}
+.line-container {
+  display: block;
+  padding-left: 15px;
+}
+.line-container p {
+  display: inline-block;
+  margin: 10px;
+  line-height: 1.2em;
+}
+.line-sym-service {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2em;
+  font-weight: bold;
+  font-size: 14px;
+}
+/*RESULT CLASSES*/
+.origin, .destination {
+  margin-top: 10px;
+  display: block;
+  line-height: 1.2em;
+}
+.key {
+  font-weight: bold;
+}
+.origin p, .destination p {
+  display: inline-block;
+  padding-right: 15px;
+  line-height: 150%;
+}
+.journey {
+  width: 60%;
+  padding-right: 20px;
+}
+
+.stops p {
+  line-height: 150%;
+}

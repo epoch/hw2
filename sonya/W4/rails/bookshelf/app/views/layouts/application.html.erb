@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookshelf</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<%= root_path %>">The Bookshelf</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to('Authors', authors_path) %></li>
+            <li><%= link_to('Books', books_path) %></li>
+            <li><%= link_to('New Author', new_author_path) %></li>
+            <li><%= link_to('New Book', new_book_path) %></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+  
+        <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+
+        <%= yield %>
+      </div>
+
+    </div><!-- /.container -->
+
+    <div class="footer">
+      <em>I find television very educating. Every time somebody turns on the set, I go into the other room and read a book.</em></p>
+      <p> ~ Groucho Marx</p>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

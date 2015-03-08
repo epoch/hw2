@@ -1,0 +1,13 @@
+<nav>
+    <ul>
+        <li><%=link_to('New ocean', oceans_new_path)%></li>
+    </ul>    
+</nav>
+
+<h1>Oceans of the World</h1>
+
+<% @oceans.each do |ocean| %>
+
+    <li><%= link_to(ocean.name, ocean_path(ocean.id))%></li>
+
+<%end%>

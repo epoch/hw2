@@ -1,0 +1,11 @@
+<h2><%= @video["title"] %></h2>
+<p>Genre: <em><%= @video["genre"] %></em></p>
+
+<iframe width="420" height="315"
+   src="http://www.youtube.com/embed/<%=@embedded_url%>">
+</iframe>
+
+<div class="controls">
+    <a href="/videos/<%= @video["id"] %>/delete">Delete</a>
+    <a href="/videos/<%= @video["id"] %>/edit">Edit</a>
+</div>

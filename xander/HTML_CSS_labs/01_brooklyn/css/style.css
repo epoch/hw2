@@ -1,0 +1,46 @@
+
+body {
+    font-size: 12px;
+    line-height: 17px;
+    font-family: "Times New Roman", serif;
+    color: #656565;
+}
+
+#container {
+    width: 73%;
+    margin: auto;
+}
+
+.blurb {
+    text-align: justify;
+   
+}
+
+.bl {
+    font-size: 40px;
+    color:RGB(135,135,135);
+}
+
+.logos {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+}
+
+.fashion {
+    margin: auto;
+    width: 100%;
+}
+
+.date {
+    color: RGB(60,140,196);
+}
+
+a {
+    color: RGB(60,140,196);
+}
+
+a:hover {
+    color: #20222a;
+}
+

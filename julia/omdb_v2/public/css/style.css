@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/css?family=Voltaire|News+Cycle:400,700);
+
+body {
+    background-color: #000;
+    background-image: url(http://25.media.tumblr.com/tumblr_lbkzl3QTEb1qzkrfxo1_500.jpg);
+    font-family: 'News Cycle', sans-serif;
+    font-size: 24px;
+    color: #EBEFCC;
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+}
+
+h1, h2, label {
+    font-family: 'Voltaire', sans-serif;
+    text-transform: uppercase;
+}
+h1 {
+    padding-top: 40px;
+    font-size: 92px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 7px;
+}
+h2 {
+    font-size: 32px;
+}
+form {
+    width: 600px;
+    margin: auto;
+}
+label {
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+    font-size: 54px;
+}
+input {
+    background-color: #FFFAF6;
+    display: block;
+    width: 420px;
+    margin: auto;
+    padding: 25px 10px;
+    border: 2px solid #EBEFCC;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+}
+input:focus {
+  background   : rgba(0,0,0,.1);
+  border-radius: 5px;
+  outline      : none;
+}
+
+button {
+    background-color: transparent;
+    width: 445px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    padding: 25px 10px;
+    border: 2px solid #EBEFCC;
+    font-family: 'News Cycle', sans-serif;
+    color: #EBEFCC;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: #EBEFCC;
+}
+
+a:hover {
+    color: #004358;
+}
+
+/*GENERAL CLASSES*/
+.container {
+    background-color:rgba(0,0,0,0.9);
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.superscript {
+    vertical-align: super;
+}
+/*FORM CLASSES*/
+.search-form {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+.label {
+    height: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+/*OPTION CLASSES*/
+.search-results-container {
+    max-width: 600px;
+    max-height: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.search-results-header {
+    margin-left: 35px;
+}
+.search-result {
+    list-style-type: none;
+    line-height: 2em;
+}
+i.fa {
+    color: #EBEFCC;
+}
+/*POSTER DISPLAY CLASSES*/
+.poster {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/*ERROR MSG CLASSES*/
+.error {
+    max-width: 600px;
+    margin: auto;
+}

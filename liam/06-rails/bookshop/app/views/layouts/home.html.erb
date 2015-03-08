@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookshop</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header class="white bg-mid-gray bg-cover bg-center"
+  style="background-image: url(http://static.pexels.com/wp-content/uploads/2014/06/dance-floor-parquet-floor-pit-1486.jpg)">
+  <nav class="clearfix white">
+    <div class="sm-col">
+      <a href="<%= root_path %>" class="button py2 button-nav-dark">Home</a>
+      <a href="<%= authors_path %>" class="button py2 button-nav-dark">Authors</a>
+      <a href="<%= books_path %>" class="button py2 button-nav-dark">Books</a>
+    </div>
+    <div class="sm-col-right">
+      <a href="<%= new_author_path %>" class="button py2 button-nav-dark">New Author</a>
+      <a href="<%= new_book_path %>" class="button py2 button-nav-dark">New Book</a>
+    </div>
+  </nav>
+  <div class="center px2 py4">
+    <h1 class="h1 h0-responsive caps mt4 mb0 regular">WDI Bookshop</h1>
+    <p class="h3">We stock a highly curated range of books so you know you're buying a quality read.</p>
+    <a href="<%= authors_path %>" class="h3 button button-big mb4 button-blue">View by Author</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <%= yield %>
+
+</div>
+
+<br>
+
+<footer class="white bg-dark-gray">
+  <div class="px2 py3 container">
+    <p class="h6 mb0">&copy; 2014 WDI Bookshop. Crafted by <a href="yttp://www.liamdarmody.com">Liam Darmody</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

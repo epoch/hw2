@@ -1,0 +1,12 @@
+<div class="form-results">
+  <% if @question.to_s.length > 0 %>
+    <p><%= @answer %></p>
+  <% end %>
+</div>
+<form action="/games/magic_ball" class="magic-eight-form">
+  <div class="label">
+    <label for="question">Ask a question</label>
+    <input type="text" id="question" name="question" placeholder="Enter a question" required>
+    <button type="submit" class="btn-magic">Shake!</button>
+  </div>
+</form>

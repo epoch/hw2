@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  height: 100%;
+  color: #33332D;
+}
+
+nav {
+  background-color: #000;
+  background: url(/img/hero-bg-2.jpeg) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 600px;
+  color: #fff;
+  opacity: 0.9;
+
+}
+nav ul {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+}
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 10px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #332532;
+}
+
+li {
+  list-style-type: none;
+}
+
+footer {
+  background-color: #33332D;
+  padding: 20px;
+  font-size: 14px;
+  color: #fff;
+}
+header, .content-container {
+  max-width: 960px;
+  margin: 30px auto;
+
+}
+
+.fa-chevron-down {
+  color: #000;
+}

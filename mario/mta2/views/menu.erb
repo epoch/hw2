@@ -1,0 +1,15 @@
+ <form action="/process">
+    <div class="menu">
+    <h2>Select your starting station</h2>
+        <%= display_menu(:n_line, "N-Line", "start") %>
+        <%= display_menu(:l_line, "L-Line", "start") %>
+        <%= display_menu(:six_line, "6-Line", "start") %>
+    </div>
+    <div class="menu">
+    <h2 class="finish_h2">Select your destination</h2>
+        <%= display_menu(:n_line, "N-Line", "finish") %>
+        <%= display_menu(:l_line, "L-Line", "finish") %>
+        <%= display_menu(:six_line, "6-Line", "finish") %>
+    </div>
+    <button>submit</button>
+</form>

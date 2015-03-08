@@ -1,0 +1,87 @@
+<div class="main">
+    <!-- show lines and stations to select -->
+<form action="/trip">
+   
+    <!-- select departure line -->
+<p>
+    <label for="start_line">Departure Line:</label>
+    <select name="start_line" id="start_line">
+        <optgroup label="MTA LINES: <%= @subway_lines.keys %>">
+        <% @subway_lines.keys.each do |start_line| %>
+            <option value="<%= start_line %>"><%= start_line %>
+            </option>
+        <% end %>
+        </optgroup>
+    </select>
+</p>
+
+<!-- select the departure station -->
+<p>
+    <label for="start_station">Departure: </label>
+
+    <!-- THE N LINE -->
+    <select name="start_station" id="start_station">
+        <optgroup label="<%= @subway_lines.keys[0] %>">
+            <% @subway_lines['line_N'].each do |start_station| %>
+            <option value="<%= start_station %>"><%= start_station %>
+            </option>
+        <% end %>
+    <!-- THE L LINE -->
+        <optgroup label="<%= @subway_lines.keys[1] %>">
+            <% @subway_lines['line_L'].each do |start_station| %>
+            <option value="<%= start_station %>"><%= start_station %>
+            </option>
+        <% end %>
+    <!-- THE 6 LINE -->
+        <optgroup label="<%= @subway_lines.keys[2] %>">
+            <% @subway_lines['line_6'].each do |start_station| %>
+            <option value="<%= start_station %>"><%= start_station %>
+            </option>
+        <% end %>
+    </select>
+</p>
+
+<!-- select the end line -->
+<p>
+    <label for="end_line">Destination line: </label>
+    <select name="end_line" id="end_line">
+
+        <optgroup label="MTA LINES: <%= @subway_lines.keys %>">
+            <% @subway_lines.keys.each do |end_line| %>
+                <option value="<%= end_line %>"><%= end_line %>
+                </option>
+        <% end %>  
+        </optgroup>
+    </select>
+</p>
+
+<!-- same as departure station but for final destination -->
+<p>
+    <label for="end_station">Destination: </label>
+     <select name="end_station" id='end_station'>
+
+    <!-- THE N LINE -->
+        <optgroup label="<%= @subway_lines.keys[0] %>">
+            <% @subway_lines['line_N'].each do |end_station| %>
+            <option value="<%= end_station %>"><%= end_station %>
+            </option>
+        <% end %>
+    <!-- THE L LINE -->
+        <optgroup label="<%= @subway_lines.keys[1] %>">
+            <% @subway_lines['line_L'].each do |end_station| %>
+            <option value="<%= end_station %>"><%= end_station %>
+            </option>
+        <% end %>
+    <!-- THE 6 LINE -->
+        <optgroup label="<%= @subway_lines.keys[2] %>">
+            <% @subway_lines['line_6'].each do |end_station| %>
+            <option value="<%= end_station %>"><%= end_station %>
+            </option>
+        <% end %>
+    </select>
+</p>
+
+<button>SUBMIT</button>
+
+</form>
+</div> 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memetube</title>
+  <link rel="stylesheet" href="/css/bootstrap/style.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+  <div class="container">
+    
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/videos">Videos</a></li>
+        <li><a href="/videos/new">New Video</a></li>
+      </ul>
+
+      <ul>
+        <% @genre.each do |group| %>
+          <li>
+            <a href="/videos/genre/<%= group["genre"] %>">
+              <%= group["genre"] %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+
+    <%= yield %>
+  </div>
+  
+</body>
+</html>

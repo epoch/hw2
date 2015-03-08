@@ -1,0 +1,79 @@
+@import url(http://fonts.googleapis.com/css?family=Voltaire);
+
+body {
+    background-color: #000;
+    background-image: url(http://25.media.tumblr.com/tumblr_lbkzl3QTEb1qzkrfxo1_500.jpg);
+    color: #EBEFCC;
+    text-transform: uppercase;
+    font-family: 'Voltaire', sans-serif;
+    font-size: 24px;
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    font-size: 92px;
+    line-height: 150%;
+    padding-top: 40px;
+}
+h2 {
+    text-transform: capitalize;
+    font-size: 46px;
+}
+form {
+    width: 600px;
+    margin: auto;
+}
+label {
+    font-size: 58px;
+    display: inline-block;
+    width: 110px;
+    margin: auto;
+    vertical-align: middle;
+
+}
+input {
+    background-color: #FFFAF6;
+    padding: 26px 10px;
+    border: 1px solid #EBEFCC;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 160px;
+    margin: auto;
+    text-align: center;
+}
+button {
+    background-color: transparent;
+    padding: 22px;
+    border: 2px solid #EBEFCC;
+    margin-left: 10px;
+    color: #EBEFCC;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 160px;
+    font-size: 14px;
+}
+
+
+.container {
+    background-color: #000;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 100%; 
+    opacity: 0.9;
+}
+.poster {
+    width: 500px;
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.label {
+    margin: auto;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    height: 100%;
+    width: 500px;
+}

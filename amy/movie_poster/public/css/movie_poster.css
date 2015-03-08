@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+@import url(http://fonts.googleapis.com/css?family=Plaster);
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    font-size: 35px;
+    background-color: #eff0f2;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+header {
+    width: 100%;
+    height: 120px;
+}
+
+h1 {
+    font-family: 'Plaster', cursive;
+    font-size: 100px;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+    background: #eff0f2 url("http://i.imgur.com/X4RXvXU.png") no-repeat top center; 
+    padding: 50px 0px;
+    background-repeat: repeat-y;
+    height: 100%;
+}
+
+p {
+    display: block;
+}
+
+label {
+    margin: 100px;
+}
+
+input {
+    padding: 20px;
+    background-color: white;
+    border: 5px solid #000;
+    background-color: #fff;
+    width: 300px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+button {
+    border: 5px solid #000;
+    background-color: #eff0f2;
+    color: #000;
+    width: 300px;
+    height: 80px;
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.poster {
+    margin-top: 50px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    box-shadow: 5px 5px 20px #888888;
+}
+
+footer {
+    height: 50px;
+    text-align: center;
+    background-color: #eff0f2;
+
+}
+
+footer p {
+    font-size: 16px;
+    line-height: 50px;
+}
+

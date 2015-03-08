@@ -1,0 +1,23 @@
+<h2>Rock, paper or scissors?</h2>
+
+<p>Your move: <span><%= @user_move.capitalize %></span></p>
+
+<p>Opponents's move: <span><%= @comp_move.capitalize %></span></p>
+
+<br>
+<% if @user_score > @comp_score %>
+  <p class="match-result">You Win!</p>
+<% elsif @user_score < @comp_score %>
+  <p class="match-result">You Lose!</p>
+<% else %>
+  <p class="match-result">Draw</p>
+<% end %>
+
+<br>
+<br>
+
+<h3>Would you like another game?</h3>
+
+<div>
+  <%= erb :games, :layout => false %>
+</div>

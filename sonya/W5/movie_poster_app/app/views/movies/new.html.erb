@@ -1,0 +1,19 @@
+<%= form_for @movie do |f| %>
+
+  <p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :poster %>
+    <%= f.file_field :poster %>
+  </p>
+
+  <p>
+    <%= f.text_field :remote_poster_url%>
+  </p>
+
+  <button>Movie it!</button>
+
+<% end %>

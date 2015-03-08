@@ -1,0 +1,18 @@
+
+<h2>Name: <%=@user.name%></h2>
+
+<div><%=image_tag(@user.image)%></div>
+
+<p>Age: <%=@user.age%></p>
+
+<%if @user.books.any? %>
+     <h3>Books</h3>
+<%end%>
+
+<% @user.books.each do |book| %>
+    <%=link_to(image_tag(book.image, :class => 'thumb'), book)%>
+<%end%>
+
+<%= link_to 'Edit user', edit_user_path(@user)%>
+
+<%= link_to 'Delete user', @user, :method => 'delete', :data => {:confirm => "Are you sure?"}%>

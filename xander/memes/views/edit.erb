@@ -1,0 +1,17 @@
+<h2>Add a Meme</h2>
+
+<form action="/memes/<%= @meme["id"] %>" method ="post">
+    <label for="title">Title:</label>
+    <input id="title" name="title" value="<%= @meme["title"] %>">
+
+    <label for="description">Description:</label>
+    <input id="description" name="description" value="<%= @meme["description"] %>">
+
+    <label for="url">URL:</label>
+    <input id="url" name="url" type="url" value="<%= @meme["url"] %>">
+
+    <label for="genre">Genre:</label>
+    <input id="genre" name="genre" value="<%= @meme["genre"] %>">
+
+    <input type="submit" value="Upload video">
+</form>

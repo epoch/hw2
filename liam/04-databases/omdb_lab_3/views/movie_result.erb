@@ -1,0 +1,15 @@
+<div class="search_again"?>
+  <%= erb :search, :layout => false %>
+</div>
+
+<h2><%= @movie.title %></h2>
+
+<p>Released: <%= @movie.released %></p>
+
+<p>Runtime: <%= @movie.runtime %></p>
+
+<p>Genre: <%= @movie.genre %></p>
+
+<p>Director: <%= @movie.director %></p>
+
+<img src= <%= @movie.poster %> >

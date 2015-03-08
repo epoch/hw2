@@ -1,0 +1,9 @@
+<div class="search_again"?>
+  <%= erb :search, :layout => false %>
+</div>
+
+<h2>Which movie are you searching for?</h2>
+
+<% @search_data["Search"].each do |movie| %>
+  <p><a href="/results?id=<%= movie["imdbID"] %>"><%= movie["Title"] %>, <%= movie["Year"] %></a></p>
+<% end %>

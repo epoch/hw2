@@ -1,0 +1,8 @@
+body {
+    background-color: green;
+}
+
+.receipt {
+    background-color: gray;
+    border: 5px dotted white;
+}

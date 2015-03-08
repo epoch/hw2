@@ -1,0 +1,13 @@
+%h1= @user.name
+%p
+  = link_to 'Edit user', edit_user_path(@user)
+  = link_to 'Delete user', @user, :method => 'delete', :data => { :confirm => "Are you sure? "}
+%p
+  = image_tag @user.image, :class => 'portrait'
+%h4
+  %li
+    ID: #{@user.id}
+  %li
+    Cohort ID: #{@user.cohort_id}
+  %li
+    Admin: #{@user.is_admin}

@@ -1,0 +1,58 @@
+<form action="/options">
+
+    <% if @movie_data["Response"] == "False"%>
+        <h2 class="no_movie"> "Toto, I've got a feeling we're not in Kansas anymore..."</h2>
+
+    <% else %>
+        <h2><%=@movie_data["Title"]%></h2>
+        <% if @movie_data["Poster"] !="N/A" %>
+            <img src= <%=@movie_data["Poster"]%>>
+        <%end%>
+
+
+    <p class="key_stats">
+    <ul>
+        <li><%=@movie_data["Title"]%></li>
+        <li><%=@movie_data["Year"]%></li>
+        <li><%=@movie_data["Runtime"]%></li>
+        <li><%=@movie_data["Genre"]%></li>
+       <% if @movie_data["Awards"]!="N/A"%>
+        <li><%=@movie_data["Awards"]%> <li>
+        <% end %>
+        <% if $awards.include?("Oscars.") || $awards.include?("Oscar.")%>
+        <li>Oscar considerations were for <%=@movie_data["Year"].to_i+1%></li>
+        <li><%=@movie_data["Country"]%></li>
+        <%end%>
+    </ul>
+
+    <ul>
+        <li>Directed by <%=@movie_data["Director"]%></li>
+        <li>Starring <%=@movie_data["Actors"]%></li>
+    </ul>
+        
+    </p>
+
+    <p class="plot">
+        <%=@movie_data["Plot"]%>
+    </p>
+
+    <% end %>
+
+    <h2 class="again"> Play it again, Sam?^</h2>
+
+    
+    <p>
+        <label for="movie_name">Enter Movie</label>
+    </p>
+
+    <p>
+        <input type="text" id="movie_name" name="movie_name" placeholder="Bambi" required>
+    </p>
+
+    <p>
+        <button>SHOW ME THE MONEY</button>
+    </p>
+<p class="footer">^ Not an actual movie quote</p>
+
+
+</form>

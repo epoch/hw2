@@ -1,0 +1,289 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,800,900,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway+Dots);
+@import url(http://fonts.googleapis.com/css?family=Plaster);
+@import url(http://fonts.googleapis.com/css?family=Monoton);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+
+/*font-family: 'Raleway Dots', cursive;*/
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+    text-align: center;
+
+}
+
+header {
+    /*background-color: #000;*/
+    /*color: #fff;*/
+    text-align: center;
+    background-color: rgb(244, 8, 8);
+    color: #fff;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+nav {
+    /*padding-top: 50px;*/
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+/*    position: fixed;
+    width: 100%;*/
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+}
+
+.container {
+    /*height: 100%;*/
+    margin-top: 100px;
+}
+
+.movies-menu-div, .stocks-menu-div, .games-menu-div {
+    display: inline-block;
+    max-width: 33%;
+    /*background-color: #000222;*/
+    /*color: #fff;*/
+    /*height: 600px;*/
+    padding: 80px;
+    box-sizing: border-box;
+    text-align: center;
+    height: 100%;
+}
+
+.movies-menu-div a, .stocks-menu-div a, .games-menu-div a {
+
+    color: #000;
+    text-decoration: none;
+}
+
+.movies-menu-div a:hover, .stocks-menu-div a:hover, .games-menu-div a:hover {
+
+    /*color: #fff;*/
+    /*text-decoration: none;*/
+    /*font-weight: 600;*/
+    /*color: red;*/
+}
+
+.movies-menu-div img, .stocks-menu-div img, .games-menu-div img {
+
+    color: #fff;
+    text-decoration: none;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+}
+
+
+.movies-menu-link, .stocks-menu-link, .games-menu-link {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.movies-menu-p, .stocks-menu-p, .games-menu-p {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.movies-menu-link {
+    font-family: 'Plaster', cursive;;
+}
+
+.stocks-menu-link {
+    font-family: 'Oswald', sans-serif;
+}
+
+.games-menu-link {
+    font-family: 'Monoton', cursive;
+    line-height: 60px;
+}
+
+
+label {
+    margin: 100px;
+}
+
+input {
+    padding: 20px;
+    background-color: white;
+    border: 5px solid #000;
+    background-color: #fff;
+    width: 300px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+button {
+    border: 5px solid #000;
+    background-color: #eff0f2;
+    color: #000;
+    width: 300px;
+    height: 80px;
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.stock_home_title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+}
+
+.movie_home_title {
+    font-family: 'Plaster', cursive;
+    font-size: 60px;
+}
+
+.games_home_title {
+    font-family: 'Monoton', cursive;
+    font-size: 60px;
+}
+
+.games-menu {
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+}
+
+p {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+/*
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    font-size: 35px;
+    background-color: #eff0f2;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+header {
+    width: 100%;
+    height: 120px;
+}
+
+h1 {
+    font-family: 'Plaster', cursive;
+    font-size: 100px;
+    text-align: center;
+    color: #000;
+}
+
+.title {
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+    background: #eff0f2 url("http://i.imgur.com/X4RXvXU.png") no-repeat top center; 
+    padding: 50px 0px;
+    background-repeat: repeat-y;
+    height: 100%;
+}
+
+p {
+    display: block;
+}
+
+label {
+    margin: 100px;
+}
+
+input {
+    padding: 20px;
+    background-color: white;
+    border: 5px solid #000;
+    background-color: #fff;
+    width: 300px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+button {
+    border: 5px solid #000;
+    background-color: #eff0f2;
+    color: #000;
+    width: 300px;
+    height: 80px;
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.poster {
+    margin-top: 50px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    box-shadow: 5px 5px 20px #888888;
+    margin-bottom: 70px;
+
+}
+
+li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+}
+
+ul {
+    text-align: center;
+        margin: auto;
+}
+
+li a:hover {
+    color: #EB0500;
+}
+
+li {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+  
+footer {
+    height: 50px;
+    text-align: center;
+    background-color: #eff0f2;
+
+}
+
+footer p {
+    font-size: 16px;
+    line-height: 50px;
+}*/
+

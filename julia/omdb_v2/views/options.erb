@@ -1,0 +1,11 @@
+<div class="search-results-container">
+    <h2 class="search-results-header">Search results</h2>
+    <ul class="search-results">
+        <% @film_array.each do |film| %>
+            <% if film['Type']['movie'] %>
+                <li class="search-result"><a href="/poster?id=<%= film['imdbID']%>"><i class="fa fa-film fa-fw"></i>&nbsp;<%= film['Title']%>, <%= film['Year']%></a></li>
+            <% end %>
+        <% end %>
+    </ul>
+</div>
+<%= erb :index, :layout => false %>

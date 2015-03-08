@@ -1,0 +1,30 @@
+<div class="clearfix">
+  <div class="centerino">
+    <div class="col col-4">
+      <h1><%= @author.name %></h1>
+      <p><%= image_tag @author.image, :class => 'portrait' %></p>
+
+      <%= link_to 'Edit author', edit_author_path(@author), :class => "button" %>
+      <%= button_to 'Delete author', @author, :method => 'delete', :class => "button",
+      :data => { :confirm => "Are you sure?" } %>
+    </div>
+
+    <div class="info col col-4">
+      <ul>
+        <li>Nationality: <%= @author.nationality %></li>
+        <li>Date of birth: <%= @author.dob.strftime('%B %e, %Y') %></li>
+      </ul>
+    </div>
+
+    <div class="col col-4">
+      <% if @author.books.any? %>
+        <h2>Books</h2>
+      <% end %>
+
+      <% @author.books.each do |book| %>
+        <%= link_to(image_tag(book.image, :class => 'thumb'), book) %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

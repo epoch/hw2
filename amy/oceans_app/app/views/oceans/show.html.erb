@@ -1,0 +1,26 @@
+<h1><%= @ocean.name %></h1>
+
+<!-- number_with_delimiter(12345678, delimiter: ",")   -->
+
+<dl>
+    <div>
+    <dt>Area</dt>
+    <dd><%= number_with_delimiter(@ocean.area, delimiter: ",") %> km2</dd>
+    </div>
+    <div>
+    <dt>Deepest point</dt>
+    <dd><%= number_with_delimiter(@ocean.deepest_point, delimiter: ",") %> m</dd>
+    </div>
+    <div>
+    <dt>Average depth</dt>
+    <dd><%= number_with_delimiter(@ocean.average_depth, delimiter: ",") %> m</dd>
+    </div>
+</dl>
+
+<div><%= image_tag @ocean.image %></div>
+
+<%= link_to('Edit ocean', ocean_edit_path(@ocean.id)) %>
+
+<%= button_to('Delete ocean', ocean_delete_path(@ocean.id)) %>
+
+<!-- number_to_human(500000, units: {unit: "ml", thousand: "lt"})  # => "500 lt" -->

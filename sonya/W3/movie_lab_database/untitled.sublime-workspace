@@ -1,0 +1,1136 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"i",
+				"imdbid"
+			],
+			[
+				"get",
+				"get_poster"
+			],
+			[
+				"B",
+				"Butterfly"
+			],
+			[
+				"but",
+				"butterfly"
+			],
+			[
+				"bu",
+				"butterfly"
+			],
+			[
+				"butter",
+				"butterfly"
+			],
+			[
+				"meme",
+				"memetube"
+			],
+			[
+				"SQL",
+				"SQLite3"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"butt",
+				"butterflies"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"re",
+				"redirect"
+			],
+			[
+				"db",
+				"db_query"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"IN",
+				"INTO"
+			],
+			[
+				"pet",
+				"pet_id"
+			],
+			[
+				"person",
+				"person_id"
+			],
+			[
+				"per",
+				"person_pet"
+			],
+			[
+				"I",
+				"INTO"
+			],
+			[
+				"na",
+				"first_name"
+			],
+			[
+				"t",
+				"TABLE"
+			],
+			[
+				"T",
+				"TEXT"
+			],
+			[
+				"serif",
+				"sans-serif"
+			],
+			[
+				"comput",
+				"computer_guess"
+			],
+			[
+				"rock",
+				"rock_paper_scissors"
+			],
+			[
+				"movie",
+				"movie_data"
+			],
+			[
+				"mov",
+				"movie_data"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"b",
+				"body"
+			],
+			[
+				"crea",
+				"creation_time"
+			],
+			[
+				"boot",
+				"boot_time"
+			],
+			[
+				"al",
+				"alpha_prefix"
+			],
+			[
+				"mac",
+				"mac_id"
+			],
+			[
+				"h",
+				"href	Attr"
+			],
+			[
+				"ab",
+				"abandoned_animal"
+			],
+			[
+				"each",
+				"each_with_index"
+			],
+			[
+				"ani",
+				"animal_index"
+			],
+			[
+				"anima",
+				"animals"
+			],
+			[
+				"cre",
+				"create_client"
+			],
+			[
+				"animal",
+				"animal_index"
+			],
+			[
+				"client",
+				"client_index"
+			],
+			[
+				"adopted",
+				"adopted_animal"
+			],
+			[
+				"cli",
+				"client_index"
+			],
+			[
+				"anim",
+				"animal_index"
+			],
+			[
+				"numbe",
+				"number_of_pets"
+			],
+			[
+				"num",
+				"number_of_pets"
+			],
+			[
+				"return",
+				"return_animal"
+			],
+			[
+				"adopt",
+				"adopt_animal"
+			],
+			[
+				"require",
+				"require_relative"
+			],
+			[
+				"number",
+				"number_of_children"
+			],
+			[
+				"multiple",
+				"multiple_toys"
+			],
+			[
+				"ten",
+				"tenants"
+			],
+			[
+				"create",
+				"create_tenant"
+			],
+			[
+				"ap",
+				"apartment"
+			],
+			[
+				"has",
+				"has_elevator"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"Marx",
+				"MarxBrother"
+			],
+			[
+				"gr",
+				"groucho"
+			],
+			[
+				"group_",
+				"group_size"
+			],
+			[
+				"n",
+				"number_of_groups"
+			],
+			[
+				"subway",
+				"subway_line"
+			],
+			[
+				"sub",
+				"subway_line"
+			],
+			[
+				"favor",
+				"favorite_numbers"
+			],
+			[
+				"fav",
+				"favorite_numbers"
+			],
+			[
+				"g",
+				"Groucho"
+			],
+			[
+				"C",
+				"Chico"
+			],
+			[
+				"Ha",
+				"Harpo"
+			],
+			[
+				"days",
+				"days_of_the_week"
+			],
+			[
+				"da",
+				"days_of_the_week"
+			],
+			[
+				"squ",
+				"square_root"
+			],
+			[
+				"men",
+				"menu_selection"
+			],
+			[
+				"name",
+				"name_tag"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"tim",
+				"timber_width"
+			],
+			[
+				"ger",
+				"generated_number"
+			],
+			[
+				"gener",
+				"generated_number"
+			],
+			[
+				"ma",
+				"maximum_number"
+			],
+			[
+				"user",
+				"user_guess"
+			],
+			[
+				"gen",
+				"generated_number"
+			],
+			[
+				"te",
+				"temperature"
+			],
+			[
+				"su",
+				"suburb"
+			],
+			[
+				"fir",
+				"first_name"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.rb",
+			"settings":
+			{
+				"buffer_size": 1860,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/index.erb",
+			"settings":
+			{
+				"buffer_size": 185,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/result.erb",
+			"settings":
+			{
+				"buffer_size": 206,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/result_db.erb",
+			"settings":
+			{
+				"buffer_size": 190,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/search_result.erb",
+			"settings":
+			{
+				"buffer_size": 217,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/layout.erb",
+			"settings":
+			{
+				"buffer_size": 389,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/css/movie.css",
+			"settings":
+			{
+				"buffer_size": 931,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "movies.sql",
+			"settings":
+			{
+				"buffer_size": 437,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "movie.rb",
+			"settings":
+			{
+				"buffer_size": 36,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: List Packages"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/d3_say.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/movie_lab_database/views/result_db.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/movie_lab_database/movie.db",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/movie_lab_database/movie.sql",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/memetube/memetube.sql",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/memetube/views/home.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/databases/butterflies/views/layout.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/databases/butterflies/public/css/butterflies.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/databases/butterflies/butterflies.sql",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/databases/butterflies/views/new.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/databases/butterflies/views/show.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/databases/butterflies/views/home.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W3/databases/butterflies/views/index.erb",
+		"/Users/sonyacorcoran/Downloads/animate.css",
+		"/Users/sonyacorcoran/Desktop/style.css",
+		"/Users/sonyacorcoran/Desktop/codrops.html",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/MTA_lab/MTA_lab.rb",
+		"/Users/sonyacorcoran/Desktop/mta.rb",
+		"/Users/sonyacorcoran/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/sonyacorcoran/Desktop/MTA-whitperson.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/W2D5_HW_MTA2/views/trip.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/W2D5_HW_MTA2/views/layout.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/W2D5_HW_MTA2/views/form.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/W2D5_HW_MTA2/main.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/W2D5_HW_MTA2_charlie/views/home.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/W2D5_HW_MTA2/public/style.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/W2D5_HW_MTA2_charlie/main.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/W2D5_HW_MTA2_charlie/views/form.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/W2D5_HW_MTA2/views/result.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/games_on_sinatra/views/rock_user_win.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/games_on_sinatra/views/rock_comp_win.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/games_on_sinatra/views/rock_tie.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/games_on_sinatra/main.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/games_on_sinatra/views/secret_number.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/games_on_sinatra/views/rock_correct.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/games_on_sinatra/views/rock_incorrect.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/games_on_sinatra/views/rock_results.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/games_on_sinatra/views/incorrect_guess.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/games_on_sinatra/public/style.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/games_on_sinatra/views/correct_guess.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/file-io/bigbrother-JT.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/sinatra/file-io/database.txt",
+		"/Users/sonyacorcoran/WDI/01-ruby/guess_the_number.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/return_of_the_movie/views/search.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/views/layout.erb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/views/movie.erb",
+		"/Users/sonyacorcoran/wdi/wdi8_homework/sonya/w2/movie_lab/public/css/component.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/public/css/demo.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/public/css/movie.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/public/css/normalize.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/public/js/classie.js",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/index.html",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/README.md",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/css/component.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/css/demo.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/css/normalize.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/fonts/codropsicons/codropsicons.svg",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/fonts/codropsicons/codropsicons.woff",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/fonts/codropsicons/license.txt",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/fonts/font-awesome-4.2.0/css/font-awesome.min.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.svg",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.woff",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/TextInputEffects/js/classie.js",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/views/error.erb",
+		"/Users/sonyacorcoran/wdi/wdi8_homework/sonya/w2/movie_lab/public/css/demo.css",
+		"/Users/sonyacorcoran/wdi/wdi8_homework/sonya/w2/movie_lab/public/css/normalize.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/movie_lab/views/result.erb",
+		"/Users/sonyacorcoran/wdi/wdi8_homework/sonya/w2/sinatra/stocklab/main.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/forms/public/css/forms.css",
+		"/Users/sonyacorcoran/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/sonyacorcoran/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/03-frontend/site/index.html",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/03-frontend/site/css/site.css",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/pairprogrammingbot/config.ru",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W2/pairprogrammingbot/Gemfile",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/Github Examples/robot.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/Github Examples/main.rb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/assets/stylesheets/application.css",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/assets/stylesheets/ideas.scss",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/views/pages/info.html.erb",
+		"/Users/sonyacorcoran/app_project/railsgirls/config/routes.rb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/controllers/ideas_controller.rb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/uploaders/picture_uploader.rb",
+		"/Users/sonyacorcoran/app_project/railsgirls/config/environments/development.rb",
+		"/Users/sonyacorcoran/app_project/railsgirls/Gemfile",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/views/comments/show.html.erb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/views/ideas/show.html.erb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/views/comments/_form.html.erb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/views/ideas/_form.html.erb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/models/comment.rb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/views/layouts/application.html.erb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/views/ideas/new.html.erb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/controllers/application_controller.rb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/views/ideas/index.html.erb",
+		"/Users/sonyacorcoran/app_project/railsgirls/db/migrate/20150118023057_create_ideas.rb",
+		"/Users/sonyacorcoran/app_project/railsgirls/db/migrate/20150118082252_create_comments.rb",
+		"/Users/sonyacorcoran/app_project/railsgirls/db/migrate/20150118085738_devise_create_users.rb",
+		"/Users/sonyacorcoran/app_project/railsgirls/app/models/idea.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/happitails_lab/main.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/happitails_lab/clients.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/happitails_lab/animals.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/HTLAB copy.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/HTLAB_clients.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/HTLAB_animals.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/HTLAB.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/happitails_lab/HTLAB.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/rental_lab/apartment.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/happitails_lab/shelter.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/rental_lab/main.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/rental_lab/tenant.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/d5_scrabble.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/d4_bros.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/d5_warmup.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/rental_lab/menu ideas",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/bros.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/d4_person.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/d4_person_refactored.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/person.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/object.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/MTA_lab.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/MTA_lab_with_menu.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/D4-warmup.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/hashes_ex.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/D3-warmup.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/calc.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/MTA_lab_with_user_input.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/hashes_ex_JT.rb",
+		"/Users/sonyacorcoran/WDI/wdi8_homework/sonya/W1/read_alight.rb"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"movies.db",
+			"video",
+			"memetube",
+			"'/memetube'",
+			"/memetube/genre/:title",
+			"name",
+			"hinge",
+			"background",
+			"word wr",
+			"browsers",
+			"@subway_lines",
+			"start",
+			"'line_6'",
+			"'line_L'",
+			"'line_N'",
+			"</option>",
+			"</optgroup>",
+			"</option>",
+			"<% end %>",
+			"<%end%>",
+			"@subway_lines",
+			"user_choice",
+			"computer_choice",
+			"paper",
+			"Paper",
+			"paper",
+			"rock",
+			"Rock",
+			"rock",
+			"@generated_number",
+			".strip",
+			"movie_data",
+			"movies",
+			"checkbox",
+			"vices[]",
+			"Wine",
+			"wine",
+			"Cigars",
+			"cigars",
+			"Cigars",
+			"cigars",
+			"address",
+			"Address",
+			"address",
+			"range",
+			"Range",
+			"range",
+			"myspace_page",
+			"position",
+			"relative",
+			"absol",
+			"display",
+			"line",
+			"inspir",
+			"inspiration",
+			"stock",
+			"f.submit",
+			"create idea",
+			"submit",
+			"submi",
+			"idea",
+			"create",
+			"avail",
+			"new idea",
+			"class Cl",
+			"new idea",
+			"new",
+			"ul class",
+			"<td><%= idea.picture %></td>",
+			"number_of_pets",
+			"id",
+			"class c",
+			"class Cl",
+			"pets",
+			"number_of_pets",
+			"return_to_continue",
+			"press",
+			"toys",
+			"multiple_toys",
+			"display_clients",
+			"shelter",
+			"end",
+			"client",
+			"building",
+			"create_tenants",
+			"create_tenant",
+			"location",
+			"num_stops",
+			"total_trip",
+			"starting_point",
+			"trains",
+			"subway_line"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"user_location",
+			"number_of_stops",
+			"count_stops",
+			"location",
+			"subway"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1860,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1140,
+								1207
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 787.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/index.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 185,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/result.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 206,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								206
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/result_db.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 190,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								190,
+								190
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/search_result.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								143,
+								143
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "views/layout.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "public/css/movie.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 931,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								809,
+								809
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 138.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "movies.sql",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 437,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								388,
+								394
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "movie.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 36,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								32
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 151.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

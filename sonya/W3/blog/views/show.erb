@@ -1,0 +1,9 @@
+<div class="container">
+<h3><%= @post.title %></h3>
+  <p><img class="gif" src="<%= @post.url %>"></p>
+
+  <div class="controls">
+    <a href="/posts/<%= @post.id %>/delete">Delete</a>
+    <a href="/posts/<%= @post.id %>/edit">Edit</a>
+  </div>
+</div>

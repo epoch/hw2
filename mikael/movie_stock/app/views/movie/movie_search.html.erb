@@ -1,0 +1,132 @@
+<h1>Open Movie Database</h1>
+
+<form action="/movie">
+  <input class="search_box" name="movie" id="movie" placeholder="Godfather" value="<%= @input %>" autofocus required>
+  <button class="button">Search</button>
+</form>
+
+<!-- LANDING RENDERING -->
+<% if params[:movie].nil? %>
+
+<!-- ERROR RENDERING -->
+<% elsif @movie_data.response == "False" %>
+  <h1>Sorry, couldn't find what you were looking for...</h1>
+
+<!-- N/A RENDERING -->
+<% elsif @poster && @plot == "N/A" %>
+  <h1 class="header"><%= @title %></h1>
+  <h1 class="header">Year: <%= @year %></h1>
+  <ul>
+    <% unless @rated == "N/A" %>
+      <li>Rated: <%= @rated %></li>
+    <% end %>
+    <% unless @released == "N/A" %>
+      <li>Released: <%= @released %></li>
+    <% end %>
+    <% unless @runtime == "N/A" %>
+      <li>Runtime: <%= @runtime %></li>
+    <% end %>
+    <% unless @genre == "N/A" %>
+      <li>Genre: <%= @genre %></li>
+    <% end %>
+    <% unless @director == "N/A" %>
+      <li>Director: <%= @director %></li>
+    <% end %>
+    <% unless @writer == "N/A" %>
+      <li>Writer: <%= @writer %></li>
+    <% end %>
+    <% unless @actors == "N/A" %>
+      <li>Actors: <%= @actors %></li>
+    <% end %>
+    <% unless @language == "N/A" %>
+      <li>Language: <%= @language %></li>
+    <% end %>
+    <% unless @country == "N/A" %>
+      <li>Country: <%= @country %></li>
+    <% end %>
+    <% unless @awards == "N/A" %>
+      <li>Awards: <%= @awards %></li>
+    <% end %>
+    <% unless @imdb_id == "N/A" %>
+      <li>IMDB: <a target="_blank" href="http://www.imdb.com/title/<%= @imdb_id %>">http://www.imdb.com/title/<%= @imdb_id %></a>
+      </li>
+    <% end %>
+    <% unless @imdb_rating == "N/A" %>
+      <li>IMDB Rating: <%= @imdb_rating %></a></li>
+    <% end %>
+    <% unless @type == "N/A" %>
+      <li>Type: <%= @type %></li>
+    <% end %>
+  </ul>
+  <% if @results.is_a? Array %>
+  <h1 class="header" id="suggestion">Suggestions:</h1>
+  <ul>
+    <% @results.each do |i| %>
+      <li><a href="?movie=<%= i.title %>"> <%= i.title %>, <%= i.year %></a></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+<!-- TITLE RENDERING -->
+<% else @movie_data.response == "True" %>
+  <h1 class="header"><%= @title %></h1>
+  <h1 class="header">Year: <%= @year %></h1>
+  <% unless @poster == "N/A" %>
+    <img src="<%= @poster %>"/>
+  <% end %>
+  <% unless @plot == "N/A" %>
+    <p>Plot: <%= @plot %></p>
+  <% end %>
+
+  <ul>
+    <% unless @rated == "N/A" %>
+      <li>Rated: <%= @rated %></li>
+    <% end %>
+    <% unless @released == "N/A" %>
+      <li>Released: <%= @released %></li>
+    <% end %>
+    <% unless @runtime == "N/A" %>
+      <li>Runtime: <%= @runtime %></li>
+    <% end %>
+    <% unless @genre == "N/A" %>
+      <li>Genre: <%= @genre %></li>
+    <% end %>
+    <% unless @director == "N/A" %>
+      <li>Director: <%= @director %></li>
+    <% end %>
+    <% unless @writer == "N/A" %>
+      <li>Writer: <%= @writer %></li>
+    <% end %>
+    <% unless @actors == "N/A" %>
+      <li>Actors: <%= @actors %></li>
+    <% end %>
+    <% unless @language == "N/A" %>
+      <li>Language: <%= @language %></li>
+    <% end %>
+    <% unless @country == "N/A" %>
+      <li>Country: <%= @country %></li>
+    <% end %>
+    <% unless @awards == "N/A" %>
+      <li>Awards: <%= @awards %></li>
+    <% end %>
+    <% unless @imdb_id == "N/A" %>
+      <li>IMDB: <a target="_blank" href="http://www.imdb.com/title/<%= @imdb_id %>">http://www.imdb.com/title/<%= @imdb_id %></a>
+      </li>
+    <% end %>
+    <% unless @imdb_rating == "N/A" %>
+      <li>IMDB Rating: <%= @imdb_rating %></a></li>
+    <% end %>
+    <% unless @type == "N/A" %>
+      <li>Type: <%= @type %></li>
+    <% end %>
+  </ul>
+  
+  <% if @results.is_a? Array %>
+  <h1 class="header" id="suggestion">Suggestions:</h1>
+  <ul>
+    <% @results.each do |i| %>
+      <li><a href="?movie=<%= i.title %>"> <%= i.title %>, <%= i.year %></a></li>
+    <% end %>
+  </ul>
+  <% end %>
+<% end %>

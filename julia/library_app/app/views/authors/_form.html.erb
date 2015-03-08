@@ -1,0 +1,21 @@
+<%= form_for @author do |f| %>
+  <div class="form-group">
+    <%= f.label :name, :class => 'label-form' %>
+    <%= f.text_field :name, :required => true, :class => 'input-form' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :dob, "Date of birth", :class => 'label-form' %>
+    <%= f.text_field :dob, :class => 'input-form' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :nationality, :class => 'label-form' %>
+    <%= f.text_field :nationality, :class => 'input-form' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :image, :class => 'label-form' %>
+    <%= f.url_field :image, :class => 'input-form' %>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Submit', :class => 'btn-form' %>
+  </div>
+<% end %>

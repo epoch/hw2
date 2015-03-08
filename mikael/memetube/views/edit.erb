@@ -1,0 +1,14 @@
+<h2>Edit video</h2>
+
+<form action="/youtube/<%= @video["id"] %>" method="post">
+  <label for="name">Name:</label>
+  <input id="name" name="name" value="<%= @video["name"] %>">
+
+  <label for="genre">Genre:</label>
+  <input id="genre" name="genre" value="<%= @video["genre"] %>">
+
+  <label for="video">Video:</label>
+  <input id="video" name="video" type="url" value="<%= @video["video"] %>">
+
+  <input type="submit" value="Update video">
+</form>

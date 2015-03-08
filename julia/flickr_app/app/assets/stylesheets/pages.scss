@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'CODE Bold';
+  src: url("CODE Bold.otf");
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #000;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+}
+
+h1 {
+  font-family: 'CODE Bold';
+  font-size: 48px;
+  order: 1;
+  flex: 4 6 auto;
+  text-align: center;
+}
+
+input, button {
+  display: inline-block;
+  background-color: #fff;
+  font-size: 14px;
+  border-radius: 15px;
+  border: none;
+  padding: 7px;
+  margin: 5px 2px;
+  outline: none;
+}
+input {
+  width: 300px;
+  box-shadow: inset 1px 1px 1px #000;
+}
+button {
+  width: 140px;
+  background-color: #8D2872;
+  box-sizing: content-box;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.search {
+  order: 2;
+  flex: 2 6 auto;
+  text-align: center;
+  margin: 0 15px;
+}
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#images {
+  margin: 30px;
+  font-size: 0;
+  text-align: center;
+}
+@media only screen and (min-width: 550px) {
+  input {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  header {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 40px;
+  }
+  h1 {
+    text-align: left;
+  }
+  input, button {
+    padding: 10px;
+  }
+  input {
+    width: 310px;
+    display: inline-block;
+    margin: 5px 2px;
+    box-shadow: inset 1px 1px 1px #000;
+  }
+  .search {
+    text-align: right;
+  }
+}

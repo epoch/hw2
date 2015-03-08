@@ -1,0 +1,29 @@
+<div id="video-entry">
+  <h2>New video</h2>
+  <br>
+  <form action="/videos" method="post">
+    <div class="labels">
+      <ul>
+        <li><label for="name">Name:</label></li>
+        <li><label for="description">Description:</label></li>
+        <li><label for="url">URL:</label></li>
+        <li><label for="genre">Genre:</label></li>
+      </ul>
+    </div>
+
+    <div class="inputs">
+      <ul>
+        <li><input type="text" id="name" name="name"></li>
+        <li><input type="textarea" id="description" name="description"></li>
+        <li><input type="url" id="url" name="url"></li>
+        <li><input type="text" id="genre" name="genre"></li>
+      </ul>
+    </div>
+
+    <br>
+    <br>
+    <p>
+      <input type="submit" value="Create entry">
+    </p>
+  </form>
+</div>

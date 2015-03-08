@@ -1,0 +1,23 @@
+<h1 class="stock_home_title">Stock look up</h1>
+
+
+<% if @price && @price > 0 %>
+    <p>Last trade for <%= @symbol %> was $<%= @price %></p>
+<% elsif @price == 0.0 %>
+    <p>No stock trading with that symbol. Search again.</p>
+<% end %>
+
+<p>Please enter a stock symbol</p>
+<form action="/stock">
+    <input name="stock_symbol" placeholder="GOOG" required>
+    <button>Get quote</button>
+</form>
+
+
+<!-- whatever name i give my input will make it available in params -->
+
+<!-- #this means the last trade for line won't appear until there is a price -->
+
+<!-- what is in the action field is telling the form which url to go to once the submit button has been hit 
+
+Setting a value in the unput is only if you still want the value to be thereo nce the user has hit submitted  -->

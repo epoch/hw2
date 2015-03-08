@@ -1,0 +1,17 @@
+<%= form_for @user do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+   
+     <div>
+        <%= f.label :age %>
+        <%= f.text_field :age %>
+    </div>
+
+    <div>
+        <%= f.label :image %>
+        <%= f.url_field :image %>
+    </div>
+    <%= f.submit %>
+<% end %>

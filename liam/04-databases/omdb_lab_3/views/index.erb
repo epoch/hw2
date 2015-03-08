@@ -1,0 +1,7 @@
+<% @movies.each do |movie| %>
+<p>
+  <a href="/results?id=<%= movie.id %>">
+    <%= movie.title %>
+  </a>
+</p>
+<% end %>

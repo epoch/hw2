@@ -1,0 +1,24 @@
+%h1 List of Classmates
+
+- @users.in_groups_of(3) do |user|
+  .row
+    - user.compact.each do |user|
+      .col-md-4
+        .user_index
+          = link_to(image_tag(user.image), user)
+          %h2= link_to(user.name, user)
+          %h4
+            %li
+              ID: #{user.id}
+            %li
+              Cohort ID: #{user.cohort_id}
+            %li
+              Admin: #{user.is_admin}
+            %li
+              Class: #{user.cohort.cohort}
+            %li
+              Cohort: #{user.cohort.year}
+
+          / - if user.cohorts.any?
+          /   %li
+          /     Cohort: #{cohort.year}

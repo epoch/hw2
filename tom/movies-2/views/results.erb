@@ -1,0 +1,49 @@
+<div id="search-results">
+
+
+
+<h3>Search results:</h3>
+
+
+
+<% if @search_results["Search"] %>
+
+
+   <% @search_results["Search"].each do |v| %>
+
+    <!-- by making our own url (with ?id= on the end of the route /movie)
+    we can make the value of the newly created param "id" equal to
+    the value of the imdb id stored in the search hash -->
+    <a href="/movie?id=<%= v["imdbID"] %>"><%= v["Title"] + ", " + v["Year"]%></a>
+
+    <br>
+  <% end %>
+
+
+
+<% else %>
+
+  <br>
+  <h2>That film doesn't exist. Do you even cinema?</h2>
+  <br>
+  <p>Try again?</p>
+
+  <form action="/results">
+
+      <!-- below basically says, whatever goes in here I want to be called name (this can then be accessed via params[:name]) -->
+      <p>
+        <label for="search">Name: </label>
+        <input name="search" id="search" placeholder="Movie name" required autofocus>
+      </p>
+
+      <br>
+      <!-- by default, a button within a form will automatically be set up to submit -->
+      <button>Submit</button>
+    </form>
+
+<% end %>
+
+<br>
+
+
+</div>

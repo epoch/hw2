@@ -1,0 +1,95 @@
+.container {
+    max-width: 960px;
+    margin: auto;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#4A6EB8, white);
+}
+
+.find {
+    margin-left: 16em;
+    padding: 1em;
+    color: white;
+    background: linear-gradient(white, #2C426E);
+    width: 18em;
+    border-radius: 1em;
+}
+
+nav {
+    background: linear-gradient(white, #2C426E);
+    padding: 1.5em;
+    text-decoration: none;
+
+}
+
+nav a {
+    color: white;
+    margin-left: 5em;
+
+}
+
+nav li {
+    display: inline-block;   
+}
+
+.movies {
+    background-image: url(/assets/imdb_250.jpg);
+    padding: 3em;
+    min-height: 620px;
+}
+
+.stocks {
+    background-image: url(/assets/stock_exchange2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 3em;
+    min-height: 620px;
+}
+
+.output {
+    display: inline-block;
+    margin-left: 5em;
+    vertical-align: auto;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.poster {
+    margin-top: 2em;
+    margin-left: 5em;
+    border-radius: 1em;
+}
+
+.input {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.movie_list {
+    color: white;
+    margin-left: 5em;
+    width: 15em;
+    background-color: black;
+    padding: 0.5em;
+}
+
+.list_title {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    width: 350px;
+    padding: 0.5em;
+    margin-left: 100;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

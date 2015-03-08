@@ -1,0 +1,5 @@
+<h1>Movie Search Results</h1>
+
+<% @search_data["Search"].each do |movie| %>
+  <p><a href="/movies/<%= movie["imdbID"] %>"><%= movie["Title"] %> <%= movie["Year"] %></a></p>
+<% end %>

@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align:center;
+    font-family: Tahoma, Verdana, Helvetica, Arial, sans-serif;
+    margin-top: 250px;
+
+}
+
+.button {
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    margin: 15px; 
+    border-radius: 10px
+
+}
+
+#yes {    
+    background-color: green;
+}
+
+#no {    
+    background-color: red;
+}
+
+#done {
+    background-color: blue;
+}

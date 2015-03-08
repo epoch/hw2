@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+header {
+  border-bottom: 1px solid #000;
+}
+h1 {
+  text-transform: uppercase;
+}
+nav {
+  position: absolute;
+  top: 10px;
+  right: 160px;
+}
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  padding: 20px 10px;
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1695A3;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.container img {
+  margin: auto;
+}
+
+.super {
+  text-transform: 
+}

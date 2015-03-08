@@ -1,0 +1,90 @@
+@import url(http://fonts.googleapis.com/css?family=Monda);
+
+body {
+  background-image: url('http://www.k-o.com/wp-content/uploads/2010/10/Resized000011.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Monda', sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#container {
+  max-width: 960px;
+
+  margin: auto;
+  height: 400px;
+  margin-top: 150px;
+}
+
+#center-container {
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 400px;
+/*  height: 250px;*/
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: auto;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 70px;
+}
+
+#num-list {
+  margin-bottom: 15px;
+}
+
+form {
+  margin-bottom: 15px;
+}
+
+.menu-choice {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.main-menu {
+  border: 1px solid white;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 15px;
+  background-color: #2196F3;
+  border-radius: 10px;
+}
+
+.try-again {
+  border: 1px solid white;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 15px;
+  background-color: orange;
+  border-radius: 10px;
+}
+
+.rps-choice {
+  border: 1px solid white;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 15px;
+  background-color: #F56D72;
+  border-radius: 10px;
+
+}
+
+.number {
+  border: 1px solid white;
+  height: 27px;
+  width: 27px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.match-result {
+  font-size: 20px;
+}
+
+span {
+  margin-left: 10px;
+}

@@ -1,0 +1,15 @@
+<h2>Authors</h2>
+<div class="author">
+  <% @authors.each do |author| %>
+    <div class="author-img">
+      <%= image_tag(author.image, :class => 'thumb-author') %>
+    </div>
+    <div class="author-info">
+      <ul>
+        <li>Name: <%= link_to(author.name, author) %></li>
+        <li>Nationality: <%= author.nationality %></li>
+        <li>Date of Birth: <%= author.dob.strftime('%B %e, %Y') if author.dob %></li>
+      </ul>  
+    </div>
+  <% end %>
+</div>

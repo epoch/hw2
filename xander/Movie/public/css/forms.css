@@ -1,0 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display+SC);
+
+body {
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+    margin: 0;
+    padding: 0; 
+    background: url('http://wallpoper.com/images/00/38/37/12/the-godfather_00383712.png'); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: left;
+    max-width: 1000px;
+    margin-left: 100px;
+    margin-top: 50px;
+    padding: 0;
+
+}
+
+h1 {
+    margin: 0px;
+}
+
+img {
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.output {
+    font-size: 12px;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Alegreya+SC:400,700' rel='stylesheet' type='text/css'>
+        <meta charset="UTF-8">
+       
+        <title>MTA Trip Planner</title>
+
+        <link rel="stylesheet" href="css/stylesheet.css"> 
+    </head>
+    <body>
+        <img id="left_logo" src="http://www.twulocal100.org/sites/twulocal100.org/files/images/seal_of_new_york.svg_.png">
+        <img id="right_logo" src="http://www.twulocal100.org/sites/twulocal100.org/files/images/seal_of_new_york.svg_.png">
+        
+        <div class="container">
+            <h1>MTA Trip Planner</h1>
+            <%= yield %>
+        </div>
+
+    </body>
+    <footer>
+        MTA Trip Planner brought to you by the City of New York
+        <img id="mta_logo_left" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/MTA_NYC_logo.svg/768px-MTA_NYC_logo.svg.png">
+        <img id="mta_logo_right" src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/MTA_NYC_logo.svg/768px-MTA_NYC_logo.svg.png">
+    </footer>
+</html>

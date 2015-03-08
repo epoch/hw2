@@ -1,0 +1,101 @@
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
+body {
+  background-color: #E9F1DF;
+  font-family: 'Poiret One', helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+header {
+  max-width: 30%;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 72px;
+  font-weight: 900;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 42px;
+  font-weight: 900;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #F2385A;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0 0 10px 2px;
+}
+
+input, button {
+  display: inline-block;
+  background-color: #E9F1DF;
+  font-size: 18px;
+  font-family: helvetica, arial, sans-serif;
+  padding: 27px;
+  margin: 5px auto;
+  outline: none;
+  text-align: center;
+}
+input {
+  width: 240px;
+  border: 2px solid #F2385A;
+}
+::-webkit-input-placeholder {
+  text-transform: uppercase;
+  text-align: center;
+}
+button {
+  width: 240px;
+  background-color: #F2385A;
+  box-sizing: content-box;
+  color: #E9F1DF;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid #F2385A;
+}
+
+button:hover {
+  background-color: #E9F1DF;
+  color: #F2385A;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.form-container {
+  max-width: 30%;
+}
+.movies-container {
+  -webkit-flex: 1;
+  flex: 1;
+  flex-basis: 33%;
+  margin: 17px 5px 0 0;
+  padding-top: 5px;
+  padding-left: 15px;
+  min-width: 40%;
+}
+.poster-container {
+  -webkit-flex: 2;
+  flex: 2;
+  flex-basis: 33%;
+  margin-top: 60px;
+  margin-left: 10px;
+  padding-top: 5px;
+}
+.error {
+  background-color: #F2385A;
+  color: #E9F1DF;
+  padding: 40px 20px;
+  margin: 80px 10px;
+}

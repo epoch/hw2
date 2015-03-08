@@ -1,0 +1,63 @@
+<h1 class="title">A --> B</h1>
+<h2 class="tagline"> Getting you back to home sweet home</h2>
+
+<form action="/result">
+    <select name="start" required>
+        <option disabled selected>Where are you?</option>
+        <optgroup label="N Line">
+            <% $directory[:LineN].each do |station|%>
+                <div class="station">
+                    <option value="<%=station%>"><%=station%></option>
+                </div>
+            <%end%>
+
+        </optgroup>
+        <optgroup label="L Line">
+            <% $directory[:LineL].each do |station|%>
+                <div class="station">
+                    <option value="<%=station%>"><%=station%></option>
+                </div>
+            <%end%>
+        </optgroup>
+
+        <optgroup label="6 Line">
+            <% $directory[:Line6].each do |station|%>
+                <div class="station">
+                    <option value="<%=station%>"><%=station%></option>
+                </div>
+            <%end%>
+        </optgroup>
+    </select>
+
+    <select name="end" required>
+        <option disabled selected>Where are you going?</option>
+            <optgroup label="N Line">
+                <% $directory[:LineN].each do |station|%>
+                    <div class="station">
+                        <option value="<%=station%>"><%=station%></option>
+                    </div>
+                <%end%>
+
+            </optgroup>
+            <optgroup label="L Line">
+                <% $directory[:LineL].each do |station|%>
+                    <div class="station">
+                        <option value="<%=station%>"><%=station%></option>
+                    </div>
+                <%end%>
+            </optgroup>
+
+            <optgroup label="6 Line">
+                <% $directory[:Line6].each do |station|%>
+                    <div class="station">
+                        <option value="<%=station%>"><%=station%></option>
+                    </div>
+                <%end%>
+            </optgroup>
+    </select>
+
+ <p>
+    <input type="submit" value="Click those sparkly shoes together">
+</p>
+
+</form>

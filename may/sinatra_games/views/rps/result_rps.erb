@@ -1,0 +1,27 @@
+
+
+
+<% if @computer == "rock" %>
+    <% if @choice == "paper" %>
+        <span><h1>You won! </h1></span>
+    <% else %>
+        <span><h1>You lost! </h1></span>
+    <% end %>
+<% elsif @computer == "paper" %>
+    <% if @choice == "scissors" %>
+        <span><h1>You won! </h1></span>
+    <% else %>
+        <span><h1>You lost! </h1></span>
+    <% end %> 
+<% else %>
+    <% if @choice == "rock" %>
+        <span><h1>You won! </h1></span>
+    <% else %>
+        <span><h1>You lost! </h1></span>
+    <% end %>
+<% end %>
+
+
+<%= erb :'rps/index', :layout =>false %>
+     
+    

@@ -1,0 +1,14 @@
+<h1>Stock Lookup</h1>
+
+<form action="/stock">
+  <input class="search_box" name="stock" placeholder="Stock Code" value="<%= @input %>">
+  <button class="button">Calculate</button>
+</form>
+
+<% unless @quotes.nil? %>
+<% if @quotes == 0.0 %>
+<h1>Sorry, couldn't find the stock you were looking for.</h1>
+<% else %>
+<h1>The current value for '<%= params[:stock] %>' is: <%= @quotes %></h1>
+<% end %>
+<% end %>

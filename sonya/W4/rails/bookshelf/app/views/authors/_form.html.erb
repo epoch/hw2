@@ -1,0 +1,17 @@
+<%= form_for @author do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, :autofocus => true %> 
+
+  <%= f.label :nationality %>
+  <%= f.text_field :nationality %> 
+
+  <%= f.label :dob, "Date of Birth"%>
+  <%= f.text_field :dob %> 
+
+  <%= f.label :image %>
+  <%= f.url_field :image %> 
+
+<hr>
+  <%= f.submit %>
+
+<% end %>

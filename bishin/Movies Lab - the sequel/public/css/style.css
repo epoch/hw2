@@ -1,0 +1,47 @@
+/*clothing*/
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Dynalight);
+
+body {
+    background-color: cadetblue;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container{
+    width: 960px;
+    margin: auto;
+    border: 2px solid white;
+    text-align: center;
+    padding:5%;
+}
+
+.no_movie{ 
+    font-family: 'Dynalight', cursive;
+    font-size: 60px;
+}
+    /*background-image: url("http://bigcheesecoaching.com/wp-content/uploads/2014/04/emerald-dorothy-and-toto-pl.jpg")*/
+
+.footer{
+    font-size: 10px;
+}
+
+.plot {
+    display: block;
+    text-align: justify;
+    padding: 5%;
+}
+
+.again {
+        font-family: 'Dynalight', cursive;
+}
+
+.birdy{
+    width: 200px;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}

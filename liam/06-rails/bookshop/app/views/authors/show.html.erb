@@ -1,0 +1,20 @@
+<h1><%= @author.name %></h1>
+<p>
+  <%= link_to 'Edit Author', edit_author_path(@author) %>
+  |
+  <%= link_to 'Delete Author', @author, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
+</p>
+<%= image_tag @author.image, :class => 'portrait' %>
+<div>
+  <p><strong>Nationality:</strong> <%= @author.nationality %></p>
+  <p><strong>Date of Birth:</strong> <%= @author.dob.strftime('%B, %e, %Y') %></p>
+  <p><strong>Bio:</strong> <%= @author.bio %></p>
+</div>
+
+<% if @author.books.any? %>
+  <h2>Books</h2>
+<% end %>
+
+<% @author.books.each do |book| %>
+  <%= link_to(image_tag(book.image, :class => 'thumb'), book) %>
+<% end  %>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>New York City Subway</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>New York City Subway</h1>
+      <div class="subway-lines">
+          <div class="line-description">Manhattan &amp; Broadway Local</div>
+          <div class="line-sym line-n">N</div>
+          <div class="line-sym line-l">L</div>
+          <div class="line-sym line-6">6</div>
+      </div>
+      <div class="main-container">
+        <div class="schedule">
+          <h2>Schedule</h2>
+          <div class="select-container">
+            <select id="origin" name="origin" required>
+              <option disabled selected>Select your Line and Station</option>
+            </select>
+          </div>
+          <div class="select-container"> 
+            <select id="destination" name="destination" required>
+              <option disabled selected>Select your Line and Station</option>
+              </select>
+            </div>
+          <input id="submit" type="submit" value="Go!">
+        </div>
+        <div class="journey">
+          <h2>Journey</h2>
+          <div class="origin">
+            <h3>Origin</h3>
+            <p id="origin-selection"></p>
+          </div>
+          <div class="destination">
+            <h3>Destination</h3>
+            <p id="destination-selection"></p>
+          </div>
+          <div class="stops"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+body, html {
+    margin: 0;
+}
+
+.container {
+
+}
+
+.thumb {
+    max-width: 10em;
+}
+
+.cover {
+    max-height: 75vh;
+}
+
+.portrait {
+    max-height: 75vh;
+}

@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+h1 {
+    
+}
+
+li {
+    display: inline-block;
+}
+li a {
+    color: #fff;
+    padding: 10px;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 100%;
+/*    margin: 0 auto; */
+}

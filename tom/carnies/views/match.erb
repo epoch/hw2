@@ -1,0 +1,21 @@
+<p>Your move: <span><%= @user_move.capitalize %></span></p>
+
+<p>Opponents's move: <span><%= @comp_move.capitalize %></span></p>
+
+<br>
+<% if @user_score > @comp_score %>
+  <p class="match-result">-- YOU WIN --</p>
+<% elsif @user_score < @comp_score %>
+  <p class="match-result">-- YOU LOSE --</p>
+<% else %>
+  <p class="match-result">-- DRAW --</p>
+<% end %>
+
+<br>
+<a href="/rock_paper_scissors" class="try-again">Try again</a>
+
+<a href="/" class="main-menu">Main Menu</a>
+
+<br>
+<br>
+

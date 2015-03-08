@@ -1,0 +1,46 @@
+<!-- Content Section -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="section-heading">New Article</h1>
+        <form action="/articles" method="post">
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input class="form-control" id="title" name="title">
+          </div>
+
+          
+          <div class="form-group">
+            <label for="category">Category:</label>
+            <input class="form-control" id="category" name="category">
+          </div>
+
+          <div class="form-group">
+            <label for="body">Body:</label>
+            <textarea class="form-control" rows="10" id="body" name="body"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="image">Image:</label>
+            <input class="form-control" id="image" name="image" type="url">
+          </div>
+
+          <div class="form-group">
+            <label for="user_id">Author:</label>
+            <select class="form-control" name="user_id" id="user_id">
+              <option></option><!-- Blank to allow "none" option -->
+              <% User.all.each do |user| %>
+                <option value="<%= user.id %>"><%= user.name %></option>
+              <% end %>
+            </select>
+          </div>
+
+          <input class="btn btn-default" type="submit" value="Post Article">
+        </form>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>

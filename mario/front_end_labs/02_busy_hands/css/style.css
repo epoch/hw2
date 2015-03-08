@@ -1,0 +1,39 @@
+body {
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7f7d78;
+    font-size: 13px;
+    line-height: 1.1;
+    background: #FFF;
+}
+
+nav {
+    background: url(../images/bg_wrapper.png) repeat-x;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    height: 488px;
+}
+
+nav li a {
+    color: grey;
+    text-decoration: none;
+    
+}
+
+nav li a:hover {
+    color: cyan;
+    background: url(../images/bg_nav_rollover.png) repeat-x;
+    display: inline;
+    padding-top: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px; 
+    padding: 10px;
+}
+
+nav ul li .menu {
+    padding: 30px 30px 33px 30px;
+}

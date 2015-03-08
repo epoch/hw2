@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie // Stock</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="cover-container">
+      <a href="/"><h1 class="masthead-brand" draggable="true">Movie // Stock</h1></a>
+      <ul class="nav masthead-nav">
+        <li class="<%= 'active' if params[:controller] == 'home' %>"><a href="/home">Home</a></li>
+        <li class="<%= 'active' if params[:controller] == 'stock' %>"><a href="/stock">Stocks</a></li>
+        <li class="<%= 'active' if params[:controller] == 'movie' %>"><a href="/movie">Movies</a></li>
+        <li class="<%= 'active' if params[:controller] == 'about' %>"><a href="/about">About</a></li>
+        <li class="<%= 'active' if params[:controller] == 'faq' %>"><a href="/faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <%= yield %>
+    </div>
+  </div>
+
+  <div class="push"></div>             
+  <div class="footer">
+    <p class="footer-paragraph">Powered by ☞ <a href="http://www.omdbapi.com/" target="_blank">OMDb API</a> &amp; 
+      <a href="http://www.transparentech.com/projects/yahoofinance" target="_blank">Yahoo Finance API</a></p> 
+  </div>
+
+  <div class="animation-trigger">
+    <a class="btn btn-lg btn-default">Hello Joel!</a>
+  </div>
+
+  <!-- JavaScript -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="/assets/bootstrap.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $(".btn-default").mouseenter(function(){
+      $(".btn-default").css("background-color", "#69D2E7");
+    });
+    $(".btn-default").mouseleave(function(){
+      $(".btn-default").css("background-color","#7BAABE");
+    });
+  });
+  </script>
+
+
+</body>
+</html>

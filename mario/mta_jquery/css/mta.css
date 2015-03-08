@@ -1,0 +1,28 @@
+body {
+  font-family: helvetica, sans-serif;
+  font-size: 2em;
+}
+
+h2 {
+  margin-left: 72px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+label {
+  padding-left: 1em;
+  font-style: none;
+}
+
+.mta-logo {
+  width: 100px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+#nextButton {
+  margin-top: 2em;
+  width: 100%;
+}

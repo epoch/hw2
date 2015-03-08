@@ -1,0 +1,13 @@
+<form action="/calc">
+    <input name="first" placeholder="First Number" value="<%= params[:first] %>">
+    <input name="operator" placeholder="Math Operator" value="<%= params[:operator] %>">
+    <input name="second" placeholder="Second Number" value="<%= params[:second] %>">
+
+    <button>Calculate</button>
+</form>
+
+<h1>The result is:</h1>
+
+<em><%= @result %></em>
+
+<p>Thank you for using Browser Calc</p>

@@ -1,0 +1,20 @@
+<form action="<%=mountain_path(@mountain.id)%>" method="post">
+    
+    <label for="name">Name: </label>
+    <input id="name" name="mountain[name]" value="<%=@mountain.name%>" autofocus >
+ 
+    <label for="height">Height: </label>
+    <input type="number" id="height" name="mountain[height]" value="<%=@mountain.height%>">
+
+    <label for="country">Country: </label>
+    <input type="text" id="country" name="mountain[country]" value="<%=@mountain.country%>">
+
+    <label for="nearest_ocean">Nearest ocean: </label>
+    <input type="text" id="nearest_ocean" name="mountain[nearest_ocean]" value="<%=@mountain.nearest_ocean%>">
+
+    <label for="image">Image: </label>
+    <input type="url" id="image" name="mountain[image]" value="<%=@mountain.image%>">
+
+    <button>Edit mountain</button>
+
+</form>

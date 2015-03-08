@@ -1,0 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+
+body {
+  background: #fff url(/img/carnival-lights1.jpg) no-repeat fixed right;
+  background-size: 100% 100%;
+  color: #000;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+form {
+  color: #000;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+label {
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  max-width: 350px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+}

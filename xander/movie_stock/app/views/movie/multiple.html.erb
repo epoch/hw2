@@ -1,0 +1,13 @@
+<div class="movies">
+    <div class="list_title">
+                <p>
+                Please select the movie you're looking for:
+                </p>
+            </div>
+            <% @movies.each do |movie| %>
+
+            <div class="movie_list">
+                <a href="/movie/result?id=<%= movie['imdbID'] %>"><%= movie['Title'] %></a> 
+            </div>
+    <% end %>
+</div>  

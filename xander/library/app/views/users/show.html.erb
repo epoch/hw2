@@ -1,0 +1,19 @@
+<h1><%= @user.name %></h1>
+<p>
+    <%= link_to 'Edit User', edit_user_path(@user) %>
+    <%= button_to 'Delete User', @user, :method => 'delete', :data => { :confirm => 'Are you sure you want to delete this user?' }%>
+</p>
+     <ul>
+        <li>Name: <%= @user.name %></li>
+        <li>Address: <%= @user.address %></li>
+        <li>Date of Birth: <%= @user.dob.strftime('%A %B %e, %Y') if @user.dob %></li>
+    </ul>
+
+<% if @user.books.any? %>
+    <h2>Books</h2>
+<% end %>
+
+
+<% @user.books.each do |book| %>
+        <%= link_to(image_tag(book.image, :class => 'thumb'), book) %>
+<% end %>

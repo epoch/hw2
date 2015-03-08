@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Oceans of the World</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Oceans of the world</h1>
+        <nav>
+          <ul>
+            <li><%= link_to('Home', oceans_path) %></li>
+            <li><%= link_to('New ocean', oceans_new_path) %></li>
+          </ul>
+        </nav>
+      </header>
+        <%= yield %>
+    </div>
+  </body>
+</html>

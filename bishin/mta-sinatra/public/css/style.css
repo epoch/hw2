@@ -1,0 +1,76 @@
+body {
+    font-family: "Helvetica";
+    background-color: SteelBlue;
+    color: LightSteelBlue;
+    text-align: center;
+
+}
+
+.title {
+    background: tomato;
+    opacity: 0.7; /*how to change opacity of background only*/
+    height: 5em;
+    width: 5em;
+    text-align: center;
+    line-height: 5em;
+    border-radius: 5em;
+    display: inline-block;
+}
+
+.container {
+    border: 1em solid LightSteelBlue;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin: 5%;
+    text-align: center;
+    padding: 5%;
+    
+
+}
+
+h2.tagline {
+    font-size: 14px;
+    padding-bottom: 1em;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border-radius: 2em;
+    background-color: tomato;
+    margin-left: 7em;
+    margin-right: 7em;
+    opacity: 0.7;
+}
+
+.box {
+    display: inline-block;
+    width: 8em;
+    height:auto;
+    font-size: 14px;
+    margin-left: 7em;
+    margin-right: 7em;
+    text-align: center;
+}
+
+.line {
+    padding: 5%;
+}
+
+.try_again {
+    font-style: bold;
+    color: black;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.line {
+    position: static;
+}
+
+.narration {
+    margin: 10%;
+}

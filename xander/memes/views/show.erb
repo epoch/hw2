@@ -1,0 +1,10 @@
+<h2><%= @meme["title"] %></h2>
+<p>Description: <%= @meme["description"] %></p>
+
+<iframe width="560" height="315" src="<%= @youtube %>"></iframe>
+
+<div class="controls">
+    <a href="/memes/<%= @meme["id"] %>/delete">Delete</a>
+    <a href="/memes/<%= @meme["id"] %>/edit">Edit</a>
+</div>
+

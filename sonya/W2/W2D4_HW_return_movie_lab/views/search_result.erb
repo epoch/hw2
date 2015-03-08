@@ -1,0 +1,4 @@
+<h2>Which <span><%= params[:query] %></span> were you looking for?</h2>
+    <% @search_results.each do |i| %>
+    <p><a href="get_poster?imdbid=<%= i["imdbID"] %>"><%= i["Title"] %>, <%= i["Year"] %></a></p>
+<% end %>

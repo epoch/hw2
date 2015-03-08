@@ -1,0 +1,24 @@
+<h2><%= @book.title %></h2>
+<div class="book">
+  <div class="full-book-img">
+    <%= image_tag(@book.image, :class => 'cover') %>
+  </div>
+  <div class="full-book-info">
+    <ul>
+      <% if @book.author %>
+        <li>Author: <%= link_to(@book.author.name, @book.author) %></li>
+      <% end %>
+      <li>Year: <%= @book.year %></li>
+      <li>Publisher: <%= @book.publisher %></li>
+      <li>Genre: <%= @book.genre %></li>
+      <li>ISBN: <%= @book.isbn %></li>
+    </ul>
+    <div>
+      <p><%= @book.summary %></p>
+    </div>
+    <div class="controls">
+      <%= link_to 'Edit book', edit_book_path(@book), :class => 'btn-control' %>
+      <%= link_to 'Delete book', @book, :method => 'delete', :data => {:confirm => "Sure about that?"}, :class => 'btn-control' %>
+    </div>
+  </div>
+</div>

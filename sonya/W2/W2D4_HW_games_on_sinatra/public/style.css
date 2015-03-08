@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter);
+
+header {
+    background-color: white;
+    opacity: .2;
+    border-radius: 10px;
+    font-size: 48px;
+    padding: 20px;
+    color: black;
+}
+
+body {
+    font-family: 'Bitter', serif;
+    max-width: 960px;
+    margin: 0 auto;
+    background-image: url(http://i.imgur.com/NcHdF.png);
+    color: white;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+}
+
+footer {
+    background-color: white;
+    opacity: .2;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 10px;
+    color: gray;
+    text-align: left;
+}
+
+/*Magic 8 Ball*/
+
+.magic {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 2em purple, 0 0 2em purple;
+}
+
+#input {
+    font-size: 24px;
+}
+
+/*Rock Paper Scissors*/
+
+.rock_paper_scissors {
+    width: 90%;
+    display: inline-block;
+}
+
+.rock_result {
+    text-shadow: 1px 1px 2px black, 0 0 2em purple, 0 0 2em purple;
+}
+
+/*Secret Number*/
+.incorrect_guess {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 2em purple, 0 0 2em purple;
+}
+
+.correct_guess {
+    color: gold;
+}

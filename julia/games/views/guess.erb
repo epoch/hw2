@@ -1,0 +1,8 @@
+<div class="guess">
+    <% if @controller == @number %>
+        <p>Congratulations! You win!</p>
+    <% else %>
+        <p>Sorry, you lose!</p>
+    <% end %>
+    <a href="/secret_number">Try again!</a>
+</div>

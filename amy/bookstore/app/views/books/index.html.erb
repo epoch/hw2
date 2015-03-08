@@ -1,0 +1,21 @@
+<h2>Books</h2>
+
+<% @books.each do |book| %>
+
+    <div>
+        <%=link_to(image_tag(book.image, :class => 'thumb'), book) %>
+    </div>
+    <ul>
+        <li>Title: <%=book.title %></li>
+        <%if book.author %>
+            <li>Author: <%= book.author.name %></li>
+        <%end%>
+        <li>Year: <%= book.year %></li>
+    </ul>
+
+<%end%>
+
+
+
+
+<!-- title image year author -->

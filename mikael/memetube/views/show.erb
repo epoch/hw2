@@ -1,0 +1,16 @@
+<h2><%= @video["name"] %></h2>
+<p>Genre: <em><%= @video["genre"] %></em></p>
+
+<video id="video" 
+  class="video-js vjs-default-skin"
+  controls
+  preload="auto"
+  width="640"
+  height="360"
+  data-setup='{"techOrder":["youtube"], "src":"<%= @video["video"] %>" }'>
+</video>
+
+<div>
+  <a href="/youtube/<%= @video["id"] %>/delete">Delete</a>
+  <a href="/youtube/<%= @video["id"] %>/edit">Edit</a>
+</div>

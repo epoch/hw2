@@ -1,0 +1,23 @@
+<h1><%=@mountain.name%></h1>
+
+<dl>
+    <div>
+    <dt>Height</dt>
+    <dd><%=number_with_delimiter(@mountain.height, delimiter: ",")%> m</dd>
+    </div>
+    <div>
+    <dt>Country</dt>
+    <dd><%=@mountain.country %></dd>
+    </div>
+    <div>
+    <dt>Nearest ocean</dt>
+    <dd><%=@mountain.nearest_ocean%></dd>
+    </div>
+</dl>
+
+
+<div><%= image_tag (@mountain.image) %></div>
+
+<%=link_to('Edit mountain', mountain_edit_path(@mountain.id))%>
+
+<%=button_to('Delete mountain', mountain_delete_path(@mountain.id))%>

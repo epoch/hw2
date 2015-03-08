@@ -1,0 +1,5 @@
+Author.destroy_all
+Book.destroy_all
+
+author1 = Author.create(:name => 'Tim Ferriss', :nationality => 'American', :dob => '1977/07/20', :bio => 'Timothy "Tim" Ferriss (born July 20, 1977) is an American author, entrepreneur, angel investor, and public speaker.', :image => 'http://upload.wikimedia.org/wikipedia/commons/b/bb/Timothy_Ferriss.jpg')
+Book.create(:title => 'The 4-Hour Work Week: Escape the 9-5, Live Anywhere and Join the New Rich', :date_published => '2011/08/31', :publisher => 'Ebury Digital', :description => 'Forget the old concept of retirement and the rest of the deferred-life plan - there is no need to wait and every reason not to, especially in unpredictable economic times. Whether your dream is escaping the rat race, experiencing high-end world travel, earning a monthly five-figure income with zero management, or just living more and working less, this book is the blueprint.', :image => 'http://ecx.images-amazon.com/images/I/71DPD5QEZCL._SL1263_.jpg', :author_id => author1.id)

@@ -1,0 +1,45 @@
+body {
+    background-color: #000;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+p {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 200px;
+    margin-bottom: 35px;
+}
+
+.yes, .no, .done, .restart {
+    text-decoration: none;
+    margin: 0px 15px;
+    padding: 11px 19px;
+    font-size: 17.5px;
+    color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.yes:hover, .no:hover, .done:hover, .restart:hover {
+    text-decoration: underline;
+}
+
+.yes {
+    background-color: #5bb75b;
+}
+
+.no {
+    background-color: #da4f49;
+} 
+
+.done, .restart {
+    background-color: #006dcc;
+}
+
+
+
+
+
