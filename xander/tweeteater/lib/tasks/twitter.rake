@@ -18,8 +18,9 @@ namespace :twitter do
 
     $twitter.search(args[:query]).take(args[:limit].to_i).each do |tweet|
     
-      puts tweet.text
-      
+      message = tweet.text
+      Tweet.create :post => message
+
     end
   end
 end
