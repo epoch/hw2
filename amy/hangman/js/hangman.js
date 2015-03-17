@@ -3,9 +3,14 @@ console.log('hangman js');
 $(document).ready(function(){
 
   var generateWord = function(event){
-    event.preventDefault();
+    // event.preventDefault();
+
+    console.log('generate word running');
     $('.hangman').empty();
     $('.word').empty();
+
+    word = _.sample(words);
+    letters = word.split('')
 
     console.log('Computer word is: ' + word);
 
@@ -17,8 +22,10 @@ $(document).ready(function(){
       letterDiv.appendTo($('.word'));
     };
   };
+  generateWord();
 
   var getLetter = function(event){
+    console.log('get letter running');
     event.preventDefault();
     $('.message').empty();
 
@@ -27,20 +34,36 @@ $(document).ready(function(){
 
     // checks if the letter has alrady been used 
     if (_.contains(usedLetters, $letter) === false){
-      letterDiv = $('<div></div>').addClass('used-letter-div');
-      letterP = $('<p></p>').addClass('used-letter-p').text($letter);
-      letterDiv.append(letterP);
-      letterDiv.appendTo($('.used-letters'));  
+ 
       usedLetters.push($letter);
       console.log('used letters are: ' + usedLetters);
 
       checkLetterMatch();
+      calcRemainingLetters();
       $('#letter').val('');
     }
     else{
       $('.message').append($('<p></p>').text("You've already chosen that letter"));
     };  
   };
+
+  var calcRemainingLetters = function(){
+    $('.remaining-letters').empty();
+
+    var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    remainingLetters = $(alphabet).not(usedLetters).get();
+           // debugger;
+    for (var i = 0; i < remainingLetters.length; i++) {
+      letter = remainingLetters[i];
+      letterDiv = $('<div></div>').addClass('remaining-letter-div');
+      letterP = $('<p></p>').addClass('remaining-letter-p').text(letter);
+      letterDiv.append(letterP);
+      letterDiv.appendTo($('.remaining-letters')); 
+
+    };
+
+
+  }
 
   var checkLetterMatch = function(){
   
@@ -52,6 +75,8 @@ $(document).ready(function(){
       $('.message').append($('<p></p>').text('Good guess! Pick another letter or guess the word.'));
     }else{
       console.log('nope soz');
+      wrongLetterCount++
+      makeHangman();
       $('.message').append($('<p></p>').text('Naww, try another letter.'));
 
     };
@@ -61,17 +86,97 @@ $(document).ready(function(){
 
   };
 
+  var makeHangman = function(){
+    console.log('makiing hngman');
+    console.log('wrong letter count: ' + wrongLetterCount);
+
+    if(wrongLetterCount === 1){
+
+    }
+    if(wrongLetterCount === 2){
+
+    }
+    if(wrongLetterCount === 3){
+
+    }
+    if(wrongLetterCount === 4){
+
+    }
+    if(wrongLetterCount === 5){
+
+    }
+    if(wrongLetterCount === 6){
+
+    }
+    if(wrongLetterCount === 7){
+
+    }
+    if(wrongLetterCount === 8){
+
+    }
+    if(wrongLetterCount === 9){
+
+    }
+    if(wrongLetterCount === 10){
+      
+      userLoses();
+    }
+
+  }
+
   var checkIfWon = function(){
+
+    // user wins if guesses all letters
+    if ($('p').hasClass('hide-letter') === false){
+      userWins();
+    } 
 
   }
 
   var checkIfLost = function(){
 
+    // user looes if turns exceed 10
+
+
+  }
+
+  var checkGuess= function(event){
+    console.log('check guess running');
+    event.preventDefault();
+    console.log('checking word');
+
+    guess = $('#word').val();
+
+    debugger;
+
+    if (guess === word) {
+      userWins();
+    }else{
+      $('.message').append($('<p></p>').text('Wrong, try again!'));
+    };
+
+  }
+
+  var userWins = function(){
+    $('.message').append($('<p></p>').text('You win!'));
+    $('.reset-content').empty();
+    $('a').removeClass('hide');
+  }
+
+  var userLoses = function(){
+    $('.message').append($('<p></p>').text('You lose. Play again?'));
+    $('.reset-content').empty();
+    $('a').removeClass('hide');
   }
 
 
+
+  // event handlers
   $('#letter-btn').on('click', getLetter);  
-  $('#play-game-btn').on('click', generateWord);
+  $('#word-btn').on('click', checkGuess);
+  $('.play-again').on('click', function(){
+    window.location.reload();
+  });
 
 });
 
@@ -285,3 +390,9 @@ var word = _.sample(words);
 var letters = word.split('');
 
 var usedLetters = [];
+
+var remainingLetters = [];
+
+var wrongLetterCount = 0;
+
+

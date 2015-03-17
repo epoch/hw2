@@ -15,7 +15,11 @@ body {
   visibility: hidden;
 }
 
-.used-letter-div {
+.hide {
+  display: none;
+}
+
+.remaining-letter-div {
   display: inline-block;
   margin: 4px;
   width: 50px;

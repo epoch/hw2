@@ -13,27 +13,28 @@
   <div class="main-container">
     <div class="hangman"></div>
     <div class="message"></div>
-    <div class="word"></div>
-    <div class="play-game">
-      <button id="play-game-btn">Play game</button>
+    <a href="#" class="hide play-again">Play again</a>
+<!--     <button id="play-game-btn" class="hide-play-btn">Play game</button> -->
+    <div class="reset-content">
+      <div class="word"></div>
+      <div class="choose-letter">
+        <form action="">
+          <label for="letter">Choose letter</label>
+          <input id="letter" maxlength="1" placeholder="Enter letter" required>
+          <button id="letter-btn">Submit</button> 
+        </form>
+      </div>
+      <div class="guess-word">
+        <form action="">
+          <label for="word">Guess word</label>
+          <input id="word" placeholder="Enter word" required>
+          <button id="word-btn">Submit</button> 
+        </form>
+      </div> 
+      <div class="remaining-letters">
+        <h2>Remaining letters</h2>
+      </div>  
     </div>
-    <div class="choose-letter">
-      <form action="">
-        <label for="letter">Choose letter</label>
-        <input id="letter" maxlength="1" placeholder="Enter letter" required>
-        <button id="letter-btn">Submit</button> 
-      </form>
-    </div>
-    <div class="used-letters">
-      <h2>Used letters</h2>
-    </div>
-    <div class="guess-word">
-      <form action="">
-        <label for="word">Guess word</label>
-        <input id="word" placeholder="Enter word" required>
-        <button id="word-btn">Submit</button> 
-      </form>
-    </div>   
   </div>
 </body>
 </html>
