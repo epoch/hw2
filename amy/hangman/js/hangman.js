@@ -6,8 +6,8 @@ $(document).ready(function(){
     // event.preventDefault();
 
     console.log('generate word running');
-    $('.hangman').empty();
-    $('.word').empty();
+    // $('.hangman').empty();
+    // $('.word').empty();
 
     word = _.sample(words);
     letters = word.split('')
@@ -91,34 +91,34 @@ $(document).ready(function(){
     console.log('wrong letter count: ' + wrongLetterCount);
 
     if(wrongLetterCount === 1){
-
+      $(".base").css("border-color", "red");
     }
     if(wrongLetterCount === 2){
-
+      $('.left-bar').css("border-color", "red");
     }
     if(wrongLetterCount === 3){
-
+      $('.top-bar').css("border-color", "red");
     }
     if(wrongLetterCount === 4){
-
+    $('.side-bar').css("border-color", "red");
     }
     if(wrongLetterCount === 5){
-
+      $('.noose').css("border-color", "red");
     }
     if(wrongLetterCount === 6){
-
+      $('.head').css("border-color", "red");
     }
     if(wrongLetterCount === 7){
-
+      $('.body').css("border-color", "red");
     }
     if(wrongLetterCount === 8){
-
+      $('.arms').css("border-color", "red");
     }
     if(wrongLetterCount === 9){
-
+      $('.l-leg').css("border-color", "red");
     }
     if(wrongLetterCount === 10){
-      
+      $('.r-leg').css("border-color", "red");
       userLoses();
     }
 
