@@ -1,0 +1,19 @@
+
+
+<div class="header"> There are <%= @result['Search'].count %> search results: </div>
+
+<div class="search"> 
+
+<% @result['Search'].each do |movie| %>
+<p><a href="/result?imdbID=<%= movie['imdbID'] %>&<%= @info.map { |x| 'info%5B%5D=' + x }.join('&') %>"><%= movie['Title'] %> <%= movie['Year'] %></a></p>               
+
+<% end %>
+
+</div>
+
+
+<!-- <iframe width="420" style="display:none;" height="315" src="https://www.youtube.com/embed/CY_htwAmBOQ?autoplay=1" frameborder="0" allowfullscreen></iframe> -->
+
+
+
+

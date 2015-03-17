@@ -1,0 +1,32 @@
+<div class="header"><%= @film['Title'] %></div> 
+<% if @film['Poster'] != 'N/A' %>
+<img src="<%= @film['Poster']%>">
+<% else %> 
+<div class="no_poster"> There is no poster for this movie.</div>
+<% end %>
+<div class="result">
+
+
+<% @info.each do |x| %>  
+  <% if @film[x] != 'N/A' %> 
+  <p><%=  @film[x] %></p>
+  <% end %>
+<% end %>
+
+</div>
+
+
+
+
+
+
+
+        
+
+
+
+
+    
+    
+
+

@@ -1,0 +1,24 @@
+
+
+    <article><h1><%= params[:movie] %></h1></article> 
+
+    <pre>
+        <aside>
+            <% params[:info].each do |text| %>
+                <% if text == 'Poster' %>
+                    <img src="<%= @result[text] %>">
+                <% else %>
+                    <%= text %>: <%= @result[text] %>                                                                       
+                <% end %>
+            <% end %>
+        </aside>
+    </pre>
+        
+
+
+
+
+    
+    
+
+
