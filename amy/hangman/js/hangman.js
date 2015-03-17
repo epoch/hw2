@@ -43,16 +43,15 @@ $(document).ready(function(){
       $('#letter').val('');
     }
     else{
-      $('.message').append($('<p></p>').text("You've already chosen that letter"));
+      $('.message').append($('<p></p>').text("You already chose '"+$letter+"'. Pick again."));
     };  
   };
 
   var calcRemainingLetters = function(){
-    $('.remaining-letters').empty();
+    $('.remaining-letter-div').remove();
 
     var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
     remainingLetters = $(alphabet).not(usedLetters).get();
-           // debugger;
     for (var i = 0; i < remainingLetters.length; i++) {
       letter = remainingLetters[i];
       letterDiv = $('<div></div>').addClass('remaining-letter-div');
@@ -61,9 +60,8 @@ $(document).ready(function(){
       letterDiv.appendTo($('.remaining-letters')); 
 
     };
-
-
   }
+  calcRemainingLetters();
 
   var checkLetterMatch = function(){
   
@@ -72,13 +70,12 @@ $(document).ready(function(){
 
     if (_.contains(letters, $letter) === true){
       $( "p:contains(" + $letter + ")" ).removeClass('hide-letter');
-      $('.message').append($('<p></p>').text('Good guess! Pick another letter or guess the word.'));
+      $('.message').append($('<p></p>').text('Good choice! Pick another letter or guess the word.'));
     }else{
       console.log('nope soz');
       wrongLetterCount++
+      $('.message').append($('<p></p>').text('Doh! Try another letter.'));
       makeHangman();
-      $('.message').append($('<p></p>').text('Naww, try another letter.'));
-
     };
 
     checkIfWon();
@@ -127,7 +124,7 @@ $(document).ready(function(){
   var checkIfWon = function(){
 
     // user wins if guesses all letters
-    if ($('p').hasClass('hide-letter') === false){
+    if ($('p').hasClass('hide-letter') === false && wrongLetterCount < 10){
       userWins();
     } 
 
@@ -136,7 +133,6 @@ $(document).ready(function(){
   var checkIfLost = function(){
 
     // user looes if turns exceed 10
-
 
   }
 
@@ -147,8 +143,6 @@ $(document).ready(function(){
 
     guess = $('#word').val();
 
-    debugger;
-
     if (guess === word) {
       userWins();
     }else{
@@ -158,17 +152,18 @@ $(document).ready(function(){
   }
 
   var userWins = function(){
+    $('.message').empty();
     $('.message').append($('<p></p>').text('You win!'));
     $('.reset-content').empty();
     $('a').removeClass('hide');
   }
 
   var userLoses = function(){
-    $('.message').append($('<p></p>').text('You lose. Play again?'));
+    $('.message').empty();
+    $('.message').append($('<p></p>').text('You lose!'));
     $('.reset-content').empty();
     $('a').removeClass('hide');
   }
-
 
 
   // event handlers
@@ -182,7 +177,6 @@ $(document).ready(function(){
 
 
 // if used letters length is 26, no more turns, show answer
-
 
 var words = ["waste",
  "donkey",

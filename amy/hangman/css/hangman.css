@@ -3,6 +3,10 @@ body {
   font-size: 25px;
 }
 
+h2 {
+  font-size: 28px;
+}
+
 .left {
   display: inline-block;
   width: 48%;
@@ -29,10 +33,14 @@ body {
   display: none;
 }
 
+.remaining-letters{
+  width: 80%;
+}
+
 .remaining-letter-div {
   display: inline-block;
-  margin: 4px;
-  width: 50px;
+  margin: 3px;
+  width: 30px;
   text-align: center;
 }
 
@@ -131,6 +139,10 @@ body {
   -ms-transform: rotate(135deg); /* IE 9 */
   -webkit-transform: rotate(135deg); /* Chrome, Safari, Opera */
   transform: rotate(135deg);
+}
+
+.choose-letter, .guess-word {
+  margin-top: 20px;
 }
 
 
