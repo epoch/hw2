@@ -1,0 +1,149 @@
+body {
+  font-family: helvetica, arial; 
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.left {
+  display: inline-block;
+  width: 48%;
+}
+
+.right {
+  display: inline-block;
+  width: 48%;
+}
+
+.letter-div {
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  margin: 4px;
+  width: 50px;
+  text-align: center;
+}
+
+.hide-letter {
+  visibility: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.remaining-letters{
+  width: 80%;
+}
+
+.remaining-letter-div {
+  display: inline-block;
+  margin: 3px;
+  width: 30px;
+  text-align: center;
+}
+
+.hangman {
+  margin-top: 200px;
+  /*position: relative;*/
+}
+
+.base {
+  width: 250px;
+  border-bottom: 2px solid #000;
+  position: absolute;
+  left: 590px;
+  top: 550px;
+}
+
+.left-bar{
+  height: 500px;
+  border-right: 2px solid #000;
+  position: absolute;
+  /*right: 0px;*/
+  top: 50px;
+}
+
+.top-bar{
+  width: 500px;
+  border-top: 2px solid #000;
+  position: absolute;
+  /*right: 0px;*/
+  top: 50px;
+}
+
+.side-bar{
+  height: 270px;
+  border-right: 2px solid #000;
+  position: absolute;
+  left: 800px;
+  top: 20px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
+.noose{
+  height: 100px;
+  border-right: 2px solid #000;
+  position: absolute;
+  right: 240px;
+  top: 50px;
+}
+
+.head{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  position: absolute;
+  right: 190px;
+  top: 150px;
+}
+
+.body{
+  border-right: 2px solid #000;
+  height: 170px;
+  position: absolute;
+  right: 240px;
+  top: 250px;
+
+}
+
+.arms {
+  width: 150px;
+  border-bottom: 2px solid #000;
+  position: absolute;
+  right: 170px;
+  top: 300px;
+}
+
+.l-leg{
+  border-right: 2px solid #000;
+  height: 100px;
+  position: absolute;
+  right: 274px;
+  top: 400px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
+.r-leg {
+  border-left: 2px solid #000;
+  height: 100px;
+  position: absolute;
+  right: 205px;
+  top: 400px;
+  -ms-transform: rotate(135deg); /* IE 9 */
+  -webkit-transform: rotate(135deg); /* Chrome, Safari, Opera */
+  transform: rotate(135deg);
+}
+
+.choose-letter, .guess-word {
+  margin-top: 20px;
+}
+
+
+

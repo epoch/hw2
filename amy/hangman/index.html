@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="css/hangman.css">
+  <script src="js/underscore.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/hangman.js"></script>
+</head>
+<body>
+  <h1>Hangman</h1>
+  <div class="main-container">
+  <div class="message"></div>
+  <a href="#" class="hide play-again">Play again</a>
+  <div class="reset-content">
+    <div class="left">
+      <div class="word"></div>
+      <div class="choose-letter">
+        <form action="">
+          <label for="letter">Choose letter</label>
+          <input id="letter" maxlength="1" placeholder="Enter letter" required>
+          <button id="letter-btn">Submit</button> 
+        </form>
+      </div>
+      <div class="guess-word">
+        <form action="">
+          <label for="word">Guess word</label>
+          <input id="word" placeholder="Enter word" required>
+          <button id="word-btn">Submit</button> 
+        </form>
+      </div> 
+      <div class="remaining-letters">
+        <h2>Remaining letters</h2>
+      </div>  
+    </div>
+    <div class="right">
+      <div class="hangman">
+        <div class="base"></div>
+        <div class="left-bar"></div>
+        <div class="top-bar"></div>
+        <div class="noose"></div>
+        <div class="side-bar"></div>
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="arms"></div>
+        <div class="l-leg"></div>
+        <div class="r-leg"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
