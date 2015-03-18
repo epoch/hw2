@@ -1,0 +1,12 @@
+<h2 class='post-list'>Posts</h2>
+
+
+<ul class='post-list-index'>
+  <% @posts.each do |post| %>
+    <li>
+      <a href="/posts/<%= post.id %>">
+        <%= post.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>

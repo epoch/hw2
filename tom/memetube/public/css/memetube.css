@@ -109,7 +109,7 @@ header {
 
 #listing ul {
   margin-top: 70px;
-  list-style: none;
+  list-style: square;
   margin-left: 100px;
 }
 
@@ -169,4 +169,3 @@ text-align: center;
 .inputs ul {
   list-style: none;
 }
-

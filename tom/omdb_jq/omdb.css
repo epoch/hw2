@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700,400italic);
+
+body {
+  font-family: 'Cabin', sans-serif;
+  background-image: url('gplaypattern.png');
+}
+
+b {
+  font-size: 24px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: red;
+}
+
+img {
+  border: 3px solid #555252;
+}
+
+h1 {
+  z-index: 5;
+  font-size: 45px;
+  margin-bottom: 25px;
+  margin-top: 50px;
+}
+
+.container {
+
+  height: 100vh;
+  width: 750px;
+}
+
+.search-bar {
+  margin-bottom: 100px;
+}
+
+#info-box {
+  margin-top: -80px;
+}

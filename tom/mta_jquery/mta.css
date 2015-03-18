@@ -1,0 +1,21 @@
+body {
+  font-family: 'Helvetica';
+}
+
+#info {
+  border: 1px solid black;
+  visibility: hidden;
+}
+
+#inputs {
+  display: inline-block;
+  width: 39%;
+
+}
+
+#map {
+  float: right;
+  font-size: 18pt;
+  width: 59%;
+
+}

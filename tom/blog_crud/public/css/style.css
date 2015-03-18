@@ -1,0 +1,175 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,500);
+
+body {
+  background-image: url('http://www.webtexture.net/wp-content/gallery/20-seamless-paper-texture/papar_texture_thumb03.jpg');
+  background-repeat: repeat;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Cabin', sans-serif;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+  background-color: #e3f2fd;
+}
+
+#home-blurb {
+  position: relative;
+}
+
+#most-recent-post {
+  width: 70%;
+}
+
+#most-recent-post img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+#most-recent-post h2 {
+  border: 1px solid #4D68A1;
+  background-color: white;
+  padding: 0.3em;
+}
+
+#most-recent-post a {
+  color: #4D68A1;
+  text-decoration: none;
+}
+
+#top-five {
+  width: 29%;
+  position: absolute;
+  top: -19px;
+  right: 0;
+}
+
+#top-five ul {
+  list-style: square;
+}
+
+#top-five h3 {
+  background-color: white;
+  border: 1px solid #4D68A1;
+  color: #4D68A1;
+  padding: 0.55em;
+}
+
+header {
+  border: 1px solid #4D68A1;
+  background-color: #4D68A1;
+  position: relative;
+}
+
+header h1 {
+  text-align: left;
+  margin-left: 1em;
+  font-size: 38pt;
+  margin-bottom: 100px;
+  margin-top: 60px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.menu li {
+  display: inline-block;
+
+}
+
+.menu a {
+   color: #4D68A1;
+   text-decoration: none;
+   margin-right: 1em;
+   margin-left: 1em;
+}
+
+.post {
+  position: relative;
+}
+
+.post h2 {
+  border: 1px solid #4D68A1;
+  background-color: white;
+  color: #4D68A1;
+  padding: 0.3em;
+  width: 70%;
+}
+
+/*needs to be displayed as a block before it can be centred, as it is not block by default*/
+.content-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  padding: 0.75em;
+  border: 1px solid #4D68A1;
+}
+
+.controls a {
+  margin-right: 1em;
+  margin-left: 1em;
+  color: #4D68A1;
+  font-size: 10pt;
+}
+
+.post-list {
+  border: 1px solid #4D68A1;
+  background-color: white;
+  color: #4D68A1;
+  padding: 0.3em;
+  width: 70%;
+}
+
+.post-list-index {
+  list-style: square;
+  padding-bottom: 3em;
+  padding-top: 2em;
+}
+
+form {
+  margin-left: 3em;
+  padding-bottom: 3em;
+}
+
+textarea {
+  width: 95%;
+  height: 200px;
+}
+
+.home-post-content {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+.show-content {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+.about {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}

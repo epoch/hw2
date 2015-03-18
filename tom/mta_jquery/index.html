@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MTA jQ</title>
+  <link rel="stylesheet" href="mta.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="mta.js"></script>
+</head>
+<body>
+
+  <h1>MTA jQuery</h1>
+
+  <h2>Start</h2>
+
+  <div id="start">
+    <p>Line:</p>
+    <select name="start-line" id="start-line-dropdown">
+      <option value="N" class="start-line">Line N</option>
+      <option value="L" class="start-line">Line L</option>
+      <option value="6" class="start-line">Line 6</option>
+    </select>
+
+    <button id="show-stations">Show stations</button>
+
+    <!-- need to sort out different classes for the stations options -->
+    <div class="start-stations-n">
+      <select name="start-stations-n">
+        <option value="Times Square">Times Square</option>
+        <option value="34th">34th</option>
+        <option value="28th">28th</option>
+        <option value="23rd">23rd</option>
+        <option value="Union Square">Union Square</option>
+        <option value="3rd">3rd</option>
+        <option value="1st">1st</option>
+      </select>
+    </div>
+
+    <div class="start-stations-l">
+      <select name="start-stations-l">
+        <option value="8th">8th</option>
+        <option value="6th">6th</option>
+        <option value="Union Square">Union Square</option>
+        <option value="3rd">3rd</option>
+        <option value="1st">1st</option>
+      </select>
+    </div>
+
+    <div class="start-stations-6">
+      <select name="start-stations-6">
+        <option value="Grand Central">Grand Central</option>
+        <option value="33rd">33rd</option>
+        <option value="28th">28th</option>
+        <option value="23rd">23rd</option>
+        <option value="Union Square">Union Square</option>
+        <option value="Astor Place">Astor Place</option>
+      </select>
+    </div>
+
+    <!-- have each of the stations select menus here but set to hidden
+    when N line is chosen, set the visibility of the N stations dropdown to show -->
+    <!-- NEED TO CHANGE SELECT NAMES AND CLASSES FOR EACH HIDDEN AND VISIBLE DIV SO THEY ARE UNIQUE AND CAN
+    BE TARGETED INDIVIDUALLY -->
+  </div>
+
+  <h2>Finish</h2>
+
+  <div id="finish">
+    <select name="finish" id="finish-line-dropdown">
+      <option value="N" class="finish-line">Line N</option>
+      <option value="L" class="finish-line">Line L</option>
+      <option value="6" class="finish-line">Line 6</option>
+    </select>
+
+    <button id="show-stations-finish">Show stations</button>
+
+
+    <!-- need to sort out different classes for the stations options -->
+    <div class="finish-stations-n">
+      <select name="finish-sations-n">
+        <option value="Times Square">Times Square</option>
+        <option value="34th">34th</option>
+        <option value="28th">28th</option>
+        <option value="23rd">23rd</option>
+        <option value="Union Square">Union Square</option>
+        <option value="3rd">3rd</option>
+        <option value="1st">1st</option>
+      </select>
+    </div>
+
+    <div class="finish-stations-l">
+      <select name="finish-stations-l">
+        <option value="8th">8th</option>
+        <option value="6th">6th</option>
+        <option value="Union Square">Union Square</option>
+        <option value="3rd">3rd</option>
+        <option value="1st">1st</option>
+      </select>
+    </div>
+
+    <div class="finish-stations-6">
+      <select name="finish-stations-6">
+        <option value="Grand Central">Grand Central</option>
+        <option value="33rd">33rd</option>
+        <option value="28th">28th</option>
+        <option value="23rd">23rd</option>
+        <option value="Union Square">Union Square</option>
+        <option value="Astor Place">Astor Place</option>
+      </select>
+    </div>
+
+  </div>
+
+  <button id="plan-route">Plan Route</button>
+
+  <div id="info"></div>
+
+</body>
+</html>

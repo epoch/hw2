@@ -1,0 +1,28 @@
+<!-- get this page to display the most recent post, and the five most recent titles of other posts? -->
+
+<!-- THIS WORKS! -->
+
+<!-- make this in such a way that the most recent post shown on the homepage is a
+smaller version of the inital post, in size, and style it so it fits in with
+a group of posts on the side -->
+<div id="home-blurb">
+  <div id="most-recent-post">
+
+    <h2><a href="/posts/<%= @most_recent_post.id %>"><%= @most_recent_post.title %></a></h2>
+    <div class='home-post-content'>
+      <p>Created: <%= @most_recent_post.post_time %></p>
+      <p><%= @most_recent_post.body %></p>
+      <img src="<%= @most_recent_post.image %>">
+    </div>
+  </div>
+
+  <div id="top-five">
+  <h3>Recent Posts:</h3>
+  <ul>
+    <% @top_five.each do |post| %>
+      <li><a href="/posts/<%= post.id %>"><%= post.title %></a></li>
+    <% end %>
+  </ul>
+  </div>
+
+</div>

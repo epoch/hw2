@@ -25,8 +25,8 @@
       <ul>
         <% @genres.each do |group| %>
           <li>
-            <a href="/videos/genre/<%= group["genre"] %>">
-              <%= group["genre"] %>
+            <a href="/videos/genre/<%= group.genre %>">
+              <%= group.genre %>
             </a>
           </li>
         <% end %>

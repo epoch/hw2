@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman JS</title>
+  <script src="jquery.js"></script>
+  <script src="underscore.js"></script>
+  <script src="hangman.js"></script>
+</head>
+<body>
+  <h1>Hangman</h1>
+
+  <div id="gameboard">
+    <p id="underscores"></p>
+    <p id="guess-counter"></p>
+  </div>
+
+  <!-- Maybe generate this with jQuery when the game starts. -->
+  <div id="incorrect-guesses">
+    <h2 id="crosses"></h2>
+    <h3>Incorrect Guesses:</h3>
+  </div>
+
+  <form>
+    <!-- Need to limit this to one letter! -->
+    <input type="text" id="guess-input" autofocus>
+    <button id="submit">Guess</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<%= form_for @author, :html => {:class => "form-horizontal"} do |f| %>
+  <div class="form-group">
+    <%= f.label :name, :class => "col-md-2 col-md-offset-1 text-right" %>
+    <%= f.text_field :name, :autofocus => true, :class => "col-md-6" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dob, 'DOB', :class => "col-md-2 col-md-offset-1 text-right" %>
+    <%= f.text_field :dob, :class => "col-md-6" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :nationality, :class => "col-md-2 col-md-offset-1 text-right" %>
+    <%= f.text_field :nationality, :class => "col-md-6" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image, :class => "col-md-2 col-md-offset-1 text-right" %>
+    <%= f.text_field :image, :class => "col-md-6" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit :class => "col-md-2 col-md-offset-5" %>
+  </div>
+<% end %>
