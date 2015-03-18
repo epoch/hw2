@@ -1,0 +1,13 @@
+hello world 
+
+<form action="/symbol">
+   <input name="symbol" placeholder="Stock" value ="<%= params[:symbol] %>">
+
+   <button>Get Quote</button>
+</form>
+
+<h1><%= params[:symbol] %> last traded at:</h1>
+
+<em><%= @result %></em>
+
+<p>Thank you for using Faryar's Stock Site</p>

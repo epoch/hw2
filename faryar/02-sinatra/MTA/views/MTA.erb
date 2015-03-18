@@ -1,0 +1,89 @@
+<header> 
+<pre>
+<% @subway.each do |line| %> 
+<%=  line %> 
+<% end %> 
+
+
+</pre>
+</header>
+<form action="/result">
+
+<h3>What line are you getting on at?</h3>
+<p>
+    <label for="line_start">Line:</label>
+    <select name="line_start" id="line_start">
+        <option value="N">N</option>
+        <option value="L">L</option>
+        <option value="6">6</option>
+    </select>
+</p>
+
+<h3>What station are you getting on at?</h3>
+<p>
+    <label for="station_start">Station:</label>
+    <select name="station_start" id="station_start">
+        <option value="ASTOR PLACE">ASTOR PLACE</option>
+        <option value="GRAND CENTRAL">GRAND CENTRAL</option>
+        <option value="TIMES SQUARE">TIMES SQUARE</option>
+        <option value="UNION SQUARE" selected>UNION SQUARE</option>
+        <option value="1ST">1ST</option>
+        <option value="3RD">3RD</option>
+        <option value="6TH">6TH</option>
+        <option value="8TH (N)">8TH (N)</option>
+        <option value="8TH (L)">8TH (L)</option>
+        <option value="23RD (N)">23RD (N)</option>
+        <option value="23RD (6)">23RD (6)</option>
+        <option value="28TH (N)">28TH (N)</option>
+        <option value="28TH (6)">28TH (6)</option>
+        <option value="33RD">33RD</option>
+        <option value="34TH">34TH</option>
+    </select>
+</p>
+
+<h3>What line are you getting off at?</h3>
+<p>
+    <label for="line_end">Line:</label>
+    <select name="line_end" id="line_end">
+        <option value="N">N</option>
+        <option value="L">L</option>
+        <option value="6">6</option>
+    </select>
+</p>
+
+<h3>What station are you getting off at?</h3>
+<p>
+    <label for="station_end">Station:</label>
+    <select name="station_end" id="station_end">
+        <option value="ASTOR PLACE">ASTOR PLACE</option>
+        <option value="GRAND CENTRAL">GRAND CENTRAL</option>
+        <option value="TIMES SQUARE">TIMES SQUARE</option>
+        <option value="UNION SQUARE" selected>UNION SQUARE</option>
+        <option value="1ST">1ST</option>
+        <option value="3RD">3RD</option>
+        <option value="6TH">6TH</option>
+        <option value="8TH (N)">8TH</option>
+        <option value="8TH (L)">8TH</option>
+        <option value="23RD (N)">23RD</option>
+        <option value="23RD (6)">23RD</option>
+        <option value="28TH (N)">28TH</option>
+        <option value="28TH (6)">28TH</option>
+        <option value="28TH">28TH</option>
+        <option value="33RD">33RD</option>
+        <option value="34TH">34TH</option>
+    </select>
+</p>
+
+<button>Submit</button>  
+
+</form>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+
+body { 
+background-color: #FFC293; 
+color: black;
+font-family: 'Share Tech Mono'; 
+display: block;
+background-image: url(https://alualuna.files.wordpress.com/2012/01/scan-22.jpg);
+margin: auto;
+}
+
+
+.container { 
+max-width: 1200px; 
+margin: auto;
+}
+
+p { 
+font-size: 20px; 
+margin-top: 0px; 
+}
+
+h1 { 
+margin: auto;
+text-align: center; 
+}
+
+article > h1 { 
+text-align: left; 
+}
+
+h2 { 
+position: relative;
+top: -12px;
+margin-bottom: 0px; 
+}
+
+div > p {  
+margin-left: 250px; 
+color: white;
+padding-top: -20px; 
+font-size: 120%; 
+}
+
+img { 
+position: absolute;
+top: 53px;
+left: 606px;
+}
+
+label { 
+padding-top: -10px; 
+}
+
+aside { 
+width: 15%;
+position: relative;
+left: 200px;
+color: white;
+}
+
+
+
+

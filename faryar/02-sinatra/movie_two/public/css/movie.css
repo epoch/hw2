@@ -1,0 +1,114 @@
+@import url(//fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+
+body { 
+background-color: #FFC293; 
+color: black;
+font-family: 'Share Tech Mono'; 
+/*display: block;*/
+background-image: url(https://alualuna.files.wordpress.com/2012/01/scan-22.jpg);
+/*margin: auto;*/
+}
+
+
+a { 
+text-decoration: none;
+color: white; 
+}
+
+/*.container { 
+max-width: 1200px; 
+}*/
+
+.search > p {  
+margin-top: 30px; 
+}
+
+h1 { 
+margin: 8px 0px 0px 0px; 
+text-align: center; 
+}
+
+/*article > h1 { 
+text-align: left; 
+font-size: 20px; 
+margin-left: 5px; 
+}*/
+
+/*h2 { 
+position: relative;
+margin-left: 40px; 
+margin-bottom: 5px; 
+margin-top: 4px;  
+font-size: 20px;  
+}*/
+
+/*div > p {  
+margin-left: 240px; 
+color: white;
+padding-top: -20px; 
+font-size: 120%; 
+}*/
+
+img { 
+float: right; 
+margin-top: 85px; 
+margin-right: 130px; 
+}
+
+label { 
+margin-left: 5px; 
+margin-top: 0px; 
+font-size: 16px;  
+}
+
+/*aside { 
+width: 15%;
+position: relative;
+left: 200px;
+color: white;
+}*/
+
+.search { 
+max-width: 680px; 
+margin-left: 240px; 
+margin-top: 95px;
+color: white; 
+
+ }
+
+.result { 
+max-width: 680px; 
+margin-left: 100px; 
+margin-top: 135px;
+color: white; 
+text-align: center; 
+
+ }
+
+/*.search_count { 
+  margin-left: 20px; 
+  margin-top: 8px; 
+  font-size: 22px; 
+
+ }*/
+
+ .major { 
+  margin-left: 240px;
+  color: white; 
+  margin-top: 60px;  }
+
+.header { 
+  font-size: 20px; 
+  margin-left: 5px; }
+
+.no_poster { 
+float: right; 
+margin-top: 85px; 
+margin-right: 130px; 
+color: white;
+}
+
+
+
+
