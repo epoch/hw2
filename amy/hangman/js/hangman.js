@@ -1,4 +1,4 @@
-console.log('hangman js');
+// console.log('hangman js');
 
 $(document).ready(function(){
 
@@ -20,13 +20,21 @@ $(document).ready(function(){
   };
   generateWord();
 
+  var addLetter = function(){
+    console.log('selecting letter');
+    // debugger;
+    lastSelected = this;
+    $('#letter').val(this.innerHTML);
+    // debugger;
+  };
+
   var getLetter = function(event){
     console.log('get letter running');
     event.preventDefault();
     $('.message').empty();
 
     var $letter = $('#letter').val();
-    console.log ('letter is:' + $letter);
+    console.log('letter is:' + $letter);
 
     // checks if the letter has alrady been used 
     if (_.contains(usedLetters, $letter) === false){
@@ -34,8 +42,11 @@ $(document).ready(function(){
       usedLetters.push($letter);
       console.log('used letters are: ' + usedLetters);
 
+      $(lastSelected).parent().remove();
       checkLetterMatch();
-      calcRemainingLetters();
+
+      // calcRemainingLetters();
+
       $('#letter').val('');
     }
     else{
@@ -43,8 +54,9 @@ $(document).ready(function(){
     };  
   };
 
+
   var calcRemainingLetters = function(){
-    $('.remaining-letter-div').remove();
+
 
     var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
     remainingLetters = $(alphabet).not(usedLetters).get();
@@ -60,7 +72,8 @@ $(document).ready(function(){
   calcRemainingLetters();
 
   var checkLetterMatch = function(){
-  
+    // $(lastSelected).parent().remove();
+
     $letter = $('#letter').val();
     console.log('checking letter: ' + $letter);
 
@@ -132,8 +145,15 @@ $(document).ready(function(){
 
 
   // event handlers
-  $('#letter-btn').on('click', getLetter);  
+  $('#letter-btn').on('click', getLetter); 
+  $('.remaining-letter-p').on('click', addLetter) 
   $('#word-btn').on('click', checkGuess);
+  $('#word-btn').on('keypress', function(){
+      if(event.which != 13){
+          return;
+      }
+      checkGuess();
+  });
   $('.play-again').on('click', function(){
     window.location.reload();
   });
@@ -351,6 +371,8 @@ var words = ["waste",
  "ratty",
  "reproduce"]
 
+
+
 var word = _.sample(words);
 
 var letters = word.split('');
@@ -359,11 +381,13 @@ var usedLetters = [];
 
 var remainingLetters = [];
 
+var lastSelected;
+
 var wrongLetterCount = 0;
 
+
 // to do:
-// choose letters on click
-// enter key rather than submit button 
+// choose letters on click 
 // words api
 // css
 // EATON are the most common letters in the english language
