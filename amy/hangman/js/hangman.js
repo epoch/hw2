@@ -3,12 +3,8 @@ console.log('hangman js');
 $(document).ready(function(){
 
   var generateWord = function(event){
-    // event.preventDefault();
 
     console.log('generate word running');
-    // $('.hangman').empty();
-    // $('.word').empty();
-
     word = _.sample(words);
     letters = word.split('')
 
@@ -87,53 +83,23 @@ $(document).ready(function(){
     console.log('makiing hngman');
     console.log('wrong letter count: ' + wrongLetterCount);
 
-    if(wrongLetterCount === 1){
-      $(".base").css("border-color", "red");
-    }
-    if(wrongLetterCount === 2){
-      $('.left-bar').css("border-color", "red");
-    }
-    if(wrongLetterCount === 3){
-      $('.top-bar').css("border-color", "red");
-    }
-    if(wrongLetterCount === 4){
-    $('.side-bar').css("border-color", "red");
-    }
-    if(wrongLetterCount === 5){
-      $('.noose').css("border-color", "red");
-    }
-    if(wrongLetterCount === 6){
-      $('.head').css("border-color", "red");
-    }
-    if(wrongLetterCount === 7){
-      $('.body').css("border-color", "red");
-    }
-    if(wrongLetterCount === 8){
-      $('.arms').css("border-color", "red");
-    }
-    if(wrongLetterCount === 9){
-      $('.l-leg').css("border-color", "red");
-    }
+    // select the correct hangman part by the wrongLetterCount
+    $('.hangman-'+wrongLetterCount).css("border-color", "red");
+
     if(wrongLetterCount === 10){
-      $('.r-leg').css("border-color", "red");
       userLoses();
     }
-
   }
 
   var checkIfWon = function(){
-
     // user wins if guesses all letters
     if ($('p').hasClass('hide-letter') === false && wrongLetterCount < 10){
       userWins();
     } 
-
   }
 
   var checkIfLost = function(){
-
     // user looes if turns exceed 10
-
   }
 
   var checkGuess= function(event){
@@ -148,7 +114,6 @@ $(document).ready(function(){
     }else{
       $('.message').append($('<p></p>').text('Wrong, try again!'));
     };
-
   }
 
   var userWins = function(){
@@ -174,6 +139,13 @@ $(document).ready(function(){
   });
 
 });
+
+// game loop when you start it initializes certain things
+// then the game is running
+// and if you want to exit the game or save it then you break our of the loop
+// so you have a bunch of steps in the game and while its running you are prompting them to 
+// do someting 
+// you break out of the loop when the user chooses to or they loose or win
 
 
 // if used letters length is 26, no more turns, show answer
@@ -388,5 +360,12 @@ var usedLetters = [];
 var remainingLetters = [];
 
 var wrongLetterCount = 0;
+
+// to do:
+// choose letters on click
+// enter key rather than submit button 
+// words api
+// css
+// EATON are the most common letters in the english language
 
 
