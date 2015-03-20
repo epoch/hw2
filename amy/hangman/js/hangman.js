@@ -23,7 +23,6 @@ $(document).ready(function(){
   var addLetter = function(){
     console.log('selecting letter');
     // debugger;
-    lastSelected = this;
     $('#letter').val(this.innerHTML);
     // debugger;
   };
@@ -42,6 +41,10 @@ $(document).ready(function(){
       usedLetters.push($letter);
       console.log('used letters are: ' + usedLetters);
 
+      // debugger
+      $letter = $('#letter').val();
+      var lastSelected = $( "p:contains(" + $letter + ")" );
+
       $(lastSelected).parent().remove();
       checkLetterMatch();
 
@@ -57,6 +60,7 @@ $(document).ready(function(){
 
   var calcRemainingLetters = function(){
 
+    // $('.remaining-letters').remove();
 
     var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
     remainingLetters = $(alphabet).not(usedLetters).get();
@@ -381,7 +385,7 @@ var usedLetters = [];
 
 var remainingLetters = [];
 
-var lastSelected;
+// var lastSelected;
 
 var wrongLetterCount = 0;
 
