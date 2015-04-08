@@ -1,14 +1,10 @@
-console.log('hangman js');
+// console.log('hangman js');
 
 $(document).ready(function(){
 
   var generateWord = function(event){
-    // event.preventDefault();
 
     console.log('generate word running');
-    // $('.hangman').empty();
-    // $('.word').empty();
-
     word = _.sample(words);
     letters = word.split('')
 
@@ -24,13 +20,20 @@ $(document).ready(function(){
   };
   generateWord();
 
+  var addLetter = function(){
+    console.log('selecting letter');
+    // debugger;
+    $('#letter').val(this.innerHTML);
+    // debugger;
+  };
+
   var getLetter = function(event){
     console.log('get letter running');
     event.preventDefault();
     $('.message').empty();
 
     var $letter = $('#letter').val();
-    console.log ('letter is:' + $letter);
+    console.log('letter is:' + $letter);
 
     // checks if the letter has alrady been used 
     if (_.contains(usedLetters, $letter) === false){
@@ -38,8 +41,15 @@ $(document).ready(function(){
       usedLetters.push($letter);
       console.log('used letters are: ' + usedLetters);
 
+      // debugger
+      $letter = $('#letter').val();
+      var lastSelected = $( "p:contains(" + $letter + ")" );
+
+      $(lastSelected).parent().remove();
       checkLetterMatch();
-      calcRemainingLetters();
+
+      // calcRemainingLetters();
+
       $('#letter').val('');
     }
     else{
@@ -47,8 +57,10 @@ $(document).ready(function(){
     };  
   };
 
+
   var calcRemainingLetters = function(){
-    $('.remaining-letter-div').remove();
+
+    // $('.remaining-letters').remove();
 
     var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
     remainingLetters = $(alphabet).not(usedLetters).get();
@@ -64,7 +76,8 @@ $(document).ready(function(){
   calcRemainingLetters();
 
   var checkLetterMatch = function(){
-  
+    // $(lastSelected).parent().remove();
+
     $letter = $('#letter').val();
     console.log('checking letter: ' + $letter);
 
@@ -87,53 +100,23 @@ $(document).ready(function(){
     console.log('makiing hngman');
     console.log('wrong letter count: ' + wrongLetterCount);
 
-    if(wrongLetterCount === 1){
-      $(".base").css("border-color", "red");
-    }
-    if(wrongLetterCount === 2){
-      $('.left-bar').css("border-color", "red");
-    }
-    if(wrongLetterCount === 3){
-      $('.top-bar').css("border-color", "red");
-    }
-    if(wrongLetterCount === 4){
-    $('.side-bar').css("border-color", "red");
-    }
-    if(wrongLetterCount === 5){
-      $('.noose').css("border-color", "red");
-    }
-    if(wrongLetterCount === 6){
-      $('.head').css("border-color", "red");
-    }
-    if(wrongLetterCount === 7){
-      $('.body').css("border-color", "red");
-    }
-    if(wrongLetterCount === 8){
-      $('.arms').css("border-color", "red");
-    }
-    if(wrongLetterCount === 9){
-      $('.l-leg').css("border-color", "red");
-    }
+    // select the correct hangman part by the wrongLetterCount
+    $('.hangman-'+wrongLetterCount).css("border-color", "red");
+
     if(wrongLetterCount === 10){
-      $('.r-leg').css("border-color", "red");
       userLoses();
     }
-
   }
 
   var checkIfWon = function(){
-
     // user wins if guesses all letters
     if ($('p').hasClass('hide-letter') === false && wrongLetterCount < 10){
       userWins();
     } 
-
   }
 
   var checkIfLost = function(){
-
     // user looes if turns exceed 10
-
   }
 
   var checkGuess= function(event){
@@ -148,7 +131,6 @@ $(document).ready(function(){
     }else{
       $('.message').append($('<p></p>').text('Wrong, try again!'));
     };
-
   }
 
   var userWins = function(){
@@ -167,13 +149,27 @@ $(document).ready(function(){
 
 
   // event handlers
-  $('#letter-btn').on('click', getLetter);  
+  $('#letter-btn').on('click', getLetter); 
+  $('.remaining-letter-p').on('click', addLetter) 
   $('#word-btn').on('click', checkGuess);
+  $('#word-btn').on('keypress', function(){
+      if(event.which != 13){
+          return;
+      }
+      checkGuess();
+  });
   $('.play-again').on('click', function(){
     window.location.reload();
   });
 
 });
+
+// game loop when you start it initializes certain things
+// then the game is running
+// and if you want to exit the game or save it then you break our of the loop
+// so you have a bunch of steps in the game and while its running you are prompting them to 
+// do someting 
+// you break out of the loop when the user chooses to or they loose or win
 
 
 // if used letters length is 26, no more turns, show answer
@@ -379,6 +375,8 @@ var words = ["waste",
  "ratty",
  "reproduce"]
 
+
+
 var word = _.sample(words);
 
 var letters = word.split('');
@@ -387,6 +385,15 @@ var usedLetters = [];
 
 var remainingLetters = [];
 
+// var lastSelected;
+
 var wrongLetterCount = 0;
+
+
+// to do:
+// choose letters on click 
+// words api
+// css
+// EATON are the most common letters in the english language
 
 
